@@ -4,19 +4,26 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Microsoft.DotNet.Maestro.WebApi.Handlers;
 using Microsoft.DotNet.Maestro.WebApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Services
 {
     public class EventRegistrationTable
     {
         private static HttpClient s_client = new HttpClient();
+        private static JsonSerializerSettings s_settings = new JsonSerializerSettings()
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
+
 
         private SubscriptionsModel SubscriptionModel { get; set; }
 
@@ -34,114 +41,114 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
         {
             string subscriptionsString = await s_client.GetStringAsync(Config.Instance.SubscriptionsUrl);
 
-            SubscriptionModel = JsonConvert.DeserializeObject<SubscriptionsModel>(subscriptionsString);
+            SubscriptionModel = JsonConvert.DeserializeObject<SubscriptionsModel>(subscriptionsString, s_settings);
         }
 
         private class SubscriptionsModel
         {
-            public BuildDefinitionList NamedVsoBuildDefinitions { get; set; }
-            public SubscriptionList Subscriptions { get; set; }
+            public ActionsList Actions { get; set; }
+            public List<Subscription> Subscriptions { get; set; }
 
             public IEnumerable<ISubscriptionHandler> GetHandlers(ModifiedFileModel modifiedFile)
             {
-                List<ISubscriptionHandler> handlers = new List<ISubscriptionHandler>();
+                List<ISubscriptionHandler> subscriptionHandlers = new List<ISubscriptionHandler>();
+                HandlerResolver resolver = new HandlerResolver(this);
 
-                foreach (Subscription subscription in Subscriptions.GetSubscriptions(modifiedFile))
+                foreach (HandlerObject handlerObject in GetHandlerObjects(modifiedFile))
                 {
-                    BuildDefinition buildDefinition = GetBuildDefinition(subscription);
-                    string parameters = VsoParameterGenerator.GetParameters(subscription.VsoParameters);
-
-                    handlers.Add(new VsoBuildHandler()
+                    ISubscriptionHandler subscriptionHandler = resolver.Resolve(handlerObject);
+                    if (subscriptionHandler != null)
                     {
-                        VsoInstance = buildDefinition.VsoInstance,
-                        VsoProject = buildDefinition.VsoProject,
-                        BuildDefinitionId = buildDefinition.BuildDefinitionId,
-                        VsoParameters = parameters
-                    });
-                }
-
-                return handlers;
-            }
-
-            private BuildDefinition GetBuildDefinition(Subscription subscription)
-            {
-                // first look to see if there is a NamedVsoBuildDefinition property and a
-                // valid VsoBuildDefinition with that name
-                BuildDefinition buildDefinition = NamedVsoBuildDefinitions.GetBuildDefinition(subscription);
-
-                // if that doesn't exist, get the BuildDefinition from the properties directly
-                if (buildDefinition == null)
-                {
-                    buildDefinition = new BuildDefinition()
-                    {
-                        VsoInstance = subscription.VsoInstance,
-                        VsoProject = subscription.VsoProject,
-                        BuildDefinitionId = subscription.BuildDefinitionId,
-                    };
-                }
-
-                return buildDefinition;
-            }
-        }
-
-        private class SubscriptionList
-        {
-            [JsonExtensionData]
-            private IDictionary<string, JToken> SubscribedFiles { get; set; }
-
-            public IEnumerable<Subscription> GetSubscriptions(ModifiedFileModel modifiedFile)
-            {
-                foreach (string fileName in SubscribedFiles.Keys)
-                {
-                    if (string.Equals(fileName, modifiedFile.FullPath, StringComparison.OrdinalIgnoreCase))
-                    {
-                        return JsonConvert.DeserializeObject<Subscription[]>(SubscribedFiles[fileName].ToString());
+                        subscriptionHandlers.Add(subscriptionHandler);
                     }
                 }
 
-                return Enumerable.Empty<Subscription>();
+                return subscriptionHandlers;
+            }
+
+            private IEnumerable<HandlerObject> GetHandlerObjects(ModifiedFileModel modifiedFile)
+            {
+                return Subscriptions
+                    .Where(s => string.Equals(s.Path, modifiedFile.FullPath, StringComparison.OrdinalIgnoreCase))
+                    .SelectMany(s => s.Handlers);
             }
         }
 
         private class Subscription
         {
-            public string NamedVsoBuildDefinition { get; set; }
-
-            public string VsoProject { get; set; }
-            public string VsoInstance { get; set; }
-            public int BuildDefinitionId { get; set; }
-
-            [JsonExtensionData]
-            public IDictionary<string, JToken> VsoParameters { get; set; }
+            public string Path { get; set; }
+            public List<HandlerObject> Handlers { get; set; }
         }
 
-        private class BuildDefinitionList
+        private class HandlerObject
+        {
+            public string MaestroAction { get; set; }
+
+            [JsonExtensionData]
+            public IDictionary<string, JToken> Parameters { get; set; }
+        }
+
+        private class ActionsList
         {
             [JsonExtensionData]
-            private IDictionary<string, JToken> BuildNames { get; set; }
+            private IDictionary<string, JToken> ActionNames { get; set; }
 
-            public BuildDefinition GetBuildDefinition(Subscription subscription)
+            public JObject GetAction(string name)
             {
-                BuildDefinition buildDefinition = null;
+                JObject action = null;
 
-                if (!string.IsNullOrEmpty(subscription.NamedVsoBuildDefinition))
+                if (!string.IsNullOrEmpty(name))
                 {
                     JToken token;
-                    if (BuildNames.TryGetValue(subscription.NamedVsoBuildDefinition, out token))
+                    if (ActionNames.TryGetValue(name, out token))
                     {
-                        buildDefinition = JsonConvert.DeserializeObject<BuildDefinition>(token.ToString());
+                        action = token as JObject;
                     }
                 }
 
-                return buildDefinition;
+                return action;
             }
         }
 
-        private class BuildDefinition
+        private class HandlerResolver
         {
-            public string VsoProject { get; set; }
-            public string VsoInstance { get; set; }
-            public int BuildDefinitionId { get; set; }
+            private SubscriptionsModel _subscriptionsModel;
+
+            public HandlerResolver(SubscriptionsModel subscriptionsModel)
+            {
+                _subscriptionsModel = subscriptionsModel;
+            }
+
+            public ISubscriptionHandler Resolve(HandlerObject handlerObject)
+            {
+                if (string.IsNullOrEmpty(handlerObject.MaestroAction))
+                {
+                    Trace.TraceError("All Subscription Handler objects must contain a 'maestroAction' property.");
+                    return null;
+                }
+
+                JObject action = _subscriptionsModel.Actions.GetAction(handlerObject.MaestroAction);
+                if (action == null)
+                {
+                    Trace.TraceError($"Could not find a valid action with name '{handlerObject.MaestroAction}'.");
+                    return null;
+                }
+
+                if (action.Property("vsoInstance") != null)
+                {
+                    // It's a VSO build definition
+                    return new VsoBuildHandler()
+                    {
+                        VsoInstance = action["vsoInstance"].ToString(),
+                        VsoProject = action["vsoProject"].ToString(),
+                        BuildDefinitionId = action["buildDefinitionId"].Value<int>(),
+                        VsoParameters = VsoParameterGenerator.GetParameters(handlerObject.Parameters)
+                    };
+                }
+
+                Trace.TraceError($"Could not resolve a Handler for Subscription '{JsonConvert.ToString(handlerObject)}'.");
+                return null;
+            }
         }
     }
 }

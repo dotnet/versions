@@ -13,7 +13,8 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
         public static bool TryParse(string repoFullName, string refSpec, string fullPath, out ModifiedFileModel model)
         {
             // the file path goes like the following:
-            // <owner>/<repo>/<branch>/<fullPath>
+            // https://github.com/<owner>/<repo>/blob/<branch>/<fullPath>
+            // NOTE: only supports github files for now.
 
             model = null;
 
@@ -27,7 +28,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
 
             model = new ModifiedFileModel()
             {
-                FullPath = string.Join("/", repoFullName, branchName, fullPath)
+                FullPath = "https://github.com/" + string.Join("/", repoFullName, "blob", branchName, fullPath)
             };
 
             return true;
