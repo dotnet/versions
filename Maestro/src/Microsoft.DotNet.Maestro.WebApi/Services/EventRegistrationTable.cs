@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.DotNet.Maestro.WebApi.Handlers;
 using Microsoft.DotNet.Maestro.WebApi.Models;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Services
@@ -19,14 +20,14 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
 
         private SubscriptionsModel SubscriptionModel { get; set; }
 
-        public async Task<IEnumerable<EventRegistration>> GetRegistrations(ModifiedFileModel modifiedFile)
+        public async Task<IEnumerable<ISubscriptionHandler>> GetSubscriptionHandlers(ModifiedFileModel modifiedFile)
         {
             if (SubscriptionModel == null)
             {
                 await InitializeSubscriptionModel();
             }
 
-            return SubscriptionModel.GetRegistrations(modifiedFile);
+            return SubscriptionModel.GetHandlers(modifiedFile);
         }
 
         private async Task InitializeSubscriptionModel()
@@ -41,16 +42,16 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
             public BuildDefinitionList NamedVsoBuildDefinitions { get; set; }
             public SubscriptionList Subscriptions { get; set; }
 
-            public IEnumerable<EventRegistration> GetRegistrations(ModifiedFileModel modifiedFile)
+            public IEnumerable<ISubscriptionHandler> GetHandlers(ModifiedFileModel modifiedFile)
             {
-                List<EventRegistration> registrations = new List<EventRegistration>();
+                List<ISubscriptionHandler> handlers = new List<ISubscriptionHandler>();
 
                 foreach (Subscription subscription in Subscriptions.GetSubscriptions(modifiedFile))
                 {
                     BuildDefinition buildDefinition = GetBuildDefinition(subscription);
                     string parameters = VsoParameterGenerator.GetParameters(subscription.VsoParameters);
 
-                    registrations.Add(new EventRegistration()
+                    handlers.Add(new VsoBuildHandler()
                     {
                         VsoInstance = buildDefinition.VsoInstance,
                         VsoProject = buildDefinition.VsoProject,
@@ -59,7 +60,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
                     });
                 }
 
-                return registrations;
+                return handlers;
             }
 
             private BuildDefinition GetBuildDefinition(Subscription subscription)

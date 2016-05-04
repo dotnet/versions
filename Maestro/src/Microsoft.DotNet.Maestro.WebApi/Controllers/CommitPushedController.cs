@@ -2,20 +2,20 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using Microsoft.DotNet.Maestro.WebApi.Models;
-using Microsoft.DotNet.Maestro.WebApi.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Microsoft.DotNet.Maestro.WebApi.Handlers;
+using Microsoft.DotNet.Maestro.WebApi.Models;
+using Microsoft.DotNet.Maestro.WebApi.Services;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Controllers
 {
     public class CommitPushedController : ApiController
     {
         private EventRegistrationTable _eventService = new EventRegistrationTable();
-        private VsoService _vsoService = new VsoService();
 
         public async Task Post(PushWebHookEvent e)
         {
@@ -38,18 +38,13 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
                                     continue;
                                 }
 
-                                List<Task> queueBuildTasks = new List<Task>();
-                                foreach (EventRegistration registration in await _eventService.GetRegistrations(modifiedFile))
+                                List<Task> handlerTasks = new List<Task>();
+                                foreach (ISubscriptionHandler handler in await _eventService.GetSubscriptionHandlers(modifiedFile))
                                 {
-                                    queueBuildTasks.Add(
-                                        _vsoService.QueueBuildAsync(
-                                            registration.VsoInstance,
-                                            registration.VsoProject,
-                                            registration.BuildDefinitionId,
-                                            registration.VsoParameters));
+                                    handlerTasks.Add(handler.Execute());
                                 }
 
-                                await Task.WhenAll(queueBuildTasks);
+                                await Task.WhenAll(handlerTasks);
                             }
                         }
                     }
