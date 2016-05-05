@@ -1,0 +1,26 @@
+{
+  "actions": {
+    // A test build definition
+    "test-build-definition": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 1768
+    }
+  },
+  "subscriptions": [
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/Maestro/test/test-build-info.txt",
+      "handlers": [
+        {
+          "maestroAction": "test-build-definition",
+          "SimpleProperty": "simple-value",
+          "ArgumentList": [
+            "-one one-value",
+            "-two two-value",
+            "-three three-value"
+          ]
+        }
+      ]
+    }
+  ]
+}

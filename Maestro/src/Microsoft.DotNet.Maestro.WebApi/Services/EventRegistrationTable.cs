@@ -24,7 +24,6 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
             ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
 
-
         private SubscriptionsModel SubscriptionModel { get; set; }
 
         public async Task<IEnumerable<ISubscriptionHandler>> GetSubscriptionHandlers(ModifiedFileModel modifiedFile)
