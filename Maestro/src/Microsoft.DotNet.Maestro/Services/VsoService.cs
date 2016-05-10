@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
 
-namespace Microsoft.DotNet.Maestro.WebApi.Services
+namespace Microsoft.DotNet.Maestro.Services
 {
     public class VsoService
     {

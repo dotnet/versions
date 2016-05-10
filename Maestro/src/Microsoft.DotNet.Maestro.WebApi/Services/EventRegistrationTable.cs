@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.DotNet.Maestro.WebApi.Handlers;
+using Microsoft.DotNet.Maestro.Handlers;
 using Microsoft.DotNet.Maestro.WebApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -82,6 +82,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
         private class HandlerObject
         {
             public string MaestroAction { get; set; }
+            public TimeSpan? MaestroDelay { get; set; }
 
             [JsonExtensionData]
             public IDictionary<string, JToken> Parameters { get; set; }
@@ -138,6 +139,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
                     // It's a VSO build definition
                     return new VsoBuildHandler()
                     {
+                        Delay = handlerObject.MaestroDelay,
                         VsoInstance = action["vsoInstance"].ToString(),
                         VsoProject = action["vsoProject"].ToString(),
                         BuildDefinitionId = action["buildDefinitionId"].Value<int>(),

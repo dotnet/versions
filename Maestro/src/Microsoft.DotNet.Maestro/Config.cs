@@ -5,7 +5,7 @@
 using System;
 using System.Configuration;
 
-namespace Microsoft.DotNet.Maestro.WebApi
+namespace Microsoft.DotNet.Maestro
 {
     /// <summary>
     /// Holds the configuration information for Maestro.
@@ -17,6 +17,7 @@ namespace Microsoft.DotNet.Maestro.WebApi
         private Lazy<string> _vsoUser = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(VSoUser)]);
         private Lazy<string> _vsoPassword = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(VSoPassword)]);
         private Lazy<string> _subscriptionsUrl = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(SubscriptionsUrl)]);
+        private Lazy<string> _azureWebJobsStorage = new Lazy<string>(() => ConfigurationManager.ConnectionStrings[nameof(AzureWebJobsStorage)]?.ConnectionString);
 
         private Config()
         {
@@ -35,6 +36,11 @@ namespace Microsoft.DotNet.Maestro.WebApi
         public string SubscriptionsUrl
         {
             get { return _subscriptionsUrl.Value; }
+        }
+
+        public string AzureWebJobsStorage
+        {
+            get { return _azureWebJobsStorage.Value; }
         }
     }
 }

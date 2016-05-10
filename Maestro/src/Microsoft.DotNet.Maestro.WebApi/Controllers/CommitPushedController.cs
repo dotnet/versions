@@ -7,15 +7,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Microsoft.DotNet.Maestro.WebApi.Handlers;
+using Microsoft.DotNet.Maestro.Handlers;
+using Microsoft.DotNet.Maestro.Messages;
 using Microsoft.DotNet.Maestro.WebApi.Models;
 using Microsoft.DotNet.Maestro.WebApi.Services;
+using Newtonsoft.Json;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Controllers
 {
     public class CommitPushedController : ApiController
     {
         private EventRegistrationTable _eventService = new EventRegistrationTable();
+        private AzureStorageService _storageService = new AzureStorageService();
 
         public async Task Post(PushWebHookEvent e)
         {
@@ -41,7 +44,22 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
                                 List<Task> handlerTasks = new List<Task>();
                                 foreach (ISubscriptionHandler handler in await _eventService.GetSubscriptionHandlers(modifiedFile))
                                 {
-                                    handlerTasks.Add(handler.Execute());
+                                    if (handler.Delay.HasValue)
+                                    {
+                                        DelayedMessage message = new DelayedMessage();
+                                        message.HandlerType = handler.GetType().AssemblyQualifiedName;
+                                        message.HandlerData = JsonConvert.SerializeObject(handler);
+
+                                        handlerTasks.Add(
+                                            _storageService.EnqueueMessage(
+                                                DelayedMessage.QueueName, 
+                                                JsonConvert.SerializeObject(message), 
+                                                handler.Delay));
+                                    }
+                                    else
+                                    {
+                                        handlerTasks.Add(handler.Execute());
+                                    }
                                 }
 
                                 await Task.WhenAll(handlerTasks);

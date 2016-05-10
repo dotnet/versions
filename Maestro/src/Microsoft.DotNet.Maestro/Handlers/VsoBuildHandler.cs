@@ -2,14 +2,20 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
-using Microsoft.DotNet.Maestro.WebApi.Services;
+using Microsoft.DotNet.Maestro.Services;
 
-namespace Microsoft.DotNet.Maestro.WebApi.Handlers
+namespace Microsoft.DotNet.Maestro.Handlers
 {
     public class VsoBuildHandler : ISubscriptionHandler
     {
+        [IgnoreDataMember]
         public VsoService VsoService { get; } = new VsoService();
+
+        [IgnoreDataMember]
+        public TimeSpan? Delay { get; set; }
 
         public string VsoInstance { get; set; }
         public string VsoProject { get; set; }
