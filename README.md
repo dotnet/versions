@@ -30,6 +30,6 @@ these packages without having to hard-code the feed themselves.
 ## Maestro
 
 An application that coordinates between multiple repositories. It has the ability to automate any process
-that requires cross-repo communication. For exapmle, when a new LKG build of one repo is avaialble, it can
+that requires cross-repo communication. For example, when a new LKG build of one repo is avaialble, it can
 signal any dependent repos to start using this new build.
  
