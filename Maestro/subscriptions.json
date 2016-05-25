@@ -6,6 +6,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1084
     },
+    // A build definition capable of running any .ps1 script in the core-setup repo
+    "core-setup-general": {
+      "vsoInstance": "mseng.visualstudio.com",
+      "vsoProject": "dotnetcore",
+      "buildDefinitionId": 3571
+    },
     // A build definition that will update the dependencies of the CLI repo
     "cli-dependencies": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -15,9 +21,15 @@
   },
   "subscriptions": [
     {
-      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0-rc2/Latest.txt",
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt",
       "handlers": [
-        // This handler will bring the CoreFX RC2 build into CLI
+        // This handler will bring the CoreFX 1.0.0 build into core-setup
+        {
+          "maestroAction": "core-setup-general",
+          "ScriptFileName": "build_projects\update-dependencies\update-dependencies.ps1",
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])'"
+        },
+        // This handler will bring the CoreFX 1.0.0 build into CLI
         {
           "maestroAction": "cli-dependencies"
         }
