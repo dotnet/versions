@@ -40,11 +40,12 @@ namespace Microsoft.DotNet.Maestro.Services
             formatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             ObjectContent queueBuildContent = new ObjectContent<Build>(build, formatter);
+            string queueBuildContentString = await queueBuildContent.ReadAsStringAsync();
 
             HttpResponseMessage response = await client.PostAsync(queueBuildUrl, queueBuildContent);
             if (!response.IsSuccessStatusCode)
             {
-                Trace.TraceError($"Error queuing VSO build to '{queueBuildUrl}'\nBody: {await queueBuildContent.ReadAsStringAsync()}\n\nResponse StatusCode: {response.StatusCode}\nResponse Body: {await response.Content.ReadAsStringAsync()}");
+                Trace.TraceError($"Error queuing VSO build to '{queueBuildUrl}'\nBody: {queueBuildContentString}\n\nResponse StatusCode: {response.StatusCode}\nResponse Body: {await response.Content.ReadAsStringAsync()}");
             }
             else
             {
