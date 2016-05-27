@@ -34,10 +34,6 @@
           "maestroAction": "core-setup-general",
           "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
           "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])'"
-        },
-        // This handler will bring the CoreFX 1.0.0 build into CLI
-        {
-          "maestroAction": "cli-dependencies"
         }
       ]
     },
@@ -75,6 +71,15 @@
             "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/master/Latest.txt",
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'"
           ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest_Packages.txt",
+      "handlers": [
+        // This handler will bring the core-setup build into CLI
+        {
+          "maestroAction": "cli-dependencies"
         }
       ]
     }
