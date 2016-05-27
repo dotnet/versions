@@ -1,10 +1,16 @@
 {
   "actions": {
-    // A build definition capable of running any .ps1 script in the CoreFX repo
+    // A build definition capable of running any .ps1 script in the CoreFX repo master branch
     "corefx-general": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1084
+    },
+    // A build definition capable of running any .ps1 script in the CoreFX repo release/1.0.0 branch
+    "corefx-general-release": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 1990
     },
     // A build definition capable of running any .ps1 script in the core-setup repo
     "core-setup-general": {
@@ -32,6 +38,24 @@
         // This handler will bring the CoreFX 1.0.0 build into CLI
         {
           "maestroAction": "cli-dependencies"
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest CoreFX release/1.0.0 build into CorefX release/1.0.0
+        {
+          "maestroAction": "corefx-general-release",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/release/1.0.0/Latest.txt",
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'"
+          ]
         }
       ]
     },
