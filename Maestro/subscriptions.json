@@ -95,7 +95,26 @@
             "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
             "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
-            "-DirPropsVersionElements CoreClrExpectedPrerelease, ExternalExpectedPrerelease"
+            "-DirPropsVersionElements ExternalExpectedPrerelease"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/master/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest CoreCLR master build into CoreFX master
+        {
+          "maestroAction": "corefx-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/coreclr/master/Latest.txt",
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements CoreClrExpectedPrerelease"
           ]
         }
       ]
