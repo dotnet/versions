@@ -69,8 +69,8 @@
             "-GitHubEmail dotnet-bot@microsoft.com",
             "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
             "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib",
-            "-DirPropsVersionElement 'CoreFxExpectedPrerelease"
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements CoreFxExpectedPrerelease"
           ]
         }
       ]
@@ -78,7 +78,7 @@
     {
       "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
       "handlers": [
-        // This handler will bring the Latest ProjectK TFS master build into CoreFX master for CoreCLR dependencies
+        // This handler will bring the Latest ProjectK TFS master build into CoreFX master
         {
           "maestroAction": "corefx-general",
           "maestroDelay": "00:10:00",
@@ -88,36 +88,8 @@
             "-GitHubEmail dotnet-bot@microsoft.com",
             "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
             "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib",
-            "-DirPropsVersionElement 'CoreClrExpectedPrerelease"
-          ]
-        },
-        // This handler will bring the Latest ProjectK TFS master build into CoreFX master for CoreLib targeting pack dependencies
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "ScriptFileName": "UpdateDependencies.ps1",
-          "Arguments": [
-            "-GitHubUser dotnet-bot",
-            "-GitHubEmail dotnet-bot@microsoft.com",
-            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
-            "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib",
-            "-DirPropsVersionElement 'CoreLibTargetingPackExpectedPrerelease"
-          ]
-        },
-        // This handler will bring the Latest ProjectK TFS master build into CoreFX master for TFS-side CoreFX dependencies
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "ScriptFileName": "UpdateDependencies.ps1",
-          "Arguments": [
-            "-GitHubUser dotnet-bot",
-            "-GitHubEmail dotnet-bot@microsoft.com",
-            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
-            "-CoreFxVersionUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib",
-            "-DirPropsVersionElement 'ExternalExpectedPrerelease"
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements CoreClrExpectedPrerelease, ExternalExpectedPrerelease"
           ]
         }
       ]
