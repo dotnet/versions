@@ -24,6 +24,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     }
+    // A build definition that will trigger the dotnet-preview Docker image build in Docker Hub
+    "build-dotnet-docker-preview": {
+      "vsoInstance": "mseng.visualstudio.com",
+      "vsoProject": "dotnetcore",
+      "buildDefinitionId": 3590
+    }
   },
   "subscriptions": [
     {
@@ -80,6 +86,16 @@
         // This handler will bring the core-setup build into CLI
         {
           "maestroAction": "cli-dependencies",
+          "maestroDelay": "00:05:00"
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0/Latest_Packages.txt",
+      "handlers": [
+        // This handler will produce a new dotnet-preview Docker image for the latest CLI
+        {
+          "maestroAction": "build-dotnet-docker-preview",
           "maestroDelay": "00:05:00"
         }
       ]
