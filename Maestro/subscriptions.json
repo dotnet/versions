@@ -57,7 +57,7 @@
     {
       "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest.txt",
       "handlers": [
-        // This handler will bring the Latest CoreFX release/1.0.0 build into CorefX release/1.0.0
+        // This handler will bring the Latest CoreFX release/1.0.0 build into CoreFX release/1.0.0
         {
           "maestroAction": "corefx-general-release",
           "maestroDelay": "00:10:00",
@@ -68,7 +68,48 @@
             "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
             "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/release/1.0.0/Latest.txt",
             "-GitHubUpstreamBranch 'release/1.0.0'",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'"
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements CoreFxExpectedPrerelease"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectk-tfs/release/1.0.0/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest ProjectKRel TFS release/1.0.0 build into CoreFX release/1.0.0
+        {
+          "maestroAction": "corefx-general-release",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-VersionFileUrl https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectk-tfs/release/1.0.0/Latest.txt",
+            "-GitHubUpstreamBranch 'release/1.0.0'",
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements ExternalExpectedPrerelease"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest CoreCLR release/1.0.0 build into CoreFX release/1.0.0
+        {
+          "maestroAction": "corefx-general-release",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-VersionFileUrl https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/Latest.txt",
+            "-GitHubUpstreamBranch 'release/1.0.0'",
+            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements CoreClrExpectedPrerelease"
           ]
         }
       ]
