@@ -12,6 +12,18 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1990
     },
+    // A build definition capable of running any .ps1 script in the CoreCLR repo master branch
+    "coreclr-general": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 2249
+    },
+    // A build definition capable of running any .ps1 script in the CoreCLR repo release/1.0.0 branch
+    "coreclr-general-release": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 2250
+    },
     // A build definition capable of running any .ps1 script in the core-setup repo
     "core-setup-general": {
       "vsoInstance": "mseng.visualstudio.com",
@@ -91,6 +103,21 @@
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
             "-DirPropsVersionElements ExternalExpectedPrerelease"
           ]
+        },
+        // This handler will bring the Latest ProjectKRel TFS release/1.0.0 build into CoreCLR release/1.0.0
+        {
+          "maestroAction": "coreclr-general-release",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-VersionFileUrl https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectk-tfs/release/1.0.0/Latest.txt",
+            "-GitHubUpstreamBranch 'release/1.0.0'",
+            "-GitHubPullRequestNotifications 'dotnet/coreclr-contrib'",
+            "-DirPropsVersionElements ExternalExpectedPrerelease"
+          ]
         }
       ]
     },
@@ -147,6 +174,20 @@
             "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
             "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements ExternalExpectedPrerelease"
+          ]
+        },
+        // This handler will bring the Latest ProjectK TFS master build into CoreCLR master
+        {
+          "maestroAction": "coreclr-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
+            "-GitHubPullRequestNotifications 'dotnet/coreclr-contrib'",
             "-DirPropsVersionElements ExternalExpectedPrerelease"
           ]
         }
