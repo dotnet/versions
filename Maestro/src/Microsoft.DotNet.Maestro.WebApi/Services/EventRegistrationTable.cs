@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.DotNet.Maestro.Handlers;
+using Microsoft.DotNet.Maestro.Models;
 using Microsoft.DotNet.Maestro.WebApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -79,15 +80,6 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
             public List<HandlerObject> Handlers { get; set; }
         }
 
-        private class HandlerObject
-        {
-            public string MaestroAction { get; set; }
-            public TimeSpan? MaestroDelay { get; set; }
-
-            [JsonExtensionData]
-            public IDictionary<string, JToken> Parameters { get; set; }
-        }
-
         private class ActionsList
         {
             [JsonExtensionData]
@@ -134,21 +126,13 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
                     return null;
                 }
 
-                if (action.Property("vsoInstance") != null)
-                {
-                    // It's a VSO build definition
-                    return new VsoBuildHandler()
-                    {
-                        Delay = handlerObject.MaestroDelay,
-                        VsoInstance = action["vsoInstance"].ToString(),
-                        VsoProject = action["vsoProject"].ToString(),
-                        BuildDefinitionId = action["buildDefinitionId"].Value<int>(),
-                        VsoParameters = VsoParameterGenerator.GetParameters(handlerObject.Parameters)
-                    };
-                }
+                ISubscriptionHandler result = VsoBuildHandler.TryCreate(action, handlerObject);
 
-                Trace.TraceError($"Could not resolve a Handler for Subscription '{JsonConvert.ToString(handlerObject)}'.");
-                return null;
+                if (result == null)
+                {
+                    Trace.TraceError($"Could not resolve a Handler for Subscription '{JsonConvert.ToString(handlerObject)}'.");
+                }
+                return result;
             }
         }
     }
