@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
@@ -26,13 +27,14 @@ namespace Microsoft.DotNet.Maestro.Services
                        string.Format("{0}:{1}", Config.Instance.VSoUser, Config.Instance.VSoPassword))));
         }
 
-        public async Task QueueBuildAsync(string instance, string project, int buildDefinitionId, string parameters)
+        public async Task QueueBuildAsync(string instance, string project, int buildDefinitionId, string sourceBranch, string parameters)
         {
             string queueBuildUrl = $"https://{instance}/defaultcollection/{project}/_apis/build/builds?api-version={apiVersion}";
 
             Build build = new Build()
             {
                 Definition = new BuildDefinitionRef() { Id = buildDefinitionId },
+                SourceBranch = sourceBranch,
                 Parameters = parameters
             };
 
@@ -57,6 +59,10 @@ namespace Microsoft.DotNet.Maestro.Services
         {
             public BuildDefinitionRef Definition { get; set; }
 
+            [DataMember(EmitDefaultValue = false)]
+            public string SourceBranch { get; set; }
+
+            [DataMember(EmitDefaultValue = false)]
             public string Parameters { get; set; }
         }
 
