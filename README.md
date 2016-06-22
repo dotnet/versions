@@ -53,13 +53,13 @@ Typical builds that are tracked are:
 
 - Latest
 - LKG (or Last Known Good)
-- Release (The build that was released from this branch)
+- Release (The build that was released from this channel)
 
 But each owner/repo/channel can define builds and build names that make sense for them to track.
 
 #### Renaming
 
-Keep in mind that these names are public, and consumers will be taking dependencies on channel names and build poniter names.
+Keep in mind that these names are public, and consumers will be taking dependencies on channel names and build pointer names.
 You should consider renaming these folders/files like you would any other breaking change (it needs plenty of communication). 
 
 ### Suggestions
