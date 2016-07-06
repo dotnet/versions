@@ -36,8 +36,8 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     },
-    // A build definition that will trigger the dotnet-preview Docker image build in Docker Hub
-    "build-dotnet-docker-preview": {
+    // A build definition that will trigger the dotnet-nightly Docker image build in Docker Hub
+    "build-dotnet-docker-nightly": {
       "vsoInstance": "mseng.visualstudio.com",
       "vsoProject": "dotnetcore",
       "buildDefinitionId": 3590
@@ -148,11 +148,11 @@
       ]
     },
     {
-      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0-preview2/Latest_Packages.txt",
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0/Latest_Packages.txt",
       "handlers": [
-        // This handler will produce a new dotnet-preview Docker image for the latest CLI
+        // This handler will produce a new dotnet-nightly Docker image for the latest CLI
         {
-          "maestroAction": "build-dotnet-docker-preview",
+          "maestroAction": "build-dotnet-docker-nightly",
           "maestroDelay": "00:05:00"
         }
       ]
