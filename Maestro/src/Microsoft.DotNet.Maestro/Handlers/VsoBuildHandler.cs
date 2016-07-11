@@ -47,7 +47,7 @@ namespace Microsoft.DotNet.Maestro.Handlers
         private static string GetSourceBranch(HandlerObject handlerObject)
         {
             JToken sourceBranchToken = null;
-            handlerObject.ExtensionData.TryGetValue("vsoSourceBranch", out sourceBranchToken);
+            handlerObject.ExtensionData?.TryGetValue("vsoSourceBranch", out sourceBranchToken);
 
             return sourceBranchToken?.ToString();
         }
