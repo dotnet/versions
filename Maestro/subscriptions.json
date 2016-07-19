@@ -82,6 +82,20 @@
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
             "-DirPropsVersionElements CoreFxExpectedPrerelease"
           ]
+        },
+        // This handler will bring the Latest CoreFX master build into CoreCLR master
+        {
+          "maestroAction": "coreclr-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/master/Latest.txt",
+            "-GitHubPullRequestNotifications 'dotnet/coreclr-contrib'",
+            "-DirPropsVersionElements CoreFxExpectedPrerelease"
+          ]
         }
       ]
     },
@@ -185,6 +199,20 @@
             "-GitHubUpstreamBranch dev/api",
             "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/coreclr/master/Latest.txt",
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
+            "-DirPropsVersionElements CoreClrExpectedPrerelease"
+          ]
+        },
+        // This handler will bring the Latest CoreCLR master build into CoreCLR master
+        {
+          "maestroAction": "coreclr-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "UpdateDependencies.ps1",
+          "Arguments": [
+            "-GitHubUser dotnet-bot",
+            "-GitHubEmail dotnet-bot@microsoft.com",
+            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
+            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/coreclr/master/Latest.txt",
+            "-GitHubPullRequestNotifications 'dotnet/coreclr-contrib'",
             "-DirPropsVersionElements CoreClrExpectedPrerelease"
           ]
         }
