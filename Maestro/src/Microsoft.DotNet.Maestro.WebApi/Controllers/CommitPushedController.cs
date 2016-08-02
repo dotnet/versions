@@ -33,21 +33,18 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
 
                     foreach (Commit c in e.Commits)
                     {
-                        if (c.modified != null)
+                        foreach (string changedFilePath in c.GetAllChangedFiles())
                         {
-                            foreach (string modified in c.modified)
+                            ModifiedFileModel modifiedFile;
+                            if (!ModifiedFileModel.TryParse(e.Repository.Full_Name, e.Ref, changedFilePath, out modifiedFile))
                             {
-                                ModifiedFileModel modifiedFile;
-                                if (!ModifiedFileModel.TryParse(e.Repository.Full_Name, e.Ref, modified, out modifiedFile))
-                                {
-                                    Trace.TraceWarning($"Skipping file '{modified}'");
-                                    continue;
-                                }
+                                Trace.TraceWarning($"Skipping file '{changedFilePath}'");
+                                continue;
+                            }
 
-                                foreach (ISubscriptionHandler handler in await _eventService.GetSubscriptionHandlers(modifiedFile))
-                                {
-                                    handlers.Add(handler);
-                                }
+                            foreach (ISubscriptionHandler handler in await _eventService.GetSubscriptionHandlers(modifiedFile))
+                            {
+                                handlers.Add(handler);
                             }
                         }
                     }
