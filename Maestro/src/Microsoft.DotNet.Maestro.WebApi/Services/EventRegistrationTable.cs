@@ -69,8 +69,25 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
             private IEnumerable<HandlerObject> GetHandlerObjects(ModifiedFileModel modifiedFile)
             {
                 return Subscriptions
-                    .Where(s => string.Equals(s.Path, modifiedFile.FullPath, StringComparison.OrdinalIgnoreCase))
+                    .Where(s => Matches(s, modifiedFile))
                     .SelectMany(s => s.Handlers);
+            }
+
+            private bool Matches(Subscription s, ModifiedFileModel modifiedFile)
+            {
+                bool matches = string.Equals(s.Path, modifiedFile.FullPath, StringComparison.OrdinalIgnoreCase);
+                if (matches)
+                {
+                    return true;
+                }
+
+                if (s.Path.EndsWith("/**/*", StringComparison.OrdinalIgnoreCase))
+                {
+                    string rootPath = s.Path.Substring(0, s.Path.Length - 5);
+                    return modifiedFile.FullPath.StartsWith(rootPath, StringComparison.OrdinalIgnoreCase);
+                }
+
+                return false;
             }
         }
 

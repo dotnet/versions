@@ -66,5 +66,34 @@ namespace Microsoft.DotNet.Maestro.Handlers
                 SourceBranch,
                 VsoParameters);
         }
+
+        public override bool Equals(object obj)
+        {
+            VsoBuildHandler other = obj as VsoBuildHandler;
+            if (other == null)
+            {
+                return false;
+            }
+
+            return Delay == other.Delay &&
+                VsoInstance == other.VsoInstance &&
+                VsoProject == other.VsoProject &&
+                BuildDefinitionId == other.BuildDefinitionId &&
+                SourceBranch == other.SourceBranch &&
+                VsoParameters == other.VsoParameters;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return Delay?.GetHashCode() ?? 0 +
+                    VsoInstance.GetHashCode() +
+                    VsoProject.GetHashCode() +
+                    BuildDefinitionId.GetHashCode() +
+                    SourceBranch?.GetHashCode() ?? 0 +
+                    VsoParameters?.GetHashCode() ?? 0;
+            }
+        }
     }
 }

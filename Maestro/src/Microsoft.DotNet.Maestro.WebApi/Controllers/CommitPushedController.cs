@@ -28,6 +28,9 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
             {
                 if (e.Commits != null)
                 {
+                    // only invoke a specific handler once per a push notification
+                    HashSet<ISubscriptionHandler> handlers = new HashSet<ISubscriptionHandler>();
+
                     foreach (Commit c in e.Commits)
                     {
                         if (c.modified != null)
@@ -41,31 +44,36 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
                                     continue;
                                 }
 
-                                List<Task> handlerTasks = new List<Task>();
                                 foreach (ISubscriptionHandler handler in await _eventService.GetSubscriptionHandlers(modifiedFile))
                                 {
-                                    if (handler.Delay.HasValue)
-                                    {
-                                        DelayedMessage message = new DelayedMessage();
-                                        message.HandlerType = handler.GetType().AssemblyQualifiedName;
-                                        message.HandlerData = JsonConvert.SerializeObject(handler);
-
-                                        handlerTasks.Add(
-                                            _storageService.EnqueueMessage(
-                                                DelayedMessage.QueueName, 
-                                                JsonConvert.SerializeObject(message), 
-                                                handler.Delay));
-                                    }
-                                    else
-                                    {
-                                        handlerTasks.Add(handler.Execute());
-                                    }
+                                    handlers.Add(handler);
                                 }
-
-                                await Task.WhenAll(handlerTasks);
                             }
                         }
                     }
+
+                    List<Task> handlerTasks = new List<Task>();
+                    foreach (ISubscriptionHandler handler in handlers)
+                    {
+                        if (handler.Delay.HasValue)
+                        {
+                            DelayedMessage message = new DelayedMessage();
+                            message.HandlerType = handler.GetType().AssemblyQualifiedName;
+                            message.HandlerData = JsonConvert.SerializeObject(handler);
+
+                            handlerTasks.Add(
+                                _storageService.EnqueueMessage(
+                                    DelayedMessage.QueueName,
+                                    JsonConvert.SerializeObject(message),
+                                    handler.Delay));
+                        }
+                        else
+                        {
+                            handlerTasks.Add(handler.Execute());
+                        }
+                    }
+
+                    await Task.WhenAll(handlerTasks);
                 }
             }
             catch (Exception ex)
