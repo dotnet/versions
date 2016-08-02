@@ -36,6 +36,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     },
+    // A build definition that will trigger an official build of the CLI repo
+    "cli-pipebuild": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 3159
+    },
     // A build definition that will trigger the dotnet-nightly Docker image build in Docker Hub
     "build-dotnet-docker-nightly": {
       "vsoInstance": "mseng.visualstudio.com",
@@ -197,6 +203,15 @@
         {
           "maestroAction": "cli-dependencies",
           "maestroDelay": "00:05:00"
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/cli/blob/feature/msbuild/**/*",
+      "handlers": [
+        // This handler will trigger an official build of the CLI repo
+        {
+          "maestroAction": "cli-pipebuild"
         }
       ]
     },
