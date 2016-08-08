@@ -67,14 +67,17 @@
         {
           "maestroAction": "corefx-general",
           "maestroDelay": "00:10:00",
-          "ScriptFileName": "UpdateDependencies.ps1",
+          "ScriptFileName": "build-managed.cmd",
           "Arguments": [
-            "-GitHubUser dotnet-bot",
-            "-GitHubEmail dotnet-bot@microsoft.com",
-            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
-            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
-            "-DirPropsVersionElements CoreFxExpectedPrerelease"
+            "--",
+            "/t:UpdateDependencies",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=\"dotnet/corefx-contrib\""
           ]
         }
       ]
@@ -107,14 +110,17 @@
         {
           "maestroAction": "corefx-general",
           "maestroDelay": "00:10:00",
-          "ScriptFileName": "UpdateDependencies.ps1",
+          "ScriptFileName": "build-managed.cmd",
           "Arguments": [
-            "-GitHubUser dotnet-bot",
-            "-GitHubEmail dotnet-bot@microsoft.com",
-            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
-            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
-            "-DirPropsVersionElements ExternalExpectedPrerelease"
+            "--",
+            "/t:UpdateDependencies",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=\"dotnet/corefx-contrib\""
           ]
         },
         // This handler will bring the Latest ProjectK TFS master build into CoreFX dev/api
@@ -156,14 +162,17 @@
         {
           "maestroAction": "corefx-general",
           "maestroDelay": "00:10:00",
-          "ScriptFileName": "UpdateDependencies.ps1",
+          "ScriptFileName": "build-managed.cmd",
           "Arguments": [
-            "-GitHubUser dotnet-bot",
-            "-GitHubEmail dotnet-bot@microsoft.com",
-            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
-            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/coreclr/master/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
-            "-DirPropsVersionElements CoreClrExpectedPrerelease"
+            "--",
+            "/t:UpdateDependencies",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=\"dotnet/corefx-contrib\""
           ]
         },
         // This handler will bring the Latest CoreCLR master build into CoreFX dev/api
