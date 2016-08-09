@@ -174,22 +174,6 @@
     {
       "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectk-tfs/release/1.0.0/Latest.txt",
       "handlers": [
-        // This handler will bring the Latest ProjectKRel (projectk-tfs/release/1.0.0) build into CoreFX release/1.0.0
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "vsoSourceBranch": "release/1.0.0",
-          "ScriptFileName": "UpdateDependencies.ps1",
-          "Arguments": [
-            "-GitHubUser dotnet-bot",
-            "-GitHubEmail dotnet-bot@microsoft.com",
-            "-GitHubPassword `$(`$Secrets['DotNetBotGitHubPassword'])",
-            "-GitHubUpstreamBranch release/1.0.0",
-            "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/projectk-tfs/release/1.0.0/Latest.txt",
-            "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
-            "-DirPropsVersionElements ExternalExpectedPrerelease"
-          ]
-        },
         // This handler will bring the Latest ProjectKRel (projectk-tfs/release/1.0.0) build into CoreCLR release/1.0.0
         {
           "maestroAction": "coreclr-general",
