@@ -30,11 +30,11 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 3159
     },
-    // A build definition that will trigger the dotnet-nightly Docker image build in Docker Hub
-    "build-dotnet-docker-nightly": {
+    // A build definition capable of running any .ps1 script in the dotnet-docker-nightly repo
+    "dotnet-docker-nightly-general": {
       "vsoInstance": "mseng.visualstudio.com",
       "vsoProject": "dotnetcore",
-      "buildDefinitionId": 3590
+      "buildDefinitionId": 3784
     }
   },
   "subscriptions": [
@@ -273,10 +273,12 @@
     {
       "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0/Latest_Packages.txt",
       "handlers": [
-        // This handler will produce a new dotnet-nightly Docker image for the latest CLI
+        // This handler will update the dotnet-docker-nightly Dockerfiles to use the latest CLI
         {
-          "maestroAction": "build-dotnet-docker-nightly",
-          "maestroDelay": "00:05:00"
+          "maestroAction": "dotnet-docker-nightly-general",
+          "maestroDelay": "00:05:00",
+          "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','CLI_BRANCH=rel/1.0.0'"
         }
       ]
     }
