@@ -18,6 +18,12 @@
       "vsoProject": "dotnetcore",
       "buildDefinitionId": 3571
     },
+    // A build definition that will trigger an official build of the core-setup repo
+    "core-setup-pipebuild": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 3160
+    },
     // A build definition that will update the dependencies of the CLI repo
     "cli-dependencies": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -307,6 +313,15 @@
         {
           "maestroAction": "cli-dependencies",
           "maestroDelay": "00:05:00"
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/core-setup/blob/master/**/*",
+      "handlers": [
+        // This handler will trigger an official build of the core-setup repo
+        {
+          "maestroAction": "core-setup-pipebuild"
         }
       ]
     },
