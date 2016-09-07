@@ -14,6 +14,7 @@ namespace Microsoft.DotNet.Maestro
     {
         public static Config Instance { get; } = new Config();
 
+        private Lazy<string> _webhookSecretToken = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(WebhookSecretToken)]);
         private Lazy<string> _vsoUser = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(VSoUser)]);
         private Lazy<string> _vsoPassword = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(VSoPassword)]);
         private Lazy<string> _subscriptionsUrl = new Lazy<string>(() => ConfigurationManager.AppSettings[nameof(SubscriptionsUrl)]);
@@ -21,6 +22,11 @@ namespace Microsoft.DotNet.Maestro
 
         private Config()
         {
+        }
+
+        public string WebhookSecretToken
+        {
+            get { return _webhookSecretToken.Value; }
         }
 
         public string VSoUser
