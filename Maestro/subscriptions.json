@@ -79,6 +79,13 @@
           "maestroAction": "core-setup-general",
           "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
           "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
+        },
+        // This handler will bring the Latest Roslyn 1.0.0 build into core-setup release/1.1.0
+        {
+          "maestroAction": "core-setup-general",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
         }
       ]
     },
@@ -122,6 +129,37 @@
             "/p:NotifyGitHubUsers=dotnet/coreclr-contrib",
             "/verbosity:Normal"
           ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.1.0/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest CoreFX release/1.1.0 build into CoreFX release/1.1.0
+        {
+          "maestroAction": "corefx-general",
+          "maestroDelay": "00:10:00",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=release/1.1.0",
+            "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
+            "/verbosity:Normal"
+          ]
+        },
+        // This handler will bring the Latest CoreFX release/1.1.0 build into core-setup release/1.1.0
+        {
+          "maestroAction": "core-setup-general",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
         }
       ]
     },
@@ -336,6 +374,37 @@
             "-GitHubPullRequestNotifications 'dotnet/corefx-contrib'",
             "-DirPropsVersionElements CoreClrExpectedPrerelease"
           ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.1.0/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest CoreCLR release/1.1.0 build into CoreFX release/1.1.0
+        {
+          "maestroAction": "corefx-general",
+          "maestroDelay": "00:10:00",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=release/1.1.0",
+            "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
+            "/verbosity:Normal"
+          ]
+        },
+        // This handler will bring the Latest CoreCLR release/1.1.0 build into core-setup release/1.1.0
+        {
+          "maestroAction": "core-setup-general",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
         }
       ]
     },
