@@ -160,6 +160,27 @@
             "/verbosity:Normal"
           ]
         },
+        // This handler will bring the Latest CoreFX release/1.1.0 build into CoreCLR release/1.1.0
+        {
+          "maestroAction": "coreclr-general",
+          "maestroDelay": "00:10:00",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "run.cmd",
+          "Arguments": [
+            "build",
+            "-Project='tests\\build.proj'",
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=coreclr",
+            "/p:ProjectRepoBranch=release/1.1.0",
+            "/p:NotifyGitHubUsers=dotnet/coreclr-contrib",
+            "/verbosity:Normal"
+          ]
+        },
         // This handler will bring the Latest CoreFX release/1.1.0 build into core-setup release/1.1.0
         {
           "maestroAction": "core-setup-general",
@@ -402,6 +423,27 @@
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/1.1.0",
             "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
+            "/verbosity:Normal"
+          ]
+        },
+        // This handler will bring the Latest CoreCLR release/1.1.0 build into CoreCLR release/1.1.0
+        {
+          "maestroAction": "coreclr-general",
+          "maestroDelay": "00:10:00",
+          "vsoSourceBranch": "release/1.1.0",
+          "ScriptFileName": "run.cmd",
+          "Arguments": [
+            "build",
+            "-Project='tests\\build.proj'",
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=coreclr",
+            "/p:ProjectRepoBranch=release/1.1.0",
+            "/p:NotifyGitHubUsers=dotnet/coreclr-contrib",
             "/verbosity:Normal"
           ]
         },
