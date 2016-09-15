@@ -47,6 +47,12 @@
       "vsoInstance": "mseng.visualstudio.com",
       "vsoProject": "dotnetcore",
       "buildDefinitionId": 3784
+    },
+    // A build definition capable of running any .ps1 script in the WCF repo. By default, the master branch.
+    "wcf-general": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 4226
     }
   },
   "subscriptions": [
@@ -133,6 +139,24 @@
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=master",
             "/p:NotifyGitHubUsers=dotnet/coreclr-contrib",
+            "/verbosity:Normal"
+          ]
+        },
+        // This handler will bring the Latest CoreFX master build into WCF master
+        {
+          "maestroAction": "wcf-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=wcf",
+            "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=dotnet/wcf-contrib",
             "/verbosity:Normal"
           ]
         }
@@ -378,6 +402,47 @@
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=master",
             "/p:NotifyGitHubUsers=dotnet/coreclr-contrib",
+            "/verbosity:Normal"
+          ]
+        },
+        // This handler will bring the Latest CoreCLR master build into WCF master
+        {
+          "maestroAction": "wcf-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=wcf",
+            "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=dotnet/wcf-contrib",
+            "/verbosity:Normal"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/master/Latest.txt",
+      "handlers": [
+        // This handler will bring the Latest WCF master build into WCF master
+        {
+          "maestroAction": "wcf-general",
+          "maestroDelay": "00:10:00",
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=wcf",
+            "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=dotnet/wcf-contrib",
             "/verbosity:Normal"
           ]
         }
