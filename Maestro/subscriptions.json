@@ -217,30 +217,6 @@
       ]
     },
     {
-      "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/dev/api/Latest.txt",
-      "handlers": [
-        // This handler will bring the Latest CoreFX dev/api build into CoreFX dev/api
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "vsoSourceBranch": "dev/api",
-          "ScriptFileName": "build-managed.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-bot",
-            "/p:GitHubEmail=dotnet-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=corefx",
-            "/p:ProjectRepoBranch=dev/api",
-            "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
-            "/verbosity:Normal"
-          ]
-        }
-      ]
-    },
-    {
       "path": "https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectk-tfs/master/Latest.txt",
       "handlers": [
         // This handler will bring the Latest ProjectK TFS master build into CoreFX master
@@ -257,25 +233,6 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
-            "/verbosity:Normal"
-          ]
-        },
-        // This handler will bring the Latest ProjectK TFS master build into CoreFX dev/api
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "vsoSourceBranch": "dev/api",
-          "ScriptFileName": "build-managed.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-bot",
-            "/p:GitHubEmail=dotnet-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=corefx",
-            "/p:ProjectRepoBranch=dev/api",
             "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
             "/verbosity:Normal"
           ]
@@ -322,25 +279,6 @@
             "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
             "/verbosity:Normal"
           ]
-        },
-        // This handler will bring the Latest ProjectN TFS master build into CoreFX dev/api
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "vsoSourceBranch": "dev/api",
-          "ScriptFileName": "build-managed.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-bot",
-            "/p:GitHubEmail=dotnet-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=corefx",
-            "/p:ProjectRepoBranch=dev/api",
-            "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
-            "/verbosity:Normal"
-          ]
         }
       ]
     },
@@ -382,25 +320,6 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
-            "/verbosity:Normal"
-          ]
-        },
-        // This handler will bring the Latest CoreCLR master build into CoreFX dev/api
-        {
-          "maestroAction": "corefx-general",
-          "maestroDelay": "00:10:00",
-          "vsoSourceBranch": "dev/api",
-          "ScriptFileName": "build-managed.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-bot",
-            "/p:GitHubEmail=dotnet-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=corefx",
-            "/p:ProjectRepoBranch=dev/api",
             "/p:NotifyGitHubUsers=dotnet/corefx-contrib",
             "/verbosity:Normal"
           ]
