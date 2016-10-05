@@ -17,7 +17,6 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
 {
     public class CommitPushedController : ApiController
     {
-        private EventRegistrationTable _eventService = new EventRegistrationTable();
         private AzureStorageService _storageService = new AzureStorageService();
 
         [VerifyPayloadSignature]
@@ -29,6 +28,8 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
             {
                 if (e.Commits != null)
                 {
+                    SubscriptionsModel subscriptionsModel = await SubscriptionsModel.CreateAsync();
+
                     // only invoke a specific handler once per a push notification
                     HashSet<ISubscriptionHandler> handlers = new HashSet<ISubscriptionHandler>();
 
@@ -43,7 +44,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
                                 continue;
                             }
 
-                            foreach (ISubscriptionHandler handler in await _eventService.GetSubscriptionHandlers(modifiedFile))
+                            foreach (ISubscriptionHandler handler in subscriptionsModel.GetHandlers(modifiedFile))
                             {
                                 handlers.Add(handler);
                             }
