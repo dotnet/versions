@@ -8,7 +8,7 @@ def newJobName = Utilities.getFullJobName(project, '', isPR)
 
 def newJob = job(newJobName) {
     steps {
-        batchFile('.\Maestro\build.cmd')
+        batchFile('.\\Maestro\\build.cmd')
     }
 }
 
