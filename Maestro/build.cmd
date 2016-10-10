@@ -13,12 +13,24 @@ if not exist "%VS140COMNTOOLS%VsMSBuildCmd.bat" (
   exit /b 1
 )
 
+set nuGetVersion=v3.4.4
+set cachedNuGetDir=%LocalAppData%\NuGet\%nuGetVersion%
+set cachedNuGet=%cachedNuGetDir%\NuGet.exe
 set logFile="%~dp0build.log"
 set solutionPath="%~dp0Microsoft.DotNet.Maestro.sln"
 set buildArgs=/nologo /maxcpucount /nodeReuse:false /v:minimal /clp:Summary /flp:Verbosity=detailed;LogFile=%logFile%;Append %*
 
 REM Add msbuild to the path for the current process.
 call "%VS140COMNTOOLS%\VsMSBuildCmd.bat"
+
+if not exist %cachedNuGet% (
+  echo Downloading NuGet.exe %nuGetVersion%.
+  if not exist %cachedNuGetDir% mkdir %cachedNuGetDir%
+  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest 'https://dist.nuget.org/win-x86-commandline/%nuGetVersion%/NuGet.exe' -OutFile '%cachedNuGet%'"
+)
+
+echo Restoring packages for %solutionPath%
+%cachedNuGet% restore %solutionPath%
 
 echo Building %solutionPath%
 echo msbuild %solutionPath% %buildArgs%> %logFile%
