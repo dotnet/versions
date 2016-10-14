@@ -9,12 +9,15 @@ using Newtonsoft.Json.Linq;
 
 namespace Microsoft.DotNet.Maestro.Models
 {
-    public class HandlerObject
+    public class Subscription
     {
-        public string MaestroAction { get; set; }
-        public TimeSpan? MaestroDelay { get; set; }
+        [JsonProperty(Required = Required.Always)]
+        public List<string> TriggerPaths { get; set; }
 
-        [JsonExtensionData]
-        public IDictionary<string, JToken> ExtensionData { get; set; }
+        [JsonProperty(Required = Required.Always)]
+        public string Action { get; set; }
+
+        public TimeSpan? Delay { get; set; }
+        public IDictionary<string, JToken> ActionArguments { get; set; }
     }
 }
