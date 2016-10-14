@@ -9,12 +9,14 @@
   },
   "subscriptions": [
     {
-      "path": "https://github.com/dotnet/versions/blob/master/Maestro/test/test-build-info.txt",
-      "handlers": [
-        {
-          "maestroAction": "test-build-definition",
-          "maestroDelay": "00:00:30",
-          "vsoSourceBranch": "eerhardt-patch-1",
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/Maestro/test/test-build-info.txt"
+      ],
+      "action": "test-build-definition",
+      "delay": "00:00:30",
+      "actionArguments": {
+        "vsoSourceBranch": "eerhardt-patch-1",
+        "vsoBuildParameters": {
           "SimpleProperty": "simple-value",
           "ArgumentList": [
             "-one one-value",
@@ -22,15 +24,13 @@
             "-three three-value"
           ]
         }
-      ]
+      }
     },
     {
-      "path": "https://github.com/dotnet/cli/blob/feature/msbuild/**/*",
-      "handlers": [
-        {
-          "maestroAction": "test-build-definition"
-        }
-      ]
+      "triggerPaths": [
+        "https://github.com/dotnet/cli/blob/feature/msbuild/**/*"
+      ],
+      "action": "test-build-definition"
     }
   ]
 }
