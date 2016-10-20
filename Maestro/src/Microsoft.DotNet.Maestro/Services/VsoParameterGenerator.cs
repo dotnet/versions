@@ -2,29 +2,31 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json.Linq;
 
 namespace Microsoft.DotNet.Maestro.Services
 {
     public static class VsoParameterGenerator
     {
-        public static string GetParameters(IDictionary<string, JToken> actionArguments)
+        public static string GetParameters(IDictionary<string, JToken> vsoParameters, Func<string, bool> filter)
         {
-            JToken vsoBuildParametersToken = null;
-            actionArguments?.TryGetValue("vsoBuildParameters", out vsoBuildParametersToken);
-
-            if (vsoBuildParametersToken == null)
+            if (vsoParameters == null || !vsoParameters.Any())
             {
                 return null;
             }
 
-            JObject parameterObject = (JObject)vsoBuildParametersToken;
-            foreach (KeyValuePair<string, JToken> parameter in parameterObject)
+            JObject parameterObject = new JObject();
+            foreach (KeyValuePair<string, JToken> parameter in vsoParameters)
             {
-                string value = GetValueString(parameter.Value);
+                if (filter(parameter.Key))
+                {
+                    string value = GetValueString(parameter.Value);
 
-                parameterObject[parameter.Key] = value;
+                    parameterObject[parameter.Key] = value;
+                }
             }
 
             return parameterObject.ToString();

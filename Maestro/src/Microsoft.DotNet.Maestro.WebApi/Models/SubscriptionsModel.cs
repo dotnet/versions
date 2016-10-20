@@ -21,14 +21,10 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
         private static HttpClient s_client = new HttpClient();
         private static JsonSerializerSettings s_settings = new JsonSerializerSettings()
         {
-            ContractResolver = new CamelCasePropertyNamesContractResolver(),
-            MissingMemberHandling = MissingMemberHandling.Error
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
 
-        [JsonProperty(Required = Required.Always)]
         public ActionsList Actions { get; set; }
-
-        [JsonProperty(Required = Required.Always)]
         public List<Subscription> Subscriptions { get; set; }
 
         public static async Task<SubscriptionsModel> CreateAsync()
@@ -48,11 +44,11 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
             List<ISubscriptionHandler> subscriptionHandlers = new List<ISubscriptionHandler>();
             HandlerResolver resolver = new HandlerResolver(this);
 
-            foreach (Subscription subscription in GetSubscriptions(modifiedFile))
+            foreach (HandlerObject handlerObject in GetHandlerObjects(modifiedFile))
             {
                 try
                 {
-                    ISubscriptionHandler subscriptionHandler = resolver.Resolve(subscription);
+                    ISubscriptionHandler subscriptionHandler = resolver.Resolve(handlerObject);
                     subscriptionHandlers.Add(subscriptionHandler);
                 }
                 catch (Exception e)
@@ -64,22 +60,24 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
             return subscriptionHandlers;
         }
 
-        private IEnumerable<Subscription> GetSubscriptions(ModifiedFileModel modifiedFile)
+        private IEnumerable<HandlerObject> GetHandlerObjects(ModifiedFileModel modifiedFile)
         {
-            return Subscriptions.Where(s => s.TriggerPaths.Any(p => Matches(p, modifiedFile)));
+            return Subscriptions
+                .Where(s => Matches(s, modifiedFile))
+                .SelectMany(s => s.Handlers);
         }
 
-        private bool Matches(string path, ModifiedFileModel modifiedFile)
+        private bool Matches(Subscription s, ModifiedFileModel modifiedFile)
         {
-            bool matches = string.Equals(path, modifiedFile.FullPath, StringComparison.OrdinalIgnoreCase);
+            bool matches = string.Equals(s.Path, modifiedFile.FullPath, StringComparison.OrdinalIgnoreCase);
             if (matches)
             {
                 return true;
             }
 
-            if (path.EndsWith("/**/*", StringComparison.OrdinalIgnoreCase))
+            if (s.Path.EndsWith("/**/*", StringComparison.OrdinalIgnoreCase))
             {
-                string rootPath = path.Substring(0, path.Length - 5);
+                string rootPath = s.Path.Substring(0, s.Path.Length - 5);
                 return modifiedFile.FullPath.StartsWith(rootPath, StringComparison.OrdinalIgnoreCase);
             }
 

@@ -25,31 +25,36 @@ namespace Microsoft.DotNet.Maestro.Handlers
         public string SourceBranch { get; set; }
         public string VsoParameters { get; set; }
 
-        public static ISubscriptionHandler TryCreate(JObject action, Subscription subscription)
+        public static ISubscriptionHandler TryCreate(JObject action, HandlerObject handlerObject)
         {
             if (action.Property("vsoInstance") != null)
             {
                 // It's a VSO build definition
                 return new VsoBuildHandler()
                 {
-                    Delay = subscription.Delay,
+                    Delay = handlerObject.MaestroDelay,
                     VsoInstance = action["vsoInstance"].ToString(),
                     VsoProject = action["vsoProject"].ToString(),
                     BuildDefinitionId = action["buildDefinitionId"].Value<int>(),
-                    SourceBranch = GetSourceBranch(subscription),
-                    VsoParameters = VsoParameterGenerator.GetParameters(subscription.ActionArguments)
+                    SourceBranch = GetSourceBranch(handlerObject),
+                    VsoParameters = VsoParameterGenerator.GetParameters(handlerObject.ExtensionData, FilterParameters)
                 };
             }
 
             return null;
         }
 
-        private static string GetSourceBranch(Subscription subscription)
+        private static string GetSourceBranch(HandlerObject handlerObject)
         {
             JToken sourceBranchToken = null;
-            subscription.ActionArguments?.TryGetValue("vsoSourceBranch", out sourceBranchToken);
+            handlerObject.ExtensionData?.TryGetValue("vsoSourceBranch", out sourceBranchToken);
 
             return sourceBranchToken?.ToString();
+        }
+
+        private static bool FilterParameters(string parameterKey)
+        {
+            return parameterKey != "vsoSourceBranch";
         }
 
         public Task Execute()
