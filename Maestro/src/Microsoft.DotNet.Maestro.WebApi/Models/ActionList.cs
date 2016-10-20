@@ -3,12 +3,16 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Models
 {
-    public class ActionsList : Dictionary<string, JToken>
+    public class ActionsList
     {
+        [JsonExtensionData]
+        private IDictionary<string, JToken> ActionNames { get; set; }
+
         public JObject GetAction(string name)
         {
             JObject action = null;
@@ -16,7 +20,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
             if (!string.IsNullOrEmpty(name))
             {
                 JToken token;
-                if (TryGetValue(name, out token))
+                if (ActionNames.TryGetValue(name, out token))
                 {
                     action = token as JObject;
                 }
