@@ -20,24 +20,19 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
             _subscriptionsModel = subscriptionsModel;
         }
 
-        public ISubscriptionHandler Resolve(HandlerObject handlerObject)
+        public ISubscriptionHandler Resolve(Subscription subscription)
         {
-            if (string.IsNullOrEmpty(handlerObject.MaestroAction))
-            {
-                throw new Exception("All Subscription Handler objects must contain a 'maestroAction' property.");
-            }
-
-            JObject action = _subscriptionsModel.Actions.GetAction(handlerObject.MaestroAction);
+            JObject action = _subscriptionsModel.Actions.GetAction(subscription.Action);
             if (action == null)
             {
-                throw new Exception($"Could not find a valid action with name '{handlerObject.MaestroAction}'.");
+                throw new Exception($"Could not find a valid action with name '{subscription.Action}'.");
             }
 
-            ISubscriptionHandler result = VsoBuildHandler.TryCreate(action, handlerObject);
+            ISubscriptionHandler result = VsoBuildHandler.TryCreate(action, subscription);
 
             if (result == null)
             {
-                throw new Exception($"Could not resolve a Handler for Subscription '{JsonConvert.SerializeObject(handlerObject)}'.");
+                throw new Exception($"Could not resolve a Handler for Subscription '{JsonConvert.SerializeObject(subscription)}'.");
             }
             return result;
         }
