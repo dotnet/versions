@@ -20,9 +20,9 @@ namespace Microsoft.DotNet.Maestro.SubscriptionValidation
             SubscriptionsModel subscriptionsModel = InitializeSubscriptionsModel();
             HandlerResolver resolver = new HandlerResolver(subscriptionsModel);
 
-            foreach (HandlerObject handlerObject in subscriptionsModel.Subscriptions.SelectMany(s => s.Handlers))
+            foreach (Subscription subscription in subscriptionsModel.Subscriptions)
             {
-                resolver.Resolve(handlerObject);
+                resolver.Resolve(subscription);
             }
         }
 
@@ -31,7 +31,7 @@ namespace Microsoft.DotNet.Maestro.SubscriptionValidation
         {
             SubscriptionsModel subscriptionsModel = InitializeSubscriptionsModel();
 
-            foreach (string path in subscriptionsModel.Subscriptions.Select(s => s.Path))
+            foreach (string path in subscriptionsModel.Subscriptions.SelectMany(s => s.TriggerPaths))
             {
                 Assert.True(Uri.IsWellFormedUriString(path, UriKind.Absolute), $"The path '{path}' is not valid.");
             }

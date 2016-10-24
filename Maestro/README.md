@@ -21,21 +21,22 @@ There may be more "action" types in the future, if the need presents itself.
 This JSON file holds the subscription information of which action to run when a specified file changes. The format
 of the file is as follows:
 
-- actions - A list of actions that can be performed in a build definitions that can be referenced in an event handler. Each object can have the
-following properties:
+- actions - An object containing actions that can be referenced in an event subscription. Each action object
+represents a VSO build definition and can have the following properties:
  - vsoInstance (required) - The domain name where the VSO tenant is hosted.
  - vsoProject (required) - The project the build defintion is contained in.
  - buildDefinitionId (required) - The integer id of the build defintion 
 
-- subscriptions - The array of subscription objects which reference the file to watch, and the list of actions or "handlers"
-to invoke whenever that file is updated. Each subscription object can have the following properties:
- - path (required) - The file that will trigger actions when it is updated.
- - handlers (required) - The array of subscription handler objects that will be triggered when the files changes.
- 
- Each subscription handler can have the following properties:
- - maestroAction (required) - The name of the Action object which contains the necessary information to
- queue a new VSO build.
- - Any other properties defined on the handler will be passed as variables to the queued VSO build using
- the name of the property as the name of the variable and the value of the property as the value of the variable.
-   - In order to make the json file more readable, Maestro supports the value of the property to be an array of strings that
-   get appended together to make up one long variable value string.
+- subscriptions - The array of subscription objects which specify the list of files to watch and the action
+to invoke whenever any of the files is updated. Each subscription object can have the following properties:
+  - triggerPaths (required) - The array of files for which Maestro will trigger the action when any are updated
+  (modified, added, or removed).
+  - action (required) - The name of the action object that will be triggered when any of the files changes.
+  - delay (optional) - The amount of time to wait before triggering the action.
+  - actionArguments (optional) - An object containing properties to be passed to the action. For VSO build actions,
+  the following properties are supported:
+    - vsoSourceBranch (optional) - The source branch for which to queue the build.
+    - vsoBuildParameters (optional) - An object containing properties to be passed as variables to the queued VSO
+    build using the name of the property as the name of the variable and the value of the property as the value of
+    the variable. In order to make the json file more readable, Maestro supports the value of the property to be
+    an array of strings that get appended together to make up one long variable value string.
