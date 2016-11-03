@@ -296,7 +296,14 @@
       "actionArguments": {
         "vsoBuildParameters": {
           "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
-          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','CLI_BRANCH=rel/1.0.0'"
+          "Arguments": [
+            "-EnvVars",
+            "'GITHUB_USER=dotnet-bot',",
+            "'GITHUB_EMAIL=dotnet-bot@microsoft.com',",
+            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
+            "'CLI_BRANCH=rel/1.0.0',",
+            "'CLI_RELEASE_MONIKER=preview3'"
+          ] 
         }
       }
     },
@@ -310,7 +317,14 @@
       "actionArguments": {
         "vsoBuildParameters": {
           "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
-          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','CLI_BRANCH=rel/1.0.0-preview2.1'"
+          "Arguments": [
+            "-EnvVars",
+            "'GITHUB_USER=dotnet-bot',",
+            "'GITHUB_EMAIL=dotnet-bot@microsoft.com',",
+            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
+            "'CLI_BRANCH=rel/1.0.0-preview2.1',",
+            "'CLI_RELEASE_MONIKER=preview2-1'"
+          ]
         }
       }
     },
