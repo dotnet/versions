@@ -1,0 +1,56 @@
+{
+    "product": "netsdk",
+    "name": "cli",
+    "displayName": ".NET CLI",
+    "repository": "dotnet/cli",
+    "sortOrder": 50,
+    "sources": [
+        {
+            "name": "official/cli/rel/1.0.0/",
+            "branch": "rel/1.0.0",
+            "milestone": "1.1.0",
+            "release": "1.1.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        },
+        {
+            "name": "official/cli/rel/1.0.0-preview2/",
+            "branch": "rel/1.0.0-preview2",
+            "milestone": "1.0.x",
+            "release": "1.0.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        }
+    ],
+    "definitions": {
+        "types": [
+            {
+                "name": "build/product/",
+                "displayName": "Product Build",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.subType",
+                        "displayName": "Build Type"
+                    },
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    },
+                    {
+                        "name": "job.properties.platform",
+                        "displayName": "Platform"
+                    }
+                ],
+                "noWorkItems": true
+            }
+        ]
+    }
+}

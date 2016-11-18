@@ -1,0 +1,56 @@
+{
+    "product": "netcore",
+    "name": "roslyn",
+    "displayName": "Roslyn",
+    "repository": "dotnet/roslyn",
+    "sortOrder": 30,
+    "sources": [
+        {
+            "name": "official/roslyn/master/",
+            "branch": "master",
+            "milestone": "2.1",
+            "release": "Master",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        },
+        {
+            "name": "official/roslyn/dev15-preview-5/",
+            "branch": "dev15-preview-5",
+            "milestone": "2.0 (Preview 5)",
+            "release": "1.1",
+            "types": {
+                "$ref": "#/definitions/types"
+            },
+        }
+    ],
+    "definitions": {
+        "types": [
+            {
+                "name": "build/product/",
+                "displayName": "Product Build",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.subType",
+                        "displayName": "Build Type"
+                    },
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    },
+                    {
+                        "name": "job.properties.platform",
+                        "displayName": "Platform"
+                    }
+                ],
+                "noWorkItems": true
+            }
+        ]
+    }
+}
