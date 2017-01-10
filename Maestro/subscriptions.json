@@ -36,12 +36,6 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 4188
     },
-    // A build definition that will update the dependencies of the CLI repo
-    "cli-dependencies": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 808
-    },
     // A build definition that will trigger an official build of the CLI repo
     "cli-pipebuild": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -62,14 +56,6 @@
     }
   },
   "subscriptions": [
-    // Update dependencies in cli
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt"
-      ],
-      "action": "cli-dependencies",
-      "delay": "00:05:00"
-    },
     // Update dependencies in CoreCLR master
     {
       "triggerPaths": [
