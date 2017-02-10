@@ -36,6 +36,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 4188
     },
+    // A build definition that will update the dependencies of the CLI repo
+    "cli-dependencies": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 808
+    },
     // A build definition that will trigger an official build of the CLI repo on rel/1.0.0
     "cli-pipebuild-rel-1.0.0": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -398,6 +404,19 @@
             "/p:NotifyGitHubUsers=dotnet/wcf-contrib",
             "/verbosity:Normal"
           ]
+        }
+      }
+    },
+    // Update dependencies in cli master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/tree/master/build-info/dotnet/core-setup/master/Latest_Packages.txt"
+      ],
+      "action": "cli-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli"
         }
       }
     },
