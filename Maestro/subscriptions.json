@@ -42,12 +42,6 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     },
-    // A build definition that will trigger an official build of the CLI repo on rel/1.0.0
-    "cli-pipebuild-rel-1.0.0": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 5248
-    },
     // A build definition capable of running any .ps1 script in the dotnet-docker-nightly repo
     "dotnet-docker-nightly-general": {
       "vsoInstance": "mseng.visualstudio.com",
@@ -419,13 +413,6 @@
           "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli"
         }
       }
-    },
-    // Trigger official build of cli rel/1.0.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/cli/blob/rel/1.0.0/**/*"
-      ],
-      "action": "cli-pipebuild-rel-1.0.0"
     },
     // Trigger official build of core-setup master
     {
