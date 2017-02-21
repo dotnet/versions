@@ -50,9 +50,9 @@
     },
     // A build definition capable of running any .ps1 script in the dotnet-docker-nightly repo
     "dotnet-docker-nightly-general": {
-      "vsoInstance": "mseng.visualstudio.com",
-      "vsoProject": "dotnetcore",
-      "buildDefinitionId": 3784
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 5543
     },
     // A build definition capable of running any .ps1 script in the WCF repo. By default, the master branch.
     "wcf-general": {
@@ -334,48 +334,6 @@
             "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
             "'CLI_BRANCH=rel/1.0.0',",
             "'CLI_RELEASE_MONIKER=rc4'"
-          ]
-        }
-      }
-    },
-    // Update cli rel/1.0.0-preview2 dependencies in dotnet-docker-nightly master
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0-preview2/Latest_Packages.txt"
-      ],
-      "action": "dotnet-docker-nightly-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
-          "Arguments": [
-            "-EnvVars",
-            "'GITHUB_USER=dotnet-bot',",
-            "'GITHUB_EMAIL=dotnet-bot@microsoft.com',",
-            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
-            "'CLI_BRANCH=rel/1.0.0-preview2',",
-            "'CLI_RELEASE_MONIKER=preview2'"
-          ]
-        }
-      }
-    },
-    // Update cli rel/1.0.0-preview2.1 dependencies in dotnet-docker-nightly master
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0-preview2.1/Latest_Packages.txt"
-      ],
-      "action": "dotnet-docker-nightly-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
-          "Arguments": [
-            "-EnvVars",
-            "'GITHUB_USER=dotnet-bot',",
-            "'GITHUB_EMAIL=dotnet-bot@microsoft.com',",
-            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
-            "'CLI_BRANCH=rel/1.0.0-preview2.1',",
-            "'CLI_RELEASE_MONIKER=preview2-1'"
           ]
         }
       }
