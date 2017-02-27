@@ -311,7 +311,28 @@
         }
       }
     },
-    // Update cli rel/1.0.0 dependencies in dotnet-docker-nightly master
+    // Update cli rel/1.0.1 dependencies in dotnet-docker-nightly master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.1/Latest_Packages.txt"
+      ],
+      "action": "dotnet-docker-nightly-general",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
+          "Arguments": [
+            "-EnvVars",
+            "'GITHUB_USER=dotnet-bot',",
+            "'GITHUB_EMAIL=dotnet-bot@microsoft.com',",
+            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
+            "'CLI_BRANCH=rel/1.0.1',",
+            "'CLI_RELEASE_MONIKER=rc4'"
+          ]
+        }
+      }
+    },
+    // Update cli rel/1.0.0 dependencies in dotnet-docker-nightly sdk-1.0.0
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/rel/1.0.0/Latest_Packages.txt"
@@ -319,6 +340,7 @@
       "action": "dotnet-docker-nightly-general",
       "delay": "00:05:00",
       "actionArguments": {
+        "vsoSourceBranch": "sdk-1.0.0",
         "vsoBuildParameters": {
           "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
           "Arguments": [
