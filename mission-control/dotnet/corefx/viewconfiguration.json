@@ -1,0 +1,208 @@
+{
+    "product": "netcore",
+    "name": "corefx",
+    "displayName": "CoreFx",
+    "repository": "dotnet/corefx",
+    "sortOrder": 10,
+    "sources": [
+        {
+            "name": "official/corefx/master/",
+            "branch": "master",
+            "milestone": "1.2.0",
+            "release": "Master",
+            "types": {
+                "$ref": "#/definitions/types"
+            },
+            "externalLinks": [
+                {
+                    "name": "Performance Results",
+                    "url": "https://aka.ms/dotnet-perf-bi-corefx"
+                }
+            ]
+        },
+        {
+            "name": "official/corefx/release/1.0.0/",
+            "branch": "release/1.0.0",
+            "milestone": "1.0.x",
+            "release": "1.0.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        },
+        {
+            "name": "official/corefx/release/1.1.0/",
+            "branch": "release/1.1.0",
+            "milestone": "1.1.0",
+            "release": "1.1.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            },
+            "externalLinks": [
+                {
+                    "name": "Performance Results",
+                    "url": "https://aka.ms/dotnet-perf-bi-corefx"
+                }
+            ]
+        }
+    ],
+    "definitions": {
+        "types": [
+            {
+                "name": "build/product/",
+                "displayName": "Product Build",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.subType",
+                        "displayName": "Build Type"
+                    },
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    },
+                    {
+                        "name": "job.properties.platform",
+                        "displayName": "Platform"
+                    }
+                ],
+                "noWorkItems": true
+            },
+            {
+                "name": "build/tests/",
+                "displayName": "Test Build",
+                "columns": [
+                    {
+                        "name": "job.properties.targetQueue",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    },
+                    {
+                        "name": "job.properties.TargetTestCategory",
+                        "displayName": "Test Category"
+                    }
+                ],
+                "noWorkItems": true
+            },
+            {
+                "name": "build/publish/",
+                "displayName": "Publish",
+                "columns": [
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/functional/cli/",
+                "displayName": "Core Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/functional/uwp/",
+                "displayName": "UWP F5 Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/functional/ilc/",
+                "displayName": "UWP ILC Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/functional/desktop/cli/",
+                "displayName": "Full Framework Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/functional/perf/cli/",
+                "displayName": "Performance Run",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "product": "components",
+    "name": "wcf",
+    "displayName": "WCF",
+    "repository": "dotnet/wcf",
+    "sortOrder": 60,
+    "sources": [
+        {
+            "name": "official/wcf/master/",
+            "branch": "master",
+            "milestone": "1.2.0",
+            "release": "Master",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        },
+        {
+            "name": "official/wcf/release/1.0.0/",
+            "branch": "release/1.0.0",
+            "milestone": "1.0.x",
+            "release": "1.0.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        },
+        {
+            "name": "official/wcf/release/1.1.0/",
+            "branch": "release/1.1.0",
+            "milestone": "1.1.0",
+            "release": "1.1.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        }
+    ],
+    "definitions": {
+        "types": [
+            {
+                "name": "build/product/",
+                "displayName": "Product Build",
+                "columns": [
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    }
+                ],
+                "noWorkItems": true
+            },
+            {
+                "name": "build/tests/",
+                "displayName": "Test Build",
+                "columns": [
+                    {
+                        "name": "job.properties.targetQueue",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    }
+                ],
+                "noWorkItems": true
+            },
+            {
+                "name": "build/publish/",
+                "displayName": "Publish",
+                "columns": [
+                    {
+                        "name": "job.properties.ConfigurationGroup",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/scenario/selfhosted/",
+                "displayName": "Self Hosted Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/scenario/iishosted/",
+                "displayName": "IIS Hosted Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Architecture"
+                    },
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/uwpilc/selfhosted/",
+                "displayName": "UWP ILC Self Hosted Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            },
+            {
+                "name": "test/uwpilc/iishosted/",
+                "displayName": "UWP ILC IIS Hosted Tests",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.configuration",
+                        "displayName": "Configuration"
+                    }
+                ]
+            }
+        ]
+    }
+}

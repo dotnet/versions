@@ -1,0 +1,90 @@
+{
+	// At any point in this file, a {"$ref": "#/reference/path"} can
+	// be substituted for any value (usually it's used for types).
+	
+	// You can preview how your changes will affect MC by adding
+	// ?_vcb=<commit/branch>. Where commit/branch is a commit or
+	// branch in the dotnet/versions repository containing
+	// proposed changes. ex. https://mc.dot.net/?_vcb=my-test-branch
+	// Be sure to put it _before_ the # character
+
+    "product": "example",
+        // This should be the product name to associate with this
+        // repository on the site. A "product" is a set of things that
+        // all ship together, and all should have the same value. At
+        // the moment, the values for this are "netcore", "netsdk"
+        // and "components"
+    "name": "example-library",
+        // This is an identifier for this repository. Usually this
+        // is the bare repository name from github "corefx", or "coreclr"
+    "displayName": "Example Library",
+        // This is a friendly readable string to be displayed on
+        // the site whenever this repository is referenced
+    "repository": "dotnet/example-library",
+        // The github repository name,
+    "sortOrder": 40,
+        // (Optional) This is used to sort the list of repositories
+        // whenever they are displayed together. If left out, defaults
+        // to 0, and all things with the same order are sorted
+        // alphabetically by name
+    "sources": [
+        // A list of sources of build/test information in Helix
+        // to be displayed as official builds/tests runs
+	{
+		"name": "official/corefx/release/1.0.0/",
+			// Source name from a submitted Helix job, sources
+			// can be seen in the "Private Runs" tab of mc for
+			// personal runs to find the correct anwser for
+			// existing runs,
+		"branch": "release/1.0.0",
+			// The github branch that this source represents
+		"milestone": "1.1.0",
+			// The github milestone this source is tied to
+			// for issues and end dates,
+		"release": "1.1.0",
+			// The product release name is being shipped. This
+			// value is shared among all repositories in the
+			// same "product" (see above) to group builds/tests/etc
+			// into. It is generally related to the milestone,
+			// but that's not required, as long as all repositories
+			// in a product agree on a string,
+		"types": [
+		{
+			"name":  "test/functional/cli/",
+				// Type name from a submitted Helix job, sources
+				// can be seen in the "Private Runs" tab of mc for
+				// personal runs to find the correct anwser for
+				// existing runs,
+			"displayName": "Core Tests",
+				// Friendly text to display for this types
+			"columns": [
+				// An array of columns to group results by
+				{
+					"name": "job.properties.operatingSystem",
+						// Property sent into the Helix system
+						// as "property" data associated with the job
+						// All jobs that share the same value for
+						// this key will be grouped together
+					"displayName": "OS",
+						// Friendly display name for the column
+				}
+			"otherProperties": [
+				// Same format of "columns"
+				// Used to separate runs that share the same
+				// "column" values after clicking into a grouped set
+			]
+		}, ...]
+		"noWorkItems": true/false,
+			// (Optional) This is set if the type does not contain
+			// indiviual workitems (like a "build" is just one
+			// large build unit, with no breakdown by workitem).
+			// This will cause some intermediate pages to be skipped
+			// while clicking through on the site when set
+		}
+	}, ...],
+	"definitions":
+		// (Optional) These are placeholders that can be referenced
+		// using the "$ref" syntax above, for when large objects
+		// are repeated multiple types, usually the "types"
+		// field is used for this
+}

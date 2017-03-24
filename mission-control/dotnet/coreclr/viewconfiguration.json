@@ -1,0 +1,83 @@
+{
+    "product": "netcore",
+    "name": "coreclr",
+    "displayName": "CoreCLR",
+    "repository": "dotnet/coreclr",
+    "sortOrder": 20,
+    "sources": [
+        {
+            "name": "official/coreclr/master/",
+            "branch": "master",
+            "milestone": "1.2.0",
+            "release": "Master",
+            "types": {
+                "$ref": "#/definitions/types"
+            },
+            "externalLinks": [
+                {
+                    "name": "Performance Results",
+                    "url": "https://aka.ms/dotnet-perf-bi-coreclr"
+                }
+            ]
+        },
+        {
+            "name": "official/coreclr/release/1.0.0/",
+            "branch": "release/1.0.0",
+            "milestone": "1.0.x",
+            "release": "1.0.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            }
+        },
+        {
+            "name": "official/coreclr/release/1.1.0/",
+            "branch": "release/1.1.0",
+            "milestone": "1.1.0",
+            "release": "1.1.0",
+            "types": {
+                "$ref": "#/definitions/types"
+            },
+            "externalLinks": [
+                {
+                    "name": "Performance Results",
+                    "url": "https://aka.ms/dotnet-perf-bi-coreclr"
+                }
+            ]
+        }
+    ],
+    "definitions": {
+        "types": [
+            {
+                "name": "build/product/",
+                "displayName": "Product Build",
+                "columns": [
+                    {
+                        "name": "job.properties.operatingSystem",
+                        "displayName": "OS"
+                    }
+                ],
+                "otherProperties": [
+                    {
+                        "name": "job.properties.subType",
+                        "displayName": "Build Type"
+                    },
+                    {
+                        "name": "job.properties.configurationGroup",
+                        "displayName": "Configuration"
+                    },
+                    {
+                        "name": "job.properties.architecture",
+                        "displayName": "Platform"
+                    }
+                ],
+                "noWorkItems": true
+            },
+            {
+                "name": "build/publish/",
+                "displayName": "Publish",
+                "noWorkItems": true,
+                "columns": []
+            }
+        ]
+    }
+}
