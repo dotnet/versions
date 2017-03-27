@@ -332,33 +332,6 @@
         }
       }
     },
-    // Update dependencies in WCF master
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/master/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/master/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/master/Latest.txt"
-      ],
-      "action": "wcf-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "ScriptFileName": "build-managed.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-bot",
-            "/p:GitHubEmail=dotnet-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=wcf",
-            "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/wcf-contrib",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
     // Update dependencies in cli master
     {
       "triggerPaths": [
