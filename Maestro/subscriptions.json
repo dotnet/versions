@@ -6,6 +6,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1084
     },
+    // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
+    "corefxlab-general": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 5944
+    },
     // A build definition capable of running any .ps1 script in the CoreCLR repo. By default, the master branch.
     "coreclr-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -231,6 +237,27 @@
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/1.1.0",
             "/verbosity:Normal"
+          ]
+        }
+      }
+    },
+    // Update dependencies in CoreFxLab master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/master/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/master/Latest.txt"
+      ],
+      "action": "corefxlab-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "ScriptFileName": "scripts\\update-dependencies.ps1",
+          "Arguments": [
+            "-EnvVars",
+            "'GITHUB_USER=dotnet-bot',",
+            "'GITHUB_EMAIL=dotnet-bot@microsoft.com',",
+            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])',",
+            "'GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/corefxlab-contrib'"
           ]
         }
       }
