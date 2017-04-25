@@ -449,6 +449,22 @@
         }
       }
     },
+    // Update dependencies in cli release/2.0.0
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/2.0.0/Latest_Packages.txt"
+      ],
+      "action": "cli-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.0.0",
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
+          "GITHUB_UPSTREAM_BRANCH": "release/2.0.0",
+          "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.0.0"
+        }
+      }
+    },
     // Trigger official build of core-setup master
     {
       "triggerPaths": [
@@ -462,6 +478,6 @@
         "https://github.com/dotnet/core-setup/blob/release/2.0.0/**/*"
       ],
       "action": "core-setup-pipebuild-release-2.0.0"
-    },
+    }
   ]
 }
