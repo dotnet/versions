@@ -24,12 +24,6 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 5610
     },
-    // A build definition that will trigger an official build of the core-setup repo on master
-    "core-setup-pipebuild-master": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 3160
-    },
     // A build definition that will trigger an official build of the core-setup repo on release/1.0.0
     "core-setup-pipebuild-release-1.0.0": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -447,13 +441,6 @@
           "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.0.0"
         }
       }
-    },
-    // Trigger official build of core-setup master
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/core-setup/blob/master/**/*"
-      ],
-      "action": "core-setup-pipebuild-master"
     }
   ]
 }
