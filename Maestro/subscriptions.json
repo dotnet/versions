@@ -318,6 +318,32 @@
         }
       }
     },
+    // Update dependencies in core-setup master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/master/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/master/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/master/Latest.txt"
+      ],
+      "action": "core-setup-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "ScriptFileName": "build.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=core-setup",
+            "/p:ProjectRepoBranch=master",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
     // Update dependencies in core-setup release/1.0.0
     {
       "triggerPaths": [
