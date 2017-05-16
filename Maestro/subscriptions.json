@@ -469,6 +469,20 @@
           "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.0.0"
         }
       }
+    },
+    // Trigger official build of core-setup release/1.0.0
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/core-setup/blob/release/1.0.0/**/*"
+      ],
+      "action": "core-setup-pipebuild-release-1.0.0"
+    },
+    // Trigger official build of core-setup release/1.1.0
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/core-setup/blob/release/1.1.0/**/*"
+      ],
+      "action": "core-setup-pipebuild-release-1.1.0"
     }
   ]
 }
