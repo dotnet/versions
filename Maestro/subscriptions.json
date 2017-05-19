@@ -394,8 +394,19 @@
       "actionArguments": {
         "vsoSourceBranch": "release/2.0.0",
         "vsoBuildParameters": {
-          "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
-          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-bot','GITHUB_EMAIL=dotnet-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetBotGitHubPassword`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
+          "ScriptFileName": "build.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-bot",
+            "/p:GitHubEmail=dotnet-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetBotGitHubPassword'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=core-setup",
+            "/p:ProjectRepoBranch=release/2.0.0",
+            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/verbosity:Normal"
+          ]
         }
       }
     },
