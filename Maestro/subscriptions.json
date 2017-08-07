@@ -6,6 +6,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1084
     },
+    // A 'build' that mirrors corefx github into VSO
+    "corefx-mirror": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 1119
+    },
     // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
     "corefxlab-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -297,6 +303,66 @@
             "/verbosity:Normal"
           ]
         }
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/master/**/*",
+      ],
+      "action": "corefx-mirror",
+      "actionArguments": {
+        "vsoSourceBranch": "master"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/1.0.0/**/*",
+      ],
+      "action": "corefx-mirror",
+      "actionArguments": {
+        "vsoSourceBranch": "release/1.0.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/1.1.0/**/*",
+      ],
+      "action": "corefx-mirror",
+      "actionArguments": {
+        "vsoSourceBranch": "release/1.1.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/2.0.0/**/*",
+      ],
+      "action": "corefx-mirror",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.0.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/uwp6.0/**/*",
+      ],
+      "action": "corefx-mirror",
+      "actionArguments": {
+        "vsoSourceBranch": "release/uwp6.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/dev/defaultintf/**/*",
+      ],
+      "action": "corefx-mirror",
+      "actionArguments": {
+        "vsoSourceBranch": "dev/defaultintf"
       }
     },
     // Update dependencies in CoreFX release/2.0.0
