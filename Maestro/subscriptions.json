@@ -308,9 +308,62 @@
     // Mirror corefx changes into VSO
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/master/**/*",
+        "https://github.com/dotnet/corefx/blob/master/**/*",
       ],
       "action": "corefx-mirror"
+      "actionArguments": {
+        "vsoSourceBranch": "master"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/1.0.0/**/*",
+      ],
+      "action": "corefx-mirror"
+      "actionArguments": {
+        "vsoSourceBranch": "release/1.0.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/1.1.0/**/*",
+      ],
+      "action": "corefx-mirror"
+      "actionArguments": {
+        "vsoSourceBranch": "release/1.1.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/2.0.0/**/*",
+      ],
+      "action": "corefx-mirror"
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.0.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/release/uwp6.0/**/*",
+      ],
+      "action": "corefx-mirror"
+      "actionArguments": {
+        "vsoSourceBranch": "release/uwp6.0"
+      }
+    },
+    // Mirror corefx changes into VSO
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/blob/dev/defaultintf/**/*",
+      ],
+      "action": "corefx-mirror"
+      "actionArguments": {
+        "vsoSourceBranch": "dev/defaultintf"
+      }
     },
     // Update dependencies in CoreFX release/2.0.0
     {
