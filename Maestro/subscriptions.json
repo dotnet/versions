@@ -584,6 +584,27 @@
         }
       }
     },
+    // Update cli master dependencies in dotnet-docker-nightly master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/cli/master/Latest_Packages.txt"
+      ],
+      "action": "dotnet-docker-nightly-general",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "ScriptFileName": "update-dependencies\\update-dependencies.ps1",
+          "Arguments": [
+            "-EnvVars",
+            "'GITHUB_USER=dotnet-maestro-bot',",
+            "'GITHUB_EMAIL=dotnet-maestro-bot@microsoft.com',",
+            "'GITHUB_PASSWORD=`$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])',",
+            "'CLI_BRANCH=master',",
+            "'CLI_RELEASE_PREFIX=2.1.0'"
+          ]
+        }
+      }
+    },
     // Update cli release/2.0.0 dependencies in dotnet-docker-nightly master
     {
       "triggerPaths": [
