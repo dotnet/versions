@@ -60,6 +60,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 5543
     },
+    // A build definition that will trigger an official build of the dotnet-docker-nightly repo
+    "dotnet-docker-nightly-pipebuild": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 6226
+    },
     // A build definition capable of running any .ps1 script in the WCF repo. By default, the master branch.
     "wcf-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -625,6 +631,16 @@
           ]
         }
       }
+    },
+    // Trigger official build of the dotnet-docker-nightly repo when a base image is changed
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/stretch-scm.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/jessie.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt"
+      ],
+      "action": "dotnet-docker-nightly-pipebuild"
     },
     // Update dependencies in cli master
     {
