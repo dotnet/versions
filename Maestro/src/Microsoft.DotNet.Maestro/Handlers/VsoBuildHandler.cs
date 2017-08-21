@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.DotNet.Maestro.Models;
 using Microsoft.DotNet.Maestro.Services;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace Microsoft.DotNet.Maestro.Handlers
 {
@@ -25,7 +26,7 @@ namespace Microsoft.DotNet.Maestro.Handlers
         public string SourceBranch { get; set; }
         public string VsoParameters { get; set; }
 
-        public static ISubscriptionHandler TryCreate(JObject action, Subscription subscription)
+        public static ISubscriptionHandler TryCreate(JObject action, Subscription subscription, IDictionary<string, string> parameterSubstitutions)
         {
             if (action.Property("vsoInstance") != null)
             {
@@ -37,7 +38,7 @@ namespace Microsoft.DotNet.Maestro.Handlers
                     VsoProject = action["vsoProject"].ToString(),
                     BuildDefinitionId = action["buildDefinitionId"].Value<int>(),
                     SourceBranch = GetSourceBranch(subscription),
-                    VsoParameters = VsoParameterGenerator.GetParameters(subscription.ActionArguments)
+                    VsoParameters = VsoParameterGenerator.GetParameters(subscription.ActionArguments, parameterSubstitutions)
                 };
             }
 
