@@ -10,6 +10,10 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
     {
         public string FullPath { get; set; }
 
+        public string RepoName { get; set; }
+
+        public string BranchName { get; set; }
+
         public static bool TryParse(string repoFullName, string refSpec, string fullPath, out ModifiedFileModel model)
         {
             // the file path goes like the following:
@@ -28,6 +32,8 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
 
             model = new ModifiedFileModel()
             {
+                RepoName = repoFullName,
+                BranchName = branchName,
                 FullPath = "https://github.com/" + string.Join("/", repoFullName, "blob", branchName, fullPath)
             };
 

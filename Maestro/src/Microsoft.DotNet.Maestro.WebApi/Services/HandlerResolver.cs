@@ -8,6 +8,7 @@ using Microsoft.DotNet.Maestro.Models;
 using Microsoft.DotNet.Maestro.WebApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Services
 {
@@ -20,7 +21,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
             _subscriptionsModel = subscriptionsModel;
         }
 
-        public ISubscriptionHandler Resolve(Subscription subscription)
+        public ISubscriptionHandler Resolve(Subscription subscription, IDictionary<string, string> parameterSubstitutions = null)
         {
             JObject action = _subscriptionsModel.Actions.GetAction(subscription.Action);
             if (action == null)
@@ -28,7 +29,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Services
                 throw new Exception($"Could not find a valid action with name '{subscription.Action}'.");
             }
 
-            ISubscriptionHandler result = VsoBuildHandler.TryCreate(action, subscription);
+            ISubscriptionHandler result = VsoBuildHandler.TryCreate(action, subscription, parameterSubstitutions);
 
             if (result == null)
             {

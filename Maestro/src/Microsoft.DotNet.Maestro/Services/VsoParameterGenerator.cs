@@ -9,7 +9,7 @@ namespace Microsoft.DotNet.Maestro.Services
 {
     public static class VsoParameterGenerator
     {
-        public static string GetParameters(IDictionary<string, JToken> actionArguments)
+        public static string GetParameters(IDictionary<string, JToken> actionArguments, IDictionary<string, string> parameterSubstitutions)
         {
             JToken vsoBuildParametersToken = null;
             actionArguments?.TryGetValue("vsoBuildParameters", out vsoBuildParametersToken);
@@ -23,6 +23,14 @@ namespace Microsoft.DotNet.Maestro.Services
             foreach (KeyValuePair<string, JToken> parameter in parameterObject)
             {
                 string value = GetValueString(parameter.Value);
+
+                if (parameterSubstitutions != null)
+                {
+                    foreach (var sub in parameterSubstitutions)
+                    {
+                        value = value.Replace(sub.Key, sub.Value);
+                    }
+                }
 
                 parameterObject[parameter.Key] = value;
             }

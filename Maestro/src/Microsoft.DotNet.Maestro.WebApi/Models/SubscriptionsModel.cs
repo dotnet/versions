@@ -52,7 +52,14 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
             {
                 try
                 {
-                    ISubscriptionHandler subscriptionHandler = resolver.Resolve(subscription);
+                    Dictionary<string, string> triggerSubs = new Dictionary<string, string>()
+                    {
+                        { "<trigger-repo>", modifiedFile.RepoName},
+                        { "<trigger-branch>", modifiedFile.BranchName },
+                        { "<trigger-path>", modifiedFile.FullPath }
+                    };
+
+                    ISubscriptionHandler subscriptionHandler = resolver.Resolve(subscription, triggerSubs);
                     subscriptionHandlers.Add(subscriptionHandler);
                 }
                 catch (Exception e)
