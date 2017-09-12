@@ -77,6 +77,11 @@
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 4226
+    },
+    "dotnet-branch-merge-mirror": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 7168
     }
   },
   "subscriptions": [
@@ -813,6 +818,18 @@
             "/verbosity:Normal"
           ]
         }
+      }
+    },
+    // Merge mirrored branches
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/**/*",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/**/*",
+      ],
+      "action": "dotnet-branch-merge-mirror",
+      "actionArguments": {
+        "GithubRepo": "<trigger-repo>",
+        "BranchToMirror": "<trigger-branch>"
       }
     }
   ]
