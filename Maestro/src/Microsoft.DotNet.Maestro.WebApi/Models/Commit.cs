@@ -9,6 +9,8 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
 {
     public class Commit
     {
+        public string id { get; set; }
+
         public string[] added { get; set; }
         public string[] modified { get; set; }
         public string[] removed { get; set; }
