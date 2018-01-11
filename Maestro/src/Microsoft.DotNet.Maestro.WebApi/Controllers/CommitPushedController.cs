@@ -38,7 +38,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
                         foreach (string changedFilePath in c.GetAllChangedFiles())
                         {
                             ModifiedFileModel modifiedFile;
-                            if (!ModifiedFileModel.TryParse(e.Repository.Full_Name, e.Ref, changedFilePath, out modifiedFile))
+                            if (!ModifiedFileModel.TryParse(e.Repository.Full_Name, e.Ref, changedFilePath, c, out modifiedFile))
                             {
                                 Trace.TraceWarning($"Skipping file '{changedFilePath}'");
                                 continue;

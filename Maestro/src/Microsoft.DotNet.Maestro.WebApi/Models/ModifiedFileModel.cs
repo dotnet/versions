@@ -14,7 +14,14 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
 
         public string BranchName { get; set; }
 
-        public static bool TryParse(string repoFullName, string refSpec, string fullPath, out ModifiedFileModel model)
+        public string CommitId { get; set; }
+
+        public static bool TryParse(
+            string repoFullName,
+            string refSpec,
+            string fullPath,
+            Commit commit,
+            out ModifiedFileModel model)
         {
             // the file path goes like the following:
             // https://github.com/<owner>/<repo>/blob/<branch>/<fullPath>
@@ -34,7 +41,8 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
             {
                 RepoName = repoFullName,
                 BranchName = branchName,
-                FullPath = "https://github.com/" + string.Join("/", repoFullName, "blob", branchName, fullPath)
+                FullPath = "https://github.com/" + string.Join("/", repoFullName, "blob", branchName, fullPath),
+                CommitId = commit.id
             };
 
             return true;
