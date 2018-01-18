@@ -88,6 +88,12 @@
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 7168
+    },
+    // Performs final publish steps for an orchestrated build based on its build output manifest on dotnet/versions.
+    "DotNet-Orchestration-Final-Publish-Executor": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 8228
     }
   },
   "subscriptions": [
@@ -852,6 +858,60 @@
       "actionArguments": {
         "GithubRepo": "<trigger-repo>",
         "BranchToMirror": "<trigger-branch>"
+      }
+    },
+    // Orchestrated build final publish in master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/master/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalPackagePublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/master/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalBlobPublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
+        }
+      }
+    },
+    // Orchestrated build final publish in release/2.1
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalPackagePublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalBlobPublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
+        }
       }
     }
   ]
