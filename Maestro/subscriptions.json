@@ -6,11 +6,11 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1084
     },
-    // A 'build' that mirrors corefx github into VSO
-    "corefx-mirror": {
+    // A 'build' that mirrors changes from github into VSTS
+    "github-vsts-mirror": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
-      "buildDefinitionId": 1119
+      "buildDefinitionId": 1308884
     },
     // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
     "corefxlab-general": {
@@ -337,16 +337,17 @@
         }
       }
     },
-    // Mirror corefx changes into VSO
+    // Mirror github changes to vsts
     {
       "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/master/**/*",
         "https://github.com/dotnet/corefx/blob/release/**/*",
         "https://github.com/dotnet/corefx/blob/dev/defaultintf/**/*"
       ],
-      "action": "corefx-mirror",
+      "action": "github-vsts-mirror",
       "actionArguments": {
-        "vsoSourceBranch": "<trigger-branch>"
+        "GithubRepo": "<trigger-repo>",
+        "BranchToMirror": "<trigger-branch>"
       }
     },
     // Update dependencies in CoreFX release/2.0.0
