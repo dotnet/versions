@@ -352,8 +352,10 @@
       ],
       "action": "github-vsts-mirror",
       "actionArguments": {
-        "GithubRepo": "<trigger-repo>",
-        "BranchToMirror": "<trigger-branch>"
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "BranchToMirror": "<trigger-branch>"
+        }
       }
     },
     // Update dependencies in CoreFX release/2.0.0
@@ -815,8 +817,10 @@
       ],
       "action": "dotnet-branch-merge-mirror",
       "actionArguments": {
-        "GithubRepo": "<trigger-repo>",
-        "BranchToMirror": "<trigger-branch>"
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "BranchToMirror": "<trigger-branch>"
+        }
       }
     },
     // Orchestrated build final publish in master
