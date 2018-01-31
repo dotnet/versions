@@ -850,7 +850,9 @@
         "vsoBuildParameters": {
           "PB_FinalTargets": "/t:FinalPackagePublish",
           "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>"
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "PB_MyGetBaseEndpoint": "https://dotnet.myget.org/F/dotnet-core",
+          "PB_CentralBlobFeedUrl": "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json"
         }
       }
     },
@@ -863,7 +865,9 @@
         "vsoBuildParameters": {
           "PB_FinalTargets": "/t:FinalBlobPublish",
           "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>"
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "DotNetCliContainerName": "dotnet",
+          "DotNetCliChecksumsContainerName": "dotnet"
         }
       }
     },
