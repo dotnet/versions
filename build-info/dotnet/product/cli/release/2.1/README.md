@@ -1,4 +1,4 @@
-## Product build: cli '20180201-02-1344692'
+## Product build: cli '20180201-02-1346034'
 
 ### SDK Installers and Binaries
 
@@ -165,3 +165,14 @@ RedHat/Fedora (x64)   | [Installer (rpm)][aspnetcore-redhat-x64-rpm]
  * coreclr '20180201-03' on 'release/2.1' (89f1279cbb118d999280352b3aa68f5169789a56)
  * corefx '20180201-03' on 'release/2.1' (e1f6f2be6b95097182eac5d936d4c53a2a1452ab)
  * core-setup '20180201-01' on 'release/2.1' (ed5e11180c2cfba90871c51f71f14fa71eaafdd0)
+ * dotnet/CliCommandLineParser '20180201.2' on 'refs/heads/release/2.1.3xx' (08181c4bbb129a494cc2e65489423e9838c3893e)
+ * dotnet/cli-migrate '20180201.2' on 'refs/heads/release/2.1.3xx' (abc2a1d4d7a5a08a1708ece9e60c1eba3d062c0c)
+ * dotnet/sdk '20180201.2' on 'refs/heads/release/2.1.3xx' (0f79bbe7adcf345cc1b6854a28fc503cbbf1aa4a)
+ * dotnet/symreader '20180201.2' on 'refs/heads/release/1.3.0' (cd969e38f278bc68aa7b2d2cd2a4a82399f094eb)
+ * dotnet/symreader-portable '20180201.2' on 'refs/heads/release/1.5.0' (224b694d9762e5bfbb305ed0d2c640c9c5d1c6e0)
+ * fsharp '20180202-01' on 'dev15.6' (a11a8b6ce9155f83134e12aafed0e64468b6d4be)
+ * msbuild '20180201-02' on 'vs15.7' (59612d979daea8c8f9bbb59acc03b1540706afc9)
+ * nuget.client '20180201-02' on 'dev' (6ad78037582f1ab63dc7b6dd2ddaddad40a33f4f)
+ * roslyn '20180202.4' on 'refs/heads/dev15.7.x-vs-deps' (66358873409a9889fb1406fee3471e82863364af)
+ * templating '20180201-02' on 'release/2.1' (51a14e2ec1a696bb78868f4623ce010311ce206a)
+ * websdk '20180201-02' on 'release/2.1' (0d358e713a3b691704552fb0944791e4939b4259)
