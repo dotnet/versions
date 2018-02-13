@@ -906,6 +906,18 @@
           "PB_VersionsRepoRef": "<trigger-commit>"
         }
       }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-preview1/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Validate-Assets-Signed",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
+        }
+      }
     }
   ]
 }
