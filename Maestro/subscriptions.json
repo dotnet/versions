@@ -54,19 +54,19 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     },
-    // A build definition capable of running any .ps1 script in the dotnet-docker-nightly repo
-    "dotnet-docker-nightly-general": {
+    // A build definition capable of running any .ps1 script in the dotnet-docker repo
+    "dotnet-docker-general": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 5543
     },
-    // A build definition that will trigger an official build of the dotnet-docker-nightly repo
+    // A build definition that will trigger an official build of the dotnet-docker repo's nightly branch
     "dotnet-docker-nightly-pipebuild": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 6226
     },
-    // A build definition that will trigger an official build of the dotnet-docker repo
+    // A build definition that will trigger an official build of the dotnet-docker repo's master branch
     "dotnet-docker-pipebuild": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
@@ -556,12 +556,12 @@
         }
       }
     },
-    // Update dependencies in dotnet-docker-nightly master
+    // Update dependencies in the dotnet-docker repo's nightly branch
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/installers.semaphore"
       ],
-      "action": "dotnet-docker-nightly-general",
+      "action": "dotnet-docker-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoBuildParameters": {
@@ -575,10 +575,11 @@
               "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml",
             "'"
           ]
-        }
+        },
+        "vsoSourceBranch": "nightly"
       }
     },
-    // Trigger official build of the dotnet-docker-nightly repo when a base image is changed
+    // Trigger official build of the dotnet-docker repo's nightly branch when a base image is changed
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
@@ -587,12 +588,9 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch.txt"
       ],
-      "action": "dotnet-docker-nightly-pipebuild",
-      "actionArguments": {
-        "vsoSourceBranch": "master"
-      }
+      "action": "dotnet-docker-nightly-pipebuild"
     },
-    // Trigger official build of the dotnet-docker repo when a base image is changed
+    // Trigger official build of the dotnet-docker repo's master branch when a base image is changed
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
@@ -601,10 +599,7 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch.txt"
       ],
-      "action": "dotnet-docker-pipebuild",
-      "actionArguments": {
-        "vsoSourceBranch": "master"
-      }
+      "action": "dotnet-docker-pipebuild"
     },
     // Update dependencies in cli master
     {
