@@ -559,7 +559,7 @@
     // Update dependencies in the dotnet-docker repo's nightly branch
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/installers.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
       ],
       "action": "dotnet-docker-general",
       "delay": "00:05:00",
@@ -588,7 +588,10 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch.txt"
       ],
-      "action": "dotnet-docker-nightly-pipebuild"
+      "action": "dotnet-docker-nightly-pipebuild",
+      "actionArguments": {
+        "vsoSourceBranch": "nightly"
+      }
     },
     // Trigger official build of the dotnet-docker repo's master branch when a base image is changed
     {
@@ -599,7 +602,10 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch.txt"
       ],
-      "action": "dotnet-docker-pipebuild"
+      "action": "dotnet-docker-pipebuild",
+      "actionArguments": {
+        "vsoSourceBranch": "master"
+      }
     },
     // Update dependencies in cli master
     {
