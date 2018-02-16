@@ -6,6 +6,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8550
     },
+    // A build definition capable of running any .ps1 script in the aspnet/Universe repo
+    "aspnet-dependency-update": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 8517
+    },
     // A build definition capable of running any .ps1 script in the CoreFX repo. By default, the master branch.
     "corefx-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -698,6 +704,29 @@
           ]
         },
         "vsoSourceBranch": "dev"
+      }
+    },
+    // Update dependencies in the aspnetcore repo's dev branch
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/master/packages.semaphore"
+      ],
+      "action": "aspnet-dependency-update",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "ScriptFileName": "scripts\\UpdateDependencies.ps1",
+          "Arguments": [
+            "-BuildXml",
+            "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/master/build.xml",
+            "-ConfigVars '",
+            "--GithubUsername dotnet-maestro-bot",
+            "--GithubEmail dotnet-maestro-bot@microsoft.com",
+            "--GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
+            "'"
+          ]
+        }
       }
     },
     // Trigger official build of the dotnet-docker repo's nightly branch when a base image is changed
