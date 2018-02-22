@@ -969,7 +969,20 @@
         }
       }
     },
-    // Do signing validation for preview1.  Publishing steps are not included so that we do not have to attempt to overwrite stable versions.
+    // Do signing validation and symbol publish for preview1. Package and Blob publishing steps are not included so that we do not have to attempt to overwrite stable versions.
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-preview1/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalSymbolPublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+        }
+      }
+    },
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-preview1/build.semaphore"
