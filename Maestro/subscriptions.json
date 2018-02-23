@@ -12,6 +12,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8289
     },
+    // A 'build' that mirrors changes from github into VSTS
+    "github-vsts-mirror-private": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 8548
+    },
     // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
     "corefxlab-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -464,7 +470,6 @@
     // Mirror github changes to vsts
     {
       "triggerPaths": [
-        "https://github.com/dotnet/arcade/blob/master/**/*",
         "https://github.com/dotnet/corefx/blob/master/**/*",
         "https://github.com/dotnet/corefx/blob/release/**/*",
         "https://github.com/dotnet/coreclr/blob/master/**/*",
@@ -475,6 +480,19 @@
         "https://github.com/dotnet/standard/blob/release/**/*"
       ],
       "action": "github-vsts-mirror",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "BranchToMirror": "<trigger-branch>"
+        }
+      }
+    },
+    // Mirror private github changes to vsts
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/arcade/blob/master/**/*"
+      ],
+      "action": "github-vsts-mirror-private",
       "actionArguments": {
         "vsoBuildParameters": {
           "GithubRepo": "<trigger-repo>",
