@@ -1032,39 +1032,7 @@
         }
       }
     },
-    // One-time orchestrated build final publish in release/2.1-preview1
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-preview1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalPackagePublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_MyGetBaseEndpoint": "https://dotnet.myget.org/F/dotnet-core",
-          "PB_CentralBlobFeedUrl": "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-preview1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalBlobPublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "DotNetCliContainerName": "dotnet",
-          "DotNetCliChecksumsContainerName": "dotnet",
-          "CoreSetupLatestChannel": "release/2.1",
-          "CliLatestChannel": "release/2.1.3xx"
-        }
-      }
-    },
+    // Do signing validation and symbol publish for preview1. Package and Blob publishing steps are not included so that we do not have to attempt to overwrite stable versions.
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-preview1/build.semaphore"
@@ -1075,7 +1043,6 @@
           "PB_FinalTargets": "/t:FinalSymbolPublish",
           "PB_TriggerPath": "<trigger-path>",
           "PB_VersionsRepoRef": "<trigger-commit>",
-          "SymbolExpirationInDays": "-1",
         }
       }
     },
