@@ -4,7 +4,7 @@
     "aspnet-docker-general": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
-      "buildDefinitionId": 8547
+      "buildDefinitionId": 8550
     },
     // A build definition capable of running any .ps1 script in the CoreFX repo. By default, the master branch.
     "corefx-general": {
@@ -666,7 +666,7 @@
             "-CleanupDocker",
               "--github-user:dotnet-maestro-bot",
               "--github-email:dotnet-maestro-bot@microsoft.com",
-              "--github-password:`$Secrets[`'DotNetMaestroBotGitHubToken`']",
+              "--github-password:`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`']",
               "--branch:dev",
               "--build-info-url:https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml"
           ]
