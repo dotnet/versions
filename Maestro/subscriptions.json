@@ -84,6 +84,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 6412
     },
+    // A build definition that will trigger an official build of the dotnet-docker samples
+    "dotnet-docker-samples-pipebuild": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 7263
+    },
     // A build definition capable of running any .ps1 script in the Standard repo. By default, the master branch.
     "standard-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -717,6 +723,16 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch.txt"
       ],
       "action": "dotnet-docker-pipebuild",
+      "actionArguments": {
+        "vsoSourceBranch": "master"
+      }
+    },
+    // Trigger official build of the dotnet-docker samples when the source is changed
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/dotnet-docker/blob/master/samples/**/*"
+      ],
+      "action": "dotnet-docker-samples-pipebuild",
       "actionArguments": {
         "vsoSourceBranch": "master"
       }
