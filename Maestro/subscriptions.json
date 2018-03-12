@@ -386,10 +386,8 @@
       "actionArguments": {
         "vsoSourceBranch": "release/1.1.0",
         "vsoBuildParameters": {
-          "ScriptFileName": "build-managed.cmd",
+          "ScriptFileName": "UpdateDependencies.ps1",
           "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
             "/p:GitHubUser=dotnet-maestro-bot",
             "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
             "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
