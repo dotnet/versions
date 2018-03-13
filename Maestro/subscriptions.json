@@ -24,12 +24,6 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8289
     },
-    // A 'build' that mirrors changes from github into VSTS
-    "github-vsts-mirror-private": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 8548
-    },
     // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
     "corefxlab-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -482,6 +476,7 @@
     // Mirror github changes to vsts
     {
       "triggerPaths": [
+        "https://github.com/dotnet/arcade/blob/master/**/*",
         "https://github.com/dotnet/buildtools/blob/master/**/*",
         "https://github.com/dotnet/buildtools/blob/release/**/*",
         "https://github.com/dotnet/cli/blob/master/**/*",
@@ -493,28 +488,15 @@
         "https://github.com/dotnet/coreclr/blob/release/**/*",
         "https://github.com/dotnet/core-setup/blob/master/**/*",
         "https://github.com/dotnet/core-setup/blob/release/**/*",
+        "https://github.com/dotnet/machinelearning/blob/master/**/*",
         "https://github.com/dotnet/standard/blob/master/**/*",
         "https://github.com/dotnet/standard/blob/release/**/*",
         "https://github.com/dotnet/symstore/blob/master/**/*",
-      ],
-      "action": "github-vsts-mirror",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "BranchToMirror": "<trigger-branch>"
-        }
-      }
-    },
-    // Mirror private github changes to vsts
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/arcade/blob/master/**/*",
-        "https://github.com/dotnet/machinelearning/blob/master/**/*",
         "https://github.com/dotnet/uwp-setup/blob/arm64/**/*",
         "https://github.com/dotnet/uwp-setup/blob/master/**/*",
-        "https://github.com/dotnet/uwp-setup/blob/rel/**/*",
+        "https://github.com/dotnet/uwp-setup/blob/rel/**/*"
       ],
-      "action": "github-vsts-mirror-private",
+      "action": "github-vsts-mirror",
       "actionArguments": {
         "vsoBuildParameters": {
           "GithubRepo": "<trigger-repo>",
