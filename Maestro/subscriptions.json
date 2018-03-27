@@ -90,6 +90,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 7263
     },
+    // A build definition capable of running any .ps1 script in the source-build repo
+    "source-build-general": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 8760
+    },
     // A build definition capable of running any .ps1 script in the Standard repo. By default, the master branch.
     "standard-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -853,6 +859,32 @@
           "GITHUB_UPSTREAM_BRANCH": "release/2.1.2xx",
           "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.0.0",
           "ROSLYN_VERSION_FRAGMENT": "dotnet/roslyn/dev15.7"
+        }
+      }
+    },
+    // Update dependencies in source-build dev/release/2.1
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
+      ],
+      "action": "source-build-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "dev/release/2.1",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build.cmd",
+          "Arguments": [
+            "/t:UpdateToRemoteDependencies",
+            "/t:SubmitPullRequestIfChanged",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=source-build",
+            "/p:ProjectRepoBranch=dev/release/2.1",
+            "/verbosity:Normal"
+          ]
         }
       }
     },
