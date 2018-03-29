@@ -862,6 +862,33 @@
         }
       }
     },
+    // Update dependencies in cli release/2.1.3xx
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore",
+      ],
+      "action": "cli-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.1.3xx",
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
+          "GITHUB_UPSTREAM_BRANCH": "release/2.1.3xx",
+          // Enable once this is done https://github.com/aspnet/Universe/issues/1013.  
+          // "ASPNET_VERSION_FRAGMENT": "<version fragment>",
+          "CLICOMMANDLINEPARSER_VERSION_FRAGMENT": "dotnet/CliCommandLineParser/release/2.1.3xx",
+          "CLIMIGRATE_VERSION_FRAGMENT": "dotnet/cli-migrate/release/2.1.3xx",
+          "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.1",
+          "FSHARP_VERSION_FRAGMENT": "dotnet/fsharp/dev15.7",
+          "MSBUILD_VERSION_FRAGMENT": "dotnet/Microsoft/msbuild/vs15.7",
+          "NUGETCLIENT_VERSION_FRAGMENT": "dotnet/nuget.client/dev",
+          "ROSLYN_VERSION_FRAGMENT": "dotnet/roslyn/dev15.7",
+          "SDK_VERSION_FRAGMENT": "dotnet/sdk/release/2.1.3xx",
+          "TEMPLATING_VERSION_FRAGMENT": "dotnet/templating/release/2.1",
+          "WEBSDK_VERSION_FRAGMENT": "dotnet/websdk/release/2.1"
+        }
+      }
+    },
     // Update dependencies in source-build dev/release/2.1
     {
       "triggerPaths": [
