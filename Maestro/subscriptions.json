@@ -452,6 +452,32 @@
         }
       }
     },
+    // Update dependencies in CoreFX release/uwp6.1
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/uwp6.1/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/uwp6.1/Latest.txt"
+      ],
+      "action": "corefx-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/uwp6.1",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=release/uwp6.1",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
     // Update dependencies in CoreFX release/2.1
     {
       "triggerPaths": [
