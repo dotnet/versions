@@ -1,11 +1,5 @@
 {
   "actions": {
-    // A build definition capable of running any .ps1 script in the aspnet/aspnet-docker repo
-    "aspnet-docker-general": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 8550
-    },
     // A build definition capable of running any .ps1 script in the aspnet/Universe repo
     "aspnet-dependency-update": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -699,28 +693,6 @@
           ]
         },
         "vsoSourceBranch": "nightly"
-      }
-    },
-    // Update dependencies in the aspnet/aspnet-docker repo's dev branch
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
-      ],
-      "action": "aspnet-docker-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\Invoke-UpdateDependencies.ps1",
-          "Arguments": [
-            "-CleanupDocker",
-              "--github-user:dotnet-maestro-bot",
-              "--github-email:dotnet-maestro-bot@microsoft.com",
-              "--github-password:`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-              "--branch:dev",
-              "--build-info-url:https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml"
-          ]
-        },
-        "vsoSourceBranch": "dev"
       }
     },
     // Update dependencies in the aspnetcore repo's release/2.1 branch
