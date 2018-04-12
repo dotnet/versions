@@ -1,4 +1,4 @@
-## Product build: cli build 20180406-05-1567334
+## Product build: cli build 20180406-05-1585137
 
 ### SDK Installers and Binaries
 
@@ -13,38 +13,38 @@
 | **RHEL 6 x64**      | [tar.gz][sdk-rhel-6-x64-targz] - [Checksum][sdk-rhel-6-x64-targz-checksum] |
 | **Alpine 3.6 x64**  | [tar.gz][sdk-alpine-3.6-x64-targz] - [Checksum][sdk-alpine-3.6-x64-targz-checksum] |
 
-[sdk-win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x64.exe
-[sdk-win-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x64.exe.sha
-[sdk-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x64.zip
-[sdk-win-x64-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x64.zip.sha
+[sdk-win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x64.exe
+[sdk-win-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x64.exe.sha
+[sdk-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x64.zip
+[sdk-win-x64-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x64.zip.sha
 
-[sdk-win-x86-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x86.exe
-[sdk-win-x86-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x86.exe.sha
-[sdk-win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x86.zip
-[sdk-win-x86-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-win-x86.zip.sha
+[sdk-win-x86-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x86.exe
+[sdk-win-x86-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x86.exe.sha
+[sdk-win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x86.zip
+[sdk-win-x86-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-win-x86.zip.sha
 
-[sdk-osx-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-osx-x64.pkg
-[sdk-osx-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-osx-x64.pkg.sha
-[sdk-osx-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-osx-x64.tar.gz
-[sdk-osx-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-osx-x64.tar.gz.sha
+[sdk-osx-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-osx-x64.pkg
+[sdk-osx-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-osx-x64.pkg.sha
+[sdk-osx-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-osx-x64.tar.gz
+[sdk-osx-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-osx-x64.tar.gz.sha
 
-[sdk-linux-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-linux-x64.tar.gz
-[sdk-linux-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-linux-x64.tar.gz.sha
+[sdk-linux-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-linux-x64.tar.gz
+[sdk-linux-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-linux-x64.tar.gz.sha
 
-[sdk-linux-arm-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-linux-arm.tar.gz
-[sdk-linux-arm-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-linux-arm.tar.gz.sha
+[sdk-linux-arm-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-linux-arm.tar.gz
+[sdk-linux-arm-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-linux-arm.tar.gz.sha
 
-[sdk-linux-x64-DEB-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-x64.deb
-[sdk-linux-x64-DEB-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-x64.deb.sha
+[sdk-linux-x64-DEB-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-x64.deb
+[sdk-linux-x64-DEB-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-x64.deb.sha
 
-[sdk-rhel-7-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-rhel-x64.rpm
-[sdk-rhel-7-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-rhel-x64.rpm.sha
+[sdk-rhel-7-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-rhel-x64.rpm
+[sdk-rhel-7-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-rhel-x64.rpm.sha
 
-[sdk-rhel-6-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-rhel.6-x64.tar.gz
-[sdk-rhel-6-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-rhel.6-x64.tar.gz.sha
+[sdk-rhel-6-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-rhel.6-x64.tar.gz
+[sdk-rhel-6-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-rhel.6-x64.tar.gz.sha
 
-[sdk-alpine-3.6-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-alpine.3.6-x64.tar.gz
-[sdk-alpine-3.6-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008530/dotnet-sdk-2.1.300-preview2-008530-alpine.3.6-x64.tar.gz.sha
+[sdk-alpine-3.6-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-alpine.3.6-x64.tar.gz
+[sdk-alpine-3.6-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180406-05/final/assets/Sdk/2.1.300-preview2-008533/dotnet-sdk-2.1.300-preview2-008533-alpine.3.6-x64.tar.gz.sha
 
 
 ### .NET Core Runtime Installers and Binaries
@@ -221,13 +221,13 @@ RedHat/Fedora (x64)   | [Installer (rpm)][aspnetcore-redhat-x64-rpm] ([Checksum]
 
 ### Built Repositories
  * aspnet 2.1.0-preview2-final (6c79085b10aaedc2f349aef0d8171edb2e8ef70f) build 2.1.0-preview2-30571+pb-20180406-05
- * cli 2.1.300-preview2-008530 on 'master' (822ae6d43ace168540b24dd70a2425c9a852fa9b) build 2.1.300-preview2-008530
+ * cli 2.1.300-preview2-008533 on 'master' (996eb6c92c9c012c2147358292022756993425fd) build 2.1.300-preview2-008533
  * coreclr on 'release/2.1' (c9ff288c3a2bb62f0c0ee7add0a62d55e4aaf654) build 20180406-07
  * corefx on 'release/2.1' (7e3dbdb95b30650eabade0ac73a10b22d4dbe8b3) build 20180406-04
  * core-setup 2.1.0-preview2-26406-04 on 'release/2.1' (6833f3026bdcf4b8c2bd49859b4a29da70c99691) build 20180406-04
  * dotnet/CliCommandLineParser on 'refs/heads/release/2.1.3xx' (e6bd91f4d69eff38ffc7baec3756cf20b5e84055) build 20180406.5
  * dotnet/cli-migrate on 'refs/heads/release/2.1.3xx' (e4b22b881748e9ceb81ee2fc4dbe6722eeeabf65) build 20180406.4
- * dotnet/sdk on 'refs/heads/release/2.1.3xx' (7c2bacb797b442ef902378811cb1a51048531e9b) build 20180406.4
+ * dotnet/sdk on 'refs/heads/release/2.1.3xx' (4479a91d15584e11d4e2b4993b913ae1a69c787c) build 20180412.7
  * dotnet/symreader on 'refs/heads/release/1.3.0' (7ebd65677b8be57304326ddde8b0cbf27e08fed1) build 20180406.4
  * dotnet/symreader-portable on 'refs/heads/release/1.5.0' (dbe869e26de8085e52168e8764b07ae27e89192e) build 20180406.3
  * fsharp on 'dev15.7' (7090302f11fc41c4ad2309d896b9aa60ceffd4e2) build 20180406-04
