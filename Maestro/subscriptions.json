@@ -727,15 +727,11 @@
       "actionArguments": {
         "vsoSourceBranch": "dev",
         "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\UpdateDependencies.ps1",
+          "ScriptFileName": "scripts\\UpdateDependenciesCoreFx.ps1",
           "Arguments": [
-            "-UseCoreFx",
-            "-ConfigVars '",
-            "--GithubUpstreamBranch release/2.1",
-            "--GithubUsername dotnet-maestro-bot",
-            "--GithubEmail dotnet-maestro-bot@microsoft.com",
-            "--GithubToken=`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-            "'"
+            "-GithubUsername dotnet-maestro-bot",
+            "-GithubEmail dotnet-maestro-bot@microsoft.com",
+            "-GithubToken=`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
           ]
         }
       }
@@ -755,10 +751,10 @@
             "-BuildXml",
             "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml",
             "-ConfigVars '",
-            "--GithubUpstreamBranch release/2.1",
-            "--GithubUsername dotnet-maestro-bot",
-            "--GithubEmail dotnet-maestro-bot@microsoft.com",
-            "--GithubToken=`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
+              "--GithubUpstreamBranch release/2.1",
+              "--GithubUsername dotnet-maestro-bot",
+              "--GithubEmail dotnet-maestro-bot@microsoft.com",
+              "--GithubToken=`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
             "'"
           ]
         }
@@ -779,10 +775,10 @@
             "-BuildXml",
             "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/master/build.xml",
             "-ConfigVars '",
-            "--GithubUpstreamBranch dev",
-            "--GithubUsername dotnet-maestro-bot",
-            "--GithubEmail dotnet-maestro-bot@microsoft.com",
-            "--GithubToken=`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
+              "--GithubUpstreamBranch dev",
+              "--GithubUsername dotnet-maestro-bot",
+              "--GithubEmail dotnet-maestro-bot@microsoft.com",
+              "--GithubToken=`$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
             "'"
           ]
         }
