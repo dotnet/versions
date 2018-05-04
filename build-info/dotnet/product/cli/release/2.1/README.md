@@ -1,4 +1,4 @@
-## Product build: cli build 20180502-02-1652341
+## Product build: cli build 20180504-01-1658421
 
 ### SDK Installers and Binaries
 
@@ -14,41 +14,41 @@
 | **RHEL 6 x64**      | [tar.gz][sdk-rhel-6-x64-targz] - [Checksum][sdk-rhel-6-x64-targz-checksum] |
 | **Linux Musl x64**  | [tar.gz][sdk-musl-x64-targz] - [Checksum][sdk-musl-x64-targz-checksum] |
 
-[sdk-win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x64.exe
-[sdk-win-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x64.exe.sha
-[sdk-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x64.zip
-[sdk-win-x64-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x64.zip.sha
+[sdk-win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x64.exe
+[sdk-win-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x64.exe.sha
+[sdk-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x64.zip
+[sdk-win-x64-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x64.zip.sha
 
-[sdk-win-x86-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x86.exe
-[sdk-win-x86-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x86.exe.sha
-[sdk-win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x86.zip
-[sdk-win-x86-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-win-x86.zip.sha
+[sdk-win-x86-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x86.exe
+[sdk-win-x86-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x86.exe.sha
+[sdk-win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x86.zip
+[sdk-win-x86-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-win-x86.zip.sha
 
-[sdk-osx-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-osx-x64.pkg
-[sdk-osx-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-osx-x64.pkg.sha
-[sdk-osx-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-osx-x64.tar.gz
-[sdk-osx-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-osx-x64.tar.gz.sha
+[sdk-osx-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-osx-x64.pkg
+[sdk-osx-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-osx-x64.pkg.sha
+[sdk-osx-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-osx-x64.tar.gz
+[sdk-osx-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-osx-x64.tar.gz.sha
 
-[sdk-linux-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-x64.tar.gz
-[sdk-linux-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-x64.tar.gz.sha
+[sdk-linux-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-x64.tar.gz
+[sdk-linux-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-x64.tar.gz.sha
 
-[sdk-linux-arm-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-arm.tar.gz
-[sdk-linux-arm-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-arm.tar.gz.sha
+[sdk-linux-arm-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-arm.tar.gz
+[sdk-linux-arm-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-arm.tar.gz.sha
 
-[sdk-linux-arm64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-arm64.tar.gz
-[sdk-linux-arm64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-arm64.tar.gz.sha
+[sdk-linux-arm64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-arm64.tar.gz
+[sdk-linux-arm64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-arm64.tar.gz.sha
 
-[sdk-linux-x64-DEB-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-x64.deb
-[sdk-linux-x64-DEB-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-x64.deb.sha
+[sdk-linux-x64-DEB-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-x64.deb
+[sdk-linux-x64-DEB-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-x64.deb.sha
 
-[sdk-rpm-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-x64.rpm
-[sdk-rpm-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-x64.rpm.sha
+[sdk-rpm-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-x64.rpm
+[sdk-rpm-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-x64.rpm.sha
 
-[sdk-rhel-6-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-rhel.6-x64.tar.gz
-[sdk-rhel-6-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-rhel.6-x64.tar.gz.sha
+[sdk-rhel-6-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-rhel.6-x64.tar.gz
+[sdk-rhel-6-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-rhel.6-x64.tar.gz.sha
 
-[sdk-musl-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-musl-x64.tar.gz
-[sdk-musl-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Sdk/2.1.300-rtm-008701/dotnet-sdk-2.1.300-rtm-008701-linux-musl-x64.tar.gz.sha
+[sdk-musl-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-musl-x64.tar.gz
+[sdk-musl-x64-targz-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Sdk/2.1.300-rtm-008707/dotnet-sdk-2.1.300-rtm-008707-linux-musl-x64.tar.gz.sha
 
 
 ### .NET Core Runtime Installers and Binaries
@@ -79,100 +79,100 @@
 | **RHEL 6**                                |                                                                                        [tar.gz][rhel-6-targz]                    ([Checksum][rhel-6-targz-checksum]<sup>1</sup>)|
 | **Linux Musl**                            |                                                                                        [tar.gz][musl-x64-targz]                ([Checksum][musl-x64-targz-checksum]<sup>1</sup>)|
 
-[win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x64.exe
-[win-x64-installer-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x64.exe.sha512
-[win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x64.zip
-[win-x64-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x64.zip.sha512
-[win-x64-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-win-x64.zip
+[win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x64.exe
+[win-x64-installer-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x64.exe.sha512
+[win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x64.zip
+[win-x64-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x64.zip.sha512
+[win-x64-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-win-x64.zip
 
-[win-x86-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x86.exe
-[win-x86-installer-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x86.exe.sha512
-[win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x86.zip
-[win-x86-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-x86.zip.sha512
-[win-x86-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-win-x86.zip
+[win-x86-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x86.exe
+[win-x86-installer-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x86.exe.sha512
+[win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x86.zip
+[win-x86-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-x86.zip.sha512
+[win-x86-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-win-x86.zip
 
-[win-arm-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-arm.zip
-[win-arm-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-arm.zip.sha512
-[win-arm-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-win-arm.zip
+[win-arm-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-arm.zip
+[win-arm-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-arm.zip.sha512
+[win-arm-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-win-arm.zip
 
-[win-arm64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-arm64.zip
-[win-arm64-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-win-arm64.zip.sha512
-[win-arm64-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-win-arm64.zip
+[win-arm64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-arm64.zip
+[win-arm64-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-win-arm64.zip.sha512
+[win-arm64-symbols-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-win-arm64.zip
 
-[osx-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-osx-x64.pkg
-[osx-installer-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-osx-x64.pkg.sha512
-[osx-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-osx-x64.tar.gz
-[osx-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-osx-x64.tar.gz.sha512
-[osx-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-osx-x64.tar.gz
+[osx-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-osx-x64.pkg
+[osx-installer-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-osx-x64.pkg.sha512
+[osx-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-osx-x64.tar.gz
+[osx-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-osx-x64.tar.gz.sha512
+[osx-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-osx-x64.tar.gz
 
-[linux-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-x64.tar.gz
-[linux-x64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-x64.tar.gz.sha512
-[linux-x64-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-linux-x64.tar.gz
-[linux-arm-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-arm.tar.gz
-[linux-arm-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-arm.tar.gz.sha512
-[linux-arm-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-linux-arm.tar.gz
-[linux-arm64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-arm64.tar.gz
-[linux-arm64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-arm64.tar.gz.sha512
-[linux-arm64-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-symbols-2.1.0-rtm-26502-02-linux-arm64.tar.gz
+[linux-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-x64.tar.gz
+[linux-x64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-x64.tar.gz.sha512
+[linux-x64-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-linux-x64.tar.gz
+[linux-arm-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-arm.tar.gz
+[linux-arm-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-arm.tar.gz.sha512
+[linux-arm-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-linux-arm.tar.gz
+[linux-arm64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-arm64.tar.gz
+[linux-arm64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-arm64.tar.gz.sha512
+[linux-arm64-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-symbols-2.1.0-rtm-26504-03-linux-arm64.tar.gz
 
-[ubuntu-14.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.14.04-x64.deb
-[ubuntu-14.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.14.04-x64.deb.sha512
+[ubuntu-14.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.14.04-x64.deb
+[ubuntu-14.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.14.04-x64.deb.sha512
 
-[ubuntu-16.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.16.04-x64.deb
-[ubuntu-16.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.16.04-x64.deb.sha512
+[ubuntu-16.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.16.04-x64.deb
+[ubuntu-16.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.16.04-x64.deb.sha512
 
-[ubuntu-17.10-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.17.10-x64.deb
-[ubuntu-17.10-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.17.10-x64.deb.sha512
+[ubuntu-17.10-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.17.10-x64.deb
+[ubuntu-17.10-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.17.10-x64.deb.sha512
 
-[ubuntu-18.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.18.04-x64.deb
-[ubuntu-18.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-ubuntu.18.04-x64.deb.sha512
+[ubuntu-18.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.18.04-x64.deb
+[ubuntu-18.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-ubuntu.18.04-x64.deb.sha512
 
-[debian-8.2-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-debian.8-x64.deb
-[debian-8.2-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-debian.8-x64.deb.sha512
+[debian-8.2-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-debian.8-x64.deb
+[debian-8.2-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-debian.8-x64.deb.sha512
 
-[debian-9-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-debian.9-x64.deb
-[debian-9-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-debian.9-x64.deb.sha512
+[debian-9-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-debian.9-x64.deb
+[debian-9-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-debian.9-x64.deb.sha512
 
-[centos-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-centos.7-x64.rpm
-[centos-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-centos.7-x64.rpm.sha512
+[centos-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-centos.7-x64.rpm
+[centos-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-centos.7-x64.rpm.sha512
 
-[rhel-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-rhel.7-x64.rpm
-[rhel-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-rhel.7-x64.rpm.sha512
+[rhel-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-rhel.7-x64.rpm
+[rhel-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-rhel.7-x64.rpm.sha512
 
-[fedora-26-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-fedora.26-x64.rpm
-[fedora-26-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-fedora.26-x64.rpm.sha512
+[fedora-26-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-fedora.26-x64.rpm
+[fedora-26-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-fedora.26-x64.rpm.sha512
 
-[fedora-27-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-fedora.27-x64.rpm
-[fedora-27-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-fedora.27-x64.rpm.sha512
+[fedora-27-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-fedora.27-x64.rpm
+[fedora-27-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-fedora.27-x64.rpm.sha512
 
-[opensuse-42-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-opensuse.42-x64.rpm
-[opensuse-42-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-opensuse.42-x64.rpm.sha512
+[opensuse-42-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-opensuse.42-x64.rpm
+[opensuse-42-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-opensuse.42-x64.rpm.sha512
 
-[oraclelinux-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-oraclelinux.7-x64.rpm
-[oraclelinux-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-oraclelinux.7-x64.rpm.sha512
+[oraclelinux-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-oraclelinux.7-x64.rpm
+[oraclelinux-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-oraclelinux.7-x64.rpm.sha512
 
-[sles-12-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-sles.12-x64.rpm
-[sles-12-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-deps-2.1.0-rtm-26502-02-sles.12-x64.rpm.sha512
+[sles-12-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-sles.12-x64.rpm
+[sles-12-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-deps-2.1.0-rtm-26504-03-sles.12-x64.rpm.sha512
 
-[deb-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-host-2.1.0-rtm-26502-02-x64.deb
-[deb-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-host-2.1.0-rtm-26502-02-x64.deb.sha512
-[deb-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-hostfxr-2.1.0-rtm-26502-02-x64.deb
-[deb-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-hostfxr-2.1.0-rtm-26502-02-x64.deb.sha512
-[deb-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-x64.deb
-[deb-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-x64.deb.sha512
+[deb-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-host-2.1.0-rtm-26504-03-x64.deb
+[deb-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-host-2.1.0-rtm-26504-03-x64.deb.sha512
+[deb-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-hostfxr-2.1.0-rtm-26504-03-x64.deb
+[deb-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-hostfxr-2.1.0-rtm-26504-03-x64.deb.sha512
+[deb-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-x64.deb
+[deb-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-x64.deb.sha512
 
-[rpm-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-host-2.1.0-rtm-26502-02-x64.rpm
-[rpm-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-host-2.1.0-rtm-26502-02-x64.rpm.sha512
-[rpm-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-hostfxr-2.1.0-rtm-26502-02-x64.rpm
-[rpm-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-hostfxr-2.1.0-rtm-26502-02-x64.rpm.sha512
-[rpm-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-x64.rpm
-[rpm-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-x64.rpm.sha512
+[rpm-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-host-2.1.0-rtm-26504-03-x64.rpm
+[rpm-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-host-2.1.0-rtm-26504-03-x64.rpm.sha512
+[rpm-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-hostfxr-2.1.0-rtm-26504-03-x64.rpm
+[rpm-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-hostfxr-2.1.0-rtm-26504-03-x64.rpm.sha512
+[rpm-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-x64.rpm
+[rpm-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-x64.rpm.sha512
 
-[rhel-6-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-rhel.6-x64.tar.gz
-[rhel-6-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-rhel.6-x64.tar.gz.sha512
+[rhel-6-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-rhel.6-x64.tar.gz
+[rhel-6-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-rhel.6-x64.tar.gz.sha512
 
-[musl-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-musl-x64.tar.gz
-[musl-x64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26502-02/dotnet-runtime-2.1.0-rtm-26502-02-linux-musl-x64.tar.gz.sha512
+[musl-x64-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-musl-x64.tar.gz
+[musl-x64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0-rtm-26504-03/dotnet-runtime-2.1.0-rtm-26504-03-linux-musl-x64.tar.gz.sha512
 
 > **1**: These .NET Core Runtime checksums are generated by the orchestration infrastructure during installer publish. They are only available once that publish step completes: `installers.semaphore`. See [publish.md#checksum-generation](https://github.com/dotnet/core-eng/blob/master/Documentation/Orchestrated-Build/Api/publish.md#checksum-generation).
 
@@ -183,8 +183,8 @@ Platform              | Build
 ----------------------|---------------------
 Windows               | [Installer (exe)][dotnet-hosting-win-exe] ([Checksum][dotnet-hosting-win-exe-checksum]<sup>1</sup>)
 
-[dotnet-hosting-win-exe]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/dotnet-hosting-2.1.0-rtm-30698-win.exe
-[dotnet-hosting-win-exe-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/dotnet-hosting-2.1.0-rtm-30698-win.exe.sha512
+[dotnet-hosting-win-exe]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/dotnet-hosting-2.1.0-rtm-30722-win.exe
+[dotnet-hosting-win-exe-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/dotnet-hosting-2.1.0-rtm-30722-win.exe.sha512
 
 
 ### ASP.NET Core Runtime Installers and Binaries
@@ -199,46 +199,44 @@ Alpine 3.6 (x64)      | [Archive (tar.gz)][aspnetcore-alpine.3.6-x64-tar] ([Chec
 Debian/Ubuntu (x64)   | [Installer (deb)][aspnetcore-debian-x64-deb] ([Checksum][aspnetcore-debian-x64-deb-checksum]<sup>1</sup>)
 RedHat/Fedora (x64)   | [Installer (rpm)][aspnetcore-redhat-x64-rpm] ([Checksum][aspnetcore-redhat-x64-rpm-checksum]<sup>1</sup>)
 
-[aspnetcore-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x64.zip
-[aspnetcore-win-x64-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x64.zip.sha512
-[aspnetcore-win-x64-exe]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x64.exe
-[aspnetcore-win-x64-exe-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x64.exe.sha512
+[aspnetcore-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x64.zip
+[aspnetcore-win-x64-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x64.zip.sha512
+[aspnetcore-win-x64-exe]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x64.exe
+[aspnetcore-win-x64-exe-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x64.exe.sha512
 
-[aspnetcore-win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x86.zip
-[aspnetcore-win-x86-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x86.zip.sha512
-[aspnetcore-win-x86-exe]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x86.exe
-[aspnetcore-win-x86-exe-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-win-x86.exe.sha512
+[aspnetcore-win-x86-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x86.zip
+[aspnetcore-win-x86-zip-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x86.zip.sha512
+[aspnetcore-win-x86-exe]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x86.exe
+[aspnetcore-win-x86-exe-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-win-x86.exe.sha512
 
-[aspnetcore-linux-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-linux-x64.tar.gz
-[aspnetcore-linux-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-linux-x64.tar.gz.sha512
+[aspnetcore-linux-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-linux-x64.tar.gz
+[aspnetcore-linux-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-linux-x64.tar.gz.sha512
 
-[aspnetcore-alpine.3.6-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-alpine.3.6-x64.tar.gz
-[aspnetcore-alpine.3.6-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-alpine.3.6-x64.tar.gz.sha512
+[aspnetcore-alpine.3.6-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-alpine.3.6-x64.tar.gz
+[aspnetcore-alpine.3.6-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-alpine.3.6-x64.tar.gz.sha512
 
-[aspnetcore-osx-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-osx-x64.tar.gz
-[aspnetcore-osx-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-osx-x64.tar.gz.sha512
+[aspnetcore-osx-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-osx-x64.tar.gz
+[aspnetcore-osx-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-osx-x64.tar.gz.sha512
 
-[aspnetcore-debian-x64-deb]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-x64.deb
-[aspnetcore-debian-x64-deb-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-x64.deb.sha512
+[aspnetcore-debian-x64-deb]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-x64.deb
+[aspnetcore-debian-x64-deb-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-x64.deb.sha512
 
-[aspnetcore-redhat-x64-rpm]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180502-02/final/assets/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-x64.rpm
-[aspnetcore-redhat-x64-rpm-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30698/aspnetcore-runtime-2.1.0-rtm-30698-x64.rpm.sha512
+[aspnetcore-redhat-x64-rpm]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180504-01/final/assets/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-x64.rpm
+[aspnetcore-redhat-x64-rpm-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0-rtm-30722/aspnetcore-runtime-2.1.0-rtm-30722-x64.rpm.sha512
 
 > **1**: These ASP.NET Core Runtime checksums are generated by the orchestration infrastructure during installer publish. They are only available once that publish step completes: `installers.semaphore`. See [publish.md#checksum-generation](https://github.com/dotnet/core-eng/blob/master/Documentation/Orchestrated-Build/Api/publish.md#checksum-generation).
 
 
 ### Built Repositories
- * aspnet 2.1.0-rtm-30698 (678f4f599347ad04268f2e75c75295e8c6119ba5) build 2.1.0-rtm-30698+pb-20180502-02
- * cli 2.1.300-rtm-008701 on 'master' (f87c6e7d118ad7a4504730a9862c08137d8f2316) build 2.1.300-rtm-008701
- * coreclr on 'release/2.1' (18c14344160ed303027e1d3bf0b5ffe33dbe53f3) build 20180502-03
- * corefx on 'release/2.1' (77732da1052923259a7668540ee62bf48d35956e) build 20180502-02
- * core-setup 2.1.0-rtm-26502-02 on 'release/2.1' (e558eb10c46c5dd3efca25fe918a88bf0f3780e4) build 20180502-02
- * dotnet/CliCommandLineParser on 'refs/heads/release/2.1.3xx' (c7a7c9e17d0a22c9c66382fb737c84940b61ac8b) build 20180502.2
- * dotnet/cli-migrate on 'refs/heads/release/2.1.3xx' (4ded8438ae0d215288cbaa05c506317d987b8d31) build 20180502.6
- * dotnet/sdk on 'refs/heads/release/2.1.3xx' (6c81a0943e50b65146e0ab8220d2f4c60f1664aa) build 20180502.3
- * fsharp on 'dev15.7' (16ecf5a30ad868d183c58e4a71a71c23d4ed3ba9) build 20180502-03
- * Microsoft/msbuild on 'refs/heads/vs15.7' (72d09b8a3ec12f9e4f33ce8842702b193415c81b) build 20180502.1
+ * aspnet 2.1.0-rtm-30722 (0ce598f62d282ce8b7b92d15ce04f501e39865d7) build 2.1.0-rtm-30722+pb-20180504-01
+ * cli 2.1.300-rtm-008707 on 'master' (bf5ad90bcf81850714d9a4faa317938709ccf21f) build 2.1.300-rtm-008707
+ * coreclr on 'release/2.1' (a8998db1213f78d899df455f28787b7cc4446f32) build 20180504-02
+ * corefx on 'release/2.1' (313db193203de2a6294b7e0234115321513c0c5c) build 20180504-02
+ * core-setup 2.1.0-rtm-26504-03 on 'release/2.1' (ae8097b4d2acdc4191d037c6129acd77b28092ea) build 20180504-03
+ * dotnet/CliCommandLineParser on 'refs/heads/release/2.1.3xx' (c7a7c9e17d0a22c9c66382fb737c84940b61ac8b) build 20180504.1
+ * dotnet/cli-migrate on 'refs/heads/release/2.1.3xx' (4ded8438ae0d215288cbaa05c506317d987b8d31) build 20180504.1
+ * dotnet/sdk on 'refs/heads/release/2.1.3xx' (3e881f366d402d83aa39cc18fc1efe4816383173) build 20180504.2
+ * fsharp on 'dev15.7' (16ecf5a30ad868d183c58e4a71a71c23d4ed3ba9) build 20180504-01
  * nuget.client on 'release-4.7.0-rtm' (9245481f357ae542f92e6bc5e504fc898cfe5fc0) build 5148
- * roslyn on 'refs/heads/dev15.7.x-vs-deps' (e595ee276d14e14bfb3eb323fb57f2aa668bddea) build 20180502.6
- * templating on 'release/2.1' (443f8141a0b263355cd6799d6b477beccfb495cc) build 20180502-02
- * websdk on 'release/2.1' (0e78949b6c03efc8c257643e4913f4a22e52b653) build 20180502-02
+ * templating on 'release/2.1' (443f8141a0b263355cd6799d6b477beccfb495cc) build 20180504-01
+ * websdk on 'release/2.1' (0e78949b6c03efc8c257643e4913f4a22e52b653) build 20180504-01
