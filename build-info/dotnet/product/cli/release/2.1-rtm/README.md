@@ -1,4 +1,4 @@
-## Product build: cli build 20180515-07-1691281
+## Product build: cli build 20180515-07-1691300
 
 ### SDK Installers and Binaries
 
@@ -115,58 +115,58 @@
 [linux-arm64-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-2.1.0-linux-arm64.tar.gz.sha512
 [linux-arm64-symbols-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-symbols-2.1.0-linux-arm64.tar.gz
 
-[ubuntu-14.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.14.04-x64.deb
-[ubuntu-14.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.14.04-x64.deb.sha512
+[ubuntu-14.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.14.04-x64-upgrade.deb
+[ubuntu-14.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.14.04-x64-upgrade.deb.sha512
 
-[ubuntu-16.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.16.04-x64.deb
-[ubuntu-16.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.16.04-x64.deb.sha512
+[ubuntu-16.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.16.04-x64-upgrade.deb
+[ubuntu-16.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.16.04-x64-upgrade.deb.sha512
 
-[ubuntu-17.10-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.17.10-x64.deb
-[ubuntu-17.10-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.17.10-x64.deb.sha512
+[ubuntu-17.10-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.17.10-x64-upgrade.deb
+[ubuntu-17.10-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.17.10-x64-upgrade.deb.sha512
 
-[ubuntu-18.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.18.04-x64.deb
-[ubuntu-18.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.18.04-x64.deb.sha512
+[ubuntu-18.04-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.18.04-x64-upgrade.deb
+[ubuntu-18.04-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-ubuntu.18.04-x64-upgrade.deb.sha512
 
-[debian-8.2-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.8-x64.deb
-[debian-8.2-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.8-x64.deb.sha512
+[debian-8.2-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.8-x64-upgrade.deb
+[debian-8.2-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.8-x64-upgrade.deb.sha512
 
-[debian-9-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.9-x64.deb
-[debian-9-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.9-x64.deb.sha512
+[debian-9-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.9-x64-upgrade.deb
+[debian-9-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-debian.9-x64-upgrade.deb.sha512
 
-[centos-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-centos.7-x64.rpm
-[centos-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-centos.7-x64.rpm.sha512
+[centos-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-centos.7-x64-upgrade.rpm
+[centos-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-centos.7-x64-upgrade.rpm.sha512
 
-[rhel-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-rhel.7-x64.rpm
-[rhel-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-rhel.7-x64.rpm.sha512
+[rhel-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-rhel.7-x64-upgrade.rpm
+[rhel-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-rhel.7-x64-upgrade.rpm.sha512
 
-[fedora-26-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.26-x64.rpm
-[fedora-26-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.26-x64.rpm.sha512
+[fedora-26-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.26-x64-upgrade.rpm
+[fedora-26-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.26-x64-upgrade.rpm.sha512
 
-[fedora-27-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.27-x64.rpm
-[fedora-27-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.27-x64.rpm.sha512
+[fedora-27-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.27-x64-upgrade.rpm
+[fedora-27-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-fedora.27-x64-upgrade.rpm.sha512
 
-[opensuse-42-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-opensuse.42-x64.rpm
-[opensuse-42-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-opensuse.42-x64.rpm.sha512
+[opensuse-42-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-opensuse.42-x64-upgrade.rpm
+[opensuse-42-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-opensuse.42-x64-upgrade.rpm.sha512
 
-[oraclelinux-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-oraclelinux.7-x64.rpm
-[oraclelinux-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-oraclelinux.7-x64.rpm.sha512
+[oraclelinux-7-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-oraclelinux.7-x64-upgrade.rpm
+[oraclelinux-7-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-oraclelinux.7-x64-upgrade.rpm.sha512
 
-[sles-12-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-sles.12-x64.rpm
-[sles-12-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-sles.12-x64.rpm.sha512
+[sles-12-runtime-deps]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-sles.12-x64-upgrade.rpm
+[sles-12-runtime-deps-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-deps-2.1.0-sles.12-x64-upgrade.rpm.sha512
 
-[deb-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-host-2.1.0-x64.deb
-[deb-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-host-2.1.0-x64.deb.sha512
-[deb-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64.deb
-[deb-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64.deb.sha512
-[deb-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-2.1.0-x64.deb
-[deb-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-2.1.0-x64.deb.sha512
+[deb-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-host-2.1.0-x64-upgrade.deb
+[deb-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-host-2.1.0-x64-upgrade.deb.sha512
+[deb-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64-upgrade.deb
+[deb-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64-upgrade.deb.sha512
+[deb-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-2.1.0-x64-upgrade.deb
+[deb-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-2.1.0-x64-upgrade.deb.sha512
 
-[rpm-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-host-2.1.0-x64.rpm
-[rpm-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-host-2.1.0-x64.rpm.sha512
-[rpm-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64.rpm
-[rpm-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64.rpm.sha512
-[rpm-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-2.1.0-x64.rpm
-[rpm-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-2.1.0-x64.rpm.sha512
+[rpm-package-host]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-host-2.1.0-x64-upgrade.rpm
+[rpm-package-host-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-host-2.1.0-x64-upgrade.rpm.sha512
+[rpm-package-hostfxr]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64-upgrade.rpm
+[rpm-package-hostfxr-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-hostfxr-2.1.0-x64-upgrade.rpm.sha512
+[rpm-package-sharedfx]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-2.1.0-x64-upgrade.rpm
+[rpm-package-sharedfx-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-2.1.0-x64-upgrade.rpm.sha512
 
 [rhel-6-targz]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Runtime/2.1.0/dotnet-runtime-2.1.0-rhel.6-x64.tar.gz
 [rhel-6-targz-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/Runtime/2.1.0/dotnet-runtime-2.1.0-rhel.6-x64.tar.gz.sha512
@@ -218,11 +218,11 @@ RedHat/Fedora (x64)   | [Installer (rpm)][aspnetcore-redhat-x64-rpm] ([Checksum]
 [aspnetcore-osx-x64-tar]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-osx-x64.tar.gz
 [aspnetcore-osx-x64-tar-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-osx-x64.tar.gz.sha512
 
-[aspnetcore-debian-x64-deb]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64.deb
-[aspnetcore-debian-x64-deb-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64.deb.sha512
+[aspnetcore-debian-x64-deb]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64-upgrade.deb
+[aspnetcore-debian-x64-deb-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64-upgrade.deb.sha512
 
-[aspnetcore-redhat-x64-rpm]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64.rpm
-[aspnetcore-redhat-x64-rpm-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64.rpm.sha512
+[aspnetcore-redhat-x64-rpm]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64-upgrade.rpm
+[aspnetcore-redhat-x64-rpm-checksum]: https://dotnetclichecksums.blob.core.windows.net/dotnet/aspnetcore/Runtime/2.1.0/aspnetcore-runtime-2.1.0-x64-upgrade.rpm.sha512
 
 > **1**: These ASP.NET Core Runtime checksums are generated by the orchestration infrastructure during installer publish. They are only available once that publish step completes: `installers.semaphore`. See [publish.md#checksum-generation](https://github.com/dotnet/core-eng/blob/master/Documentation/Orchestrated-Build/Api/publish.md#checksum-generation).
 
