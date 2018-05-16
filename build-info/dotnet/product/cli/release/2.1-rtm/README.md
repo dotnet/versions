@@ -14,6 +14,7 @@
 | **RHEL 6 x64**      | [tar.gz][sdk-rhel-6-x64-targz] - [Checksum][sdk-rhel-6-x64-targz-checksum] |
 | **Linux Musl x64**  | [tar.gz][sdk-musl-x64-targz] - [Checksum][sdk-musl-x64-targz-checksum] |
 
+[sdk-win-x64-installer]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Sdk/2.1.300-rtm-008866/dotnet-sdk-2.1.300-win-x64.exe
 [sdk-win-x64-installer-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Sdk/2.1.300-rtm-008866/dotnet-sdk-2.1.300-win-x64.exe.sha
 [sdk-win-x64-zip]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Sdk/2.1.300-rtm-008866/dotnet-sdk-2.1.300-win-x64.zip
 [sdk-win-x64-zip-checksum]: https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20180515-07/final/assets/Sdk/2.1.300-rtm-008866/dotnet-sdk-2.1.300-win-x64.zip.sha
