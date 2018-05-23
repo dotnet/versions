@@ -19,14 +19,6 @@ namespace Microsoft.DotNet.Maestro.Services
         private static HttpClient client = new HttpClient();
         private const string apiVersion = "2.0";
 
-        static VsoService()
-        {
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-               Convert.ToBase64String(
-                   Encoding.ASCII.GetBytes(
-                       string.Format("{0}:{1}", Config.Instance.VSoUser, Config.Instance.VSoPassword))));
-        }
-
         public async Task QueueBuildAsync(string instance, string project, int buildDefinitionId, string sourceBranch, string parameters)
         {
             string queueBuildUrl = $"https://{instance}/defaultcollection/{project}/_apis/build/builds?api-version={apiVersion}";
@@ -44,7 +36,11 @@ namespace Microsoft.DotNet.Maestro.Services
             ObjectContent queueBuildContent = new ObjectContent<Build>(build, formatter);
             string queueBuildContentString = await queueBuildContent.ReadAsStringAsync();
 
-            HttpResponseMessage response = await client.PostAsync(queueBuildUrl, queueBuildContent);
+            HttpRequestMessage postMessage = new HttpRequestMessage(HttpMethod.Post, queueBuildUrl);
+            postMessage.Headers.Authorization = new AuthenticationHeaderValue("Basic",
+               Convert.ToBase64String(Encoding.ASCII.GetBytes($"{Config.Instance.VstsUsername}:{Config.Instance.GetPassword(instance)}")));
+            postMessage.Content = queueBuildContent;
+            HttpResponseMessage response = await client.SendAsync(postMessage);
             if (!response.IsSuccessStatusCode)
             {
                 Trace.TraceError($"Error queuing VSO build to '{queueBuildUrl}'\nBody: {queueBuildContentString}\n\nResponse StatusCode: {response.StatusCode}\nResponse Body: {await response.Content.ReadAsStringAsync()}");
