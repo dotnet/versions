@@ -903,7 +903,7 @@
         }
       }
     },
-    // Update dependencies in source-build dev/release/2.1
+    // Update dependencies in source-build release/2.1
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt",
@@ -912,7 +912,7 @@
       "action": "source-build-general",
       "delay": "00:10:00",
       "actionArguments": {
-        "vsoSourceBranch": "dev/release/2.1",
+        "vsoSourceBranch": "release/2.1",
         "vsoBuildParameters": {
           "ScriptFileName": "build.cmd",
           "Arguments": [
@@ -923,7 +923,7 @@
             "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=source-build",
-            "/p:ProjectRepoBranch=dev/release/2.1",
+            "/p:ProjectRepoBranch=release/2.1",
             "/clp:v=Normal"
           ]
         }
