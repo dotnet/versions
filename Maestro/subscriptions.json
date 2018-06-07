@@ -67,10 +67,10 @@
       "buildDefinitionId": 5543
     },
     // A build definition that will trigger an official build of the dotnet-docker repo's nightly branch
-    "dotnet-docker-nightly-pipebuild": {
+    "dotnet-docker-nightly": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
-      "buildDefinitionId": 6226
+      "buildDefinitionId": 9035
     },
     // A build definition that will trigger an official build of the dotnet-docker repo's master branch
     "dotnet-docker-pipebuild": {
@@ -774,7 +774,7 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch-slim.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/ubuntu/bionic.txt"
       ],
-      "action": "dotnet-docker-nightly-pipebuild",
+      "action": "dotnet-docker-nightly",
       "actionArguments": {
         "vsoSourceBranch": "nightly"
       }
