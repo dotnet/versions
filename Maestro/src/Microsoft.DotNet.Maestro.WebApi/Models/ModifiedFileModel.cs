@@ -4,6 +4,7 @@
 
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Models
 {
@@ -24,7 +25,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
             string refSpec,
             string fullPath,
             Commit commit,
-            List<Commit> Commits,
+            IEnumerable<Commit> commits,
             out ModifiedFileModel model)
         {
             // the file path goes like the following:
@@ -47,7 +48,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
                 BranchName = branchName,
                 FullPath = "https://github.com/" + string.Join("/", repoFullName, "blob", branchName, fullPath),
                 CommitId = commit.id,
-                CommitList = string.Join(";", Commits.ConvertAll( t => t.id ))
+                CommitList = string.Join(";", commits.Select( c => c.id ))
             };
 
             return true;
