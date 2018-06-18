@@ -79,16 +79,10 @@
       "buildDefinitionId": 9035
     },
     // A build definition that will trigger an official build of the dotnet-docker repo's master branch
-    "dotnet-docker-pipebuild": {
+    "dotnet-docker": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
-      "buildDefinitionId": 6412
-    },
-    // A build definition that will trigger an official build of the dotnet-docker samples
-    "dotnet-docker-samples-pipebuild": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 7263
+      "buildDefinitionId": 9410
     },
     // A build definition capable of running any .ps1 script in the source-build repo
     "source-build-general": {
@@ -894,13 +888,17 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/bionic-scm.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/buster-scm.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.6.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.7.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/edge.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/buster-slim.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/jessie.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch-slim.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/ubuntu/bionic.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/buster-slim.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch-slim.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/ubuntu/bionic.txt"
@@ -916,7 +914,7 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/bionic-scm.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.6.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.7.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/jessie.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch-slim.txt",
@@ -925,17 +923,7 @@
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch-slim.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/ubuntu/bionic.txt"
       ],
-      "action": "dotnet-docker-pipebuild",
-      "actionArguments": {
-        "vsoSourceBranch": "master"
-      }
-    },
-    // Trigger official build of the dotnet-docker samples when the source is changed
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/dotnet-docker/blob/master/samples/**/*"
-      ],
-      "action": "dotnet-docker-samples-pipebuild",
+      "action": "dotnet-docker",
       "actionArguments": {
         "vsoSourceBranch": "master"
       }
