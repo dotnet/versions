@@ -2,7 +2,9 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Microsoft.DotNet.Maestro.WebApi.Models
 {
@@ -16,11 +18,14 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
 
         public string CommitId { get; set; }
 
+        public string CommitList { get; set; }
+
         public static bool TryParse(
             string repoFullName,
             string refSpec,
             string fullPath,
             Commit commit,
+            IEnumerable<Commit> commits,
             out ModifiedFileModel model)
         {
             // the file path goes like the following:
@@ -42,7 +47,8 @@ namespace Microsoft.DotNet.Maestro.WebApi.Models
                 RepoName = repoFullName,
                 BranchName = branchName,
                 FullPath = "https://github.com/" + string.Join("/", repoFullName, "blob", branchName, fullPath),
-                CommitId = commit.id
+                CommitId = commit.id,
+                CommitList = string.Join(";", commits.Select( c => c.id ))
             };
 
             return true;

@@ -124,6 +124,12 @@
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8291
+    },
+    // Sync the System.Private.Corelib across coreclr, corefx and corert
+    "DotNet-GitSync-CommitManager": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 9401
     }
   },
   "subscriptions": [
@@ -533,8 +539,8 @@
         }
       }
     },
-     // Mirror github changes to dotnet vsts
-     {
+    // Mirror github changes to dotnet vsts
+    {
       "triggerPaths": [
         "https://github.com/aspnet/AADIntegration/blob/dev/**/*",
         "https://github.com/aspnet/AADIntegration/blob/release/**/*",
@@ -1553,6 +1559,25 @@
           "PB_TriggerPath": "<trigger-path>",
           "PB_VersionsRepoRef": "<trigger-commit>",
           "PB_SymbolExpirationInDays": "10950"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/corefx/tree/master/src/Common/src/CoreLib/**/*",
+        "https://github.com/dotnet/corefx/tree/release/2.1/src/Common/src/CoreLib/**/*",
+        "https://github.com/dotnet/coreclr/tree/master/src/System.Private.CoreLib/shared/**/*",
+        "https://github.com/dotnet/coreclr/tree/release/2.1/src/System.Private.CoreLib/shared/**/*",
+        "https://github.com/dotnet/corert/tree/master/src/System.Private.CoreLib/shared/**/*",
+        "https://github.com/dotnet/corert/tree/release/2.1/src/System.Private.CoreLib/shared/**/*"
+      ],
+      "action": "DotNet-GitSync-CommitManager",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "BranchToMirror": "<trigger-branch>",
+          "CommitsToMirror": "<trigger-commitlist>"
         }
       }
     }
