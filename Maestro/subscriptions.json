@@ -1010,7 +1010,7 @@
         }
       }
     },
-    // Update dependencies in cli release/2.1.3xx
+    // Update dependencies in cli release/2.1.401
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore",
@@ -1018,13 +1018,13 @@
       "action": "cli-dependencies",
       "delay": "00:05:00",
       "actionArguments": {
-        "vsoSourceBranch": "release/2.1.3xx",
+        "vsoSourceBranch": "release/2.1.401",
         "vsoBuildParameters": {
           "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
-          "GITHUB_UPSTREAM_BRANCH": "release/2.1.3xx",
+          "GITHUB_UPSTREAM_BRANCH": "release/2.1.401",
           // Enable once this is done https://github.com/aspnet/Universe/issues/1013.  
           // "ASPNET_VERSION_FRAGMENT": "<version fragment>",
-          "SDK_VERSION_FRAGMENT": "dotnet/sdk/release/2.1.3xx",
+          "SDK_VERSION_FRAGMENT": "dotnet/sdk/release/2.1.4xx",
           "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.1"
         }
       }
@@ -1390,7 +1390,7 @@
           "DotNetCliContainerName": "dotnet",
           "DotNetCliChecksumsContainerName": "dotnet",
           "CoreSetupLatestChannel": "release/2.1",
-          "CliLatestChannel": "release/2.1.3xx"
+          "CliLatestChannel": "release/2.1.401"
         }
       }
     },
@@ -1431,134 +1431,6 @@
         "vsoBuildParameters": {
           "PB_TriggerPath": "<trigger-path>",
           "PB_VersionsRepoRef": "<trigger-commit>"
-        }
-      }
-    },
-    // One-time orchestrated build final publish in release/2.1-rtm
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-rtm/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalPackagePublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_MyGetBaseEndpoint": "https://dotnet.myget.org/F/dotnet-core",
-          "PB_CentralBlobFeedUrl": "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json",
-          "OverwriteCentralBlobFeed ": "true"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-rtm/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalBlobPublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "DotNetCliContainerName": "dotnet",
-          "DotNetCliChecksumsContainerName": "dotnet",
-          "CoreSetupLatestChannel": "release/2.1",
-          "CliLatestChannel": "release/2.1.3xx"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-rtm/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalSymbolPublish",
-          "PB_SymbolServer": "msdl",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_SymbolExpirationInDays": "10950"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1-rtm/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalSymbolPublish",
-          "PB_SymbolServer": "symweb",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_SymbolExpirationInDays": "10950"
-        }
-      }
-    },
-	// One-time orchestrated build final publish in release/2.1.1
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalPackagePublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_MyGetBaseEndpoint": "https://dotnet.myget.org/F/dotnet-core",
-          "PB_CentralBlobFeedUrl": "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json",
-          "OverwriteCentralBlobFeed ": "true"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalBlobPublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "DotNetCliContainerName": "dotnet",
-          "DotNetCliChecksumsContainerName": "dotnet",
-          "CoreSetupLatestChannel": "release/2.1",
-          "CliLatestChannel": "release/2.1.3xx"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalSymbolPublish",
-          "PB_SymbolServer": "msdl",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_SymbolExpirationInDays": "10950"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalSymbolPublish",
-          "PB_SymbolServer": "symweb",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_SymbolExpirationInDays": "10950"
         }
       }
     },
