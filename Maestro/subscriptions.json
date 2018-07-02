@@ -270,6 +270,35 @@
         }
       }
     },
+    // Update dependencies in CoreCLR release/uwp6.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/uwp6.2/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/uwp6.2/Latest.txt"
+      ],
+      "action": "coreclr-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/uwp6.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "run.cmd",
+          "Arguments": [
+            "build",
+            "-Project='tests\\build.proj'",
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=coreclr",
+            "/p:ProjectRepoBranch=release/uwp6.2",
+            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
     // Update dependencies in CoreCLR release/2.1
     {
       "triggerPaths": [
@@ -473,6 +502,32 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/uwp6.1",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
+    // Update dependencies in CoreFX release/uwp6.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/uwp6.2/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/uwp6.2/Latest.txt"
+      ],
+      "action": "corefx-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/uwp6.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=release/uwp6.2",
             "/verbosity:Normal"
           ]
         }
@@ -1146,6 +1201,32 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=wcf",
             "/p:ProjectRepoBranch=release/uwp6.0",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
+    // Update dependencies in WCF release/uwp6.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/uwp6.2/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/release/uwp6.2/Latest.txt"
+      ],
+      "action": "wcf-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/uwp6.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=wcf",
+            "/p:ProjectRepoBranch=release/uwp6.2",
             "/verbosity:Normal"
           ]
         }
