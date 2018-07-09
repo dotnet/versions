@@ -1,10 +1,16 @@
 {
   "actions": {
     // A build definition capable of running any .ps1 script in the aspnet/Universe repo
-    "aspnet-dependency-update": {
+    "aspnet-universe-general": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8517
+    },
+    // A build definition capable of running any .ps1 script in the aspnet/BuildTools repo
+    "aspnet-buildtools-general": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 9524
     },
     // A build definition capable of running any .ps1 script in the CoreFX repo. By default, the master branch.
     "corefx-general": {
@@ -895,7 +901,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest.txt"
       ],
-      "action": "aspnet-dependency-update",
+      "action": "aspnet-universe-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "master",
@@ -914,7 +920,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/2.2/Latest.txt"
       ],
-      "action": "aspnet-dependency-update",
+      "action": "aspnet-universe-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "dev",
@@ -928,12 +934,107 @@
         }
       }
     },
+    // Automate opening PRs to merge IISIntegration release/2.2 branches back to feature/2.1-oob
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/IISIntegration/blob/release/2.2/**/*"
+      ],
+      "action": "aspnet-buildtools-general",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
+          "Arguments":[
+            "-Fork",
+            "-Username dotnet-maestro-bot",
+            "-HeadBranch release/2.2",
+            "-BaseBranch feature/2.1-oob",
+            "-RepoOwner aspnet",
+            "-RepoName $(GithubRepo)",
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+          ]
+        }
+      }
+    },
+    // Automate opening PRs to merge aspnet release/2.2 branches back to master
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/AADIntegration/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Antiforgery/blob/release/2.2/**/*",
+        "https://github.com/aspnet/AuthSamples/blob/release/2.2/**/*",
+        "https://github.com/aspnet/AzureIntegration/blob/release/2.2/**/*",
+        "https://github.com/aspnet/BasicMiddleware/blob/release/2.2/**/*",
+        "https://github.com/aspnet/BrowserLink/blob/release/2.2/**/*",
+        "https://github.com/aspnet/BuildTools/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Caching/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Common/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Configuration/blob/release/2.2/**/*",
+        "https://github.com/aspnet/CORS/blob/release/2.2/**/*",
+        "https://github.com/aspnet/DataProtection/blob/release/2.2/**/*",
+        "https://github.com/aspnet/DependencyInjection/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Diagnostics/blob/release/2.2/**/*",
+        "https://github.com/aspnet/DotNetTools/blob/release/2.2/**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/2.2/**/*",
+        "https://github.com/aspnet/EventNotification/blob/release/2.2/**/*",
+        "https://github.com/aspnet/FileSystem/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Hosting/blob/release/2.2/**/*",
+        "https://github.com/aspnet/HtmlAbstractions/blob/release/2.2/**/*",
+        "https://github.com/aspnet/HttpAbstractions/blob/release/2.2/**/*",
+        "https://github.com/aspnet/HttpClientFactory/blob/release/2.2/**/*",
+        "https://github.com/aspnet/HttpSysServer/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Identity/blob/release/2.2/**/*",
+        "https://github.com/aspnet/IISIntegration/blob/release/2.2/**/*",
+        "https://github.com/aspnet/JavaScriptServices/blob/release/2.2/**/*",
+        "https://github.com/aspnet/JsonPatch/blob/release/2.2/**/*",
+        "https://github.com/aspnet/KestrelHttpServer/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Localization/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Logging/blob/release/2.2/**/*",
+        "https://github.com/aspnet/MetaPackages/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Microsoft.Data.Sqlite/blob/release/2.2/**/*",
+        "https://github.com/aspnet/MusicStore/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Mvc/blob/release/2.2/**/*",
+        "https://github.com/aspnet/MvcPrecompilation/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Options/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Proxy/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Razor/blob/release/2.2/**/*",
+        "https://github.com/aspnet/ResponseCaching/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Routing/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Scaffolding/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Security/blob/release/2.2/**/*",
+        "https://github.com/aspnet/ServerTests/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Session/blob/release/2.2/**/*",
+        "https://github.com/aspnet/SignalR/blob/release/2.2/**/*",
+        "https://github.com/aspnet/StaticFiles/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Templating/blob/release/2.2/**/*",
+        "https://github.com/aspnet/Universe/blob/release/2.2/**/*",
+        "https://github.com/aspnet/WebSockets/blob/release/2.2/**/*"
+      ],
+      "action": "aspnet-buildtools-general",
+      "delay": "00:30:00",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
+          "Arguments":[
+            "-Fork",
+            "-Username dotnet-maestro-bot",
+            "-HeadBranch release/2.2",
+            "-BaseBranch master",
+            "-RepoOwner aspnet",
+            "-RepoName $(GithubRepo)",
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+          ]
+        }
+      }
+    },
     // Update dependencies in the aspnetcore repo's release/2.1 branch
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
       ],
-      "action": "aspnet-dependency-update",
+      "action": "aspnet-universe-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "release/2.1",
@@ -955,7 +1056,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/master/packages+installers.semaphore"
       ],
-      "action": "aspnet-dependency-update",
+      "action": "aspnet-universe-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "dev",
