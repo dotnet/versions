@@ -1521,6 +1521,31 @@
         }
       }
     },
+    // Automate opening PRs to merge core repo's release/2.1 changes into release/2.2 branches
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/coreclr/release/2.1/**/*",
+        "https://github.com/dotnet/corefx/release/2.1/**/*",
+        "https://github.com/dotnet/core-setup/release/2.1/**/*"
+      ],
+      "action": "aspnet-buildtools-general",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
+          "Arguments":[
+            "-Fork",
+            "-Username dotnet-maestro-bot",
+            "-HeadBranch release/2.1",
+            "-BaseBranch release/2.2",
+            "-RepoOwner dotnet",
+            "-RepoName $(GithubRepo)",
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+          ]
+        }
+      }
+    },
     // Orchestrated build final publish in master
     {
       "triggerPaths": [
