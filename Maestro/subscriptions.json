@@ -1185,6 +1185,22 @@
         }
       }
     },
+    // Update dependencies in cli release/2.1.4xx
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/roslyn/dev15.8/Latest_Packages.txt"
+      ],
+      "action": "cli-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.1.4xx",
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
+          "GITHUB_UPSTREAM_BRANCH": "release/2.1.4xx",
+          "ROSLYN_VERSION_FRAGMENT": "dotnet/roslyn/dev15.8"
+        }
+      }
+    },
     // Update dependencies in cli release/2.1.401
     {
       "triggerPaths": [
