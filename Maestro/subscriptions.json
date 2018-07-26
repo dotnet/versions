@@ -365,6 +365,34 @@
         }
       }
     },
+    // Update dependencies in CoreCLR release/2.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages.semaphore"
+      ],
+      "action": "coreclr-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "run.cmd",
+          "Arguments": [
+            "build",
+            "-Project='tests\\build.proj'",
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=coreclr",
+            "/p:ProjectRepoBranch=release/2.2",
+            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
     // Update dependencies in CoreFX master
     {
       "triggerPaths": [
@@ -618,6 +646,31 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/2.1",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
+    // Update dependencies in CoreFX release/2.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages.semaphore"
+      ],
+      "action": "corefx-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=release/2.2",
             "/verbosity:Normal"
           ]
         }
@@ -955,6 +1008,32 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=release/2.1",
+            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
+    // Update dependencies in core-setup release/2.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages.semaphore"
+      ],
+      "action": "core-setup-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=core-setup",
+            "/p:ProjectRepoBranch=release/2.2",
             "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
             "/verbosity:Normal"
           ]
@@ -1379,6 +1458,27 @@
         }
       }
     },
+    // Update dependencies in cli release/2.2.1xx
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages.semaphore",
+      ],
+      "action": "cli-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.2.1xx",
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
+          "GITHUB_UPSTREAM_BRANCH": "release/2.2.1xx",
+          // Enable once this is done https://github.com/aspnet/Universe/issues/1013.
+          // "ASPNET_VERSION_FRAGMENT": "<version fragment>",
+          "SDK_VERSION_FRAGMENT": "dotnet/sdk/release/2.2.1xx",
+          "TEMPLATING_VERSION_FRAGMENT": "dotnet/templating/release/2.2",
+          "WEBSDK_VERSION_FRAGMENT": "dotnet/templating/release/2.2.1xx",
+          "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.2"
+        }
+      }
+    },
     // Update dependencies in source-build release/2.1
     {
       "triggerPaths": [
@@ -1400,6 +1500,32 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=source-build",
             "/p:ProjectRepoBranch=release/2.1",
+            "/clp:v=Normal"
+          ]
+        }
+      }
+    },
+    // Update dependencies in source-build release/2.2
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.2/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/build.semaphore"
+      ],
+      "action": "source-build-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/2.2",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build.cmd",
+          "Arguments": [
+            "/t:UpdateToRemoteDependencies",
+            "/t:SubmitPullRequestIfChanged",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=source-build",
+            "/p:ProjectRepoBranch=release/2.2",
             "/clp:v=Normal"
           ]
         }
@@ -1860,10 +1986,10 @@
         }
       }
     },
-    // Temporary publishing for 2.1.2
+    // Orchestrated build final publish in release/2.2
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.2/build.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/build.semaphore"
       ],
       "action": "DotNet-Orchestration-Final-Publish-Executor",
       "actionArguments": {
@@ -1878,7 +2004,24 @@
     },
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.2/build.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalBlobPublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "DotNetCliContainerName": "dotnet",
+          "DotNetCliChecksumsContainerName": "dotnet",
+          "CoreSetupLatestChannel": "release/2.2",
+          "CliLatestChannel": "release/2.2.1xx"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/build.semaphore"
       ],
       "action": "DotNet-Orchestration-Final-Publish-Executor",
       "actionArguments": {
@@ -1887,13 +2030,12 @@
           "PB_SymbolServer": "msdl",
           "PB_TriggerPath": "<trigger-path>",
           "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_SymbolExpirationInDays": "10950"
         }
       }
     },
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.2/build.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/build.semaphore"
       ],
       "action": "DotNet-Orchestration-Final-Publish-Executor",
       "actionArguments": {
@@ -1902,7 +2044,18 @@
           "PB_SymbolServer": "symweb",
           "PB_TriggerPath": "<trigger-path>",
           "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_SymbolExpirationInDays": "10950"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Validate-Assets-Signed",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
         }
       }
     },
