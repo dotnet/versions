@@ -72,6 +72,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     },
+    // A build definition that will update the dependencies of the dotnet/core-sdk repo
+    "core-sdk-dependencies": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 9749
+    },
     // A build definition capable of running any .ps1 script in the dotnet-docker repo
     "dotnet-docker-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -101,6 +107,12 @@
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 7644
+    },
+    // A build definition that will update the dependencies of the dotnet/toolset repo
+    "toolset-dependencies": {
+      "vsoInstance": "devdiv.visualstudio.com",
+      "vsoProject": "DevDiv",
+      "buildDefinitionId": 9750
     },
     // A build definition capable of running any .ps1 script in the WCF repo. By default, the master branch.
     "wcf-general": {
@@ -1484,6 +1496,21 @@
           "TEMPLATING_VERSION_FRAGMENT": "dotnet/templating/release/2.2",
           "WEBSDK_VERSION_FRAGMENT": "dotnet/templating/release/2.2.1xx",
           "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/release/2.2"
+        }
+      }
+    },
+    // Update dependencies in core-sdk master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest_Packages.txt",
+      ],
+      "action": "core-sdk-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
+          "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/master"
         }
       }
     },
