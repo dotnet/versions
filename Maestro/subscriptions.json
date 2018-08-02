@@ -1499,6 +1499,21 @@
         }
       }
     },
+    // Update dependencies in core-sdk master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest_Packages.txt",
+      ],
+      "action": "core-sdk-dependencies",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
+          "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/master"
+        }
+      }
+    },
     // Update dependencies in source-build release/2.1
     {
       "triggerPaths": [
