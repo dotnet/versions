@@ -1377,22 +1377,6 @@
         "vsoSourceBranch": "master"
       }
     },
-    // Update dependencies in cli master
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest_Packages.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/roslyn/dev15.7/Latest_Packages.txt"
-      ],
-      "action": "cli-dependencies",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "GITHUB_PULL_REQUEST_NOTIFICATIONS": "dotnet/dotnet-cli",
-          "ROSLYN_VERSION_FRAGMENT": "dotnet/roslyn/dev15.7",
-          "CORESETUP_VERSION_FRAGMENT": "dotnet/core-setup/master"
-        }
-      }
-    },
     // Update dependencies in cli release/2.0.0
     {
       "triggerPaths": [
