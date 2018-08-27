@@ -1071,7 +1071,7 @@
         }
       }
     },
-    // Update dependencies in the dotnet-docker repo's nightly branch
+    // Update 2.1 dependencies in the dotnet-docker repo's nightly branch
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
@@ -1088,6 +1088,29 @@
               "--email dotnet-maestro-bot@microsoft.com",
               "--password `$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])",
               "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml",
+            "'"
+          ]
+        },
+        "vsoSourceBranch": "nightly"
+      }
+    },
+    // Update 2.2 dependencies in the dotnet-docker repo's nightly branch
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages+installers.semaphore"
+      ],
+      "action": "dotnet-docker-general",
+      "delay": "00:05:00",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "ScriptFileName": "scripts\\Invoke-UpdateDependencies.ps1",
+          "Arguments": [
+            "-CleanupDocker",
+            "-UpdateDependenciesParams '",
+              "--user dotnet-maestro-bot",
+              "--email dotnet-maestro-bot@microsoft.com",
+              "--password `$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])",
+              "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.2/build.xml",
             "'"
           ]
         },
