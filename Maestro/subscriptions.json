@@ -1136,25 +1136,6 @@
         }
       }
     },
-    // Update dependencies in the aspnetcore repo's release/2.2 branch after core-setup passes
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/2.2/Latest.txt"
-      ],
-      "action": "aspnet-universe-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/2.2",
-        "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\UpdateDependenciesCoreFx.ps1",
-          "Arguments": [
-            "-GithubUsername dotnet-maestro-bot",
-            "-GithubEmail dotnet-maestro-bot@microsoft.com",
-            "-GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-          ]
-        }
-      }
-    },
     // Automate opening PRs to merge IISIntegration release/2.2 branches back to feature/2.1-oob
     {
       "triggerPaths": [
