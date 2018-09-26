@@ -2066,10 +2066,10 @@
         }
       }
     },
-    // Temporary orchestrated build final publish in release/2.1.4
+    // Temporary orchestrated build final publish in release/2.1.5
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.4/build.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.5/build.semaphore"
       ],
       "action": "DotNet-Orchestration-Final-Publish-Executor",
       "actionArguments": {
@@ -2084,7 +2084,7 @@
     },
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.4/build.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.5/build.semaphore"
       ],
       "action": "DotNet-Orchestration-Final-Publish-Executor",
       "actionArguments": {
@@ -2132,6 +2132,81 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.5/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Validate-Assets-Signed",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>"
+        }
+      }
+    },
+    // Temporary orchestrated build final publish in release/2.1.500
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.500/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalPackagePublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "PB_MyGetBaseEndpoint": "https://dotnet.myget.org/F/dotnet-core",
+          "PB_CentralBlobFeedUrl": "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.500/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalBlobPublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "DotNetCliContainerName": "dotnet",
+          "DotNetCliChecksumsContainerName": "dotnet",
+          "CoreSetupLatestChannel": "release/2.1",
+          "CliLatestChannel": "release/2.1.5xx"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.500/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalSymbolPublish",
+          "PB_SymbolServer": "msdl",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "PB_SymbolExpirationInDays": "10950"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.500/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalSymbolPublish",
+          "PB_SymbolServer": "symweb",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "PB_SymbolExpirationInDays": "10950"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.500/build.semaphore"
       ],
       "action": "DotNet-Orchestration-Final-Validate-Assets-Signed",
       "actionArguments": {
