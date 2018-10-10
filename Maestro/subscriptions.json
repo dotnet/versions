@@ -1372,7 +1372,8 @@
             "-BaseBranch master",
             "-RepoOwner aspnet",
             "-RepoName $(GithubRepo)",
-            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
+            "-AllowAutomatedCommits"
           ]
         }
       }
@@ -1442,7 +1443,8 @@
             "-BaseBranch release/2.2",
             "-RepoOwner aspnet",
             "-RepoName $(GithubRepo)",
-            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
+            "-AllowAutomatedCommits"
           ]
         }
       }
