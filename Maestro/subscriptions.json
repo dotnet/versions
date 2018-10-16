@@ -1,7 +1,7 @@
 {
   "actions": {
-    // A build definition capable of running any .ps1 script in the aspnet/Universe repo
-    "aspnet-universe-general": {
+    // A build definition capable of running any .ps1 script in the aspnet/AspNetCore repo
+    "aspnetcore-general": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8517
@@ -742,6 +742,8 @@
     // Mirror github changes to dotnet vsts
     {
       "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/master/**/*",
+        "https://github.com/aspnet/AspNetCore/blob/release/**/*",
         "https://github.com/aspnet/AADIntegration/blob/master/**/*",
         "https://github.com/aspnet/AADIntegration/blob/release/**/*",
         "https://github.com/aspnet/Antiforgery/blob/master/**/*",
@@ -834,8 +836,6 @@
         "https://github.com/aspnet/StaticFiles/blob/release/**/*",
         "https://github.com/aspnet/Templating/blob/master/**/*",
         "https://github.com/aspnet/Templating/blob/release/**/*",
-        "https://github.com/aspnet/Universe/blob/master/**/*",
-        "https://github.com/aspnet/Universe/blob/release/**/*",
         "https://github.com/aspnet/WebHooks/blob/master/**/*",
         "https://github.com/aspnet/WebHooks/blob/release/**/*",
         "https://github.com/aspnet/WebSockets/blob/master/**/*",
@@ -1170,7 +1170,6 @@
         "https://github.com/aspnet/SignalR/blob/maestro/master/**/*",
         "https://github.com/aspnet/StaticFiles/blob/maestro/master/**/*",
         "https://github.com/aspnet/Templating/blob/maestro/master/**/*",
-        "https://github.com/aspnet/Universe/blob/maestro/master/**/*",
         "https://github.com/aspnet/WebSockets/blob/maestro/master/**/*"
       ],
       "action": "dotnet-arcade-general",
@@ -1240,7 +1239,6 @@
         "https://github.com/aspnet/SignalR/blob/maestro/release/2.2/**/*",
         "https://github.com/aspnet/StaticFiles/blob/maestro/release/2.2/**/*",
         "https://github.com/aspnet/Templating/blob/maestro/release/2.2/**/*",
-        "https://github.com/aspnet/Universe/blob/maestro/release/2.2/**/*",
         "https://github.com/aspnet/WebSockets/blob/maestro/release/2.2/**/*"
       ],
       "action": "dotnet-arcade-general",
@@ -1268,7 +1266,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest.txt"
       ],
-      "action": "aspnet-universe-general",
+      "action": "aspnetcore-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "master",
@@ -1308,6 +1306,7 @@
     // Automate opening PRs to merge aspnet release/2.2 branches back to master
     {
       "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/release/2.2/**/*",
         "https://github.com/aspnet/AADIntegration/blob/release/2.2/**/*",
         "https://github.com/aspnet/Antiforgery/blob/release/2.2/**/*",
         "https://github.com/aspnet/AuthSamples/blob/release/2.2/**/*",
@@ -1352,7 +1351,6 @@
         "https://github.com/aspnet/SignalR/blob/release/2.2/**/*",
         "https://github.com/aspnet/StaticFiles/blob/release/2.2/**/*",
         "https://github.com/aspnet/Templating/blob/release/2.2/**/*",
-        "https://github.com/aspnet/Universe/blob/release/2.2/**/*",
         "https://github.com/aspnet/WebSockets/blob/release/2.2/**/*"
       ],
       "action": "dotnet-arcade-general",
@@ -1377,6 +1375,7 @@
      // Automate opening PRs to merge aspnet release/2.1 branches back to release/2.2
     {
       "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/release/2.1/**/*",
         "https://github.com/aspnet/AADIntegration/blob/release/2.1/**/*",
         "https://github.com/aspnet/Antiforgery/blob/release/2.1/**/*",
         "https://github.com/aspnet/AuthSamples/blob/release/2.1/**/*",
@@ -1422,7 +1421,6 @@
         "https://github.com/aspnet/SignalR/blob/release/2.1/**/*",
         "https://github.com/aspnet/StaticFiles/blob/release/2.1/**/*",
         "https://github.com/aspnet/Templating/blob/release/2.1/**/*",
-        "https://github.com/aspnet/Universe/blob/release/2.1/**/*",
         "https://github.com/aspnet/WebSockets/blob/release/2.1/**/*"
       ],
       "action": "dotnet-arcade-general",
@@ -1449,7 +1447,7 @@
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.5/packages+installers.semaphore"
       ],
-      "action": "aspnet-universe-general",
+      "action": "aspnetcore-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "release/2.1",
@@ -1471,7 +1469,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages+installers.semaphore"
       ],
-      "action": "aspnet-universe-general",
+      "action": "aspnetcore-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "release/2.2",
@@ -1493,7 +1491,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/master/packages+installers.semaphore"
       ],
-      "action": "aspnet-universe-general",
+      "action": "aspnetcore-general",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "master",
