@@ -212,7 +212,7 @@
           ]
         }
       }
-    },    
+    },
     // Update ProjectK TFS dependencies in CoreCLR release/1.0.0
     {
       "triggerPaths": [
@@ -428,9 +428,8 @@
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "ScriptFileName": "build-managed.cmd",
+          "ScriptFileName": "eng\\update-dependencies.cmd",
           "Arguments": [
-            "--",
             "/t:UpdateDependenciesAndSubmitPullRequest",
             "/p:GitHubUser=dotnet-maestro-bot",
             "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
@@ -455,9 +454,8 @@
       "actionArguments": {
         "vsoSourceBranch": "feature/utf8string",
         "vsoBuildParameters": {
-          "ScriptFileName": "build-managed.cmd",
+          "ScriptFileName": "eng\\update-dependencies.cmd",
           "Arguments": [
-            "--",
             "/t:UpdateDependenciesAndSubmitPullRequest",
             "/p:GitHubUser=dotnet-maestro-bot",
             "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
@@ -469,7 +467,7 @@
           ]
         }
       }
-    },    
+    },
     // Update CoreCLR dependencies in CoreFX release/1.0.0
     {
       "triggerPaths": [
@@ -855,7 +853,7 @@
         "https://github.com/dotnet/sdk/blob/release/**/*",
         "https://github.com/dotnet/dotnet-cli-archiver/blob/master/**/*",
         "https://github.com/dotnet/cli-migrate/blob/master/**/*",
-        "https://github.com/dotnet/clicommandlineparser/blob/master/**/*",       
+        "https://github.com/dotnet/clicommandlineparser/blob/master/**/*",
         "https://github.com/dotnet/project-system/blob/master/**/*",
         "https://github.com/dotnet/project-system/blob/release/**/*",
         "https://github.com/dotnet/source-build/blob/master/**/*",
