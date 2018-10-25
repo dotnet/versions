@@ -1213,29 +1213,6 @@
         }
       }
     },
-    // Automate opening PRs to merge IISIntegration release/2.2 branches back to feature/2.1-oob
-    {
-      "triggerPaths": [
-        "https://github.com/aspnet/IISIntegration/blob/release/2.2/**/*"
-      ],
-      "action": "dotnet-arcade-general",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
-          "Arguments":[
-            "-Fork",
-            "-Username dotnet-maestro-bot",
-            "-HeadBranch release/2.2",
-            "-BaseBranch feature/2.1-oob",
-            "-RepoOwner aspnet",
-            "-RepoName $(GithubRepo)",
-            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
-          ]
-        }
-      }
-    },
     // Automate opening PRs to merge aspnet release/2.2 branches back to master
     {
       "triggerPaths": [
