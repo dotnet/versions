@@ -1,4 +1,4 @@
-## Product build: cli build 20181019-02-2137039
+## Product build: cli build 20181019-02-2156680
 
 ### SDK Installers and Binaries
 
@@ -231,9 +231,9 @@ RedHat/Fedora (x64)   | [Installer (rpm)][aspnetcore-redhat-x64-rpm] ([Checksum]
 https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20181019-02/final/index.json
 
 ### Built Repositories
- * aspnet 2.1.6 on 'release/2.1' (f9116a1f4bb58ad6c38f93fed9cf6b3ae1e12876) build 2.1.6-servicing-31093+pb-20181019-02
- * cli 2.1.500 on 'release/2.1.5xx' (edc0c06f368b618a5a8510ef283b687483a37cc7) build 2.1.500
+ * aspnet 2.1.6 on 'release/2.1' (e6ad75c80d2f3f68ea909f02be32f65dbde3eded) build 2.1.6-servicing-31096+pb-20181019-02
+ * cli 2.1.500 on 'release/2.1.5xx' (14c7845f4b84f0dc9e0d1e265de8f7f14ba3d8fc) build 2.1.500
  * coreclr on 'release/2.1' (9bff252639252a2fa0517c12b39a1af9390c9ebd) build 20181019-06
  * corefx on 'release/2.1' (6851cc781ad2ff33d4a0f429a6fc1ab85abaff86) build 20181019-05
  * core-setup 2.1.6 on 'release/2.1' (3f4f8eebd842c5f7f8b2941828c75384c2e2f1ab) build 20181019-06
- * dotnet/sdk on 'refs/heads/release/2.1.5xx' (3e08b08ed13bb0b6a8c3e436c0446e5a7006a7b7) build 20181019.5
+ * dotnet/sdk on 'refs/heads/release/2.1.5xx' (a3186d6a73c1054430bd9ed0afd77b9265b7a582) build 20181025.2
