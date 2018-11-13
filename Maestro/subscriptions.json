@@ -84,8 +84,8 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 9749
     },
-    // A build definition capable of running any .ps1 script in the dotnet-docker repo
-    "dotnet-docker-general": {
+    // A build definition that will update the dependencies in the dotnet-docker repo
+    "dotnet-docker-update-dependencies": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 10293
@@ -1079,20 +1079,11 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
       ],
-      "action": "dotnet-docker-general",
+      "action": "dotnet-docker-update-dependencies",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\Invoke-UpdateDependencies.ps1",
-          "Arguments": [
-            "-CleanupDocker",
-            "-UpdateDependenciesParams '",
-              "--user dotnet-maestro-bot",
-              "--email dotnet-maestro-bot@microsoft.com",
-              "--password `$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])",
-              "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml",
-            "'"
-          ]
+          "buildInfoUrl": "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml"
         },
         "vsoSourceBranch": "nightly"
       }
@@ -1102,20 +1093,11 @@
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages+installers.semaphore"
       ],
-      "action": "dotnet-docker-general",
+      "action": "dotnet-docker-update-dependencies",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\Invoke-UpdateDependencies.ps1",
-          "Arguments": [
-            "-CleanupDocker",
-            "-UpdateDependenciesParams '",
-              "--user dotnet-maestro-bot",
-              "--email dotnet-maestro-bot@microsoft.com",
-              "--password `$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])",
-              "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.2/build.xml",
-            "'"
-          ]
+          "buildInfoUrl": "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.2/build.xml"
         },
         "vsoSourceBranch": "nightly"
       }
