@@ -1609,32 +1609,6 @@
         }
       }
     },
-    // Update dependencies in WCF release/uwp6.2
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/uwp6.2/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/release/uwp6.2/Latest.txt"
-      ],
-      "action": "wcf-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/uwp6.2",
-        "vsoBuildParameters": {
-          "ScriptFileName": "build-managed.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=wcf",
-            "/p:ProjectRepoBranch=release/uwp6.2",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
     // Update dependencies in WCF Master
     {
       "triggerPaths": [
