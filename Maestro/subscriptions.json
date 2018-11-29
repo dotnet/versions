@@ -183,7 +183,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -213,7 +213,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=feature/utf8string",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -261,7 +261,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=release/1.1.0",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -290,7 +290,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=release/2.0.0",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -319,7 +319,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=release/uwp6.0",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -350,7 +350,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=release/uwp6.2",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -381,7 +381,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=release/2.1",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -412,7 +412,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=coreclr",
             "/p:ProjectRepoBranch=release/2.2",
-            "/p:NotifyGitHubUsers=dotnet/coreclr-auto-update-notify",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -444,6 +444,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=master",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -470,6 +471,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=feature/utf8string",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -492,7 +494,8 @@
             "-GitHubPassword `$(`$Secrets['DotNetMaestroBotGitHubToken'])",
             "-GitHubUpstreamBranch release/1.0.0",
             "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/coreclr/release/1.0.0/Latest.txt",
-            "-DirPropsVersionElements CoreClrExpectedPrerelease"
+            "-DirPropsVersionElements CoreClrExpectedPrerelease",
+            "-GitHubPullRequestNotifications dotnet/maestro-reviewers-core"
           ]
         }
       }
@@ -514,7 +517,8 @@
             "-GitHubPassword `$(`$Secrets['DotNetMaestroBotGitHubToken'])",
             "-GitHubUpstreamBranch release/1.0.0",
             "-VersionFileUrl https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/corefx/release/1.0.0/Latest.txt",
-            "-DirPropsVersionElements CoreFxExpectedPrerelease"
+            "-DirPropsVersionElements CoreFxExpectedPrerelease",
+            "-GitHubPullRequestNotifications dotnet/maestro-reviewers-core"
           ]
         }
       }
@@ -538,6 +542,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/1.1.0",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -565,6 +570,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/2.0.0",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -591,6 +597,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/uwp6.0",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -617,6 +624,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/uwp6.1",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -647,6 +655,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/uwp6.2",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -675,6 +684,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/2.1",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -703,6 +713,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=release/2.2",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -919,7 +930,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -947,7 +958,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=feature/utf8string",
-            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -967,7 +978,7 @@
         "vsoSourceBranch": "release/1.0.0",
         "vsoBuildParameters": {
           "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
-          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-maestro-bot','GITHUB_EMAIL=dotnet-maestro-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-maestro-bot','GITHUB_EMAIL=dotnet-maestro-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/maestro-reviewers-core'"
         }
       }
     },
@@ -985,7 +996,7 @@
         "vsoSourceBranch": "release/1.1.0",
         "vsoBuildParameters": {
           "ScriptFileName": "build_projects\\update-dependencies\\update-dependencies.ps1",
-          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-maestro-bot','GITHUB_EMAIL=dotnet-maestro-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/core-setup-contrib'"
+          "Arguments": "-EnvVars 'GITHUB_USER=dotnet-maestro-bot','GITHUB_EMAIL=dotnet-maestro-bot@microsoft.com','GITHUB_PASSWORD=`$(`$Secrets[`'DotNetMaestroBotGitHubToken`'])','GITHUB_PULL_REQUEST_NOTIFICATIONS=dotnet/maestro-reviewers-core'"
         }
       }
     },
@@ -1011,7 +1022,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=release/2.0.0",
-            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -1040,7 +1051,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=release/2.1",
-            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
@@ -1069,7 +1080,7 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=release/2.2",
-            "/p:NotifyGitHubUsers=dotnet/core-setup-contrib",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
         }
