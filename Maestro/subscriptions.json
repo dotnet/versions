@@ -1073,25 +1073,6 @@
         "vsoSourceBranch": "nightly"
       }
     },
-    // Update dependencies in the aspnetcore repo's master branch after core-setup passes
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest.txt"
-      ],
-      "action": "aspnetcore-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\UpdateDependenciesCoreFx.ps1",
-          "Arguments": [
-            "-GithubUsername dotnet-maestro-bot",
-            "-GithubEmail dotnet-maestro-bot@microsoft.com",
-            "-GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-          ]
-        }
-      }
-    },
     // Automate opening PRs to merge aspnet release/2.2 branches back to master
     {
       "triggerPaths": [
@@ -1186,28 +1167,6 @@
             "-BuildXml",
             "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.2/build.xml",
             "-GithubUpstreamBranch release/2.2",
-            "-GithubUsername dotnet-maestro-bot",
-            "-GithubEmail dotnet-maestro-bot@microsoft.com",
-            "-GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-          ]
-        }
-      }
-    },
-    // Update dependencies in the aspnetcore repo's dev branch
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/master/packages+installers.semaphore"
-      ],
-      "action": "aspnetcore-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\UpdateDependencies.ps1",
-          "Arguments": [
-            "-BuildXml",
-            "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/master/build.xml",
-            "-GithubUpstreamBranch dev",
             "-GithubUsername dotnet-maestro-bot",
             "-GithubEmail dotnet-maestro-bot@microsoft.com",
             "-GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
