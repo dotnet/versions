@@ -171,11 +171,9 @@
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "ScriptFileName": "run.cmd",
+          "ScriptFileName": "msbuild.cmd",
           "Arguments": [
-            "build",
-            "-Project='tests\\build.proj'",
-            "--",
+            "tests\\build.proj",
             "/t:UpdateDependenciesAndSubmitPullRequest",
             "/p:GitHubUser=dotnet-maestro-bot",
             "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
