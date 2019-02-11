@@ -416,6 +416,35 @@
         }
       }
     },
+    // Update dependencies in CoreCLR release/3.0
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/master.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/optimization/release/3.0/Latest.txt"
+      ],
+      "action": "coreclr-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/3.0",
+        "vsoBuildParameters": {
+          "ScriptFileName": "run.cmd",
+          "Arguments": [
+            "build",
+            "-Project='tests\\build.proj'",
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=coreclr",
+            "/p:ProjectRepoBranch=release/3.0",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
     // Update dependencies in CoreFX master
     {
       "triggerPaths": [
