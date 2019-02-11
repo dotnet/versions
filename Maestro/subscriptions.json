@@ -717,6 +717,36 @@
         }
       }
     },
+    // Update dependencies in CoreFX release/3.0
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/3.0/packages.semaphore",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/3.0.1/packages.semaphore",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/release/3.0.0/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.2/Latest.txt"
+      ],
+      "action": "corefx-general",
+      "delay": "00:10:00",
+      "actionArguments": {
+        "vsoSourceBranch": "release/3.0",
+        "vsoBuildParameters": {
+          "ScriptFileName": "build-managed.cmd",
+          "Arguments": [
+            "--",
+            "/t:UpdateDependenciesAndSubmitPullRequest",
+            "/p:GitHubUser=dotnet-maestro-bot",
+            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
+            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
+            "/p:ProjectRepoOwner=dotnet",
+            "/p:ProjectRepoName=corefx",
+            "/p:ProjectRepoBranch=release/3.0",
+            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
+            "/verbosity:Normal"
+          ]
+        }
+      }
+    },
+
     // Mirror github changes to devdiv Azure DevOps
     {
       "triggerPaths": [
