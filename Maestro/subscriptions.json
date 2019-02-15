@@ -1214,6 +1214,32 @@
         }
       }
     },
+    // Automate opening PRs to merge aspnet 3.0-preview3 branches back to master
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/release/3.0-preview3/**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0-preview3/**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0-preview3/**/*",       
+        "https://github.com/aspnet/Extensions/blob/release/3.0-preview3/**/*",
+      ],
+      "action": "dotnet-arcade-general",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
+          "Arguments":[
+            "-Fork",
+            "-Username dotnet-maestro-bot",
+            "-HeadBranch release/3.0-preview3",
+            "-BaseBranch master",
+            "-RepoOwner aspnet",
+            "-RepoName $(GithubRepo)",
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+          ]
+        }
+      }
+    },
     // Update dependencies in the aspnetcore repo's release/2.1 branch
     {
       "triggerPaths": [
