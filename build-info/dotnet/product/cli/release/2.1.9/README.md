@@ -1,4 +1,4 @@
-## Product build: cli build 20190214-01-2417000
+## Product build: cli build 20190214-01-2422094
 
 ### SDK Installers and Binaries
 
@@ -231,9 +231,9 @@ RedHat/Fedora (x64)   | [Installer (rpm)][aspnetcore-redhat-x64-rpm] ([Checksum]
 https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20190214-01/final/index.json
 
 ### Built Repositories
- * aspnet 2.1.9 on 'release/2.1' (bd4af873b0d1d810caf31bea125568cfc7858f2f) build 2.1.9-servicing-31245+pb-20190214-01
- * aspnet-extensions 2.1.7 on 'release/2.1' (b3dfaf1b38c106647e391c7033f2cc67e6349c82) build 2.1.7-servicing-19114-05+pb-20190214-01
- * cli 2.1.505 on 'release/2.1.5xx' (ecfbe6d287a9c0c294161c37eac65f6e9ba56391) build 2.1.505
+ * aspnet 2.1.9 on 'release/2.1' (bd4af873b0d1d810caf31bea125568cfc7858f2f) build 2.1.9-servicing-31246+pb-20190214-01
+ * aspnet-extensions 2.1.7 on 'release/2.1' (b3dfaf1b38c106647e391c7033f2cc67e6349c82) build 2.1.7-servicing-19115-03+pb-20190214-01
+ * cli 2.1.505 on 'release/2.1.5xx' (f87c1bfc0f65192bc6329f7e91808e782f23f72d) build 2.1.505
  * coreclr on 'release/2.1' (75d1d390c1b631eeb99d90f92f0ccdb840367b7d) build 20190214-06
- * corefx on 'release/2.1' (04d75dfab83167e61bb5f392e374080d28995fa9) build 20190214-06
- * core-setup 2.1.9 on 'release/2.1' (dcedc87d22ffdc1b86b6a1217dec61c4802ab517) build 20190214-07
+ * corefx on 'release/2.1' (661bb38c5dd55fde3cfe7e7b03678ece4e875237) build 20190215-01
+ * core-setup 2.1.9 on 'release/2.1' (dcedc87d22ffdc1b86b6a1217dec61c4802ab517) build 20190215-01
