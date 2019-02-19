@@ -6,7 +6,7 @@ The directory that holds information about the current builds that are available
 
 ### Structure
 
-At the top-level, the directories are organized in the same way GitHub organizes repos. Here is the pattern:
+At the top level, the directories are organized in the same way GitHub organizes repos. Here is the pattern:
 
 `/build-info/<owner>/<repo>`
 
@@ -16,7 +16,7 @@ Underneath the `<repo>`, we list the `<channel>` for the build.
 
 #### Channels
 
-At a high-level, a channel is a place to store the outputs of a build. A product defines a set of channels
+At a high level, a channel is a place to store the outputs of a build. A product defines a set of channels
 that it produces outputs for, and then as builds are executed, the build outputs are put into one or more
 channels.
 
