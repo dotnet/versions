@@ -1852,6 +1852,29 @@
         }
       }
     },
+    // Automate opening PRs to merge dotnet org repos' release/2.2 changes into master branches
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/buildtools/blob/release/2.2/**/*",
+      ],
+      "action": "dotnet-arcade-general",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepo": "<trigger-repo>",
+          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
+          "Arguments":[
+            "-Fork",
+            "-Username dotnet-maestro-bot",
+            "-HeadBranch release/2.2",
+            "-BaseBranch master",
+            "-RepoOwner dotnet",
+            "-RepoName $(GithubRepo)",
+            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
+          ]
+        }
+      }
+    },
     // Orchestrated build final publish in release/2.1
     {
       "triggerPaths": [
