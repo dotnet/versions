@@ -36,6 +36,12 @@
       "vsoProject": "internal",
       "buildDefinitionId": 240
     },
+    // A 'build' that generates pull requests on GitHub to merge branches
+    "github-dnceng-branch-merge-pr-generator": {
+      "vsoInstance": "dnceng.visualstudio.com",
+      "vsoProject": "internal",
+      "buildDefinitionId": 350
+    },
     // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
     "corefxlab-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -1220,29 +1226,22 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet 3.0-preview3 branches back to master
+    // Automate opening PRs to merge aspnet 3.0 branches back to master
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/release/3.0-preview3/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0-preview3/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0-preview3/**/*",       
-        "https://github.com/aspnet/Extensions/blob/release/3.0-preview3/**/*",
+        "https://github.com/aspnet/AspNetCore/blob/release/3.0*/**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0*/**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0*/**/*",       
+        "https://github.com/aspnet/Extensions/blob/release/3.0*/**/*",
       ],
-      "action": "dotnet-arcade-general",
+      "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "ScriptFileName": "scripts\\GitHubMergeBranches.ps1",
-          "Arguments":[
-            "-Fork",
-            "-Username dotnet-maestro-bot",
-            "-HeadBranch release/3.0-preview3",
-            "-BaseBranch master",
-            "-RepoOwner aspnet",
-            "-RepoName $(GithubRepo)",
-            "-AuthToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])"
-          ]
+          "GithubRepoOwner": "aspnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
         }
       }
     },
