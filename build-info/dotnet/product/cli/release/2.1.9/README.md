@@ -1,4 +1,4 @@
-## Product build: cli build 20190214-01-2446132
+## Product build: cli build 20190214-01-2447740
 
 ### SDK Installers and Binaries
 
@@ -233,7 +233,7 @@ https://dotnetfeed.blob.core.windows.net/orchestrated-release-2-1/20190214-01/fi
 ### Built Repositories
  * aspnet 2.1.9 on 'release/2.1' (bd4af873b0d1d810caf31bea125568cfc7858f2f) build 2.1.9-servicing-31246+pb-20190214-01
  * aspnet-extensions 2.1.7 on 'release/2.1' (b3dfaf1b38c106647e391c7033f2cc67e6349c82) build 2.1.7-servicing-19115-03+pb-20190214-01
- * cli 2.1.505 on 'release/2.1.5xx' (8e8bab195b91310f365d5db3985e6e9e59097390) build 2.1.505
+ * cli 2.1.505 on 'release/2.1.5xx' (95a10272cf7f0c864d56a750fda0f70280bc9f95) build 2.1.505
  * coreclr on 'release/2.1' (75d1d390c1b631eeb99d90f92f0ccdb840367b7d) build 20190214-06
  * corefx on 'release/2.1' (661bb38c5dd55fde3cfe7e7b03678ece4e875237) build 20190215-01
  * core-setup 2.1.9 on 'release/2.1' (dcedc87d22ffdc1b86b6a1217dec61c4802ab517) build 20190215-01
