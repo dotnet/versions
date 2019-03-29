@@ -801,7 +801,6 @@
         "https://github.com/dotnet/standard/blob/master/**/*",
         "https://github.com/dotnet/standard/blob/release/**/*",
         "https://github.com/dotnet/symstore/blob/master/**/*",
-        "https://github.com/dotnet/uwp-setup/blob/arm64/**/*",
         "https://github.com/dotnet/uwp-setup/blob/master/**/*",
         "https://github.com/dotnet/uwp-setup/blob/rel/**/*",
         "https://github.com/Microsoft/msbuild/blob/vs/**/*",
@@ -1711,34 +1710,6 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=uwp-setup",
             "/p:ProjectRepoBranch=master",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-    // Update dependencies in uwp-setup arm64
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/master/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/master/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/projectn-tfs-ilc/arm64/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/release/2.0.0/Latest.txt"
-      ],
-      "action": "uwp-setup-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "arm64",
-        "vsoBuildParameters": {
-          "ScriptFileName": "build.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=uwp-setup",
-            "/p:ProjectRepoBranch=arm64",
             "/verbosity:Normal"
           ]
         }
