@@ -189,36 +189,6 @@
         }
       }
     },
-    // Update dependencies in CoreCLR feature/utf8string
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/feature/utf8string/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/feature/utf8string/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/master/Latest.txt",
-      ],
-      "action": "coreclr-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "feature/utf8string",
-        "vsoBuildParameters": {
-          "ScriptFileName": "run.cmd",
-          "Arguments": [
-            "build",
-            "-Project='tests\\build.proj'",
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=coreclr",
-            "/p:ProjectRepoBranch=feature/utf8string",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
     // Update ProjectK TFS dependencies in CoreCLR release/1.0.0
     {
       "triggerPaths": [
@@ -471,33 +441,6 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=corefx",
             "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-    // Update dependencies in CoreFX feature/utf8string
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/feature/utf8string/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/feature/utf8string/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/master/Latest.txt"
-      ],
-      "action": "corefx-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "feature/utf8string",
-        "vsoBuildParameters": {
-          "ScriptFileName": "eng\\update-dependencies.cmd",
-          "Arguments": [
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=corefx",
-            "/p:ProjectRepoBranch=feature/utf8string",
             "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
@@ -981,34 +924,6 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=master",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-    // Update dependencies in core-setup feature/utf8string
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/feature/utf8string/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/feature/utf8string/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/master/Latest.txt"
-      ],
-      "action": "core-setup-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "feature/utf8string",
-        "vsoBuildParameters": {
-          "ScriptFileName": "build.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=core-setup",
-            "/p:ProjectRepoBranch=feature/utf8string",
             "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
