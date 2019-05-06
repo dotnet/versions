@@ -1,0 +1,15 @@
+trigger:
+- master
+
+pr:
+- master
+
+jobs:
+- job: innerloop
+  displayName: Windows build
+  pool:
+    vmImage: vs2017-win2016
+  steps:
+  - checkout: self
+    clean: true
+  - script: .\Maestro\build.cmd
