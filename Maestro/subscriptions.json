@@ -1,11 +1,5 @@
 {
   "actions": {
-    // A build definition capable of running any .ps1 script in the aspnet/AspNetCore repo
-    "aspnetcore-general": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 8517
-    },
     // A build definition capable of running any .ps1 script in the dotnet/arcade repo
     "dotnet-arcade-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -1218,51 +1212,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "master"
-        }
-      }
-    },
-    // Update dependencies in the aspnetcore repo's release/2.1 branch
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.11/packages.semaphore",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
-      ],
-      "action": "aspnetcore-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/2.1",
-        "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\UpdateDependencies.ps1",
-          "Arguments": [
-            "-BuildXml",
-            "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml",
-            "-GithubUpstreamBranch release/2.1",
-            "-GithubUsername dotnet-maestro-bot",
-            "-GithubEmail dotnet-maestro-bot@microsoft.com",
-            "-GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-          ]
-        }
-      }
-    },
-    // Update dependencies in the aspnetcore repo's release/2.2 branch
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.2/packages+installers.semaphore"
-      ],
-      "action": "aspnetcore-general",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/2.2",
-        "vsoBuildParameters": {
-          "ScriptFileName": "scripts\\UpdateDependencies.ps1",
-          "Arguments": [
-            "-BuildXml",
-            "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.2/build.xml",
-            "-GithubUpstreamBranch release/2.2",
-            "-GithubUsername dotnet-maestro-bot",
-            "-GithubEmail dotnet-maestro-bot@microsoft.com",
-            "-GithubToken `$(`$Secrets[`'BotAccount-dotnet-maestro-bot-PAT`'])",
-          ]
         }
       }
     },
