@@ -1,2 +1,37 @@
 [
+  {
+    "repo": "dotnet/core-nightly/aspnet",
+    "images": {
+      "3.0/aspnet/alpine3.9/amd64": {},
+      "3.0/aspnet/alpine3.9/arm64v8": {}
+    }
+  },
+  {
+    "repo": "dotnet/core-nightly/runtime",
+    "images": {
+      "3.0/runtime/alpine3.9/amd64": {},
+      "3.0/runtime/alpine3.9/arm64v8": {}
+    }
+  },
+  {
+    "repo": "dotnet/core-nightly/runtime-deps",
+    "images": {
+      "3.0/runtime-deps/alpine3.9/amd64": {
+        "baseImages": {
+          "alpine:3.9": "alpine@sha256:769fddc7cc2f0a1c35abb2f91432e8beecf83916c421420e6a6da9f8975464b6"
+        }
+      },
+      "3.0/runtime-deps/alpine3.9/arm64v8": {
+        "baseImages": {
+          "arm64v8/alpine:3.9": "arm64v8/alpine@sha256:9d2b3c9ba598ccd7c4aa49e5ad5b4cf47fb882adc3f5955d5e160b07f26a68ee"
+        }
+      }
+    }
+  },
+  {
+    "repo": "dotnet/core-nightly/sdk",
+    "images": {
+      "3.0/sdk/alpine3.9/amd64": {}
+    }
+  }
 ]
