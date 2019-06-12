@@ -470,5 +470,210 @@
         }
       }
     }
+  },
+  {
+    "repo": "dotnet/core/aspnet",
+    "images": {
+      "3.0/aspnet/alpine3.9/amd64": {},
+      "3.0/aspnet/alpine3.9/arm64v8": {},
+      "3.0/aspnet/bionic/amd64": {},
+      "3.0/aspnet/bionic/arm32v7": {},
+      "3.0/aspnet/bionic/arm64v8": {},
+      "3.0/aspnet/buster-slim/amd64": {},
+      "3.0/aspnet/buster-slim/arm32v7": {},
+      "3.0/aspnet/buster-slim/arm64v8": {},
+      "3.0/aspnet/disco/amd64": {},
+      "3.0/aspnet/disco/arm32v7": {},
+      "3.0/aspnet/disco/arm64v8": {},
+      "3.0/aspnet/nanoserver-1803/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:df3783b22075bdeb4111cbba31dc88a6e66e01e409b97f4ec96c83728080ba78"
+        }
+      },
+      "3.0/aspnet/nanoserver-1809/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:370afa846b124b4674257e193352b38c65790ef75bce27418da0738fa208e66a"
+        }
+      },
+      "3.0/aspnet/nanoserver-1809/arm32v7": {},
+      "3.0/aspnet/nanoserver-1903/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:3fb0c48decd249483b1f55a8cc71be49c6f828df83a91f4ec0b999eee62cc8e7"
+        }
+      }
+    }
+  },
+  {
+    "repo": "dotnet/core/runtime",
+    "images": {
+      "3.0/runtime/alpine3.9/amd64": {},
+      "3.0/runtime/alpine3.9/arm64v8": {},
+      "3.0/runtime/bionic/amd64": {},
+      "3.0/runtime/bionic/arm32v7": {},
+      "3.0/runtime/bionic/arm64v8": {},
+      "3.0/runtime/buster-slim/amd64": {},
+      "3.0/runtime/buster-slim/arm32v7": {},
+      "3.0/runtime/buster-slim/arm64v8": {},
+      "3.0/runtime/disco/amd64": {},
+      "3.0/runtime/disco/arm32v7": {},
+      "3.0/runtime/disco/arm64v8": {},
+      "3.0/runtime/nanoserver-1803/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:017e9758bf4b10dceddae3c015d272095bcde726b3bf4552ba407ce224b8cde5",
+          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:df3783b22075bdeb4111cbba31dc88a6e66e01e409b97f4ec96c83728080ba78"
+        }
+      },
+      "3.0/runtime/nanoserver-1809/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:535887492a56d570a018063d259a99e576cf6092204f87c0d2937fb160e5b090",
+          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:370afa846b124b4674257e193352b38c65790ef75bce27418da0738fa208e66a"
+        }
+      },
+      "3.0/runtime/nanoserver-1809/arm32v7": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:ba3a628ce9ef5849dbb6c5747f558e223a3467cdb11a7706354d9e144ec4858f"
+        }
+      },
+      "3.0/runtime/nanoserver-1903/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:46ac6c4fb02953b6364d19bf9f26923e764464789d0a9f67d28bd2eb0619ba68",
+          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:3fb0c48decd249483b1f55a8cc71be49c6f828df83a91f4ec0b999eee62cc8e7"
+        }
+      }
+    }
+  },
+  {
+    "repo": "dotnet/core/runtime-deps",
+    "images": {
+      "3.0/runtime-deps/alpine3.9/amd64": {
+        "baseImages": {
+          "alpine:3.9": "alpine@sha256:769fddc7cc2f0a1c35abb2f91432e8beecf83916c421420e6a6da9f8975464b6"
+        }
+      },
+      "3.0/runtime-deps/alpine3.9/arm64v8": {
+        "baseImages": {
+          "arm64v8/alpine:3.9": "arm64v8/alpine@sha256:9d2b3c9ba598ccd7c4aa49e5ad5b4cf47fb882adc3f5955d5e160b07f26a68ee"
+        }
+      },
+      "3.0/runtime-deps/bionic/amd64": {
+        "baseImages": {
+          "ubuntu:bionic": "ubuntu@sha256:f08638ec7ddc90065187e7eabdfac3c96e5ff0f6b2f1762cf31a4f49b53000a5"
+        }
+      },
+      "3.0/runtime-deps/bionic/arm32v7": {
+        "baseImages": {
+          "arm32v7/ubuntu:bionic": "arm32v7/ubuntu@sha256:3ec1f6d1568eb75573b6410dbd2bc866b6f69cba2fecba4bc808601e87f83711"
+        }
+      },
+      "3.0/runtime-deps/bionic/arm64v8": {
+        "baseImages": {
+          "arm64v8/ubuntu:bionic": "arm64v8/ubuntu@sha256:232a88d0786c151db4a9f0ef416e23cbe475c552f0a73385b659952ce73acb8f"
+        }
+      },
+      "3.0/runtime-deps/buster-slim/amd64": {
+        "baseImages": {
+          "debian:buster-slim": "debian@sha256:bcde50aa681092b7a5cf059d1e76cd87e7d0b0f5656712345c31b0d7e7f3c71b"
+        }
+      },
+      "3.0/runtime-deps/buster-slim/arm32v7": {
+        "baseImages": {
+          "arm32v7/debian:buster-slim": "arm32v7/debian@sha256:c79af5085a3ef9472bf41d1c115e40737781ca38ec18435115f28421c5f9bb6f"
+        }
+      },
+      "3.0/runtime-deps/buster-slim/arm64v8": {
+        "baseImages": {
+          "arm64v8/debian:buster-slim": "arm64v8/debian@sha256:29d6e09640fda31acf646ae34643d37638f2de94a9c28d67110fbdabd7f542e4"
+        }
+      },
+      "3.0/runtime-deps/disco/amd64": {
+        "baseImages": {
+          "ubuntu:disco": "ubuntu@sha256:1f070d23781c4e0aa3841ae9d7494885283e199e61eddec8337cd1895f864d67"
+        }
+      },
+      "3.0/runtime-deps/disco/arm32v7": {
+        "baseImages": {
+          "arm32v7/ubuntu:disco": "arm32v7/ubuntu@sha256:a1c016568daf6abc3ed3576586fb9a49a4debdcdcc6503afe159c07bf452dc6b"
+        }
+      },
+      "3.0/runtime-deps/disco/arm64v8": {
+        "baseImages": {
+          "arm64v8/ubuntu:disco": "arm64v8/ubuntu@sha256:1519a0bfd43086be8a458c4506ba479a8ca025d1f4e8a87de93908e65e8da23b"
+        }
+      }
+    }
+  },
+  {
+    "repo": "dotnet/core/sdk",
+    "images": {
+      "3.0/sdk/alpine3.9/amd64": {},
+      "3.0/sdk/bionic/amd64": {
+        "baseImages": {
+          "buildpack-deps:bionic-scm": "buildpack-deps@sha256:12f24e98616ca4855ea165d120c3fc683463c3e7290009872a5ea6229259e761"
+        }
+      },
+      "3.0/sdk/bionic/arm32v7": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:bionic-scm": "arm32v7/buildpack-deps@sha256:b0a9ed1fc100b866ede723a4cd5be45313308f0d912f72e8a464666b54ca9029"
+        }
+      },
+      "3.0/sdk/bionic/arm64v8": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:bionic-scm": "arm64v8/buildpack-deps@sha256:f1faf74f9d6b0016048952e9066036e25f8b910a8f5c03a60bd764a59db3ba6d"
+        }
+      },
+      "3.0/sdk/buster/amd64": {
+        "baseImages": {
+          "buildpack-deps:buster-scm": "buildpack-deps@sha256:b5ad1d257fe7834dd186bd3f96624376b36d670b928ecd91fa966033fc1837a4"
+        }
+      },
+      "3.0/sdk/buster/arm32v7": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:buster-scm": "arm32v7/buildpack-deps@sha256:b35ba886f51ed45873afd637bff84fd53ebda40c03f5b189d622be8d16d06d79"
+        }
+      },
+      "3.0/sdk/buster/arm64v8": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:buster-scm": "arm64v8/buildpack-deps@sha256:b3f8e3f584e93093b5764c307c33c2fb088af28840a289a60c136522531e5db8"
+        }
+      },
+      "3.0/sdk/disco/amd64": {
+        "baseImages": {
+          "buildpack-deps:disco-scm": "buildpack-deps@sha256:c766e100f7f116f8d4375797038b8d3b4c00f2402dafe258b7d43959451fc1ab"
+        }
+      },
+      "3.0/sdk/disco/arm32v7": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:disco-scm": "arm32v7/buildpack-deps@sha256:2a74f4622b8618f4c6eb1ae18a27ffe73f24fe59b794861c7764e13f89e4fd99"
+        }
+      },
+      "3.0/sdk/disco/arm64v8": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:disco-scm": "arm64v8/buildpack-deps@sha256:4ef724658390b2d55307ede437f2ec69b5fc9f477d67cd453932f0e3d758e068"
+        }
+      },
+      "3.0/sdk/nanoserver-1803/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:017e9758bf4b10dceddae3c015d272095bcde726b3bf4552ba407ce224b8cde5",
+          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:df3783b22075bdeb4111cbba31dc88a6e66e01e409b97f4ec96c83728080ba78"
+        }
+      },
+      "3.0/sdk/nanoserver-1809/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:535887492a56d570a018063d259a99e576cf6092204f87c0d2937fb160e5b090",
+          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:370afa846b124b4674257e193352b38c65790ef75bce27418da0738fa208e66a"
+        }
+      },
+      "3.0/sdk/nanoserver-1809/arm32v7": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:ba3a628ce9ef5849dbb6c5747f558e223a3467cdb11a7706354d9e144ec4858f"
+        }
+      },
+      "3.0/sdk/nanoserver-1903/amd64": {
+        "baseImages": {
+          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:46ac6c4fb02953b6364d19bf9f26923e764464789d0a9f67d28bd2eb0619ba68",
+          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:3fb0c48decd249483b1f55a8cc71be49c6f828df83a91f4ec0b999eee62cc8e7"
+        }
+      }
+    }
   }
 ]
