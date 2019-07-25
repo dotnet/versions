@@ -706,8 +706,8 @@
     // Mirror github changes to devdiv Azure DevOps
     {
       "triggerPaths": [
-	"https://github.com/aspnet/librarymanager/blob/master/**/*",
-	"https://github.com/aspnet/librarymanager/blob/release/**/*",
+        "https://github.com/aspnet/librarymanager/blob/master/**/*",
+        "https://github.com/aspnet/librarymanager/blob/release/**/*",
         "https://github.com/dotnet/arcade/blob/master/**/*",
         "https://github.com/dotnet/buildtools/blob/master/**/*",
         "https://github.com/dotnet/buildtools/blob/release/**/*",
@@ -775,7 +775,7 @@
         "https://github.com/aspnet/EntityFrameworkCore/blob/release/**/*",
         "https://github.com/aspnet/Extensions/blob/master/**/*",
         "https://github.com/aspnet/Extensions/blob/release/**/*",
-	"https://github.com/aspnet/HttpRepl/blob/master/**/*",
+        "https://github.com/aspnet/HttpRepl/blob/master/**/*",
         "https://github.com/aspnet/HttpRepl/blob/release/**/*",
         "https://github.com/aspnet/Scaffolding/blob/master/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/**/*",
@@ -1163,7 +1163,7 @@
         "https://github.com/aspnet/AspNetCore/blob/release/2.1/**/*",
         "https://github.com/aspnet/BrowserLink/blob/release/2.1/**/*",
         "https://github.com/aspnet/BuildTools/blob/release/2.1/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/2.1/**/*",       
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/2.1/**/*",
         "https://github.com/aspnet/Extensions/blob/release/2.1/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/2.1/**/*"
       ],
@@ -1183,17 +1183,17 @@
       "triggerPaths": [
         "https://github.com/aspnet/AspNetCore/blob/release/3.0-preview8/**/*",
         "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0-preview8/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0-preview8/**/*",   
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0-preview8/**/*",
         "https://github.com/aspnet/Extensions/blob/release/3.0-preview8/**/*",
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
-        "vsoSourceBranch": "release/3.0",
+        "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepoOwner": "release/3.0",
+          "GithubRepoOwner": "aspnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master"
+          "BaseBranch": "release/3.0"
         }
       }
     },
@@ -1203,12 +1203,12 @@
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
-        "vsoSourceBranch": "release/0.10.0",
+        "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepoOwner": "release/0.10.0",
+          "GithubRepoOwner": "aspnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master"
+          "BaseBranch": "release/0.10.0"
         }
       }
     },
@@ -1218,12 +1218,12 @@
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
-        "vsoSourceBranch": "release/6.3",
+        "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepoOwner": "release/6.3",
+          "GithubRepoOwner": "aspnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master"
+          "BaseBranch": "release/6.3"
         }
       }
     },
@@ -1233,7 +1233,7 @@
         "https://github.com/aspnet/AspNetCore/blob/release/3.0/**/*",
         "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0/**/*",
         "https://github.com/aspnet/EntityFramework6/blob/release/6.3/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0/**/*",   
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0/**/*",
         "https://github.com/aspnet/Extensions/blob/release/3.0/**/*",
         "https://github.com/aspnet/Blazor/blob/release/0.10.0/**/*",
       ],
@@ -2113,10 +2113,11 @@
       "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*",
+        "https://github.com/dotnet/corefx/blob/release/3.0/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/shared/**/*",
         "https://github.com/dotnet/coreclr/blob/release/2.1/src/System.Private.CoreLib/shared/**/*",
-        "https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/shared/**/*",
-        "https://github.com/dotnet/corert/blob/release/2.1/src/System.Private.CoreLib/shared/**/*"
+        "https://github.com/dotnet/coreclr/blob/release/3.0/src/System.Private.CoreLib/shared/**/*",
+        "https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/shared/**/*"
       ],
       "action": "DotNet-GitSync-CommitManager",
       "actionArguments": {
