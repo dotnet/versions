@@ -1178,15 +1178,64 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet 3.0 branches back to master
+    // Automate opening PRs to merge aspnet 3.0 preview branches back to 3.0 stable branches
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/release/3.0-preview7/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0-preview7/**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/release/6.3-preview7/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0-preview7/**/*",   
-        "https://github.com/aspnet/Extensions/blob/release/3.0-preview7/**/*",
-        "https://github.com/aspnet/Blazor/blob/release/0.10.0-preview7/**/*",
+        "https://github.com/aspnet/AspNetCore/blob/release/3.0-preview8/**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0-preview8/**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0-preview8/**/*",   
+        "https://github.com/aspnet/Extensions/blob/release/3.0-preview8/**/*",
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "release/3.0",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "release/3.0",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/Blazor/blob/release/0.10.0-preview8/**/*",
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "release/0.10.0",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "release/0.10.0",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/EntityFramework6/blob/release/6.3-preview8/**/*",
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "release/6.3",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "release/6.3",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
+        }
+      }
+    },
+    // Automate opening PRs to merge aspnet 3.0 stable branches back to master (mostly branded 3.1)
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/release/3.0/**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0/**/*",
+        "https://github.com/aspnet/EntityFramework6/blob/release/6.3/**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0/**/*",   
+        "https://github.com/aspnet/Extensions/blob/release/3.0/**/*",
+        "https://github.com/aspnet/Blazor/blob/release/0.10.0/**/*",
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -2064,11 +2113,10 @@
       "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*",
-        "https://github.com/dotnet/corefx/blob/release/3.0/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/shared/**/*",
         "https://github.com/dotnet/coreclr/blob/release/2.1/src/System.Private.CoreLib/shared/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/3.0/src/System.Private.CoreLib/shared/**/*",
-        "https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/shared/**/*"
+        "https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/shared/**/*",
+        "https://github.com/dotnet/corert/blob/release/2.1/src/System.Private.CoreLib/shared/**/*"
       ],
       "action": "DotNet-GitSync-CommitManager",
       "actionArguments": {
