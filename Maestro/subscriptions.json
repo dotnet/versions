@@ -84,18 +84,6 @@
       "vsoProject": "internal",
       "buildDefinitionId": 382
     },
-    // A build definition that will trigger an official build of the dotnet-docker repo's nightly branch
-    "dotnet-docker-nightly": {
-      "vsoInstance": "dnceng.visualstudio.com",
-      "vsoProject": "internal",
-      "buildDefinitionId": 359
-    },
-    // A build definition that will trigger an official build of the dotnet-docker repo's master branch
-    "dotnet-docker": {
-      "vsoInstance": "dnceng.visualstudio.com",
-      "vsoProject": "internal",
-      "buildDefinitionId": 373
-    },
     // A build definition capable of running any .ps1 script in the source-build repo
     "source-build-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -1233,33 +1221,6 @@
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "master"
         }
-      }
-    },
-    // Trigger official build of the dotnet-docker repo's master branch when a base image is changed
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.7.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.8.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.9.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/bionic-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/jessie.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch-slim.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/ubuntu/bionic.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/buildpack-deps/bionic-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch-slim.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/ubuntu/bionic.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/buildpack-deps/bionic-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/debian/stretch-slim.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/ubuntu/bionic.txt"
-      ],
-      "action": "dotnet-docker",
-      "actionArguments": {
-        "vsoSourceBranch": "master"
       }
     },
     // Update dependencies in cli release/2.0.0
