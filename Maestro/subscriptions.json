@@ -1235,33 +1235,6 @@
         }
       }
     },
-    // Trigger official build of the dotnet-docker repo's master branch when a base image is changed
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.7.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.8.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/alpine/3.9.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/bionic-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/jessie-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/jessie.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/debian/stretch-slim.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/ubuntu/bionic.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/buildpack-deps/bionic-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/debian/stretch-slim.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm32v7/ubuntu/bionic.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/buildpack-deps/bionic-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/buildpack-deps/stretch-scm.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/debian/stretch-slim.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/docker/arm64v8/ubuntu/bionic.txt"
-      ],
-      "action": "dotnet-docker",
-      "actionArguments": {
-        "vsoSourceBranch": "master"
-      }
-    },
     // Update dependencies in cli release/2.0.0
     {
       "triggerPaths": [
