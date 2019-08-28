@@ -1202,6 +1202,22 @@
         }
       }
     },
+    // Merge release/3.0 into release/3.1. This temporarily applies only to EntityFrameworkCore.
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "aspnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/3.1"
+        }
+      }
+    },
     // Automate opening PRs to merge aspnet 3.0 stable branches back to master (mostly branded 3.1)
     {
       "triggerPaths": [
@@ -1209,7 +1225,7 @@
         "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0//**/*",
         "https://github.com/aspnet/Blazor/blob/release/3.0//**/*",
         "https://github.com/aspnet/EntityFramework6/blob/release/6.3//**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0//**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.1//**/*",
         "https://github.com/aspnet/Extensions/blob/release/3.0//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
