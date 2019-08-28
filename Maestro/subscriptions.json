@@ -1167,7 +1167,7 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet 3.0 preview branches back to 3.0 stable branches
+    // Automate opening PRs to merge aspnet release/3.0-preview9 branches back to release/3.0
     {
       "triggerPaths": [
         "https://github.com/aspnet/AspNetCore/blob/release/3.0-preview9/**/*",
@@ -1202,10 +1202,14 @@
         }
       }
     },
-    // Merge release/3.0 into release/3.1. This temporarily applies only to EntityFrameworkCore.
+    // Automate opening PRs to merge aspnet release/3.0 branches back to release/3.1
     {
       "triggerPaths": [
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0//**/*"
+        "https://github.com/aspnet/AspNetCore/blob/release/3.0//**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0//**/*",
+        "https://github.com/aspnet/Blazor/blob/release/3.0//**/*",
+        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0//**/*",
+        "https://github.com/aspnet/Extensions/blob/release/3.0//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1218,15 +1222,30 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet 3.0 stable branches back to master (mostly branded 3.1)
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/release/3.0//**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0//**/*",
-        "https://github.com/aspnet/Blazor/blob/release/3.0//**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/release/6.3//**/*",
+        "https://github.com/aspnet/EntityFramework6/blob/release/6.3//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "aspnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/6.4"
+        }
+      }
+    },
+    // Automate opening PRs to merge aspnet release/3.1 branches back to master
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/release/3.1//**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.1//**/*",
+        "https://github.com/aspnet/Blazor/blob/release/3.1//**/*",
+        "https://github.com/aspnet/EntityFramework6/blob/release/6.4//**/*",
         "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.1//**/*",
-        "https://github.com/aspnet/Extensions/blob/release/3.0//**/*"
+        "https://github.com/aspnet/Extensions/blob/release/3.1//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
