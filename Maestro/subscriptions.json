@@ -1805,7 +1805,8 @@
         "https://github.com/dotnet/coreclr/blob/release/3.0/**/*",
         "https://github.com/dotnet/corefx/blob/release/3.0/**/*",
         "https://github.com/dotnet/core-setup/blob/release/3.0/**/*",
-        "https://github.com/dotnet/source-build/blob/release/3.0/**/*"
+        "https://github.com/dotnet/source-build/blob/release/3.0/**/*",
+        "https://github.com/dotnet/wpf/blob/release/3.0/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1815,6 +1816,22 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "release/3.1"
+        }
+      }
+    },
+    // Automate opening PRs to merge dotnet org repos' release/3.1 changes into master branches
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/wpf/blob/release/3.1/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
         }
       }
     },
