@@ -2,12 +2,20 @@
   {
     "repo": "dotnet-buildtools/prereqs",
     "images": {
+      "src/alpine/3.10/helix/amd64/Dockerfile": {
+        "baseImages": {
+          "python:3.7.3-alpine3.10": "python@sha256:93b2b24b95cf74229b41237126e22420580f05f51c76de015986fbd79d8d7e42"
+        },
+        "simpleTags": [
+          "alpine-3.10-helix-3043688-20190918150913"
+        ]
+      },
       "src/alpine/3.8/helix/amd64/Dockerfile": {
         "baseImages": {
           "python:3.7.3-alpine3.8": "python@sha256:3491d1abd29b3f87ca5cb1afd34bc696855a2403df1ff854da55cb6754af1ff8"
         },
         "simpleTags": [
-          "alpine-3.8-helix-2e197e0-20190809151301"
+          "alpine-3.8-helix-2e197e0-20190918150909"
         ]
       },
       "src/alpine/3.8/helix/arm64v8/Dockerfile": {
@@ -15,7 +23,7 @@
           "arm64v8/alpine:3.8": "arm64v8/alpine@sha256:360e20fc240529450cf378756935230541da805701e3ff895305b72f37ce4d9c"
         },
         "simpleTags": [
-          "alpine-3.8-helix-arm64v8-2e197e0-20190809151315"
+          "alpine-3.8-helix-arm64v8-2e197e0-20190918154435"
         ]
       },
       "src/alpine/3.9/amd64/Dockerfile": {
@@ -23,7 +31,7 @@
           "alpine:3.9": "alpine@sha256:7746df395af22f04212cd25a92c1d6dbc5a06a0ca9579a229ef43008d4d1302a"
         },
         "simpleTags": [
-          "alpine-3.9-44e2650-20190809151252"
+          "alpine-3.9-44e2650-20190918150908"
         ]
       },
       "src/alpine/3.9/arm32v7/Dockerfile": {
@@ -31,7 +39,7 @@
           "arm32v7/alpine:3.9": "arm32v7/alpine@sha256:f6d15ec5c7cf08079309c59f59ff1e092eb9a678ab891257b1d2b118e7aecc2b"
         },
         "simpleTags": [
-          "alpine-3.9-arm32v7-44e2650-20190809151323"
+          "alpine-3.9-arm32v7-44e2650-20190918150859"
         ]
       },
       "src/alpine/3.9/arm64v8/Dockerfile": {
@@ -39,7 +47,7 @@
           "arm64v8/alpine:3.9": "arm64v8/alpine@sha256:1032bdba4c5f88facf7eceb259c18deb28a51785eb35e469285a03eba78dd3fc"
         },
         "simpleTags": [
-          "alpine-3.9-arm64v8-44e2650-20190809151317"
+          "alpine-3.9-arm64v8-44e2650-20190918150859"
         ]
       },
       "src/alpine/3.9/helix/amd64/Dockerfile": {
@@ -47,12 +55,12 @@
           "python:3.7.3-alpine3.9": "python@sha256:69f4cedf780ea95e7a0591e5ec3db85207142278501dfab6ef483ccfa5340fe2"
         },
         "simpleTags": [
-          "alpine-3.9-helix-2e197e0-20190809151254"
+          "alpine-3.9-helix-2e197e0-20190918150913"
         ]
       },
       "src/alpine/3.9/WithNode/amd64/Dockerfile": {
         "simpleTags": [
-          "alpine-3.9-WithNode-0fc54a3-20190809151252"
+          "alpine-3.9-WithNode-0fc54a3-20190918150908"
         ]
       },
       "src/centos/6/Dockerfile": {
@@ -140,11 +148,6 @@
           "debian-iot-arm32v7-be5b37d-20190807161037"
         ]
       },
-      "src/debian/jessie/Dockerfile": {
-        "simpleTags": [
-          "debian-jessie-3e800f1-20190807161116"
-        ]
-      },
       "src/debian/jessie/coredeps/Dockerfile": {
         "baseImages": {
           "debian:jessie": "debian@sha256:a8ae3c5129fb2e10a62b5c059a24308831508c44018c24ccda2e4fc6fd7cdda7"
@@ -161,6 +164,11 @@
       "src/debian/jessie/debpkg/Dockerfile": {
         "simpleTags": [
           "debian-jessie-debpkg-58e4974-20190807161116"
+        ]
+      },
+      "src/debian/jessie/Dockerfile": {
+        "simpleTags": [
+          "debian-jessie-3e800f1-20190807161116"
         ]
       },
       "src/debian/stretch-slim/docker-testrunner/Dockerfile": {
@@ -221,14 +229,6 @@
           "nanoserver-1809-helix-amd64-61052b7-20190809151858"
         ]
       },
-      "src/ubuntu/14.04/Dockerfile": {
-        "baseImages": {
-          "ubuntu:14.04": "ubuntu@sha256:2f7c79927b346e436cc14c92bd4e5bd778c3bd7037f35bc639ac1589a7acfa90"
-        },
-        "simpleTags": [
-          "ubuntu-14.04-1735d26-20190809151504"
-        ]
-      },
       "src/ubuntu/14.04/coredeps/Dockerfile": {
         "baseImages": {
           "ubuntu:14.04": "ubuntu@sha256:2f7c79927b346e436cc14c92bd4e5bd778c3bd7037f35bc639ac1589a7acfa90"
@@ -252,12 +252,12 @@
           "ubuntu-14.04-debpkg-cfdd435-20190809151504"
         ]
       },
-      "src/ubuntu/16.04/Dockerfile": {
+      "src/ubuntu/14.04/Dockerfile": {
         "baseImages": {
-          "ubuntu:16.04": "ubuntu@sha256:97b54e5692c27072234ff958a7442dde4266af21e7b688e7fca5dc5acc8ed7d9"
+          "ubuntu:14.04": "ubuntu@sha256:2f7c79927b346e436cc14c92bd4e5bd778c3bd7037f35bc639ac1589a7acfa90"
         },
         "simpleTags": [
-          "ubuntu-16.04-30f6673-20190814211612"
+          "ubuntu-14.04-1735d26-20190809151504"
         ]
       },
       "src/ubuntu/16.04/arm32v7/Dockerfile": {
@@ -284,14 +284,14 @@
           "ubuntu-16.04-coredeps-d9d81d0-20190814211620"
         ]
       },
-      "src/ubuntu/16.04/cross/Dockerfile": {
-        "simpleTags": [
-          "ubuntu-16.04-cross-23cacb0-20190814211620"
-        ]
-      },
       "src/ubuntu/16.04/cross/14.04/Dockerfile": {
         "simpleTags": [
           "ubuntu-16.04-cross-14.04-23cacb0-20190814211620"
+        ]
+      },
+      "src/ubuntu/16.04/cross/arm64-alpine/Dockerfile": {
+        "simpleTags": [
+          "ubuntu-16.04-cross-arm64-alpine-406629a-20190814211620"
         ]
       },
       "src/ubuntu/16.04/cross/arm64/Dockerfile": {
@@ -299,9 +299,9 @@
           "ubuntu-16.04-cross-arm64-cfdd435-20190814211620"
         ]
       },
-      "src/ubuntu/16.04/cross/arm64-alpine/Dockerfile": {
+      "src/ubuntu/16.04/cross/Dockerfile": {
         "simpleTags": [
-          "ubuntu-16.04-cross-arm64-alpine-406629a-20190814211620"
+          "ubuntu-16.04-cross-23cacb0-20190814211620"
         ]
       },
       "src/ubuntu/16.04/crossdeps/Dockerfile": {
@@ -312,6 +312,14 @@
       "src/ubuntu/16.04/debpkg/Dockerfile": {
         "simpleTags": [
           "ubuntu-16.04-debpkg-cfdd435-20190814211612"
+        ]
+      },
+      "src/ubuntu/16.04/Dockerfile": {
+        "baseImages": {
+          "ubuntu:16.04": "ubuntu@sha256:97b54e5692c27072234ff958a7442dde4266af21e7b688e7fca5dc5acc8ed7d9"
+        },
+        "simpleTags": [
+          "ubuntu-16.04-30f6673-20190814211612"
         ]
       },
       "src/ubuntu/16.04/helix/arm32v7/Dockerfile": {
