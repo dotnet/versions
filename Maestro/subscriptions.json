@@ -1850,6 +1850,25 @@
         }
       }
     },
+    // Automate opening PRs to merge services' production branches into master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/arcade-services/blob/production/**/*",
+        "https://github.com/dotnet/arcade-pool-provider/blob/production/**/*",
+        "https://github.com/dotnet/helix-service/blob/production/**/*",
+        "https://github.com/dotnet/arcade/blob/release/3.x/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
+        }
+      }
+    },
     // Orchestrated build final publish in release/2.1
     {
       "triggerPaths": [
