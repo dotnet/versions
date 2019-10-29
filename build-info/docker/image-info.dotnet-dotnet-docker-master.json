@@ -2,6 +2,14 @@
   {
     "repo": "dotnet/core/aspnet",
     "images": {
+      "2.1/aspnet/alpine3.10/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.1-alpine",
+          "2.1-alpine3.10",
+          "2.1.13-alpine",
+          "2.1.13-alpine3.10"
+        ]
+      },
       "2.1/aspnet/alpine3.7/amd64/Dockerfile": {
         "simpleTags": [
           "2.1-alpine3.7",
@@ -10,9 +18,7 @@
       },
       "2.1/aspnet/alpine3.9/amd64/Dockerfile": {
         "simpleTags": [
-          "2.1-alpine",
           "2.1-alpine3.9",
-          "2.1.13-alpine",
           "2.1.13-alpine3.9"
         ]
       },
@@ -68,6 +74,14 @@
         "simpleTags": [
           "2.1-stretch-slim-arm32v7",
           "2.1.13-stretch-slim-arm32v7"
+        ]
+      },
+      "2.2/aspnet/alpine3.10/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.2-alpine",
+          "2.2-alpine3.10",
+          "2.2.7-alpine",
+          "2.2.7-alpine3.10"
         ]
       },
       "2.2/aspnet/alpine3.8/amd64/Dockerfile": {
@@ -148,19 +162,31 @@
           "2.2.7-stretch-slim-arm32v7"
         ]
       },
-      "3.0/aspnet/alpine3.9/amd64/Dockerfile": {
+      "3.0/aspnet/alpine3.10/amd64/Dockerfile": {
         "simpleTags": [
           "3.0-alpine",
-          "3.0-alpine3.9",
+          "3.0-alpine3.10",
           "3.0.0-alpine",
+          "3.0.0-alpine3.10"
+        ]
+      },
+      "3.0/aspnet/alpine3.10/arm64v8/Dockerfile": {
+        "simpleTags": [
+          "3.0-alpine-arm64v8",
+          "3.0-alpine3.10-arm64v8",
+          "3.0.0-alpine-arm64v8",
+          "3.0.0-alpine3.10-arm64v8"
+        ]
+      },
+      "3.0/aspnet/alpine3.9/amd64/Dockerfile": {
+        "simpleTags": [
+          "3.0-alpine3.9",
           "3.0.0-alpine3.9"
         ]
       },
       "3.0/aspnet/alpine3.9/arm64v8/Dockerfile": {
         "simpleTags": [
-          "3.0-alpine-arm64v8",
           "3.0-alpine3.9-arm64v8",
-          "3.0.0-alpine-arm64v8",
           "3.0.0-alpine3.9-arm64v8"
         ]
       },
@@ -364,6 +390,14 @@
       "1.1/runtime/stretch/amd64/Dockerfile": {
         "simpleTags": []
       },
+      "2.1/runtime/alpine3.10/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.1-alpine",
+          "2.1-alpine3.10",
+          "2.1.13-alpine",
+          "2.1.13-alpine3.10"
+        ]
+      },
       "2.1/runtime/alpine3.7/amd64/Dockerfile": {
         "simpleTags": [
           "2.1-alpine3.7",
@@ -372,9 +406,7 @@
       },
       "2.1/runtime/alpine3.9/amd64/Dockerfile": {
         "simpleTags": [
-          "2.1-alpine",
           "2.1-alpine3.9",
-          "2.1.13-alpine",
           "2.1.13-alpine3.9"
         ]
       },
@@ -432,6 +464,14 @@
           "2.1.13-stretch-slim-arm32v7"
         ]
       },
+      "2.2/runtime/alpine3.10/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.2-alpine",
+          "2.2-alpine3.10",
+          "2.2.7-alpine",
+          "2.2.7-alpine3.10"
+        ]
+      },
       "2.2/runtime/alpine3.8/amd64/Dockerfile": {
         "simpleTags": [
           "2.2-alpine3.8",
@@ -440,9 +480,7 @@
       },
       "2.2/runtime/alpine3.9/amd64/Dockerfile": {
         "simpleTags": [
-          "2.2-alpine",
           "2.2-alpine3.9",
-          "2.2.7-alpine",
           "2.2.7-alpine3.9"
         ]
       },
@@ -510,19 +548,31 @@
           "2.2.7-stretch-slim-arm32v7"
         ]
       },
-      "3.0/runtime/alpine3.9/amd64/Dockerfile": {
+      "3.0/runtime/alpine3.10/amd64/Dockerfile": {
         "simpleTags": [
           "3.0-alpine",
-          "3.0-alpine3.9",
+          "3.0-alpine3.10",
           "3.0.0-alpine",
+          "3.0.0-alpine3.10"
+        ]
+      },
+      "3.0/runtime/alpine3.10/arm64v8/Dockerfile": {
+        "simpleTags": [
+          "3.0-alpine-arm64v8",
+          "3.0-alpine3.10-arm64v8",
+          "3.0.0-alpine-arm64v8",
+          "3.0.0-alpine3.10-arm64v8"
+        ]
+      },
+      "3.0/runtime/alpine3.9/amd64/Dockerfile": {
+        "simpleTags": [
+          "3.0-alpine3.9",
           "3.0.0-alpine3.9"
         ]
       },
       "3.0/runtime/alpine3.9/arm64v8/Dockerfile": {
         "simpleTags": [
-          "3.0-alpine-arm64v8",
           "3.0-alpine3.9-arm64v8",
-          "3.0.0-alpine-arm64v8",
           "3.0.0-alpine3.9-arm64v8"
         ]
       },
@@ -727,6 +777,21 @@
         },
         "simpleTags": []
       },
+      "2.1/runtime-deps/alpine3.10/amd64/Dockerfile": {
+        "baseImages": {
+          "alpine:3.10": "alpine@sha256:c19173c5ada610a5989151111163d28a67368362762534d8a8121ce95cf2bd5a"
+        },
+        "simpleTags": [
+          "2.1-alpine",
+          "2.1-alpine3.10",
+          "2.1.13-alpine",
+          "2.1.13-alpine3.10",
+          "2.2-alpine",
+          "2.2-alpine3.10",
+          "2.2.7-alpine",
+          "2.2.7-alpine3.10"
+        ]
+      },
       "2.1/runtime-deps/alpine3.7/amd64/Dockerfile": {
         "baseImages": {
           "alpine:3.7": "alpine@sha256:8421d9a84432575381bfabd248f1eb56f3aa21d9d7cd2511583c68c9b7511d10"
@@ -741,13 +806,9 @@
           "alpine:3.9": "alpine@sha256:7746df395af22f04212cd25a92c1d6dbc5a06a0ca9579a229ef43008d4d1302a"
         },
         "simpleTags": [
-          "2.1-alpine",
           "2.1-alpine3.9",
-          "2.1.13-alpine",
           "2.1.13-alpine3.9",
-          "2.2-alpine",
           "2.2-alpine3.9",
-          "2.2.7-alpine",
           "2.2.7-alpine3.9"
         ]
       },
@@ -804,14 +865,42 @@
           "2.2.7-alpine3.8"
         ]
       },
+      "3.0/runtime-deps/alpine3.10/amd64/Dockerfile": {
+        "baseImages": {
+          "alpine:3.10": "alpine@sha256:c19173c5ada610a5989151111163d28a67368362762534d8a8121ce95cf2bd5a"
+        },
+        "simpleTags": [
+          "3.0-alpine",
+          "3.0-alpine3.10",
+          "3.0.0-alpine",
+          "3.0.0-alpine3.10",
+          "3.1-alpine",
+          "3.1-alpine3.10",
+          "3.1.0-preview1-alpine",
+          "3.1.0-preview1-alpine3.10"
+        ]
+      },
+      "3.0/runtime-deps/alpine3.10/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/alpine:3.10": "arm64v8/alpine@sha256:1827be57ca85c28287d18349bbfdb3870419692656cb67c4cd0f5042f0f63aec"
+        },
+        "simpleTags": [
+          "3.0-alpine-arm64v8",
+          "3.0-alpine3.10-arm64v8",
+          "3.0.0-alpine-arm64v8",
+          "3.0.0-alpine3.10-arm64v8",
+          "3.1-alpine-arm64v8",
+          "3.1-alpine3.10-arm64v8",
+          "3.1.0-preview1-alpine-arm64v8",
+          "3.1.0-preview1-alpine3.10-arm64v8"
+        ]
+      },
       "3.0/runtime-deps/alpine3.9/amd64/Dockerfile": {
         "baseImages": {
           "alpine:3.9": "alpine@sha256:7746df395af22f04212cd25a92c1d6dbc5a06a0ca9579a229ef43008d4d1302a"
         },
         "simpleTags": [
-          "3.0-alpine",
           "3.0-alpine3.9",
-          "3.0.0-alpine",
           "3.0.0-alpine3.9"
         ]
       },
@@ -820,9 +909,7 @@
           "arm64v8/alpine:3.9": "arm64v8/alpine@sha256:1032bdba4c5f88facf7eceb259c18deb28a51785eb35e469285a03eba78dd3fc"
         },
         "simpleTags": [
-          "3.0-alpine-arm64v8",
           "3.0-alpine3.9-arm64v8",
-          "3.0.0-alpine-arm64v8",
           "3.0.0-alpine3.9-arm64v8"
         ]
       },
@@ -1040,6 +1127,14 @@
         },
         "simpleTags": []
       },
+      "2.1/sdk/alpine3.10/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.1-alpine",
+          "2.1-alpine3.10",
+          "2.1.802-alpine",
+          "2.1.802-alpine3.10"
+        ]
+      },
       "2.1/sdk/alpine3.7/amd64/Dockerfile": {
         "simpleTags": [
           "2.1-alpine3.7",
@@ -1048,9 +1143,7 @@
       },
       "2.1/sdk/alpine3.9/amd64/Dockerfile": {
         "simpleTags": [
-          "2.1-alpine",
           "2.1-alpine3.9",
-          "2.1.802-alpine",
           "2.1.802-alpine3.9"
         ]
       },
@@ -1120,6 +1213,14 @@
           "2.1.802-stretch-arm32v7"
         ]
       },
+      "2.2/sdk/alpine3.10/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.2-alpine",
+          "2.2-alpine3.10",
+          "2.2.402-alpine",
+          "2.2.402-alpine3.10"
+        ]
+      },
       "2.2/sdk/alpine3.8/amd64/Dockerfile": {
         "simpleTags": [
           "2.2-alpine3.8",
@@ -1128,9 +1229,7 @@
       },
       "2.2/sdk/alpine3.9/amd64/Dockerfile": {
         "simpleTags": [
-          "2.2-alpine",
           "2.2-alpine3.9",
-          "2.2.402-alpine",
           "2.2.402-alpine3.9"
         ]
       },
@@ -1210,11 +1309,17 @@
           "2.2.402-stretch-arm32v7"
         ]
       },
-      "3.0/sdk/alpine3.9/amd64/Dockerfile": {
+      "3.0/sdk/alpine3.10/amd64/Dockerfile": {
         "simpleTags": [
           "3.0-alpine",
-          "3.0-alpine3.9",
+          "3.0-alpine3.10",
           "3.0.100-alpine",
+          "3.0.100-alpine3.10"
+        ]
+      },
+      "3.0/sdk/alpine3.9/amd64/Dockerfile": {
+        "simpleTags": [
+          "3.0-alpine3.9",
           "3.0.100-alpine3.9"
         ]
       },
