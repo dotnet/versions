@@ -1196,6 +1196,24 @@
         }
       }
     },
+    // Automate opening PRs to merge aspnet release/3.1 branches to the blazor-wasm feature branches
+    {
+      "triggerPaths": [
+        "https://github.com/aspnet/AspNetCore/blob/release/3.1//**/*",
+        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.1//**/*",
+        "https://github.com/aspnet/Blazor/blob/release/3.1//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "aspnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "blazor-wasm"
+        }
+      }
+    },
     // Automate opening PRs to merge cli 3.1.1xx to master
     {
       "triggerPaths": [
