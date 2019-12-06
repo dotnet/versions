@@ -1143,27 +1143,7 @@
         "vsoSourceBranch": "nightly"
       }
     },
-    // Automate opening PRs to merge aspnet release/2.2 branches back to release/3.0
-    {
-      "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/release/2.2/**/*",
-        "https://github.com/aspnet/BuildTools/blob/release/2.2/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/2.2/**/*",
-        "https://github.com/aspnet/Extensions/blob/release/2.2/**/*",
-        "https://github.com/aspnet/Scaffolding/blob/release/2.2/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "aspnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/3.0"
-        }
-      }
-    },
-     // Automate opening PRs to merge aspnet release/2.1 branches back to release/2.2
+    // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0
     {
       "triggerPaths": [
         "https://github.com/aspnet/AspNetCore/blob/release/2.1/**/*",
@@ -1180,7 +1160,7 @@
           "GithubRepoOwner": "aspnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/2.2"
+          "BaseBranch": "release/3.0"
         }
       }
     },
