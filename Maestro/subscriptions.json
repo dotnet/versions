@@ -743,26 +743,24 @@
       "triggerPaths": [
         "https://github.com/aspnet/AspLabs/blob/master/**/*",
         "https://github.com/aspnet/AspLabs/blob/release/**/*",
-        "https://github.com/aspnet/AspNetCore/blob/blazor-wasm/**/*",
-        "https://github.com/aspnet/AspNetCore/blob/master/**/*",
-        "https://github.com/aspnet/AspNetCore/blob/release/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/blazor-wasm/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/master/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/**/*",
         "https://github.com/aspnet/AspNetCore-Internal/blob/master/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/blazor-wasm/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/master/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/**/*",
-        "https://github.com/aspnet/Blazor/blob/blazor-wasm/**/*",
-        "https://github.com/aspnet/Blazor/blob/master/**/*",
-        "https://github.com/aspnet/Blazor/blob/release/**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/master/**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/**/*",
+        "https://github.com/dotnet/blazor/blob/master/**/*",
+        "https://github.com/dotnet/blazor/blob/release/**/*",
         "https://github.com/aspnet/BrowserLink/blob/master/**/*",
         "https://github.com/aspnet/BrowserLink/blob/release/**/*",
         "https://github.com/aspnet/BuildTools/blob/master/**/*",
         "https://github.com/aspnet/BuildTools/blob/release/**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/master/**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/release/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/master/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/**/*",
-        "https://github.com/aspnet/Extensions/blob/master/**/*",
-        "https://github.com/aspnet/Extensions/blob/release/**/*",
+        "https://github.com/dotnet/ef6/blob/master/**/*",
+        "https://github.com/dotnet/ef6/blob/release/**/*",
+        "https://github.com/dotnet/efcore/blob/master/**/*",
+        "https://github.com/dotnet/efcore/blob/release/**/*",
+        "https://github.com/dotnet/extensions/blob/master/**/*",
+        "https://github.com/dotnet/extensions/blob/release/**/*",
         "https://github.com/aspnet/SignalR-Client-Cpp/blob/master/**/*",
         "https://github.com/aspnet/SignalR-Client-Cpp/blob/release/**/*",
         "https://github.com/dotnet/HttpRepl/blob/master/**/*",
@@ -1144,14 +1142,11 @@
         "vsoSourceBranch": "nightly"
       }
     },
-    // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0
+    // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0 or release/3.1.
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/release/2.1/**/*",
         "https://github.com/aspnet/BrowserLink/blob/release/2.1/**/*",
         "https://github.com/aspnet/BuildTools/blob/release/2.1/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/2.1/**/*",
-        "https://github.com/aspnet/Extensions/blob/release/2.1/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/2.1/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
@@ -1165,55 +1160,37 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet release/3.0 branches back to release/3.1
-    // {
-    //   "triggerPaths": [
-    //     "https://github.com/aspnet/AspNetCore/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/Blazor/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/Extensions/blob/release/3.0//**/*"
-    //   ],
-    //   "action": "github-dnceng-branch-merge-pr-generator",
-    //   "actionArguments": {
-    //     "vsoSourceBranch": "master",
-    //     "vsoBuildParameters": {
-    //       "GithubRepoOwner": "aspnet",
-    //       "GithubRepoName": "<trigger-repo>",
-    //       "HeadBranch": "<trigger-branch>",
-    //       "BaseBranch": "release/3.1"
-    //     }
-    //   }
-    // },
-    // {
-    //   "triggerPaths": [
-    //     "https://github.com/aspnet/EntityFramework6/blob/release/6.3//**/*"
-    //   ],
-    //   "action": "github-dnceng-branch-merge-pr-generator",
-    //   "actionArguments": {
-    //     "vsoSourceBranch": "master",
-    //     "vsoBuildParameters": {
-    //       "GithubRepoOwner": "aspnet",
-    //       "GithubRepoName": "<trigger-repo>",
-    //       "HeadBranch": "<trigger-branch>",
-    //       "BaseBranch": "release/6.4"
-    //     }
-    //   }
-    // },
-    // Automate opening PRs to merge aspnet release/3.1 branches back to master
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.1//**/*",
-        "https://github.com/aspnet/Blazor/blob/release/3.1//**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/release/6.4//**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.1//**/*",
-        "https://github.com/aspnet/Extensions/blob/release/3.1//**/*"
+        "https://github.com/dotnet/aspnetcore/blob/release/2.1/**/*",
+        "https://github.com/dotnet/efcore/blob/release/2.1/**/*",
+        "https://github.com/dotnet/extensions/blob/release/2.1/**/*",
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepoOwner": "aspnet",
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/3.1"
+        }
+      }
+    },
+    // Automate opening PRs to merge aspnet release/3.1 branches back to master.
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*",
+        "https://github.com/dotnet/blazor/blob/release/3.1//**/*",
+        "https://github.com/dotnet/ef6/blob/release/6.4//**/*",
+        "https://github.com/dotnet/efcore/blob/release/3.1//**/*",
+        "https://github.com/dotnet/extensions/blob/release/3.1//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "master"
@@ -1261,16 +1238,16 @@
       }
     },
 
-    // Automate opening PRs to merge aspnet release/3.1 branches to the blazor-wasm feature branches
+    // Automate opening PRs to merge aspnetcore release/3.1 branch to the blazor-wasm feature branch.
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/release/3.1//**/*"
+        "https://github.com/dotnet/aspnetcore/blob/release/3.1//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepoOwner": "aspnet",
+          "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "blazor-wasm"
@@ -1278,16 +1255,16 @@
       }
     },
 
-    // Automate opening PRs to merge aspnet blazor-wasm feature branches to master
+    // Automate opening PRs to merge aspnetcore blazor-wasm feature branch to master.
     {
       "triggerPaths": [
-        "https://github.com/aspnet/AspNetCore/blob/blazor-wasm//**/*"
+        "https://github.com/dotnet/aspnetcore/blob/blazor-wasm//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          "GithubRepoOwner": "aspnet",
+          "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "master"
@@ -1796,25 +1773,25 @@
       "triggerPaths": [
         "https://github.com/aspnet/SignalR-Client-Cpp/blob/release/**/*",
         "https://github.com/aspnet/AspLabs/blob/release/**/*",
-        "https://github.com/aspnet/AspNetCore/blob/release/2/**/*",
-        "https://github.com/aspnet/AspNetCore/blob/release/3.0/**/*",
-        "https://github.com/aspnet/AspNetCore/blob/release/3.1/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/2/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0/**/*",
-        "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.1/**/*",
-        "https://github.com/aspnet/Blazor/blob/release/2/**/*",
-        "https://github.com/aspnet/Blazor/blob/release/3.0/**/*",
-        "https://github.com/aspnet/Blazor/blob/release/3.1/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/2/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/3.0/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/3.1/**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/2/**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.0/**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1/**/*",
+        "https://github.com/dotnet/blazor/blob/release/2/**/*",
+        "https://github.com/dotnet/blazor/blob/release/3.0/**/*",
+        "https://github.com/dotnet/blazor/blob/release/3.1/**/*",
         "https://github.com/aspnet/BrowserLink/blob/release/**/*",
         "https://github.com/aspnet/BuildTools/blob/release/**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/release/6.3/**/*",
-        "https://github.com/aspnet/EntityFramework6/blob/release/6.4/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/2/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0/**/*",
-        "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.1/**/*",
-        "https://github.com/aspnet/Extensions/blob/release/2/**/*",
-        "https://github.com/aspnet/Extensions/blob/release/3.0/**/*",
-        "https://github.com/aspnet/Extensions/blob/release/3.1/**/*",
+        "https://github.com/dotnet/ef6/blob/release/6.3/**/*",
+        "https://github.com/dotnet/ef6/blob/release/6.4/**/*",
+        "https://github.com/dotnet/efcore/blob/release/2/**/*",
+        "https://github.com/dotnet/efcore/blob/release/3.0/**/*",
+        "https://github.com/dotnet/efcore/blob/release/3.1/**/*",
+        "https://github.com/dotnet/extensions/blob/release/2/**/*",
+        "https://github.com/dotnet/extensions/blob/release/3.0/**/*",
+        "https://github.com/dotnet/extensions/blob/release/3.1/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/2/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/3.0/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/3.1/**/*",
