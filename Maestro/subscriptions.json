@@ -1148,18 +1148,14 @@
     // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0
     {
       "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/2.1/**/*",
         "https://github.com/aspnet/BrowserLink/blob/release/2.1/**/*",
         "https://github.com/aspnet/BuildTools/blob/release/2.1/**/*",
-        "https://github.com/dotnet/efcore/blob/release/2.1/**/*",
-        "https://github.com/dotnet/extensions/blob/release/2.1/**/*",
         "https://github.com/aspnet/Scaffolding/blob/release/2.1/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          // Reviewers: What does this setting control? For example, do I need to split this rule in two given the different orgs?
           "GithubRepoOwner": "aspnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
@@ -1167,42 +1163,23 @@
         }
       }
     },
-    // Reviewers: Should the next two blocks just be removed?
-    // Automate opening PRs to merge aspnet release/3.0 branches back to release/3.1
-    // {
-    //   "triggerPaths": [
-    //     "https://github.com/aspnet/AspNetCore/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/AspNetCore-Tooling/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/Blazor/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/EntityFrameworkCore/blob/release/3.0//**/*",
-    //     "https://github.com/aspnet/Extensions/blob/release/3.0//**/*"
-    //   ],
-    //   "action": "github-dnceng-branch-merge-pr-generator",
-    //   "actionArguments": {
-    //     "vsoSourceBranch": "master",
-    //     "vsoBuildParameters": {
-    //       "GithubRepoOwner": "aspnet",
-    //       "GithubRepoName": "<trigger-repo>",
-    //       "HeadBranch": "<trigger-branch>",
-    //       "BaseBranch": "release/3.1"
-    //     }
-    //   }
-    // },
-    // {
-    //   "triggerPaths": [
-    //     "https://github.com/aspnet/EntityFramework6/blob/release/6.3//**/*"
-    //   ],
-    //   "action": "github-dnceng-branch-merge-pr-generator",
-    //   "actionArguments": {
-    //     "vsoSourceBranch": "master",
-    //     "vsoBuildParameters": {
-    //       "GithubRepoOwner": "aspnet",
-    //       "GithubRepoName": "<trigger-repo>",
-    //       "HeadBranch": "<trigger-branch>",
-    //       "BaseBranch": "release/6.4"
-    //     }
-    //   }
-    // },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/aspnetcore/blob/release/2.1/**/*",
+        "https://github.com/dotnet/efcore/blob/release/2.1/**/*",
+        "https://github.com/dotnet/extensions/blob/release/2.1/**/*",
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/3.0"
+        }
+      }
+    },
     // Reviewers: Could someone remind me why we don't do automatic merges through 'blazor-wasm' in aspnetcore-tooling and blazor?
     // Automate opening PRs to merge aspnet release/3.1 branches back to master
     {
