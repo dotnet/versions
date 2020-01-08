@@ -747,10 +747,8 @@
         "https://github.com/dotnet/aspnetcore/blob/master/**/*",
         "https://github.com/dotnet/aspnetcore/blob/release/**/*",
         "https://github.com/aspnet/AspNetCore-Internal/blob/master/**/*",
-        "https://github.com/dotnet/aspnetcore-tooling/blob/blazor-wasm/**/*",
         "https://github.com/dotnet/aspnetcore-tooling/blob/master/**/*",
         "https://github.com/dotnet/aspnetcore-tooling/blob/release/**/*",
-        "https://github.com/dotnet/blazor/blob/blazor-wasm/**/*",
         "https://github.com/dotnet/blazor/blob/master/**/*",
         "https://github.com/dotnet/blazor/blob/release/**/*",
         "https://github.com/aspnet/BrowserLink/blob/master/**/*",
@@ -1144,8 +1142,7 @@
         "vsoSourceBranch": "nightly"
       }
     },
-    // Reviewers: Should these changes be merged into release/3.1 branches instead?
-    // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0
+    // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0 or release/3.1.
     {
       "triggerPaths": [
         "https://github.com/aspnet/BrowserLink/blob/release/2.1/**/*",
@@ -1176,12 +1173,11 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/3.0"
+          "BaseBranch": "release/3.1"
         }
       }
     },
-    // Reviewers: Could someone remind me why we don't do automatic merges through 'blazor-wasm' in aspnetcore-tooling and blazor?
-    // Automate opening PRs to merge aspnet release/3.1 branches back to master
+    // Automate opening PRs to merge aspnet release/3.1 branches back to master.
     {
       "triggerPaths": [
         "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*",
@@ -1194,7 +1190,6 @@
       "actionArguments": {
         "vsoSourceBranch": "master",
         "vsoBuildParameters": {
-          // Reviewers: Is changing this setting problematic here -- where the source repos are all in the same org?
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
@@ -1243,7 +1238,7 @@
       }
     },
 
-    // Automate opening PRs to merge aspnetcore release/3.1 branches to the blazor-wasm feature branches
+    // Automate opening PRs to merge aspnetcore release/3.1 branch to the blazor-wasm feature branch.
     {
       "triggerPaths": [
         "https://github.com/dotnet/aspnetcore/blob/release/3.1//**/*"
@@ -1260,7 +1255,7 @@
       }
     },
 
-    // Automate opening PRs to merge aspnetcore blazor-wasm feature branches to master
+    // Automate opening PRs to merge aspnetcore blazor-wasm feature branch to master.
     {
       "triggerPaths": [
         "https://github.com/dotnet/aspnetcore/blob/blazor-wasm//**/*"
