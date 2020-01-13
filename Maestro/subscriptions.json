@@ -305,7 +305,6 @@
     // Update dependencies in CoreCLR release/2.1
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/optimization/release/2.1/Latest.txt"
@@ -579,7 +578,6 @@
     // Update dependencies in CoreFX release/2.1
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/release/2.0.0/Latest.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt"
@@ -973,7 +971,6 @@
     // Update dependencies in core-setup release/2.1
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/release/2.0.0/Latest.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt"
@@ -1023,20 +1020,6 @@
             "/verbosity:Normal"
           ]
         }
-      }
-    },
-    // Update 2.1 dependencies in the dotnet-docker repo's nightly branch
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages+installers.semaphore"
-      ],
-      "action": "dotnet-docker-update-dependencies",
-      "delay": "00:05:00",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "buildInfoUrl": "https://raw.githubusercontent.com/dotnet/versions/master/build-info/dotnet/product/cli/release/2.1/build.xml"
-        },
-        "vsoSourceBranch": "nightly"
       }
     },
     // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0 or release/3.1.
@@ -1258,8 +1241,7 @@
     // Update dependencies in cli release/2.1.5xx
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore"
       ],
       "action": "cli-dependencies",
       "delay": "00:05:00",
@@ -1276,8 +1258,7 @@
     // Update dependencies in cli release/2.1.6xx
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore"
       ],
       "action": "cli-dependencies",
       "delay": "00:05:00",
@@ -1294,8 +1275,7 @@
 	// Update dependencies in cli release/2.1.8xx
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.15/packages.semaphore"
       ],
       "action": "cli-dependencies",
       "delay": "00:05:00",
@@ -1327,8 +1307,7 @@
     // Update dependencies in source-build release/2.1
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt"
       ],
       "action": "source-build-general",
       "delay": "00:10:00",
@@ -1454,7 +1433,6 @@
     // Update dependencies in WCF release/2.1.0
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/packages.semaphore",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/release/2.0.0/Latest.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/release/2.1.0/Latest.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt"
@@ -1710,79 +1688,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "master"
-        }
-      }
-    },
-    // Orchestrated build final publish in release/2.1
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalPackagePublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "PB_MyGetBaseEndpoint": "https://dotnet.myget.org/F/dotnet-core",
-          "PB_CentralBlobFeedUrl": "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalBlobPublish",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-          "DotNetCliContainerName": "dotnet",
-          "DotNetCliChecksumsContainerName": "dotnet",
-          "CoreSetupLatestChannel": "release/2.1",
-          "CliLatestChannel": "release/2.1.401"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalSymbolPublish",
-          "PB_SymbolServer": "msdl",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Publish-Executor",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_FinalTargets": "/t:FinalSymbolPublish",
-          "PB_SymbolServer": "symweb",
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>",
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1/build.semaphore"
-      ],
-      "action": "DotNet-Orchestration-Final-Validate-Assets-Signed",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "PB_TriggerPath": "<trigger-path>",
-          "PB_VersionsRepoRef": "<trigger-commit>"
         }
       }
     },
