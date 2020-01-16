@@ -2,6 +2,18 @@
   {
     "repo": "dotnet/core-nightly/aspnet",
     "images": {
+      "2.1/aspnet/focal/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.1-focal",
+          "2.1.14-focal"
+        ]
+      },
+      "2.1/aspnet/focal/arm32v7/Dockerfile": {
+        "simpleTags": [
+          "2.1-focal-arm32v7",
+          "2.1.14-focal-arm32v7"
+        ]
+      },
       "3.1/aspnet/alpine3.10/amd64/Dockerfile": {
         "simpleTags": [
           "3.1-alpine",
@@ -92,6 +104,18 @@
   {
     "repo": "dotnet/core-nightly/runtime",
     "images": {
+      "2.1/runtime/focal/amd64/Dockerfile": {
+        "simpleTags": [
+          "2.1-focal",
+          "2.1.14-focal"
+        ]
+      },
+      "2.1/runtime/focal/arm32v7/Dockerfile": {
+        "simpleTags": [
+          "2.1-focal-arm32v7",
+          "2.1.14-focal-arm32v7"
+        ]
+      },
       "3.1/runtime/alpine3.10/amd64/Dockerfile": {
         "simpleTags": [
           "3.1-alpine",
@@ -188,6 +212,24 @@
   {
     "repo": "dotnet/core-nightly/runtime-deps",
     "images": {
+      "2.1/runtime-deps/focal/amd64/Dockerfile": {
+        "baseImages": {
+          "ubuntu:focal": "ubuntu@sha256:65932238497b820938ff30b10def60587603199a8382a171eede647eae21fc5f"
+        },
+        "simpleTags": [
+          "2.1-focal",
+          "2.1.14-focal"
+        ]
+      },
+      "2.1/runtime-deps/focal/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/ubuntu:focal": "arm32v7/ubuntu@sha256:f29e5164beb9eece21968b6392c65394e739953bb6f1afe0ab292b6a02bd079f"
+        },
+        "simpleTags": [
+          "2.1-focal-arm32v7",
+          "2.1.14-focal-arm32v7"
+        ]
+      },
       "3.0/runtime-deps/alpine3.10/amd64/Dockerfile": {
         "baseImages": {
           "alpine:3.10": "alpine@sha256:c19173c5ada610a5989151111163d28a67368362762534d8a8121ce95cf2bd5a"
@@ -289,6 +331,24 @@
   {
     "repo": "dotnet/core-nightly/sdk",
     "images": {
+      "2.1/sdk/focal/amd64/Dockerfile": {
+        "baseImages": {
+          "buildpack-deps:focal-scm": "buildpack-deps@sha256:f30d1a373ee792b1abebff3ed9f8d4d6397bab5989caa435c891946e3d43c880"
+        },
+        "simpleTags": [
+          "2.1-focal",
+          "2.1.607-focal"
+        ]
+      },
+      "2.1/sdk/focal/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:focal-scm": "arm32v7/buildpack-deps@sha256:d395e597a746c5cac0b0fbcb766ed547351eeed0921e16a722cd11cdaec06b5f"
+        },
+        "simpleTags": [
+          "2.1-focal-arm32v7",
+          "2.1.607-focal-arm32v7"
+        ]
+      },
       "3.1/sdk/alpine3.10/amd64/Dockerfile": {
         "simpleTags": [
           "3.1-alpine",
