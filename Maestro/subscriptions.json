@@ -1027,9 +1027,9 @@
     // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0 or release/3.1.
     {
       "triggerPaths": [
-        "https://github.com/aspnet/BrowserLink/blob/release/2.1/**/*",
-        "https://github.com/aspnet/BuildTools/blob/release/2.1/**/*",
-        "https://github.com/aspnet/Scaffolding/blob/release/2.1/**/*"
+        "https://github.com/aspnet/BrowserLink/blob/release/2.1//**/*",
+        "https://github.com/aspnet/BuildTools/blob/release/2.1//**/*",
+        "https://github.com/aspnet/Scaffolding/blob/release/2.1//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1044,9 +1044,9 @@
     },
     {
       "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/2.1/**/*",
-        "https://github.com/dotnet/efcore/blob/release/2.1/**/*",
-        "https://github.com/dotnet/extensions/blob/release/2.1/**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/2.1//**/*",
+        "https://github.com/dotnet/efcore/blob/release/2.1//**/*",
+        "https://github.com/dotnet/extensions/blob/release/2.1//**/*",
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1062,6 +1062,7 @@
     // Automate opening PRs to merge aspnet release/3.1 branches back to master.
     {
       "triggerPaths": [
+        "https://github.com/dotnet/aspnetcore/blob/release/3.1//**/*",
         "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*",
         "https://github.com/dotnet/blazor/blob/release/3.1//**/*",
         "https://github.com/dotnet/ef6/blob/release/6.4//**/*",
@@ -1133,23 +1134,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "blazor-wasm"
-        }
-      }
-    },
-
-    // Automate opening PRs to merge aspnetcore blazor-wasm feature branch to master.
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/blazor-wasm//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master"
         }
       }
     },
