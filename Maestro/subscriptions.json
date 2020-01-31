@@ -1693,6 +1693,23 @@
         }
       }
     },
+    // Automate opening PRs to merge msbuild's vs16.x branches into master
+    {
+      "triggerPaths": [
+        "https://github.com/microsoft/msbuild/blob/vs16.5/**/*",
+        "https://github.com/microsoft/msbuild/blob/vs16.6/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "microsoft",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
+        }
+      }
+    },
     // Temporary orchestrated build final publish in release/2.1.15
     {
       "triggerPaths": [
