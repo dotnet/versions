@@ -475,36 +475,54 @@
         ]
       },
       "5.0/aspnet/buster-slim/amd64/Dockerfile": {
+        "baseImages": {
+          "buildpack-deps:buster-curl": "buildpack-deps@sha256:5b6d186908e3752b3f82a13800469d14d5f8a9a45bcef37bf5f5eaba9291aca4"
+        },
         "simpleTags": [
           "5.0-buster-slim",
           "5.0.0-alpha-buster-slim"
         ]
       },
       "5.0/aspnet/buster-slim/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:buster-curl": "arm32v7/buildpack-deps@sha256:7a207d00c0939b7377ca35372d2e3330da464f8141e9024d5976c69741a1a274"
+        },
         "simpleTags": [
           "5.0-buster-slim-arm32v7",
           "5.0.0-alpha-buster-slim-arm32v7"
         ]
       },
       "5.0/aspnet/buster-slim/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:buster-curl": "arm64v8/buildpack-deps@sha256:d7f43d7936c010ae0ecf4208de9ca46dd430b24c6e37feb276630c421935c6da"
+        },
         "simpleTags": [
           "5.0-buster-slim-arm64v8",
           "5.0.0-alpha-buster-slim-arm64v8"
         ]
       },
       "5.0/aspnet/focal/amd64/Dockerfile": {
+        "baseImages": {
+          "buildpack-deps:focal-curl": "buildpack-deps@sha256:b3e30221c1f9c1c037dea55d9f824c7ade0617edc53afb231b42ba8400dc824a"
+        },
         "simpleTags": [
           "5.0-focal",
           "5.0.0-alpha-focal"
         ]
       },
       "5.0/aspnet/focal/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:focal-curl": "arm32v7/buildpack-deps@sha256:9ad5cb20d5f70fad962d9946dbdd3a289e2237786db446b290a0f0abe48b469a"
+        },
         "simpleTags": [
           "5.0-focal-arm32v7",
           "5.0.0-alpha-focal-arm32v7"
         ]
       },
       "5.0/aspnet/focal/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:focal-curl": "arm64v8/buildpack-deps@sha256:74b7d8aff784172d7315a83cfbc6566fe140298fc10ed2fb00b16dac463303d8"
+        },
         "simpleTags": [
           "5.0-focal-arm64v8",
           "5.0.0-alpha-focal-arm64v8"
@@ -1058,36 +1076,54 @@
         ]
       },
       "5.0/runtime/buster-slim/amd64/Dockerfile": {
+        "baseImages": {
+          "buildpack-deps:buster-curl": "buildpack-deps@sha256:5b6d186908e3752b3f82a13800469d14d5f8a9a45bcef37bf5f5eaba9291aca4"
+        },
         "simpleTags": [
           "5.0-buster-slim",
           "5.0.0-alpha-buster-slim"
         ]
       },
       "5.0/runtime/buster-slim/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:buster-curl": "arm32v7/buildpack-deps@sha256:7a207d00c0939b7377ca35372d2e3330da464f8141e9024d5976c69741a1a274"
+        },
         "simpleTags": [
           "5.0-buster-slim-arm32v7",
           "5.0.0-alpha-buster-slim-arm32v7"
         ]
       },
       "5.0/runtime/buster-slim/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:buster-curl": "arm64v8/buildpack-deps@sha256:d7f43d7936c010ae0ecf4208de9ca46dd430b24c6e37feb276630c421935c6da"
+        },
         "simpleTags": [
           "5.0-buster-slim-arm64v8",
           "5.0.0-alpha-buster-slim-arm64v8"
         ]
       },
       "5.0/runtime/focal/amd64/Dockerfile": {
+        "baseImages": {
+          "buildpack-deps:focal-curl": "buildpack-deps@sha256:b3e30221c1f9c1c037dea55d9f824c7ade0617edc53afb231b42ba8400dc824a"
+        },
         "simpleTags": [
           "5.0-focal",
           "5.0.0-alpha-focal"
         ]
       },
       "5.0/runtime/focal/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/buildpack-deps:focal-curl": "arm32v7/buildpack-deps@sha256:9ad5cb20d5f70fad962d9946dbdd3a289e2237786db446b290a0f0abe48b469a"
+        },
         "simpleTags": [
           "5.0-focal-arm32v7",
           "5.0.0-alpha-focal-arm32v7"
         ]
       },
       "5.0/runtime/focal/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/buildpack-deps:focal-curl": "arm64v8/buildpack-deps@sha256:74b7d8aff784172d7315a83cfbc6566fe140298fc10ed2fb00b16dac463303d8"
+        },
         "simpleTags": [
           "5.0-focal-arm64v8",
           "5.0.0-alpha-focal-arm64v8"
@@ -1284,11 +1320,7 @@
           "3.1-alpine",
           "3.1-alpine3.11",
           "3.1.1-alpine",
-          "3.1.1-alpine3.11",
-          "5.0-alpine",
-          "5.0-alpine3.11",
-          "5.0.0-alpha-alpine",
-          "5.0.0-alpha-alpine3.11"
+          "3.1.1-alpine3.11"
         ]
       },
       "3.0/runtime-deps/alpine3.11/arm64v8/Dockerfile": {
@@ -1303,11 +1335,7 @@
           "3.1-alpine-arm64v8",
           "3.1-alpine3.11-arm64v8",
           "3.1.1-alpine-arm64v8",
-          "3.1.1-alpine3.11-arm64v8",
-          "5.0-alpine-arm64v8",
-          "5.0-alpine3.11-arm64v8",
-          "5.0.0-alpha-alpine-arm64v8",
-          "5.0.0-alpha-alpine3.11-arm64v8"
+          "3.1.1-alpine3.11-arm64v8"
         ]
       },
       "3.0/runtime-deps/alpine3.9/amd64/Dockerfile": {
@@ -1369,9 +1397,7 @@
           "3.0-buster-slim",
           "3.0.2-buster-slim",
           "3.1-buster-slim",
-          "3.1.1-buster-slim",
-          "5.0-buster-slim",
-          "5.0.0-alpha-buster-slim"
+          "3.1.1-buster-slim"
         ]
       },
       "3.0/runtime-deps/buster-slim/arm32v7/Dockerfile": {
@@ -1382,9 +1408,7 @@
           "3.0-buster-slim-arm32v7",
           "3.0.2-buster-slim-arm32v7",
           "3.1-buster-slim-arm32v7",
-          "3.1.1-buster-slim-arm32v7",
-          "5.0-buster-slim-arm32v7",
-          "5.0.0-alpha-buster-slim-arm32v7"
+          "3.1.1-buster-slim-arm32v7"
         ]
       },
       "3.0/runtime-deps/buster-slim/arm64v8/Dockerfile": {
@@ -1395,9 +1419,7 @@
           "3.0-buster-slim-arm64v8",
           "3.0.2-buster-slim-arm64v8",
           "3.1-buster-slim-arm64v8",
-          "3.1.1-buster-slim-arm64v8",
-          "5.0-buster-slim-arm64v8",
-          "5.0.0-alpha-buster-slim-arm64v8"
+          "3.1.1-buster-slim-arm64v8"
         ]
       },
       "3.0/runtime-deps/disco/amd64/Dockerfile": {
@@ -1433,9 +1455,7 @@
         },
         "simpleTags": [
           "3.1-focal",
-          "3.1.1-focal",
-          "5.0-focal",
-          "5.0.0-alpha-focal"
+          "3.1.1-focal"
         ]
       },
       "3.1/runtime-deps/focal/arm32v7/Dockerfile": {
@@ -1444,9 +1464,7 @@
         },
         "simpleTags": [
           "3.1-focal-arm32v7",
-          "3.1.1-focal-arm32v7",
-          "5.0-focal-arm32v7",
-          "5.0.0-alpha-focal-arm32v7"
+          "3.1.1-focal-arm32v7"
         ]
       },
       "3.1/runtime-deps/focal/arm64v8/Dockerfile": {
@@ -1455,7 +1473,81 @@
         },
         "simpleTags": [
           "3.1-focal-arm64v8",
-          "3.1.1-focal-arm64v8",
+          "3.1.1-focal-arm64v8"
+        ]
+      },
+      "5.0/runtime-deps/alpine3.11/amd64/Dockerfile": {
+        "baseImages": {
+          "alpine:3.11": "alpine@sha256:ab00606a42621fb68f2ed6ad3c88be54397f981a7b70a79db3d1172b11c4367d"
+        },
+        "simpleTags": [
+          "5.0-alpine",
+          "5.0-alpine3.11",
+          "5.0.0-alpha-alpine",
+          "5.0.0-alpha-alpine3.11"
+        ]
+      },
+      "5.0/runtime-deps/alpine3.11/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/alpine:3.11": "arm64v8/alpine@sha256:4d5c5951669588e23881c158629ae6bac4ab44866d5b4d150c3f15d91f26682b"
+        },
+        "simpleTags": [
+          "5.0-alpine-arm64v8",
+          "5.0-alpine3.11-arm64v8",
+          "5.0.0-alpha-alpine-arm64v8",
+          "5.0.0-alpha-alpine3.11-arm64v8"
+        ]
+      },
+      "5.0/runtime-deps/buster-slim/amd64/Dockerfile": {
+        "baseImages": {
+          "debian:buster-slim": "debian@sha256:9ab269df3cfa21324fcbfcf5366722d99d77ab480a8cbb0727612f7ea4e6ae27"
+        },
+        "simpleTags": [
+          "5.0-buster-slim",
+          "5.0.0-alpha-buster-slim"
+        ]
+      },
+      "5.0/runtime-deps/buster-slim/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/debian:buster-slim": "arm32v7/debian@sha256:13e42fe651e6d7658823a808928770b9695e9e9502c59b3905c5f3a544eaebdf"
+        },
+        "simpleTags": [
+          "5.0-buster-slim-arm32v7",
+          "5.0.0-alpha-buster-slim-arm32v7"
+        ]
+      },
+      "5.0/runtime-deps/buster-slim/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/debian:buster-slim": "arm64v8/debian@sha256:8b74a3edce7b8877bb94aeeca91cfc17eec647cb7131b89f4ae70226a86e16c4"
+        },
+        "simpleTags": [
+          "5.0-buster-slim-arm64v8",
+          "5.0.0-alpha-buster-slim-arm64v8"
+        ]
+      },
+      "5.0/runtime-deps/focal/amd64/Dockerfile": {
+        "baseImages": {
+          "ubuntu:focal": "ubuntu@sha256:7922db6447e9d1470e3bf821e8ff228d70c3593e822e980c58bf9185821ac645"
+        },
+        "simpleTags": [
+          "5.0-focal",
+          "5.0.0-alpha-focal"
+        ]
+      },
+      "5.0/runtime-deps/focal/arm32v7/Dockerfile": {
+        "baseImages": {
+          "arm32v7/ubuntu:focal": "arm32v7/ubuntu@sha256:18100e418054ebe1be0fff4e514183f28088a0db409df081c3233dd22dcf4a15"
+        },
+        "simpleTags": [
+          "5.0-focal-arm32v7",
+          "5.0.0-alpha-focal-arm32v7"
+        ]
+      },
+      "5.0/runtime-deps/focal/arm64v8/Dockerfile": {
+        "baseImages": {
+          "arm64v8/ubuntu:focal": "arm64v8/ubuntu@sha256:64a3d51cb381a58adf45f5037a03deee2e22668d8e2f19a222e78c16969229a6"
+        },
+        "simpleTags": [
           "5.0-focal-arm64v8",
           "5.0.0-alpha-focal-arm64v8"
         ]
