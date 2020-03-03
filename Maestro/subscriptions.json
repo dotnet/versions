@@ -1081,6 +1081,25 @@
         }
       }
     },
+    // Automate opening PRs to merge aspnet release/5.0-preview1 branches back to master.
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/aspnetcore/blob/release/5.0-preview1//**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/5.0-preview1//**/*",
+        "https://github.com/dotnet/efcore/blob/release/5.0-preview1//**/*",
+        "https://github.com/dotnet/extensions/blob/release/5.0-preview1//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master"
+        }
+      }
+    },
     // Automate opening PRs to merge cli 3.0.1xx to 3.1.1xx
     // {
     //   "triggerPaths": [
