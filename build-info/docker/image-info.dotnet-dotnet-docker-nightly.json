@@ -1,2575 +1,2172 @@
-[
-  {
-    "repo": "dotnet/core-nightly/aspnet",
-    "images": {
-      "2.1/aspnet/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.10",
-          "2.1.17-alpine3.10"
-        ],
-        "digest": "sha256:b362bfef6d5d8f3e12b9274cf1f79ade21e0d088be8ee5535c6dae70a2af62a6"
-      },
-      "2.1/aspnet/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine",
-          "2.1-alpine3.11",
-          "2.1.17-alpine",
-          "2.1.17-alpine3.11"
-        ],
-        "digest": "sha256:e39ec3c8bf8577ab7e9226e49bbce8df0a1816e3e5677aa6ba467e2d62c0f501"
-      },
-      "2.1/aspnet/alpine3.7/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.7",
-          "2.1.13-alpine3.7"
-        ],
-        "digest": null
-      },
-      "2.1/aspnet/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.9",
-          "2.1.14-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.1/aspnet/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-bionic",
-          "2.1.17-bionic"
-        ],
-        "digest": "sha256:cabf94893b70e380ae6929a8f0fcaceae1a979e11e25e0cebcf39ff803586e76"
-      },
-      "2.1/aspnet/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.1-bionic-arm32v7",
-          "2.1.17-bionic-arm32v7"
-        ],
-        "digest": "sha256:f5440dddea4b5b157216f938a5ecd8d0ece242817afd795a0863c6e35897ff92"
-      },
-      "2.1/aspnet/focal/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-focal",
-          "2.1.17-focal"
-        ],
-        "digest": "sha256:7556729537898ab6ef2153c76016d0b0f499eff40c121e606419ca7c5d92fa4b"
-      },
-      "2.1/aspnet/focal/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.1-focal-arm32v7",
-          "2.1.16-focal-arm32v7"
-        ],
-        "digest": "sha256:85f5d1f9467b73df2339b54723c52fcf8c4635d534ad71905969a3bcf57c9457"
-      },
-      "2.1/aspnet/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
+{
+  "schemaVersion": "1.0",
+  "repos": [
+    {
+      "repo": "dotnet/core-nightly/aspnet",
+      "images": [
+        {
+          "manifest": {
+            "digest": "sha256:c6da2d61c90480d39024ea5c6b7ca8056b176f0ba87397b93d6ceafaf1f8230a",
+            "created": "2020-03-24T18:54:14.8372595Z",
+            "sharedTags": [
+              "2.1.17",
+              "2.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "2.1/aspnet/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.17-nanoserver-1809",
+                "2.1-nanoserver-1809"
+              ],
+              "digest": "sha256:9eacb40f8ef1e0862e3b3a9efd9a5bc9ad143ac62eb38b9ad696ab153b9dcc1b",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:14.8372595Z"
+            },
+            {
+              "dockerfile": "2.1/aspnet/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.17-nanoserver-1903",
+                "2.1-nanoserver-1903"
+              ],
+              "digest": "sha256:0599695be5ec279228859e086e8f2393666c44c55f4f945bc453369fc6d05dea",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:06.5888382Z"
+            },
+            {
+              "dockerfile": "2.1/aspnet/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.17-nanoserver-1909",
+                "2.1-nanoserver-1909"
+              ],
+              "digest": "sha256:c6d806c230d4f6fcd8cf685f37aabb8c3aed0fde05087ecde2f897f5a4703b6a",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:09.7148092Z"
+            },
+            {
+              "dockerfile": "2.1/aspnet/stretch-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-slim",
+                "2.1.17-stretch-slim"
+              ],
+              "digest": "sha256:d876bca9c21def18b1d3eaa09474da5f1378de6a8493ee5177361736be64262f",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:04.9902632Z"
+            },
+            {
+              "dockerfile": "2.1/aspnet/stretch-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-slim-arm32v7",
+                "2.1.17-stretch-slim-arm32v7"
+              ],
+              "digest": "sha256:6b20dc6fe668820d8118ea5639e651672b71735790d76b5940662ea1ee2fdacb",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:21.4332675Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.1.13-nanoserver-1803",
-          "2.1-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "2.1/aspnet/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/aspnet/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine3.10",
+                "2.1.17-alpine3.10"
+              ],
+              "digest": "sha256:b362bfef6d5d8f3e12b9274cf1f79ade21e0d088be8ee5535c6dae70a2af62a6",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:47.3117245Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.1.17-nanoserver-1809",
-          "2.1-nanoserver-1809"
-        ],
-        "digest": "sha256:9eacb40f8ef1e0862e3b3a9efd9a5bc9ad143ac62eb38b9ad696ab153b9dcc1b"
-      },
-      "2.1/aspnet/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/aspnet/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine",
+                "2.1-alpine3.11",
+                "2.1.17-alpine",
+                "2.1.17-alpine3.11"
+              ],
+              "digest": "sha256:e39ec3c8bf8577ab7e9226e49bbce8df0a1816e3e5677aa6ba467e2d62c0f501",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:10.0501486Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.1.17-nanoserver-1903",
-          "2.1-nanoserver-1903"
-        ],
-        "digest": "sha256:0599695be5ec279228859e086e8f2393666c44c55f4f945bc453369fc6d05dea"
-      },
-      "2.1/aspnet/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/aspnet/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic",
+                "2.1.17-bionic"
+              ],
+              "digest": "sha256:cabf94893b70e380ae6929a8f0fcaceae1a979e11e25e0cebcf39ff803586e76",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:36.0441846Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.1.17-nanoserver-1909",
-          "2.1-nanoserver-1909"
-        ],
-        "digest": "sha256:c6d806c230d4f6fcd8cf685f37aabb8c3aed0fde05087ecde2f897f5a4703b6a"
-      },
-      "2.1/aspnet/stretch-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-stretch-slim",
-          "2.1.17-stretch-slim"
-        ],
-        "digest": "sha256:d876bca9c21def18b1d3eaa09474da5f1378de6a8493ee5177361736be64262f"
-      },
-      "2.1/aspnet/stretch-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.1-stretch-slim-arm32v7",
-          "2.1.17-stretch-slim-arm32v7"
-        ],
-        "digest": "sha256:6b20dc6fe668820d8118ea5639e651672b71735790d76b5940662ea1ee2fdacb"
-      },
-      "2.2/aspnet/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine",
-          "2.2-alpine3.10",
-          "2.2.8-alpine",
-          "2.2.8-alpine3.10"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/alpine3.8/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine3.8",
-          "2.2.7-alpine3.8"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine3.9",
-          "2.2.8-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-bionic",
-          "2.2.8-bionic"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.2-bionic-arm32v7",
-          "2.2.8-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/aspnet/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic-arm32v7",
+                "2.1.17-bionic-arm32v7"
+              ],
+              "digest": "sha256:f5440dddea4b5b157216f938a5ecd8d0ece242817afd795a0863c6e35897ff92",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:54:29.0450144Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.2.7-nanoserver-1803",
-          "2.2-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:0711f47c5bbfbe16448287a2f1fdd6cfcfd6674f2044c1fe4e4a20ef79245dfe",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:4b4acad59b06d129357951864ba2ec5624e2a33a11fbbd6fe3d27696e021c044"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/aspnet/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-focal",
+                "2.1.17-focal"
+              ],
+              "digest": "sha256:7556729537898ab6ef2153c76016d0b0f499eff40c121e606419ca7c5d92fa4b",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:10.6592025Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.2.8-nanoserver-1809",
-          "2.2-nanoserver-1809"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:29ac61dc04f9de9b82e9e7034afddf8622317b839f8000961330b893654d442b"
+        {
+          "manifest": {
+            "digest": "sha256:a3a1819371bb9e0193e51feebbafd471857e2e0764dad836b60424e2b4dd0780",
+            "created": "2020-03-24T18:55:47.9993685Z",
+            "sharedTags": [
+              "3.1.3",
+              "3.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/buster-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim",
+                "3.1.3-buster-slim"
+              ],
+              "digest": "sha256:bbdf1307b597c5f50876366013d81be06e76affd1f244018eadd1b92f205f193",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:53.127317Z"
+            },
+            {
+              "dockerfile": "3.1/aspnet/buster-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim-arm32v7",
+                "3.1.3-buster-slim-arm32v7"
+              ],
+              "digest": "sha256:fc551a5f3b304a8b2156f94c3ab80160e633a487c9057a85a30dc63ac0b51de3",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:26.9367659Z"
+            },
+            {
+              "dockerfile": "3.1/aspnet/buster-slim/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim-arm64v8",
+                "3.1.3-buster-slim-arm64v8"
+              ],
+              "digest": "sha256:955ac979b64b8c18203b724511b2fe1cdd50b6f58033697b8a1c2ca106c8b3c9",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:56.7411631Z"
+            },
+            {
+              "dockerfile": "3.1/aspnet/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.3-nanoserver-1809",
+                "3.1-nanoserver-1809"
+              ],
+              "digest": "sha256:62761c4ff13be305369f2623567bcc7ccb6a08d2ce97ee90742b860c892f8a6c",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:18.0366733Z"
+            },
+            {
+              "dockerfile": "3.1/aspnet/nanoserver-1809/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-nanoserver-1809-arm32v7",
+                "3.1.3-nanoserver-1809-arm32v7"
+              ],
+              "digest": "sha256:2dba8aee9ef42aa0dfdf5188c4dfa910e96222a7cc23169e3f5a1a964b249196",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:55:47.9993685Z"
+            },
+            {
+              "dockerfile": "3.1/aspnet/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.3-nanoserver-1903",
+                "3.1-nanoserver-1903"
+              ],
+              "digest": "sha256:fa1881336e4e2cadbb5ff5dcc03d987d8af8c1e8757171de3bb9cca34b96cf9f",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:16.5961642Z"
+            },
+            {
+              "dockerfile": "3.1/aspnet/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.3-nanoserver-1909",
+                "3.1-nanoserver-1909"
+              ],
+              "digest": "sha256:5ec8db1a31435a6faebdb359ba9ff6d45b5566223d8a5a7d14ffe27b1507fbe9",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:24.1993648Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.2-nanoserver-1809-arm32",
-          "2.2-nanoserver-1809-arm32v7",
-          "2.2.8-nanoserver-1809-arm32v7"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:9232b07147b4965894bdbeb70e0cfeba8be0d16e276451477f64cbe6943f3264",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:4fb5944b9ebefeab481893d54a0498a380432f8f80f62f2b9debe81dbd7ff6a7"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10",
+                "3.1.3-alpine3.10"
+              ],
+              "digest": "sha256:b377bc59e739fbcba13dd2770077b38be009ba842837125270444aeb71cedbf9",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:00.0434137Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.2.8-nanoserver-1903",
-          "2.2-nanoserver-1903"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:3af4fbf8bdf634c7df8a2878de55a2ad6d7370d0a026d9b11d325411c534ec90",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:12327ccba5d74921479cc95b56e9422278ac3565740c2a46359bf0ac44aab0ad"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/alpine3.10/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10-arm64v8",
+                "3.1.3-alpine3.10-arm64v8"
+              ],
+              "digest": "sha256:0e9461976768d18f354e850d6d1eaf35cf376f81e6cc6d2a3fb888873603f7d3",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:25.1592167Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "2.2.8-nanoserver-1909",
-          "2.2-nanoserver-1909"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/stretch-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-stretch-slim",
-          "2.2.8-stretch-slim"
-        ],
-        "digest": null
-      },
-      "2.2/aspnet/stretch-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.2-stretch-slim-arm32v7",
-          "2.2.8-stretch-slim-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.10",
-          "3.0.3-alpine3.10"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/alpine3.10/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.10-arm64v8",
-          "3.0.3-alpine3.10-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine",
-          "3.0-alpine3.11",
-          "3.0.3-alpine",
-          "3.0.3-alpine3.11"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/alpine3.11/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine-arm64v8",
-          "3.0-alpine3.11-arm64v8",
-          "3.0.3-alpine-arm64v8",
-          "3.0.3-alpine3.11-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.9",
-          "3.0.1-alpine3.9"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/alpine3.9/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.9-arm64v8",
-          "3.0.1-alpine3.9-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-bionic",
-          "3.0.3-bionic"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-bionic-arm32v7",
-          "3.0.3-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/bionic/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-bionic-arm64v8",
-          "3.0.3-bionic-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/buster-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-buster-slim",
-          "3.0.3-buster-slim"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/buster-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-buster-slim-arm32v7",
-          "3.0.3-buster-slim-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/buster-slim/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-buster-slim-arm64v8",
-          "3.0.3-buster-slim-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/disco/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-disco",
-          "3.0.2-disco"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/disco/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-disco-arm32v7",
-          "3.0.2-disco-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/disco/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-disco-arm64v8",
-          "3.0.2-disco-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine",
+                "3.1-alpine3.11",
+                "3.1.3-alpine",
+                "3.1.3-alpine3.11"
+              ],
+              "digest": "sha256:11e17f4489210a0679c1b87e1a10f0134122801fbae7bb1ae9adb791bcf53177",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:53.8901839Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.0.0-nanoserver-1803",
-          "3.0-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:a14c8e7a925f09bdd6eb5cc42e798349c4345be08d89514383e9731a900964e1"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/alpine3.11/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine-arm64v8",
+                "3.1-alpine3.11-arm64v8",
+                "3.1.3-alpine-arm64v8",
+                "3.1.3-alpine3.11-arm64v8"
+              ],
+              "digest": "sha256:360187053812b3bdabe52b078b341a5b75fd132490748df613a2ef59463fbd5d",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:26.8252763Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.0.3-nanoserver-1809",
-          "3.0-nanoserver-1809"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/nanoserver-1809/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-nanoserver-1809-arm32v7",
-          "3.0.3-nanoserver-1809-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:7945cccb08209e77e611d3af2c8a64c0d2f04bbdb15d69f4ed87aaf164818d48"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic",
+                "3.1.3-bionic"
+              ],
+              "digest": "sha256:fb5107e517f100fef1287429420d32bfd3de6266b1a84a0689f4070295827a69",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:06.9747091Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.0.3-nanoserver-1903",
-          "3.0-nanoserver-1903"
-        ],
-        "digest": null
-      },
-      "3.0/aspnet/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:aa625958a0c8e438974f461cef177b0d5a1e1e4d6cf9abf74e7d29b24dbe43d4"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm32v7",
+                "3.1.3-bionic-arm32v7"
+              ],
+              "digest": "sha256:07f5fffaa1fa6fd028c4ea281fd2ede183f58cafbbebf81a76e6f8dc338d0e3f",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:36.1693623Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.0.3-nanoserver-1909",
-          "3.0-nanoserver-1909"
-        ],
-        "digest": null
-      },
-      "3.1/aspnet/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine3.10",
-          "3.1.3-alpine3.10"
-        ],
-        "digest": "sha256:b377bc59e739fbcba13dd2770077b38be009ba842837125270444aeb71cedbf9"
-      },
-      "3.1/aspnet/alpine3.10/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine3.10-arm64v8",
-          "3.1.3-alpine3.10-arm64v8"
-        ],
-        "digest": "sha256:0e9461976768d18f354e850d6d1eaf35cf376f81e6cc6d2a3fb888873603f7d3"
-      },
-      "3.1/aspnet/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine",
-          "3.1-alpine3.11",
-          "3.1.3-alpine",
-          "3.1.3-alpine3.11"
-        ],
-        "digest": "sha256:11e17f4489210a0679c1b87e1a10f0134122801fbae7bb1ae9adb791bcf53177"
-      },
-      "3.1/aspnet/alpine3.11/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine-arm64v8",
-          "3.1-alpine3.11-arm64v8",
-          "3.1.3-alpine-arm64v8",
-          "3.1.3-alpine3.11-arm64v8"
-        ],
-        "digest": "sha256:360187053812b3bdabe52b078b341a5b75fd132490748df613a2ef59463fbd5d"
-      },
-      "3.1/aspnet/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-bionic",
-          "3.1.3-bionic"
-        ],
-        "digest": "sha256:fb5107e517f100fef1287429420d32bfd3de6266b1a84a0689f4070295827a69"
-      },
-      "3.1/aspnet/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-bionic-arm32v7",
-          "3.1.3-bionic-arm32v7"
-        ],
-        "digest": "sha256:07f5fffaa1fa6fd028c4ea281fd2ede183f58cafbbebf81a76e6f8dc338d0e3f"
-      },
-      "3.1/aspnet/bionic/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-bionic-arm64v8",
-          "3.1.3-bionic-arm64v8"
-        ],
-        "digest": "sha256:a7881b49b6b8ff7b08e83c36eac8e8d210e2e43e5ea4ae8f6ab1ea6252db6b5d"
-      },
-      "3.1/aspnet/buster-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-buster-slim",
-          "3.1.3-buster-slim"
-        ],
-        "digest": "sha256:bbdf1307b597c5f50876366013d81be06e76affd1f244018eadd1b92f205f193"
-      },
-      "3.1/aspnet/buster-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-buster-slim-arm32v7",
-          "3.1.3-buster-slim-arm32v7"
-        ],
-        "digest": "sha256:fc551a5f3b304a8b2156f94c3ab80160e633a487c9057a85a30dc63ac0b51de3"
-      },
-      "3.1/aspnet/buster-slim/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-buster-slim-arm64v8",
-          "3.1.3-buster-slim-arm64v8"
-        ],
-        "digest": "sha256:955ac979b64b8c18203b724511b2fe1cdd50b6f58033697b8a1c2ca106c8b3c9"
-      },
-      "3.1/aspnet/focal/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-focal",
-          "3.1.3-focal"
-        ],
-        "digest": "sha256:4362ba5f9503139463566f27233d4f99686f0b1cf11a1ed767f2ee735910df79"
-      },
-      "3.1/aspnet/focal/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-focal-arm32v7",
-          "3.1.2-focal-arm32v7"
-        ],
-        "digest": "sha256:0f67ed4f689148f21c847217018ff0b23a8d32e06bb199c2d086a369a4f3980b"
-      },
-      "3.1/aspnet/focal/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-focal-arm64v8",
-          "3.1.3-focal-arm64v8"
-        ],
-        "digest": "sha256:16d67d3e27c20a215299b0c469af445971fdc2546b6a5f638b52ba0d9a4b947a"
-      },
-      "3.1/aspnet/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/bionic/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm64v8",
+                "3.1.3-bionic-arm64v8"
+              ],
+              "digest": "sha256:a7881b49b6b8ff7b08e83c36eac8e8d210e2e43e5ea4ae8f6ab1ea6252db6b5d",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:12.9005533Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.1.0-preview3-nanoserver-1803",
-          "3.1-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "3.1/aspnet/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-focal",
+                "3.1.3-focal"
+              ],
+              "digest": "sha256:4362ba5f9503139463566f27233d4f99686f0b1cf11a1ed767f2ee735910df79",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:59.1893912Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.1.3-nanoserver-1809",
-          "3.1-nanoserver-1809"
-        ],
-        "digest": "sha256:62761c4ff13be305369f2623567bcc7ccb6a08d2ce97ee90742b860c892f8a6c"
-      },
-      "3.1/aspnet/nanoserver-1809/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-nanoserver-1809-arm32v7",
-          "3.1.3-nanoserver-1809-arm32v7"
-        ],
-        "digest": "sha256:2dba8aee9ef42aa0dfdf5188c4dfa910e96222a7cc23169e3f5a1a964b249196"
-      },
-      "3.1/aspnet/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/aspnet/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-focal-arm64v8",
+                "3.1.3-focal-arm64v8"
+              ],
+              "digest": "sha256:16d67d3e27c20a215299b0c469af445971fdc2546b6a5f638b52ba0d9a4b947a",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:20.8423496Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.1.3-nanoserver-1903",
-          "3.1-nanoserver-1903"
-        ],
-        "digest": "sha256:fa1881336e4e2cadbb5ff5dcc03d987d8af8c1e8757171de3bb9cca34b96cf9f"
-      },
-      "3.1/aspnet/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
+        {
+          "manifest": {
+            "digest": "sha256:e353b5692393641ae48c360315d9c5bb76d733352879da7a05f5d6ea045f5f76",
+            "created": "2020-03-24T18:56:50.6149158Z",
+            "sharedTags": [
+              "5.0.0-preview",
+              "5.0",
+              "latest"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "5.0/aspnet/buster-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim",
+                "5.0.0-preview-buster-slim"
+              ],
+              "digest": "sha256:9feedc6078cb9b23aa505c4fa549576e34f75142c30d0b923a4eefd97b0dab31",
+              "baseImageDigest": "buildpack-deps@sha256:51994825fd939c0c7b6d3d1b3ea01be7411bd5c534ea2694139a4dd2ef00d64d",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:04.0001614Z"
+            },
+            {
+              "dockerfile": "5.0/aspnet/buster-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim-arm32v7",
+                "5.0.0-preview-buster-slim-arm32v7"
+              ],
+              "digest": "sha256:9b25794fcf14eb3260e0c7c44dc331030a480b978e7416a584f5dfbbd2ed3c0d",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:c342b21207b0428d0b5542d6640518cb1b13d88867f1bf6c1846eb133eb6e328",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:53.4873405Z"
+            },
+            {
+              "dockerfile": "5.0/aspnet/buster-slim/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim-arm64v8",
+                "5.0.0-preview-buster-slim-arm64v8"
+              ],
+              "digest": "sha256:9ad109e13fee2d96e43cb1a5556920e8f4b0341cf24e9e1b9a5595aab429d115",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:e419963172eb4f6acbc817fba405b0cea5c2dae77b4c708d61271ac3d0e645b7",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:43.3694374Z"
+            },
+            {
+              "dockerfile": "5.0/aspnet/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.0-preview-nanoserver-1809",
+                "5.0-nanoserver-1809"
+              ],
+              "digest": "sha256:d0f2c23eb044005b84f48c4707ee08eab1539fcc26810157a93b08b101b616b7",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:50.6149158Z"
+            },
+            {
+              "dockerfile": "5.0/aspnet/nanoserver-1809/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-nanoserver-1809-arm32v7",
+                "5.0.0-preview-nanoserver-1809-arm32v7"
+              ],
+              "digest": "sha256:c51db1da936bfd890903be508fd5a8eb9002d4f175cbb7b6102e1430cfeef13a",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:55:33.8968619Z"
+            },
+            {
+              "dockerfile": "5.0/aspnet/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.0-preview-nanoserver-1903",
+                "5.0-nanoserver-1903"
+              ],
+              "digest": "sha256:f788c7297e5f0c00c0a55c5f804c97e3daa84fcf0e65b3d9e212f854bfab399b",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:31.9262252Z"
+            },
+            {
+              "dockerfile": "5.0/aspnet/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.0-preview-nanoserver-1909",
+                "5.0-nanoserver-1909"
+              ],
+              "digest": "sha256:7294789bfaef1e29a5455c0a41dff71b7ddc71d13663ce2251838c9b2cdff2a7",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:25.2958989Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "3.1.3-nanoserver-1909",
-          "3.1-nanoserver-1909"
-        ],
-        "digest": "sha256:5ec8db1a31435a6faebdb359ba9ff6d45b5566223d8a5a7d14ffe27b1507fbe9"
-      },
-      "5.0/aspnet/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "5.0-alpine",
-          "5.0-alpine3.11",
-          "5.0.0-preview-alpine",
-          "5.0.0-preview-alpine3.11"
-        ],
-        "digest": "sha256:effb519c7415d8328500fab086fc9530bf1baad019212853321fd37eeedd1edd"
-      },
-      "5.0/aspnet/alpine3.11/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "5.0-alpine-arm64v8",
-          "5.0-alpine3.11-arm64v8",
-          "5.0.0-preview-alpine-arm64v8",
-          "5.0.0-preview-alpine3.11-arm64v8"
-        ],
-        "digest": "sha256:b81c6d74f7db5cbfe67cf1dba2a6b525faaf1e568619d27fe4a39e77e60ba131"
-      },
-      "5.0/aspnet/buster-slim/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:buster-curl": "buildpack-deps@sha256:51994825fd939c0c7b6d3d1b3ea01be7411bd5c534ea2694139a4dd2ef00d64d"
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/aspnet/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine",
+                "5.0-alpine3.11",
+                "5.0.0-preview-alpine",
+                "5.0.0-preview-alpine3.11"
+              ],
+              "digest": "sha256:effb519c7415d8328500fab086fc9530bf1baad019212853321fd37eeedd1edd",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:43.878042Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0-buster-slim",
-          "5.0.0-preview-buster-slim"
-        ],
-        "digest": "sha256:9feedc6078cb9b23aa505c4fa549576e34f75142c30d0b923a4eefd97b0dab31"
-      },
-      "5.0/aspnet/buster-slim/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:buster-curl": "arm32v7/buildpack-deps@sha256:c342b21207b0428d0b5542d6640518cb1b13d88867f1bf6c1846eb133eb6e328"
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/aspnet/alpine3.11/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine-arm64v8",
+                "5.0-alpine3.11-arm64v8",
+                "5.0.0-preview-alpine-arm64v8",
+                "5.0.0-preview-alpine3.11-arm64v8"
+              ],
+              "digest": "sha256:b81c6d74f7db5cbfe67cf1dba2a6b525faaf1e568619d27fe4a39e77e60ba131",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:27.9043816Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0-buster-slim-arm32v7",
-          "5.0.0-preview-buster-slim-arm32v7"
-        ],
-        "digest": "sha256:9b25794fcf14eb3260e0c7c44dc331030a480b978e7416a584f5dfbbd2ed3c0d"
-      },
-      "5.0/aspnet/buster-slim/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:buster-curl": "arm64v8/buildpack-deps@sha256:e419963172eb4f6acbc817fba405b0cea5c2dae77b4c708d61271ac3d0e645b7"
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/aspnet/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-focal",
+                "5.0.0-preview-focal"
+              ],
+              "digest": "sha256:dc8a79e607a19dea61febcde0331b034dab96a4f33ddaf81c300eb10036b61a5",
+              "baseImageDigest": "buildpack-deps@sha256:d251ffae7d919481135bfdc3873e9510c993bc5addc36e41983143508853f4f4",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:33.000186Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0-buster-slim-arm64v8",
-          "5.0.0-preview-buster-slim-arm64v8"
-        ],
-        "digest": "sha256:9ad109e13fee2d96e43cb1a5556920e8f4b0341cf24e9e1b9a5595aab429d115"
-      },
-      "5.0/aspnet/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:focal-curl": "buildpack-deps@sha256:d251ffae7d919481135bfdc3873e9510c993bc5addc36e41983143508853f4f4"
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/aspnet/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-focal-arm64v8",
+                "5.0.0-preview-focal-arm64v8"
+              ],
+              "digest": "sha256:ae26351351254bcb98a44298e8834fe79f5a4a77e3ecfea9d68762bea2307aaa",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:ed9c12af416d915dc120820658d31316ea718277acfc04ae7a6e9277320bb0fc",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:54.679499Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "dotnet/core-nightly/runtime",
+      "images": [
+        {
+          "manifest": {
+            "digest": "sha256:427fb46d88c0e2e5291b0b916ec40def8c190bafbc65845c02670084587e35c3",
+            "created": "2020-03-24T18:53:53.0508079Z",
+            "sharedTags": [
+              "2.1.17",
+              "2.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.17-nanoserver-1809",
+                "2.1-nanoserver-1809"
+              ],
+              "digest": "sha256:e62559ff87631ca351b719d9e8a8dd3dc8b0948cd35423b359a516a929ffccb5",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:52.1455418Z"
+            },
+            {
+              "dockerfile": "2.1/runtime/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.17-nanoserver-1903",
+                "2.1-nanoserver-1903"
+              ],
+              "digest": "sha256:302b8d25bd0513d9da4b6fae91caf5a8b92a042eb3c1d09f3605c71ede83fca6",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:49.2321848Z"
+            },
+            {
+              "dockerfile": "2.1/runtime/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.17-nanoserver-1909",
+                "2.1-nanoserver-1909"
+              ],
+              "digest": "sha256:8c2ea48e2f0e2dbecf3f01eca6cf9fe2987725670a0c20f2b4935ab3f76c13f5",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:53.0508079Z"
+            },
+            {
+              "dockerfile": "2.1/runtime/stretch-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-slim",
+                "2.1.17-stretch-slim"
+              ],
+              "digest": "sha256:9af09668b676e8d5018d2b67d776da35ddeb61a7cd341cbc470a743a0daf923f",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:57.5045226Z"
+            },
+            {
+              "dockerfile": "2.1/runtime/stretch-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-slim-arm32v7",
+                "2.1.17-stretch-slim-arm32v7"
+              ],
+              "digest": "sha256:4d3802fa947f86e84cb587e1796f5dc39b5580d3bb8e9f02dd8a6f14f7b754c7",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:10.1691688Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0-focal",
-          "5.0.0-preview-focal"
-        ],
-        "digest": "sha256:dc8a79e607a19dea61febcde0331b034dab96a4f33ddaf81c300eb10036b61a5"
-      },
-      "5.0/aspnet/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:focal-curl": "arm32v7/buildpack-deps@sha256:9ad5cb20d5f70fad962d9946dbdd3a289e2237786db446b290a0f0abe48b469a"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine3.10",
+                "2.1.17-alpine3.10"
+              ],
+              "digest": "sha256:efcf992b9ac978868a2076cea7deb2a68d3fdaa51e2295e3a6b5b5b7bf8d8bef",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:38.6941198Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0-focal-arm32v7",
-          "5.0.0-preview-focal-arm32v7"
-        ],
-        "digest": "sha256:5e62864e937715119a49e82d56b6a8c481c21fa292c858fc734b292b8798d9e6"
-      },
-      "5.0/aspnet/focal/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:focal-curl": "arm64v8/buildpack-deps@sha256:ed9c12af416d915dc120820658d31316ea718277acfc04ae7a6e9277320bb0fc"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine",
+                "2.1-alpine3.11",
+                "2.1.17-alpine",
+                "2.1.17-alpine3.11"
+              ],
+              "digest": "sha256:8473a3173bf8f2b7ba545a7bf69bfb2d523b2d5e0c7d94faa5040de8d192f61b",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:47.6919173Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0-focal-arm64v8",
-          "5.0.0-preview-focal-arm64v8"
-        ],
-        "digest": "sha256:ae26351351254bcb98a44298e8834fe79f5a4a77e3ecfea9d68762bea2307aaa"
-      },
-      "5.0/aspnet/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic",
+                "2.1.17-bionic"
+              ],
+              "digest": "sha256:311ec1db5062ed423aa8491ad84c821eae3eb49f80c38c7d4147587ec58fdb80",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:28.3866561Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0.0-preview-nanoserver-1809",
-          "5.0-nanoserver-1809"
-        ],
-        "digest": "sha256:d0f2c23eb044005b84f48c4707ee08eab1539fcc26810157a93b08b101b616b7"
-      },
-      "5.0/aspnet/nanoserver-1809/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "5.0-nanoserver-1809-arm32v7",
-          "5.0.0-preview-nanoserver-1809-arm32v7"
-        ],
-        "digest": "sha256:c51db1da936bfd890903be508fd5a8eb9002d4f175cbb7b6102e1430cfeef13a"
-      },
-      "5.0/aspnet/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic-arm32v7",
+                "2.1.17-bionic-arm32v7"
+              ],
+              "digest": "sha256:6b72e5f619c8ea42a7653f8926bed265c52a4f92afe8a6f685425407a218f92c",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:54:20.0049936Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0.0-preview-nanoserver-1903",
-          "5.0-nanoserver-1903"
-        ],
-        "digest": "sha256:f788c7297e5f0c00c0a55c5f804c97e3daa84fcf0e65b3d9e212f854bfab399b"
-      },
-      "5.0/aspnet/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-focal",
+                "2.1.17-focal"
+              ],
+              "digest": "sha256:99741cef141cf193b29b5a75c729d1c22c0d773ecbd4024c6fdbd590b88c5602",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:57.1700527Z"
+            }
+          ]
         },
-        "simpleTags": [
-          "5.0.0-preview-nanoserver-1909",
-          "5.0-nanoserver-1909"
-        ],
-        "digest": "sha256:7294789bfaef1e29a5455c0a41dff71b7ddc71d13663ce2251838c9b2cdff2a7"
-      }
+        {
+          "manifest": {
+            "digest": "sha256:07a99bcdda0e67ca618c72de42b1b7be6813a70094cbbf3b6d9556c61269b30a",
+            "created": "2020-03-24T18:55:02.5243769Z",
+            "sharedTags": [
+              "3.1.3",
+              "3.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/buster-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim",
+                "3.1.3-buster-slim"
+              ],
+              "digest": "sha256:e41bd0c1c44520773b4ffc0aa52bdecbb3fd94a7354ae57533f7eb10846b2713",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:49.495598Z"
+            },
+            {
+              "dockerfile": "3.1/runtime/buster-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim-arm32v7",
+                "3.1.3-buster-slim-arm32v7"
+              ],
+              "digest": "sha256:7bbf799bc4bf6b6fdf2128d9d23e97cf2f252b1449609e44417dcbf8487587fc",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:20.5405318Z"
+            },
+            {
+              "dockerfile": "3.1/runtime/buster-slim/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim-arm64v8",
+                "3.1.3-buster-slim-arm64v8"
+              ],
+              "digest": "sha256:0e8c2b3ce914debbec58abc0a81f3d3d244ee009ef3d1f791a868f724c208398",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:51.9174482Z"
+            },
+            {
+              "dockerfile": "3.1/runtime/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.3-nanoserver-1809",
+                "3.1-nanoserver-1809"
+              ],
+              "digest": "sha256:0b59f7f03e2c8937a7f79e470989ff7c9402c5be7cdfa253bef84cc36d6bc6c3",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:50.2187279Z"
+            },
+            {
+              "dockerfile": "3.1/runtime/nanoserver-1809/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-nanoserver-1809-arm32v7",
+                "3.1.3-nanoserver-1809-arm32v7"
+              ],
+              "digest": "sha256:e9a7b519fda582e631b5d555f93aa7c36c5bb219cb1d3ab946e05a158f2aa08d",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:55:02.5243769Z"
+            },
+            {
+              "dockerfile": "3.1/runtime/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.3-nanoserver-1903",
+                "3.1-nanoserver-1903"
+              ],
+              "digest": "sha256:f968123b384383da06ccc697ed75fd9a138bfcbc373162584ddc2a12a6b0ac81",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:49.7464126Z"
+            },
+            {
+              "dockerfile": "3.1/runtime/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.3-nanoserver-1909",
+                "3.1-nanoserver-1909"
+              ],
+              "digest": "sha256:fdeed0af73f47623ad13c45774e44aa9d6427d3c504865cf9d6607b9fba47169",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:56.2210087Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10",
+                "3.1.3-alpine3.10"
+              ],
+              "digest": "sha256:d1e4a4c6561ff96b3c05c05ceda039eb2fcc616069078e6cc64c9b854b11db80",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:56.0438121Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/alpine3.10/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10-arm64v8",
+                "3.1.3-alpine3.10-arm64v8"
+              ],
+              "digest": "sha256:f9de87834cff0b9cf4942263f84e73519503cdd168d34f6549f295adf29b7bf9",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:19.1273362Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine",
+                "3.1-alpine3.11",
+                "3.1.3-alpine",
+                "3.1.3-alpine3.11"
+              ],
+              "digest": "sha256:603fc8b24ae29490fbea30380a410120237689bfaea89349ce68b9768ed375e8",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:49.6212477Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/alpine3.11/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine-arm64v8",
+                "3.1-alpine3.11-arm64v8",
+                "3.1.3-alpine-arm64v8",
+                "3.1.3-alpine3.11-arm64v8"
+              ],
+              "digest": "sha256:f14afa3af4493526a0cf2aa9c7bed1ba5fbdf96a20aa1c25aeb3b9a2aa08c108",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:20.8892246Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic",
+                "3.1.3-bionic"
+              ],
+              "digest": "sha256:f01133e2b5025ae6456f7b5a0972fd5d0796e72715be1927a887c8fae2f08e54",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:03.1005481Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm32v7",
+                "3.1.3-bionic-arm32v7"
+              ],
+              "digest": "sha256:a7739bff77b19845f59246585548bd9ec21af28e543f61bfb7c9647d848559db",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:30.1854053Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/bionic/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm64v8",
+                "3.1.3-bionic-arm64v8"
+              ],
+              "digest": "sha256:6c5adc2ce5a3816edfcff937d313742d36dac8b9c645a003f5adac704f05c0a0",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:06.9045369Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-focal",
+                "3.1.3-focal"
+              ],
+              "digest": "sha256:9870623e33269a5972d172b460be676b8432ff6546dd22366a19e3e7edea82c5",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:55.6706131Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-focal-arm64v8",
+                "3.1.3-focal-arm64v8"
+              ],
+              "digest": "sha256:ce316d75627959bdc0ab67996ec2bd618cfcd7af04d41ff859b30f4e343958eb",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:15.9143327Z"
+            }
+          ]
+        },
+        {
+          "manifest": {
+            "digest": "sha256:bc10cdc7fae95e9be4ea7fb2ac78ccf4f5d0038567e5c29e95a4d4e0d9a32efd",
+            "created": "2020-03-24T18:56:23.9150356Z",
+            "sharedTags": [
+              "5.0.0-preview",
+              "5.0",
+              "latest"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime/buster-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim",
+                "5.0.0-preview-buster-slim"
+              ],
+              "digest": "sha256:a326ce85fa43bdcf1cb2694c1997c2e97fed4572551d737849a2f918637558cd",
+              "baseImageDigest": "buildpack-deps@sha256:51994825fd939c0c7b6d3d1b3ea01be7411bd5c534ea2694139a4dd2ef00d64d",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:55.4655316Z"
+            },
+            {
+              "dockerfile": "5.0/runtime/buster-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim-arm32v7",
+                "5.0.0-preview-buster-slim-arm32v7"
+              ],
+              "digest": "sha256:b24fe38cdc1fa1de58e5272d767971681ac7f0157630f2da0187e2e2f2b62ca8",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:c342b21207b0428d0b5542d6640518cb1b13d88867f1bf6c1846eb133eb6e328",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:45.838943Z"
+            },
+            {
+              "dockerfile": "5.0/runtime/buster-slim/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim-arm64v8",
+                "5.0.0-preview-buster-slim-arm64v8"
+              ],
+              "digest": "sha256:78c87b5ba2f0bd55d8d2873e24be41cc9e325409823755e444b33575e62ffa97",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:e419963172eb4f6acbc817fba405b0cea5c2dae77b4c708d61271ac3d0e645b7",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:36.1372567Z"
+            },
+            {
+              "dockerfile": "5.0/runtime/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.0-preview-nanoserver-1809",
+                "5.0-nanoserver-1809"
+              ],
+              "digest": "sha256:4fc5bf23cbb9c6d6e8b96ccdd18fd7ab3116b38662c2ed96d0aee64941f3cd45",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:23.9150356Z"
+            },
+            {
+              "dockerfile": "5.0/runtime/nanoserver-1809/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-nanoserver-1809-arm32v7",
+                "5.0.0-preview-nanoserver-1809-arm32v7"
+              ],
+              "digest": "sha256:b783eed7ac8fdacf2dd7a5fb29266c86c8999f810b2c731a8759f80257d76cc5",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:54:50.2818778Z"
+            },
+            {
+              "dockerfile": "5.0/runtime/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.0-preview-nanoserver-1903",
+                "5.0-nanoserver-1903"
+              ],
+              "digest": "sha256:3ba836cf14882fb9e52f697b4e5541525a2532159dae7f3f70fc7162853ca192",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:06.4466321Z"
+            },
+            {
+              "dockerfile": "5.0/runtime/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.0-preview-nanoserver-1909",
+                "5.0-nanoserver-1909"
+              ],
+              "digest": "sha256:7df8e670a9000f6f8c5da3ca5be372535e83d28c422e20d3fb72e6a8762b208f",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:57.9415187Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine",
+                "5.0-alpine3.11",
+                "5.0.0-preview-alpine",
+                "5.0.0-preview-alpine3.11"
+              ],
+              "digest": "sha256:f889064f0edaee1170b76e715ac95ef7cdf8c0789cf7d0cf53d9fd1fcacdfb11",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:39.7602862Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime/alpine3.11/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine-arm64v8",
+                "5.0-alpine3.11-arm64v8",
+                "5.0.0-preview-alpine-arm64v8",
+                "5.0.0-preview-alpine3.11-arm64v8"
+              ],
+              "digest": "sha256:763ae9f622c268eb3a9000b9dc90a3e959dff071603eb14b25dfbf9e15c74a56",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:22.1753918Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-focal",
+                "5.0.0-preview-focal"
+              ],
+              "digest": "sha256:6bf27e666c95176fcadd343354a1fb05c4a8e47308929031ecf29d0fef179f9a",
+              "baseImageDigest": "buildpack-deps@sha256:d251ffae7d919481135bfdc3873e9510c993bc5addc36e41983143508853f4f4",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:25.0245438Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-focal-arm64v8",
+                "5.0.0-preview-focal-arm64v8"
+              ],
+              "digest": "sha256:9be0e271fa0a4bb934523493842fbd9cc0d11bf5d225e39a9a8e6607aaacfb57",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:ed9c12af416d915dc120820658d31316ea718277acfc04ae7a6e9277320bb0fc",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:47.8828931Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "dotnet/core-nightly/runtime-deps",
+      "images": [
+        {
+          "manifest": {
+            "digest": "sha256:7c88dec55a4012be8b6a58ee3915a414ed895d30d0e5fb1b657a59847ba0970b",
+            "created": "2020-03-24T18:56:44.9651488Z",
+            "sharedTags": [
+              "2.1.17",
+              "2.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime-deps/stretch-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-slim",
+                "2.1.17-stretch-slim"
+              ],
+              "digest": "sha256:4bec4124ad01b9c5df0a85d6d9bc248b07f4d0eb0a882283d11130933a3df789",
+              "baseImageDigest": "debian@sha256:581647f7af0a8160d3219b53859bec3407dc31e0f8e9ecf255ac4c9218740c6c",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:47.1873679Z"
+            },
+            {
+              "dockerfile": "2.1/runtime-deps/stretch-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-slim-arm32v7",
+                "2.1.17-stretch-slim-arm32v7"
+              ],
+              "digest": "sha256:e5aabc0b13ae6b09b414830a293c536c5e4b9e834d9fb6705de9951104dc28ea",
+              "baseImageDigest": "arm32v7/debian@sha256:f2fed2f892f5374fb057bb3c7f58c0af6da909a014488688d3afa80eac3d6edc",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:56:44.9651488Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime-deps/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine3.10",
+                "2.1.17-alpine3.10"
+              ],
+              "digest": "sha256:02c60d70bb9e7f9859f60c011339c221df7e8fee3ca51c92a5b39f9fb52eac8d",
+              "baseImageDigest": "alpine@sha256:7c3773f7bcc969f03f8f653910001d99a9d324b4b9caa008846ad2c3089f5a5f",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:33.4686704Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime-deps/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine",
+                "2.1-alpine3.11",
+                "2.1.17-alpine",
+                "2.1.17-alpine3.11"
+              ],
+              "digest": "sha256:715c610f44717c00950822b1656f1d757d3a0e34ec3e97dceb7aeb06c319ed7d",
+              "baseImageDigest": "alpine@sha256:b276d875eeed9c7d3f1cfa7edb06b22ed22b14219a7d67c52c56612330348239",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:40.6034773Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime-deps/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic",
+                "2.1.17-bionic"
+              ],
+              "digest": "sha256:1ff2b37359f2d388f870d37c5bd1742b500665838264a09c583f09efa792172f",
+              "baseImageDigest": "ubuntu@sha256:bec5a2727be7fff3d308193cfde3491f8fba1a2ba392b7546b43a051853a341d",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:11.2740256Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime-deps/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic-arm32v7",
+                "2.1.17-bionic-arm32v7"
+              ],
+              "digest": "sha256:db7356c2b71d5f7f6d99f41e7c935f317064ff53c188aa547186c063bd8b038f",
+              "baseImageDigest": "arm32v7/ubuntu@sha256:3b029ac9aa8eb5dffd43bb7326891cf64f9c228b3960cec55a56605d2ae2ad42",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:53:52.1770947Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/runtime-deps/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-focal",
+                "2.1.17-focal"
+              ],
+              "digest": "sha256:ecaf4b839860b2f26912afb5db613bc1f78d05b13e8ee8d998a992fb110fe5a7",
+              "baseImageDigest": "ubuntu@sha256:1515a62dc73021e2e7666a31e878ef3b4daddc500c3d031b35130ac05067abc0",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:45.9201692Z"
+            }
+          ]
+        },
+        {
+          "manifest": {
+            "digest": "sha256:ae0a1328bea37c8afadc09295cfb1f9bb4d8baab3f34bd724c1c4e482eb65de8",
+            "created": "2020-03-24T18:56:59.0482874Z",
+            "sharedTags": [
+              "3.1.3",
+              "3.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/buster-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim",
+                "3.1.3-buster-slim"
+              ],
+              "digest": "sha256:81103ae5e94a74d501a7bd9869ca5e3604184f23703adb4a372dcd2659533130",
+              "baseImageDigest": "debian@sha256:b137d31f0ebcce71c9dde707975e1d6582afa178e7033ccb341ddba04d807043",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:40.9263727Z"
+            },
+            {
+              "dockerfile": "3.1/runtime-deps/buster-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim-arm32v7",
+                "3.1.3-buster-slim-arm32v7"
+              ],
+              "digest": "sha256:6cacb66e011f773532320ea8dbb4679d65c2a0a8eef6b2fbab4b71c165d1cc20",
+              "baseImageDigest": "arm32v7/debian@sha256:cd93e42001fda8969b2c372384de1de216d61304e975dbc9bff117629200a5c3",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:56:59.0482874Z"
+            },
+            {
+              "dockerfile": "3.1/runtime-deps/buster-slim/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-slim-arm64v8",
+                "3.1.3-buster-slim-arm64v8"
+              ],
+              "digest": "sha256:3d74d67bd1410d2a257450941799241a89077197c08eca86b40ad11600c2b628",
+              "baseImageDigest": "arm64v8/debian@sha256:0e6b845c7788c6b91c5be75eeab1429c47275689129dea82bbc82f9134eb7593",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:32.8053388Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10",
+                "3.1.3-alpine3.10"
+              ],
+              "digest": "sha256:309d38492fe11949671d3c43d4e5f651d41b068c509fc27923f4ac5170e6dd7d",
+              "baseImageDigest": "alpine@sha256:7c3773f7bcc969f03f8f653910001d99a9d324b4b9caa008846ad2c3089f5a5f",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:51.386539Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/alpine3.10/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10-arm64v8",
+                "3.1.3-alpine3.10-arm64v8"
+              ],
+              "digest": "sha256:428ef672bf57d41c1930e31b4c63ec36698e9a3721e79c5f03782e94576c18b9",
+              "baseImageDigest": "arm64v8/alpine@sha256:4491fd429b8ad188ba5e120782b2bbb704261fd2ef9942fcdee128c5fcc594d5",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:10.7191933Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine",
+                "3.1-alpine3.11",
+                "3.1.3-alpine",
+                "3.1.3-alpine3.11"
+              ],
+              "digest": "sha256:653106d2c5294b037510e1d2c24959543a2ea232cfc02d63408eb153d5c08732",
+              "baseImageDigest": "alpine@sha256:b276d875eeed9c7d3f1cfa7edb06b22ed22b14219a7d67c52c56612330348239",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:45.2435799Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/alpine3.11/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine-arm64v8",
+                "3.1-alpine3.11-arm64v8",
+                "3.1.3-alpine-arm64v8",
+                "3.1.3-alpine3.11-arm64v8"
+              ],
+              "digest": "sha256:219dd88f784df9ae6601ac98150fddb0bccaa8b92e3315996ae53f1f37741827",
+              "baseImageDigest": "arm64v8/alpine@sha256:597bd5c319cc09d6bb295b4ef23cac50ec7c373fff5fe923cfd246ec09967b31",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:12.8172111Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic",
+                "3.1.3-bionic"
+              ],
+              "digest": "sha256:92609eb15e75ad9869103a4d64adcc944d97af04e8755c982ba963cb77814eb4",
+              "baseImageDigest": "ubuntu@sha256:bec5a2727be7fff3d308193cfde3491f8fba1a2ba392b7546b43a051853a341d",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:49.3425485Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm32v7",
+                "3.1.3-bionic-arm32v7"
+              ],
+              "digest": "sha256:68c164f276d46e0c81f5b66a6485da4f4a75ba2eaa3bcfeb776b76570ce9a102",
+              "baseImageDigest": "arm32v7/ubuntu@sha256:3b029ac9aa8eb5dffd43bb7326891cf64f9c228b3960cec55a56605d2ae2ad42",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:01.8333971Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/bionic/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm64v8",
+                "3.1.3-bionic-arm64v8"
+              ],
+              "digest": "sha256:17dcaa6633f9ed441cef8ea17cd4cee48acb4bdbc55493460670f5e3c5dcea93",
+              "baseImageDigest": "arm64v8/ubuntu@sha256:12b9106d200061c8eb2179c984e63cc17d5a4e7a34f6e9ad03360b8efe492e96",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:38.6485318Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-focal",
+                "3.1.3-focal"
+              ],
+              "digest": "sha256:8978db0aae2fc5ec509e6c4bbc8f81be999071f9b9d93fc13c387f89af0ce9db",
+              "baseImageDigest": "ubuntu@sha256:1515a62dc73021e2e7666a31e878ef3b4daddc500c3d031b35130ac05067abc0",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:44.9404064Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/runtime-deps/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-focal-arm64v8",
+                "3.1.3-focal-arm64v8"
+              ],
+              "digest": "sha256:b5978e8b56b9ed325ec4090e4b25dc97f8e1628a7b89c540df294fd899b6a3ed",
+              "baseImageDigest": "arm64v8/ubuntu@sha256:0551fb19b57011ba165f66399ca0e7e49402aa7cba6ba843a317f48e4cad9e35",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:49.5643288Z"
+            }
+          ]
+        },
+        {
+          "manifest": {
+            "digest": "sha256:4f168f8bc4286dcab45dcd08f48007d8260c3ddcbee1dd0693a3550a10d4c951",
+            "created": "2020-03-24T18:57:34.2234857Z",
+            "sharedTags": [
+              "5.0.0-preview",
+              "5.0",
+              "latest"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime-deps/buster-slim/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim",
+                "5.0.0-preview-buster-slim"
+              ],
+              "digest": "sha256:085c0812c382aadc55d6685ea2070ff35e6ed738dcf9ae0bae5029f034d9cbf7",
+              "baseImageDigest": "debian@sha256:b137d31f0ebcce71c9dde707975e1d6582afa178e7033ccb341ddba04d807043",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:45.9976835Z"
+            },
+            {
+              "dockerfile": "5.0/runtime-deps/buster-slim/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim-arm32v7",
+                "5.0.0-preview-buster-slim-arm32v7"
+              ],
+              "digest": "sha256:550240b708435f709dd5a4dbd91b828fb4baa52d932df4d76155b643aa3f1006",
+              "baseImageDigest": "arm32v7/debian@sha256:cd93e42001fda8969b2c372384de1de216d61304e975dbc9bff117629200a5c3",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:34.2234857Z"
+            },
+            {
+              "dockerfile": "5.0/runtime-deps/buster-slim/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-slim-arm64v8",
+                "5.0.0-preview-buster-slim-arm64v8"
+              ],
+              "digest": "sha256:1c1bc9f36dd8ea75554b2a294bc453007b1a7ba0e275b24cab2ccced15518e9a",
+              "baseImageDigest": "arm64v8/debian@sha256:0e6b845c7788c6b91c5be75eeab1429c47275689129dea82bbc82f9134eb7593",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:23.253308Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime-deps/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine",
+                "5.0-alpine3.11",
+                "5.0.0-preview-alpine",
+                "5.0.0-preview-alpine3.11"
+              ],
+              "digest": "sha256:3097ef3d24b6378fe372f776f06973edde81dd3762e68cb9d63e46eab57e12fe",
+              "baseImageDigest": "alpine@sha256:b276d875eeed9c7d3f1cfa7edb06b22ed22b14219a7d67c52c56612330348239",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:53:35.1777589Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime-deps/alpine3.11/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine-arm64v8",
+                "5.0-alpine3.11-arm64v8",
+                "5.0.0-preview-alpine-arm64v8",
+                "5.0.0-preview-alpine3.11-arm64v8"
+              ],
+              "digest": "sha256:dae931532677dfd8d85c059302351b98c19bcefa78b25c6ab35c3e1710f16b81",
+              "baseImageDigest": "arm64v8/alpine@sha256:597bd5c319cc09d6bb295b4ef23cac50ec7c373fff5fe923cfd246ec09967b31",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:14.2989028Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime-deps/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-focal",
+                "5.0.0-preview-focal"
+              ],
+              "digest": "sha256:ea602c5b345115173d5e14d9517ea40ad6292d9fc47da9a6f3593c1de1c56d8c",
+              "baseImageDigest": "ubuntu@sha256:1515a62dc73021e2e7666a31e878ef3b4daddc500c3d031b35130ac05067abc0",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:12.8207439Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/runtime-deps/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-focal-arm64v8",
+                "5.0.0-preview-focal-arm64v8"
+              ],
+              "digest": "sha256:9ef66a7652a13b585e8f5179b3f2bcb1ef1fd39565d23d83050a84ca7b59d240",
+              "baseImageDigest": "arm64v8/ubuntu@sha256:0551fb19b57011ba165f66399ca0e7e49402aa7cba6ba843a317f48e4cad9e35",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:35.4073762Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "dotnet/core-nightly/sdk",
+      "images": [
+        {
+          "manifest": {
+            "digest": "sha256:382ddb22cc81a48005d2bc9b84756e32fc88d4fe097770c10494c2326f336727",
+            "created": "2020-03-24T18:58:16.9849941Z",
+            "sharedTags": [
+              "2.1.805",
+              "2.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "2.1/sdk/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.805-nanoserver-1809",
+                "2.1-nanoserver-1809"
+              ],
+              "digest": "sha256:b2c03d1858d4c12ae067c8e0cd05b5da67df6b850f718f48b482051e8e979a4a",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:57:47.6865322Z"
+            },
+            {
+              "dockerfile": "2.1/sdk/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.805-nanoserver-1903",
+                "2.1-nanoserver-1903"
+              ],
+              "digest": "sha256:e7cafb9f29573ae25d30e01a53d83ff00ea5d9b540c3e25563ca477a685e76e3",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:58:02.6323233Z"
+            },
+            {
+              "dockerfile": "2.1/sdk/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1.805-nanoserver-1909",
+                "2.1-nanoserver-1909"
+              ],
+              "digest": "sha256:cb51a18201f01cc3dc3b348ec9553387a85d925670e7c1868662129de8d63141",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:58:16.9849941Z"
+            },
+            {
+              "dockerfile": "2.1/sdk/stretch/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch",
+                "2.1.805-stretch"
+              ],
+              "digest": "sha256:1c1e9f25c0b838026c921c5e8f527b6e10a62ab4f3dbda5a6be53a46054ee893",
+              "baseImageDigest": "buildpack-deps@sha256:879c4b1ebf18bfbf6258cad8e99ec09aea47d48deeec90ae722ffb94a17feaee",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:55:25.8558736Z"
+            },
+            {
+              "dockerfile": "2.1/sdk/stretch/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-stretch-arm32v7",
+                "2.1.805-stretch-arm32v7"
+              ],
+              "digest": "sha256:d5a0e986f31e4d1918a4433dc8ed44824fe50cd79f27dd0039e485cc9da2ea42",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:a6244a41598c2cb6eca87d2ce0349e239628dcaa54511a7e61831f73338cd86d",
+              "osType": "Linux",
+              "osVersion": "Debian 9",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:58:46.2289369Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/sdk/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine3.10",
+                "2.1.805-alpine3.10"
+              ],
+              "digest": "sha256:4c1cdc4704ef93b5f35d4946f525d30809ab60929a27c62b06ccdb436fcb47da",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:55:05.9073505Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/sdk/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-alpine",
+                "2.1-alpine3.11",
+                "2.1.805-alpine",
+                "2.1.805-alpine3.11"
+              ],
+              "digest": "sha256:d4792578d704632f3897b68bc23a0a0dfea6d5218a868f628b0d0af11c013847",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:01.7709208Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/sdk/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic",
+                "2.1.805-bionic"
+              ],
+              "digest": "sha256:32bbec49e3b7a22bcdf51476c2d0b17dda5db0693855f82461a6951d4a440741",
+              "baseImageDigest": "buildpack-deps@sha256:0176e7be2bf64df579144a7f9f83e00ba28b6a81e455ec91c9b538ae1948be05",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:55:11.3348521Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/sdk/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "2.1-bionic-arm32v7",
+                "2.1.805-bionic-arm32v7"
+              ],
+              "digest": "sha256:af447566e8b1930ce6823ce7f563f0ba86335ac39d0a2b59d5d58211bf8987c9",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:7e6e04f39cd0dc85e0b24f200da5cf0c30afbb42000dec34435ca182b138a7d2",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:58:22.2715031Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "2.1/sdk/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "2.1-focal",
+                "2.1.805-focal"
+              ],
+              "digest": "sha256:f1f65bb092be07843f67a2af6b5c507c1cdeabbdd3a80ca63efde98a988b1bc0",
+              "baseImageDigest": "buildpack-deps@sha256:57a162a545052301696ab53c56fac921a6bf3ef7b83b9a5356043ae96632528b",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:55:33.5561958Z"
+            }
+          ]
+        },
+        {
+          "manifest": {
+            "digest": "sha256:12f45ccce85a47f0a5f83c94ec2e05d6c20cba0b5db1f13a6f12e4f022335239",
+            "created": "2020-03-24T19:00:48.1121659Z",
+            "sharedTags": [
+              "3.1.201",
+              "3.1"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/buster/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-buster",
+                "3.1.201-buster"
+              ],
+              "digest": "sha256:9105ca29ce112f241d33da51ae9382f8788ae08f8c0127d2fbdcd3894ae422e5",
+              "baseImageDigest": "buildpack-deps@sha256:1481163b998184783d800ced064adfe2649a3109f79d6bafddbc9ed0ee4ec9d6",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:10.7896522Z"
+            },
+            {
+              "dockerfile": "3.1/sdk/buster/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-arm32v7",
+                "3.1.201-buster-arm32v7"
+              ],
+              "digest": "sha256:de8fb53dd3272ce723d67f5e55ba45c35592beeed28ef66ef6b2edc7ce5d0f24",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:6fe6a742de9e8aa6df4ece3aa98ee11f046656d2b989c2fc5024b5113ab2a945",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:40.3623068Z"
+            },
+            {
+              "dockerfile": "3.1/sdk/buster/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-buster-arm64v8",
+                "3.1.201-buster-arm64v8"
+              ],
+              "digest": "sha256:7f1c3af22f4dc5e75b3dafa7a9583f65b5cac5f55cc018ae259832628b05bae4",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:a38c83ca23b2e8c383cd80bc2d1197d315d90809ee1f4d056adbd18f8b1b58f6",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:53:50.9895927Z"
+            },
+            {
+              "dockerfile": "3.1/sdk/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.201-nanoserver-1809",
+                "3.1-nanoserver-1809"
+              ],
+              "digest": "sha256:467e1598186d0c5cb48ad4229d174b3212f84aa007b0c69abb6550e2722856ca",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:21.4382105Z"
+            },
+            {
+              "dockerfile": "3.1/sdk/nanoserver-1809/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-nanoserver-1809-arm32v7",
+                "3.1.201-nanoserver-1809-arm32v7"
+              ],
+              "digest": "sha256:f52d679dc8309327b53e1bc4a6a93ea67ec9fe16686820f53e9f9a1489852d4b",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "arm32",
+              "created": "2020-03-24T19:00:48.1121659Z"
+            },
+            {
+              "dockerfile": "3.1/sdk/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.201-nanoserver-1903",
+                "3.1-nanoserver-1903"
+              ],
+              "digest": "sha256:2b4490cda458fd8f9fa172841ec9e34f7f2350aa99494c7c3677fca6a85539b7",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:56.3886673Z"
+            },
+            {
+              "dockerfile": "3.1/sdk/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1.201-nanoserver-1909",
+                "3.1-nanoserver-1909"
+              ],
+              "digest": "sha256:0a1b5bf415222bd766681199d6ffc69b19f1d595f3044cc189ea0933a95ff823",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:56:16.0676295Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/alpine3.10/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine3.10",
+                "3.1.201-alpine3.10"
+              ],
+              "digest": "sha256:7c31f7a8b378849c54e4fd3e698220b82e2756e1c75762f2ea84bb9270b77b55",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:28.4651615Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-alpine",
+                "3.1-alpine3.11",
+                "3.1.201-alpine",
+                "3.1.201-alpine3.11"
+              ],
+              "digest": "sha256:cc5632cb22bb90320b4af9823dc4d753cd003d5b1f46024e10ff882b38fbd87e",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:21.8944376Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/bionic/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic",
+                "3.1.201-bionic"
+              ],
+              "digest": "sha256:296c6a4dd729feb1bf0ff3cef21a6e8af790c9bd71b7a5c56da53f051c58db71",
+              "baseImageDigest": "buildpack-deps@sha256:0176e7be2bf64df579144a7f9f83e00ba28b6a81e455ec91c9b538ae1948be05",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:21.5041122Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/bionic/arm32v7/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm32v7",
+                "3.1.201-bionic-arm32v7"
+              ],
+              "digest": "sha256:4896ed9df335b0b8103633e91d3ad8b8fae6d098d2e1c423374a6e73bb68d185",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:7e6e04f39cd0dc85e0b24f200da5cf0c30afbb42000dec34435ca182b138a7d2",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:57:28.531352Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/bionic/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-bionic-arm64v8",
+                "3.1.201-bionic-arm64v8"
+              ],
+              "digest": "sha256:6c46686f3357eaf71a0e3fcc80f47d3785223341db074d4b96b5cfdf77796b4d",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:c1fd085d9e2d43d672e9504fae9d41636f60af0f02e76263ae4ee9ee91366b93",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 18.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:14.5808222Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "3.1-focal",
+                "3.1.201-focal"
+              ],
+              "digest": "sha256:46934949b025dc21a946a677b3fb87d401c177ef5504f0e24bdf1998b96b0b71",
+              "baseImageDigest": "buildpack-deps@sha256:57a162a545052301696ab53c56fac921a6bf3ef7b83b9a5356043ae96632528b",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:15.9291405Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "3.1/sdk/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "3.1-focal-arm64v8",
+                "3.1.201-focal-arm64v8"
+              ],
+              "digest": "sha256:fbe9ff651a2f0399b089f0154de2b1f5ebb3449cc1b3bf393bc2ac43275d813f",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:c8a1fd41fb9fa7e3ade560f086b9c33cd4275be0bc870ccfd1d64cf17f28672d",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:09.3709434Z"
+            }
+          ]
+        },
+        {
+          "manifest": {
+            "digest": "sha256:82d24ce42f2f3e59fe7193bd358b7f3a32b5d7a6bb71a200576c404f4f09e5ed",
+            "created": "2020-03-24T19:01:26.9345572Z",
+            "sharedTags": [
+              "5.0.100-preview",
+              "5.0",
+              "latest"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "5.0/sdk/buster/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-buster",
+                "5.0.100-preview-buster"
+              ],
+              "digest": "sha256:843acb2c29e217445da4207b29d8134080af7d20b28949457064c658b9464641",
+              "baseImageDigest": "buildpack-deps@sha256:1481163b998184783d800ced064adfe2649a3109f79d6bafddbc9ed0ee4ec9d6",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:33.8700038Z"
+            },
+            {
+              "dockerfile": "5.0/sdk/buster/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-arm32v7",
+                "5.0.100-preview-buster-arm32v7"
+              ],
+              "digest": "sha256:81462532fcf6227fe56cc6739ee56fbf0e61b1ff4d2ae692b7d47e10eb1c1a3e",
+              "baseImageDigest": "arm32v7/buildpack-deps@sha256:6fe6a742de9e8aa6df4ece3aa98ee11f046656d2b989c2fc5024b5113ab2a945",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm32",
+              "created": "2020-03-24T18:54:19.7723235Z"
+            },
+            {
+              "dockerfile": "5.0/sdk/buster/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-buster-arm64v8",
+                "5.0.100-preview-buster-arm64v8"
+              ],
+              "digest": "sha256:15ecab74d963c60ba7dc92537c13505f084fb3fe05e6341395cbaa55ea951cb4",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:a38c83ca23b2e8c383cd80bc2d1197d315d90809ee1f4d056adbd18f8b1b58f6",
+              "osType": "Linux",
+              "osVersion": "Debian 10",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:02.1098738Z"
+            },
+            {
+              "dockerfile": "5.0/sdk/nanoserver-1809/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.100-preview-nanoserver-1809",
+                "5.0-nanoserver-1809"
+              ],
+              "digest": "sha256:cf8f13fac86cf5e64ee3db88a23496da1f810a89dacf0e25512df67e09ebad6b",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:59:24.8222906Z"
+            },
+            {
+              "dockerfile": "5.0/sdk/nanoserver-1809/arm32v7/Dockerfile",
+              "simpleTags": [
+                "5.0-nanoserver-1809-arm32v7",
+                "5.0.100-preview-nanoserver-1809-arm32v7"
+              ],
+              "digest": "sha256:fa7f6d0b66e598246a90ad32d6f25c408f101a44c808fb28559e1e20dc0995a0",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "arm32",
+              "created": "2020-03-24T19:01:26.9345572Z"
+            },
+            {
+              "dockerfile": "5.0/sdk/nanoserver-1903/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.100-preview-nanoserver-1903",
+                "5.0-nanoserver-1903"
+              ],
+              "digest": "sha256:6680cfc51d1bab3653c802f28e8320d890102fd1179a4fdb52652a95f4f63eb1",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1903",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:59:05.5815447Z"
+            },
+            {
+              "dockerfile": "5.0/sdk/nanoserver-1909/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0.100-preview-nanoserver-1909",
+                "5.0-nanoserver-1909"
+              ],
+              "digest": "sha256:567528c18c2bd825084b72ffebac4eb23564943ae319e02ec61051b46a82c47d",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
+              "osType": "Windows",
+              "osVersion": "Windows Server, version 1909",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:58:43.2384043Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/sdk/alpine3.11/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-alpine",
+                "5.0-alpine3.11",
+                "5.0.100-preview-alpine",
+                "5.0.100-preview-alpine3.11"
+              ],
+              "digest": "sha256:e91f9fd524e0a85a5fdb72a3daf026f3e83bb078ed89e53977f26f738e1cac27",
+              "osType": "Linux",
+              "osVersion": "Alpine 3.11",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:11.1692525Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/sdk/focal/amd64/Dockerfile",
+              "simpleTags": [
+                "5.0-focal",
+                "5.0.100-preview-focal"
+              ],
+              "digest": "sha256:a0087730a742a051a2303fd35ebfa5545ad292764f46796d86508246f6b78f46",
+              "baseImageDigest": "buildpack-deps@sha256:57a162a545052301696ab53c56fac921a6bf3ef7b83b9a5356043ae96632528b",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "amd64",
+              "created": "2020-03-24T18:54:30.245079Z"
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "5.0/sdk/focal/arm64v8/Dockerfile",
+              "simpleTags": [
+                "5.0-focal-arm64v8",
+                "5.0.100-preview-focal-arm64v8"
+              ],
+              "digest": "sha256:37524a5fd2bd545cf6eef66b49e5b8dc90c09629ec735f10d42e6eee19253967",
+              "baseImageDigest": "arm64v8/buildpack-deps@sha256:c8a1fd41fb9fa7e3ade560f086b9c33cd4275be0bc870ccfd1d64cf17f28672d",
+              "osType": "Linux",
+              "osVersion": "Ubuntu 20.04",
+              "architecture": "arm64",
+              "created": "2020-03-24T18:54:04.8189289Z"
+            }
+          ]
+        }
+      ]
     }
-  },
-  {
-    "repo": "dotnet/core-nightly/runtime",
-    "images": {
-      "1.0/runtime/jessie/amd64/Dockerfile": {
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.0/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:535887492a56d570a018063d259a99e576cf6092204f87c0d2937fb160e5b090",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:370afa846b124b4674257e193352b38c65790ef75bce27418da0738fa208e66a"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.1/runtime/jessie/amd64/Dockerfile": {
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.1/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:535887492a56d570a018063d259a99e576cf6092204f87c0d2937fb160e5b090",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:370afa846b124b4674257e193352b38c65790ef75bce27418da0738fa208e66a"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.1/runtime/stretch/amd64/Dockerfile": {
-        "simpleTags": [],
-        "digest": null
-      },
-      "2.1/runtime/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.10",
-          "2.1.17-alpine3.10"
-        ],
-        "digest": "sha256:efcf992b9ac978868a2076cea7deb2a68d3fdaa51e2295e3a6b5b5b7bf8d8bef"
-      },
-      "2.1/runtime/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine",
-          "2.1-alpine3.11",
-          "2.1.17-alpine",
-          "2.1.17-alpine3.11"
-        ],
-        "digest": "sha256:8473a3173bf8f2b7ba545a7bf69bfb2d523b2d5e0c7d94faa5040de8d192f61b"
-      },
-      "2.1/runtime/alpine3.7/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.7",
-          "2.1.13-alpine3.7"
-        ],
-        "digest": null
-      },
-      "2.1/runtime/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.9",
-          "2.1.14-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.1/runtime/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-bionic",
-          "2.1.17-bionic"
-        ],
-        "digest": "sha256:311ec1db5062ed423aa8491ad84c821eae3eb49f80c38c7d4147587ec58fdb80"
-      },
-      "2.1/runtime/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.1-bionic-arm32v7",
-          "2.1.17-bionic-arm32v7"
-        ],
-        "digest": "sha256:6b72e5f619c8ea42a7653f8926bed265c52a4f92afe8a6f685425407a218f92c"
-      },
-      "2.1/runtime/focal/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-focal",
-          "2.1.17-focal"
-        ],
-        "digest": "sha256:99741cef141cf193b29b5a75c729d1c22c0d773ecbd4024c6fdbd590b88c5602"
-      },
-      "2.1/runtime/focal/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.1-focal-arm32v7",
-          "2.1.16-focal-arm32v7"
-        ],
-        "digest": "sha256:6e31eefd731b64e9c481201a5bb66fada5f24adcf897ced58c431f47d4e87172"
-      },
-      "2.1/runtime/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "2.1.13-nanoserver-1803",
-          "2.1-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "2.1/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
-        },
-        "simpleTags": [
-          "2.1.17-nanoserver-1809",
-          "2.1-nanoserver-1809"
-        ],
-        "digest": "sha256:e62559ff87631ca351b719d9e8a8dd3dc8b0948cd35423b359a516a929ffccb5"
-      },
-      "2.1/runtime/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
-        },
-        "simpleTags": [
-          "2.1.17-nanoserver-1903",
-          "2.1-nanoserver-1903"
-        ],
-        "digest": "sha256:302b8d25bd0513d9da4b6fae91caf5a8b92a042eb3c1d09f3605c71ede83fca6"
-      },
-      "2.1/runtime/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
-        },
-        "simpleTags": [
-          "2.1.17-nanoserver-1909",
-          "2.1-nanoserver-1909"
-        ],
-        "digest": "sha256:8c2ea48e2f0e2dbecf3f01eca6cf9fe2987725670a0c20f2b4935ab3f76c13f5"
-      },
-      "2.1/runtime/stretch-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-stretch-slim",
-          "2.1.17-stretch-slim"
-        ],
-        "digest": "sha256:9af09668b676e8d5018d2b67d776da35ddeb61a7cd341cbc470a743a0daf923f"
-      },
-      "2.1/runtime/stretch-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.1-stretch-slim-arm32v7",
-          "2.1.17-stretch-slim-arm32v7"
-        ],
-        "digest": "sha256:4d3802fa947f86e84cb587e1796f5dc39b5580d3bb8e9f02dd8a6f14f7b754c7"
-      },
-      "2.2/runtime/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine",
-          "2.2-alpine3.10",
-          "2.2.8-alpine",
-          "2.2.8-alpine3.10"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/alpine3.8/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine3.8",
-          "2.2.7-alpine3.8"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine3.9",
-          "2.2.8-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-bionic",
-          "2.2.8-bionic"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.2-bionic-arm32v7",
-          "2.2.8-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "2.2.7-nanoserver-1803",
-          "2.2-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:0711f47c5bbfbe16448287a2f1fdd6cfcfd6674f2044c1fe4e4a20ef79245dfe",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:4b4acad59b06d129357951864ba2ec5624e2a33a11fbbd6fe3d27696e021c044"
-        },
-        "simpleTags": [
-          "2.2.8-nanoserver-1809",
-          "2.2-nanoserver-1809"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:29ac61dc04f9de9b82e9e7034afddf8622317b839f8000961330b893654d442b"
-        },
-        "simpleTags": [
-          "2.2-nanoserver-1809-arm32",
-          "2.2-nanoserver-1809-arm32v7",
-          "2.2.8-nanoserver-1809-arm32v7"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:9232b07147b4965894bdbeb70e0cfeba8be0d16e276451477f64cbe6943f3264",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:4fb5944b9ebefeab481893d54a0498a380432f8f80f62f2b9debe81dbd7ff6a7"
-        },
-        "simpleTags": [
-          "2.2.8-nanoserver-1903",
-          "2.2-nanoserver-1903"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:3af4fbf8bdf634c7df8a2878de55a2ad6d7370d0a026d9b11d325411c534ec90",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:12327ccba5d74921479cc95b56e9422278ac3565740c2a46359bf0ac44aab0ad"
-        },
-        "simpleTags": [
-          "2.2.8-nanoserver-1909",
-          "2.2-nanoserver-1909"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/stretch-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-stretch-slim",
-          "2.2.8-stretch-slim"
-        ],
-        "digest": null
-      },
-      "2.2/runtime/stretch-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "2.2-stretch-slim-arm32v7",
-          "2.2.8-stretch-slim-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.10",
-          "3.0.3-alpine3.10"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/alpine3.10/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.10-arm64v8",
-          "3.0.3-alpine3.10-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine",
-          "3.0-alpine3.11",
-          "3.0.3-alpine",
-          "3.0.3-alpine3.11"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/alpine3.11/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine-arm64v8",
-          "3.0-alpine3.11-arm64v8",
-          "3.0.3-alpine-arm64v8",
-          "3.0.3-alpine3.11-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.9",
-          "3.0.1-alpine3.9"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/alpine3.9/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.9-arm64v8",
-          "3.0.1-alpine3.9-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-bionic",
-          "3.0.3-bionic"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-bionic-arm32v7",
-          "3.0.3-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/bionic/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-bionic-arm64v8",
-          "3.0.3-bionic-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/buster-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-buster-slim",
-          "3.0.3-buster-slim"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/buster-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-buster-slim-arm32v7",
-          "3.0.3-buster-slim-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/buster-slim/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-buster-slim-arm64v8",
-          "3.0.3-buster-slim-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/disco/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-disco",
-          "3.0.2-disco"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/disco/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.0-disco-arm32v7",
-          "3.0.2-disco-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/disco/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.0-disco-arm64v8",
-          "3.0.2-disco-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "3.0.0-nanoserver-1803",
-          "3.0-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:4201fb07c1ece2ef0bad7b518fd487d030cd49de98b81b3ed8b98e71432df463",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:a14c8e7a925f09bdd6eb5cc42e798349c4345be08d89514383e9731a900964e1"
-        },
-        "simpleTags": [
-          "3.0.3-nanoserver-1809",
-          "3.0-nanoserver-1809"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:29e2270953589a12de7a77a7e77d39e3b3e9cdfd243c922b3b8a63e2d8a71026"
-        },
-        "simpleTags": [
-          "3.0-nanoserver-1809-arm32v7",
-          "3.0.3-nanoserver-1809-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:8c2fbe170c5edb21dbe3694dbd4913649c2e7fd40cf75b5de6549d9a3336152d",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:7945cccb08209e77e611d3af2c8a64c0d2f04bbdb15d69f4ed87aaf164818d48"
-        },
-        "simpleTags": [
-          "3.0.3-nanoserver-1903",
-          "3.0-nanoserver-1903"
-        ],
-        "digest": null
-      },
-      "3.0/runtime/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:7b777cc9bd1cd34eb94de4e3978249eb9831ba9311f9c4b36153bba159b0eb2a",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:aa625958a0c8e438974f461cef177b0d5a1e1e4d6cf9abf74e7d29b24dbe43d4"
-        },
-        "simpleTags": [
-          "3.0.3-nanoserver-1909",
-          "3.0-nanoserver-1909"
-        ],
-        "digest": null
-      },
-      "3.1/runtime/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine3.10",
-          "3.1.3-alpine3.10"
-        ],
-        "digest": "sha256:d1e4a4c6561ff96b3c05c05ceda039eb2fcc616069078e6cc64c9b854b11db80"
-      },
-      "3.1/runtime/alpine3.10/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine3.10-arm64v8",
-          "3.1.3-alpine3.10-arm64v8"
-        ],
-        "digest": "sha256:f9de87834cff0b9cf4942263f84e73519503cdd168d34f6549f295adf29b7bf9"
-      },
-      "3.1/runtime/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine",
-          "3.1-alpine3.11",
-          "3.1.3-alpine",
-          "3.1.3-alpine3.11"
-        ],
-        "digest": "sha256:603fc8b24ae29490fbea30380a410120237689bfaea89349ce68b9768ed375e8"
-      },
-      "3.1/runtime/alpine3.11/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine-arm64v8",
-          "3.1-alpine3.11-arm64v8",
-          "3.1.3-alpine-arm64v8",
-          "3.1.3-alpine3.11-arm64v8"
-        ],
-        "digest": "sha256:f14afa3af4493526a0cf2aa9c7bed1ba5fbdf96a20aa1c25aeb3b9a2aa08c108"
-      },
-      "3.1/runtime/bionic/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-bionic",
-          "3.1.3-bionic"
-        ],
-        "digest": "sha256:f01133e2b5025ae6456f7b5a0972fd5d0796e72715be1927a887c8fae2f08e54"
-      },
-      "3.1/runtime/bionic/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-bionic-arm32v7",
-          "3.1.3-bionic-arm32v7"
-        ],
-        "digest": "sha256:a7739bff77b19845f59246585548bd9ec21af28e543f61bfb7c9647d848559db"
-      },
-      "3.1/runtime/bionic/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-bionic-arm64v8",
-          "3.1.3-bionic-arm64v8"
-        ],
-        "digest": "sha256:6c5adc2ce5a3816edfcff937d313742d36dac8b9c645a003f5adac704f05c0a0"
-      },
-      "3.1/runtime/buster-slim/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-buster-slim",
-          "3.1.3-buster-slim"
-        ],
-        "digest": "sha256:e41bd0c1c44520773b4ffc0aa52bdecbb3fd94a7354ae57533f7eb10846b2713"
-      },
-      "3.1/runtime/buster-slim/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-buster-slim-arm32v7",
-          "3.1.3-buster-slim-arm32v7"
-        ],
-        "digest": "sha256:7bbf799bc4bf6b6fdf2128d9d23e97cf2f252b1449609e44417dcbf8487587fc"
-      },
-      "3.1/runtime/buster-slim/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-buster-slim-arm64v8",
-          "3.1.3-buster-slim-arm64v8"
-        ],
-        "digest": "sha256:0e8c2b3ce914debbec58abc0a81f3d3d244ee009ef3d1f791a868f724c208398"
-      },
-      "3.1/runtime/focal/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-focal",
-          "3.1.3-focal"
-        ],
-        "digest": "sha256:9870623e33269a5972d172b460be676b8432ff6546dd22366a19e3e7edea82c5"
-      },
-      "3.1/runtime/focal/arm32v7/Dockerfile": {
-        "simpleTags": [
-          "3.1-focal-arm32v7",
-          "3.1.2-focal-arm32v7"
-        ],
-        "digest": "sha256:393f7cc12794451fd95488aeb1289955806736630026d909e9e9fee38c876ad1"
-      },
-      "3.1/runtime/focal/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "3.1-focal-arm64v8",
-          "3.1.3-focal-arm64v8"
-        ],
-        "digest": "sha256:ce316d75627959bdc0ab67996ec2bd618cfcd7af04d41ff859b30f4e343958eb"
-      },
-      "3.1/runtime/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "3.1.0-preview3-nanoserver-1803",
-          "3.1-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "3.1/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
-        },
-        "simpleTags": [
-          "3.1.3-nanoserver-1809",
-          "3.1-nanoserver-1809"
-        ],
-        "digest": "sha256:0b59f7f03e2c8937a7f79e470989ff7c9402c5be7cdfa253bef84cc36d6bc6c3"
-      },
-      "3.1/runtime/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61"
-        },
-        "simpleTags": [
-          "3.1-nanoserver-1809-arm32v7",
-          "3.1.3-nanoserver-1809-arm32v7"
-        ],
-        "digest": "sha256:e9a7b519fda582e631b5d555f93aa7c36c5bb219cb1d3ab946e05a158f2aa08d"
-      },
-      "3.1/runtime/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
-        },
-        "simpleTags": [
-          "3.1.3-nanoserver-1903",
-          "3.1-nanoserver-1903"
-        ],
-        "digest": "sha256:f968123b384383da06ccc697ed75fd9a138bfcbc373162584ddc2a12a6b0ac81"
-      },
-      "3.1/runtime/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
-        },
-        "simpleTags": [
-          "3.1.3-nanoserver-1909",
-          "3.1-nanoserver-1909"
-        ],
-        "digest": "sha256:fdeed0af73f47623ad13c45774e44aa9d6427d3c504865cf9d6607b9fba47169"
-      },
-      "5.0/runtime/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "5.0-alpine",
-          "5.0-alpine3.11",
-          "5.0.0-preview-alpine",
-          "5.0.0-preview-alpine3.11"
-        ],
-        "digest": "sha256:f889064f0edaee1170b76e715ac95ef7cdf8c0789cf7d0cf53d9fd1fcacdfb11"
-      },
-      "5.0/runtime/alpine3.11/arm64v8/Dockerfile": {
-        "simpleTags": [
-          "5.0-alpine-arm64v8",
-          "5.0-alpine3.11-arm64v8",
-          "5.0.0-preview-alpine-arm64v8",
-          "5.0.0-preview-alpine3.11-arm64v8"
-        ],
-        "digest": "sha256:763ae9f622c268eb3a9000b9dc90a3e959dff071603eb14b25dfbf9e15c74a56"
-      },
-      "5.0/runtime/buster-slim/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:buster-curl": "buildpack-deps@sha256:51994825fd939c0c7b6d3d1b3ea01be7411bd5c534ea2694139a4dd2ef00d64d"
-        },
-        "simpleTags": [
-          "5.0-buster-slim",
-          "5.0.0-preview-buster-slim"
-        ],
-        "digest": "sha256:a326ce85fa43bdcf1cb2694c1997c2e97fed4572551d737849a2f918637558cd"
-      },
-      "5.0/runtime/buster-slim/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:buster-curl": "arm32v7/buildpack-deps@sha256:c342b21207b0428d0b5542d6640518cb1b13d88867f1bf6c1846eb133eb6e328"
-        },
-        "simpleTags": [
-          "5.0-buster-slim-arm32v7",
-          "5.0.0-preview-buster-slim-arm32v7"
-        ],
-        "digest": "sha256:b24fe38cdc1fa1de58e5272d767971681ac7f0157630f2da0187e2e2f2b62ca8"
-      },
-      "5.0/runtime/buster-slim/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:buster-curl": "arm64v8/buildpack-deps@sha256:e419963172eb4f6acbc817fba405b0cea5c2dae77b4c708d61271ac3d0e645b7"
-        },
-        "simpleTags": [
-          "5.0-buster-slim-arm64v8",
-          "5.0.0-preview-buster-slim-arm64v8"
-        ],
-        "digest": "sha256:78c87b5ba2f0bd55d8d2873e24be41cc9e325409823755e444b33575e62ffa97"
-      },
-      "5.0/runtime/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:focal-curl": "buildpack-deps@sha256:d251ffae7d919481135bfdc3873e9510c993bc5addc36e41983143508853f4f4"
-        },
-        "simpleTags": [
-          "5.0-focal",
-          "5.0.0-preview-focal"
-        ],
-        "digest": "sha256:6bf27e666c95176fcadd343354a1fb05c4a8e47308929031ecf29d0fef179f9a"
-      },
-      "5.0/runtime/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:focal-curl": "arm32v7/buildpack-deps@sha256:9ad5cb20d5f70fad962d9946dbdd3a289e2237786db446b290a0f0abe48b469a"
-        },
-        "simpleTags": [
-          "5.0-focal-arm32v7",
-          "5.0.0-preview-focal-arm32v7"
-        ],
-        "digest": "sha256:f260958dc4e91579c3e2fa335f32ec4d1efb514fa22c0587ae8f446a0f7c4c01"
-      },
-      "5.0/runtime/focal/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:focal-curl": "arm64v8/buildpack-deps@sha256:ed9c12af416d915dc120820658d31316ea718277acfc04ae7a6e9277320bb0fc"
-        },
-        "simpleTags": [
-          "5.0-focal-arm64v8",
-          "5.0.0-preview-focal-arm64v8"
-        ],
-        "digest": "sha256:9be0e271fa0a4bb934523493842fbd9cc0d11bf5d225e39a9a8e6607aaacfb57"
-      },
-      "5.0/runtime/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
-        },
-        "simpleTags": [
-          "5.0.0-preview-nanoserver-1809",
-          "5.0-nanoserver-1809"
-        ],
-        "digest": "sha256:4fc5bf23cbb9c6d6e8b96ccdd18fd7ab3116b38662c2ed96d0aee64941f3cd45"
-      },
-      "5.0/runtime/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61"
-        },
-        "simpleTags": [
-          "5.0-nanoserver-1809-arm32v7",
-          "5.0.0-preview-nanoserver-1809-arm32v7"
-        ],
-        "digest": "sha256:b783eed7ac8fdacf2dd7a5fb29266c86c8999f810b2c731a8759f80257d76cc5"
-      },
-      "5.0/runtime/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
-        },
-        "simpleTags": [
-          "5.0.0-preview-nanoserver-1903",
-          "5.0-nanoserver-1903"
-        ],
-        "digest": "sha256:3ba836cf14882fb9e52f697b4e5541525a2532159dae7f3f70fc7162853ca192"
-      },
-      "5.0/runtime/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
-        },
-        "simpleTags": [
-          "5.0.0-preview-nanoserver-1909",
-          "5.0-nanoserver-1909"
-        ],
-        "digest": "sha256:7df8e670a9000f6f8c5da3ca5be372535e83d28c422e20d3fb72e6a8762b208f"
-      }
-    }
-  },
-  {
-    "repo": "dotnet/core-nightly/runtime-deps",
-    "images": {
-      "1.0/runtime-deps/jessie/amd64/Dockerfile": {
-        "baseImages": {
-          "debian:jessie": "debian@sha256:6b95a104400bb99ad60b47a48e37d5d1eb71a3f9ec8e86854e0cf64ecc5fd0e8"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.1/runtime-deps/stretch/amd64/Dockerfile": {
-        "baseImages": {
-          "debian:stretch": "debian@sha256:2b20d1b80dbcdef98ff4e747109c39d2b91539f7f12d7873fdd452306eddb04d"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "2.1/runtime-deps/alpine3.10/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.10": "alpine@sha256:7c3773f7bcc969f03f8f653910001d99a9d324b4b9caa008846ad2c3089f5a5f"
-        },
-        "simpleTags": [
-          "2.1-alpine3.10",
-          "2.1.17-alpine3.10"
-        ],
-        "digest": "sha256:02c60d70bb9e7f9859f60c011339c221df7e8fee3ca51c92a5b39f9fb52eac8d"
-      },
-      "2.1/runtime-deps/alpine3.11/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.11": "alpine@sha256:b276d875eeed9c7d3f1cfa7edb06b22ed22b14219a7d67c52c56612330348239"
-        },
-        "simpleTags": [
-          "2.1-alpine",
-          "2.1-alpine3.11",
-          "2.1.17-alpine",
-          "2.1.17-alpine3.11"
-        ],
-        "digest": "sha256:715c610f44717c00950822b1656f1d757d3a0e34ec3e97dceb7aeb06c319ed7d"
-      },
-      "2.1/runtime-deps/alpine3.7/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.7": "alpine@sha256:8421d9a84432575381bfabd248f1eb56f3aa21d9d7cd2511583c68c9b7511d10"
-        },
-        "simpleTags": [
-          "2.1-alpine3.7",
-          "2.1.13-alpine3.7"
-        ],
-        "digest": null
-      },
-      "2.1/runtime-deps/alpine3.9/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.9": "alpine@sha256:7746df395af22f04212cd25a92c1d6dbc5a06a0ca9579a229ef43008d4d1302a"
-        },
-        "simpleTags": [
-          "2.1-alpine3.9",
-          "2.1.14-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.1/runtime-deps/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:bionic": "ubuntu@sha256:bec5a2727be7fff3d308193cfde3491f8fba1a2ba392b7546b43a051853a341d"
-        },
-        "simpleTags": [
-          "2.1-bionic",
-          "2.1.17-bionic"
-        ],
-        "digest": "sha256:1ff2b37359f2d388f870d37c5bd1742b500665838264a09c583f09efa792172f"
-      },
-      "2.1/runtime-deps/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:bionic": "arm32v7/ubuntu@sha256:3b029ac9aa8eb5dffd43bb7326891cf64f9c228b3960cec55a56605d2ae2ad42"
-        },
-        "simpleTags": [
-          "2.1-bionic-arm32v7",
-          "2.1.17-bionic-arm32v7"
-        ],
-        "digest": "sha256:db7356c2b71d5f7f6d99f41e7c935f317064ff53c188aa547186c063bd8b038f"
-      },
-      "2.1/runtime-deps/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:focal": "ubuntu@sha256:1515a62dc73021e2e7666a31e878ef3b4daddc500c3d031b35130ac05067abc0"
-        },
-        "simpleTags": [
-          "2.1-focal",
-          "2.1.17-focal"
-        ],
-        "digest": "sha256:ecaf4b839860b2f26912afb5db613bc1f78d05b13e8ee8d998a992fb110fe5a7"
-      },
-      "2.1/runtime-deps/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:focal": "arm32v7/ubuntu@sha256:18100e418054ebe1be0fff4e514183f28088a0db409df081c3233dd22dcf4a15"
-        },
-        "simpleTags": [
-          "2.1-focal-arm32v7",
-          "2.1.16-focal-arm32v7"
-        ],
-        "digest": "sha256:b35313cf5338fc2312052fd03ca68966951463bb77132a96eb5f528d7258eba3"
-      },
-      "2.1/runtime-deps/stretch-slim/amd64/Dockerfile": {
-        "baseImages": {
-          "debian:stretch-slim": "debian@sha256:581647f7af0a8160d3219b53859bec3407dc31e0f8e9ecf255ac4c9218740c6c"
-        },
-        "simpleTags": [
-          "2.1-stretch-slim",
-          "2.1.17-stretch-slim"
-        ],
-        "digest": "sha256:4bec4124ad01b9c5df0a85d6d9bc248b07f4d0eb0a882283d11130933a3df789"
-      },
-      "2.1/runtime-deps/stretch-slim/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/debian:stretch-slim": "arm32v7/debian@sha256:f2fed2f892f5374fb057bb3c7f58c0af6da909a014488688d3afa80eac3d6edc"
-        },
-        "simpleTags": [
-          "2.1-stretch-slim-arm32v7",
-          "2.1.17-stretch-slim-arm32v7"
-        ],
-        "digest": "sha256:e5aabc0b13ae6b09b414830a293c536c5e4b9e834d9fb6705de9951104dc28ea"
-      },
-      "2.2/runtime-deps/alpine3.8/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.8": "alpine@sha256:04696b491e0cc3c58a75bace8941c14c924b9f313b03ce5029ebbc040ed9dcd9"
-        },
-        "simpleTags": [
-          "2.2-alpine3.8",
-          "2.2.7-alpine3.8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/alpine3.10/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.10": "alpine@sha256:7c3773f7bcc969f03f8f653910001d99a9d324b4b9caa008846ad2c3089f5a5f"
-        },
-        "simpleTags": [
-          "3.0-alpine3.10",
-          "3.0.3-alpine3.10",
-          "3.1-alpine3.10",
-          "3.1.2-alpine3.10"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/alpine3.10/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/alpine:3.10": "arm64v8/alpine@sha256:4491fd429b8ad188ba5e120782b2bbb704261fd2ef9942fcdee128c5fcc594d5"
-        },
-        "simpleTags": [
-          "3.0-alpine3.10-arm64v8",
-          "3.0.3-alpine3.10-arm64v8",
-          "3.1-alpine3.10-arm64v8",
-          "3.1.2-alpine3.10-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/alpine3.11/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.11": "alpine@sha256:ab00606a42621fb68f2ed6ad3c88be54397f981a7b70a79db3d1172b11c4367d"
-        },
-        "simpleTags": [
-          "3.0-alpine",
-          "3.0-alpine3.11",
-          "3.0.3-alpine",
-          "3.0.3-alpine3.11",
-          "3.1-alpine",
-          "3.1-alpine3.11",
-          "3.1.2-alpine",
-          "3.1.2-alpine3.11"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/alpine3.11/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/alpine:3.11": "arm64v8/alpine@sha256:4d5c5951669588e23881c158629ae6bac4ab44866d5b4d150c3f15d91f26682b"
-        },
-        "simpleTags": [
-          "3.0-alpine-arm64v8",
-          "3.0-alpine3.11-arm64v8",
-          "3.0.3-alpine-arm64v8",
-          "3.0.3-alpine3.11-arm64v8",
-          "3.1-alpine-arm64v8",
-          "3.1-alpine3.11-arm64v8",
-          "3.1.2-alpine-arm64v8",
-          "3.1.2-alpine3.11-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/alpine3.9/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.9": "alpine@sha256:7746df395af22f04212cd25a92c1d6dbc5a06a0ca9579a229ef43008d4d1302a"
-        },
-        "simpleTags": [
-          "3.0-alpine3.9",
-          "3.0.1-alpine3.9"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/alpine3.9/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/alpine:3.9": "arm64v8/alpine@sha256:1032bdba4c5f88facf7eceb259c18deb28a51785eb35e469285a03eba78dd3fc"
-        },
-        "simpleTags": [
-          "3.0-alpine3.9-arm64v8",
-          "3.0.1-alpine3.9-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:bionic": "ubuntu@sha256:04d48df82c938587820d7b6006f5071dbbffceb7ca01d2814f81857c631d44df"
-        },
-        "simpleTags": [
-          "3.0-bionic",
-          "3.0.3-bionic",
-          "3.1-bionic",
-          "3.1.2-bionic"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:bionic": "arm32v7/ubuntu@sha256:60a99a670b980963e4a9d882f631cba5d26ba5d14ccba2aa82a4e1f4d084fb1f"
-        },
-        "simpleTags": [
-          "3.0-bionic-arm32v7",
-          "3.0.3-bionic-arm32v7",
-          "3.1-bionic-arm32v7",
-          "3.1.2-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/bionic/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/ubuntu:bionic": "arm64v8/ubuntu@sha256:fab7c78ecd4c52e801b8a597846ec5c00ff2e4f4d1d92f6af1c8390eabc1d2d5"
-        },
-        "simpleTags": [
-          "3.0-bionic-arm64v8",
-          "3.0.3-bionic-arm64v8",
-          "3.1-bionic-arm64v8",
-          "3.1.2-bionic-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/buster-slim/amd64/Dockerfile": {
-        "baseImages": {
-          "debian:buster-slim": "debian@sha256:b137d31f0ebcce71c9dde707975e1d6582afa178e7033ccb341ddba04d807043"
-        },
-        "simpleTags": [
-          "3.0-buster-slim",
-          "3.0.3-buster-slim",
-          "3.1-buster-slim",
-          "3.1.2-buster-slim"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/buster-slim/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/debian:buster-slim": "arm32v7/debian@sha256:cd93e42001fda8969b2c372384de1de216d61304e975dbc9bff117629200a5c3"
-        },
-        "simpleTags": [
-          "3.0-buster-slim-arm32v7",
-          "3.0.3-buster-slim-arm32v7",
-          "3.1-buster-slim-arm32v7",
-          "3.1.2-buster-slim-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/buster-slim/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/debian:buster-slim": "arm64v8/debian@sha256:0e6b845c7788c6b91c5be75eeab1429c47275689129dea82bbc82f9134eb7593"
-        },
-        "simpleTags": [
-          "3.0-buster-slim-arm64v8",
-          "3.0.3-buster-slim-arm64v8",
-          "3.1-buster-slim-arm64v8",
-          "3.1.2-buster-slim-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/disco/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:disco": "ubuntu@sha256:2adeae829bf27a3399a0e7db8ae38d5adb89bcaf1bbef378240bc0e6724e8344"
-        },
-        "simpleTags": [
-          "3.0-disco",
-          "3.0.2-disco"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/disco/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:disco": "arm32v7/ubuntu@sha256:16c07dac34bb78f0ec10693b6ea3905bdfd792f56916ffa2b4631554bc3ce0a2"
-        },
-        "simpleTags": [
-          "3.0-disco-arm32v7",
-          "3.0.2-disco-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/runtime-deps/disco/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/ubuntu:disco": "arm64v8/ubuntu@sha256:e4f396e90bcc1f4487f981b5621414ab8ac9d1a75dd3a1571758ca4e09c6bc32"
-        },
-        "simpleTags": [
-          "3.0-disco-arm64v8",
-          "3.0.2-disco-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.1/runtime-deps/alpine3.10/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.10": "alpine@sha256:7c3773f7bcc969f03f8f653910001d99a9d324b4b9caa008846ad2c3089f5a5f"
-        },
-        "simpleTags": [
-          "3.1-alpine3.10",
-          "3.1.3-alpine3.10"
-        ],
-        "digest": "sha256:309d38492fe11949671d3c43d4e5f651d41b068c509fc27923f4ac5170e6dd7d"
-      },
-      "3.1/runtime-deps/alpine3.10/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/alpine:3.10": "arm64v8/alpine@sha256:4491fd429b8ad188ba5e120782b2bbb704261fd2ef9942fcdee128c5fcc594d5"
-        },
-        "simpleTags": [
-          "3.1-alpine3.10-arm64v8",
-          "3.1.3-alpine3.10-arm64v8"
-        ],
-        "digest": "sha256:428ef672bf57d41c1930e31b4c63ec36698e9a3721e79c5f03782e94576c18b9"
-      },
-      "3.1/runtime-deps/alpine3.11/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.11": "alpine@sha256:b276d875eeed9c7d3f1cfa7edb06b22ed22b14219a7d67c52c56612330348239"
-        },
-        "simpleTags": [
-          "3.1-alpine",
-          "3.1-alpine3.11",
-          "3.1.3-alpine",
-          "3.1.3-alpine3.11"
-        ],
-        "digest": "sha256:653106d2c5294b037510e1d2c24959543a2ea232cfc02d63408eb153d5c08732"
-      },
-      "3.1/runtime-deps/alpine3.11/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/alpine:3.11": "arm64v8/alpine@sha256:597bd5c319cc09d6bb295b4ef23cac50ec7c373fff5fe923cfd246ec09967b31"
-        },
-        "simpleTags": [
-          "3.1-alpine-arm64v8",
-          "3.1-alpine3.11-arm64v8",
-          "3.1.3-alpine-arm64v8",
-          "3.1.3-alpine3.11-arm64v8"
-        ],
-        "digest": "sha256:219dd88f784df9ae6601ac98150fddb0bccaa8b92e3315996ae53f1f37741827"
-      },
-      "3.1/runtime-deps/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:bionic": "ubuntu@sha256:bec5a2727be7fff3d308193cfde3491f8fba1a2ba392b7546b43a051853a341d"
-        },
-        "simpleTags": [
-          "3.1-bionic",
-          "3.1.3-bionic"
-        ],
-        "digest": "sha256:92609eb15e75ad9869103a4d64adcc944d97af04e8755c982ba963cb77814eb4"
-      },
-      "3.1/runtime-deps/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:bionic": "arm32v7/ubuntu@sha256:3b029ac9aa8eb5dffd43bb7326891cf64f9c228b3960cec55a56605d2ae2ad42"
-        },
-        "simpleTags": [
-          "3.1-bionic-arm32v7",
-          "3.1.3-bionic-arm32v7"
-        ],
-        "digest": "sha256:68c164f276d46e0c81f5b66a6485da4f4a75ba2eaa3bcfeb776b76570ce9a102"
-      },
-      "3.1/runtime-deps/bionic/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/ubuntu:bionic": "arm64v8/ubuntu@sha256:12b9106d200061c8eb2179c984e63cc17d5a4e7a34f6e9ad03360b8efe492e96"
-        },
-        "simpleTags": [
-          "3.1-bionic-arm64v8",
-          "3.1.3-bionic-arm64v8"
-        ],
-        "digest": "sha256:17dcaa6633f9ed441cef8ea17cd4cee48acb4bdbc55493460670f5e3c5dcea93"
-      },
-      "3.1/runtime-deps/buster-slim/amd64/Dockerfile": {
-        "baseImages": {
-          "debian:buster-slim": "debian@sha256:b137d31f0ebcce71c9dde707975e1d6582afa178e7033ccb341ddba04d807043"
-        },
-        "simpleTags": [
-          "3.1-buster-slim",
-          "3.1.3-buster-slim"
-        ],
-        "digest": "sha256:81103ae5e94a74d501a7bd9869ca5e3604184f23703adb4a372dcd2659533130"
-      },
-      "3.1/runtime-deps/buster-slim/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/debian:buster-slim": "arm32v7/debian@sha256:cd93e42001fda8969b2c372384de1de216d61304e975dbc9bff117629200a5c3"
-        },
-        "simpleTags": [
-          "3.1-buster-slim-arm32v7",
-          "3.1.3-buster-slim-arm32v7"
-        ],
-        "digest": "sha256:6cacb66e011f773532320ea8dbb4679d65c2a0a8eef6b2fbab4b71c165d1cc20"
-      },
-      "3.1/runtime-deps/buster-slim/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/debian:buster-slim": "arm64v8/debian@sha256:0e6b845c7788c6b91c5be75eeab1429c47275689129dea82bbc82f9134eb7593"
-        },
-        "simpleTags": [
-          "3.1-buster-slim-arm64v8",
-          "3.1.3-buster-slim-arm64v8"
-        ],
-        "digest": "sha256:3d74d67bd1410d2a257450941799241a89077197c08eca86b40ad11600c2b628"
-      },
-      "3.1/runtime-deps/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:focal": "ubuntu@sha256:1515a62dc73021e2e7666a31e878ef3b4daddc500c3d031b35130ac05067abc0"
-        },
-        "simpleTags": [
-          "3.1-focal",
-          "3.1.3-focal"
-        ],
-        "digest": "sha256:8978db0aae2fc5ec509e6c4bbc8f81be999071f9b9d93fc13c387f89af0ce9db"
-      },
-      "3.1/runtime-deps/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:focal": "arm32v7/ubuntu@sha256:18100e418054ebe1be0fff4e514183f28088a0db409df081c3233dd22dcf4a15"
-        },
-        "simpleTags": [
-          "3.1-focal-arm32v7",
-          "3.1.2-focal-arm32v7"
-        ],
-        "digest": "sha256:038024f0517f589d5944d0dd4c8a34d1f4c010a6035c98ee5674aa1727693c3f"
-      },
-      "3.1/runtime-deps/focal/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/ubuntu:focal": "arm64v8/ubuntu@sha256:0551fb19b57011ba165f66399ca0e7e49402aa7cba6ba843a317f48e4cad9e35"
-        },
-        "simpleTags": [
-          "3.1-focal-arm64v8",
-          "3.1.3-focal-arm64v8"
-        ],
-        "digest": "sha256:b5978e8b56b9ed325ec4090e4b25dc97f8e1628a7b89c540df294fd899b6a3ed"
-      },
-      "5.0/runtime-deps/alpine3.11/amd64/Dockerfile": {
-        "baseImages": {
-          "alpine:3.11": "alpine@sha256:b276d875eeed9c7d3f1cfa7edb06b22ed22b14219a7d67c52c56612330348239"
-        },
-        "simpleTags": [
-          "5.0-alpine",
-          "5.0-alpine3.11",
-          "5.0.0-preview-alpine",
-          "5.0.0-preview-alpine3.11"
-        ],
-        "digest": "sha256:3097ef3d24b6378fe372f776f06973edde81dd3762e68cb9d63e46eab57e12fe"
-      },
-      "5.0/runtime-deps/alpine3.11/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/alpine:3.11": "arm64v8/alpine@sha256:597bd5c319cc09d6bb295b4ef23cac50ec7c373fff5fe923cfd246ec09967b31"
-        },
-        "simpleTags": [
-          "5.0-alpine-arm64v8",
-          "5.0-alpine3.11-arm64v8",
-          "5.0.0-preview-alpine-arm64v8",
-          "5.0.0-preview-alpine3.11-arm64v8"
-        ],
-        "digest": "sha256:dae931532677dfd8d85c059302351b98c19bcefa78b25c6ab35c3e1710f16b81"
-      },
-      "5.0/runtime-deps/buster-slim/amd64/Dockerfile": {
-        "baseImages": {
-          "debian:buster-slim": "debian@sha256:b137d31f0ebcce71c9dde707975e1d6582afa178e7033ccb341ddba04d807043"
-        },
-        "simpleTags": [
-          "5.0-buster-slim",
-          "5.0.0-preview-buster-slim"
-        ],
-        "digest": "sha256:085c0812c382aadc55d6685ea2070ff35e6ed738dcf9ae0bae5029f034d9cbf7"
-      },
-      "5.0/runtime-deps/buster-slim/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/debian:buster-slim": "arm32v7/debian@sha256:cd93e42001fda8969b2c372384de1de216d61304e975dbc9bff117629200a5c3"
-        },
-        "simpleTags": [
-          "5.0-buster-slim-arm32v7",
-          "5.0.0-preview-buster-slim-arm32v7"
-        ],
-        "digest": "sha256:550240b708435f709dd5a4dbd91b828fb4baa52d932df4d76155b643aa3f1006"
-      },
-      "5.0/runtime-deps/buster-slim/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/debian:buster-slim": "arm64v8/debian@sha256:0e6b845c7788c6b91c5be75eeab1429c47275689129dea82bbc82f9134eb7593"
-        },
-        "simpleTags": [
-          "5.0-buster-slim-arm64v8",
-          "5.0.0-preview-buster-slim-arm64v8"
-        ],
-        "digest": "sha256:1c1bc9f36dd8ea75554b2a294bc453007b1a7ba0e275b24cab2ccced15518e9a"
-      },
-      "5.0/runtime-deps/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "ubuntu:focal": "ubuntu@sha256:1515a62dc73021e2e7666a31e878ef3b4daddc500c3d031b35130ac05067abc0"
-        },
-        "simpleTags": [
-          "5.0-focal",
-          "5.0.0-preview-focal"
-        ],
-        "digest": "sha256:ea602c5b345115173d5e14d9517ea40ad6292d9fc47da9a6f3593c1de1c56d8c"
-      },
-      "5.0/runtime-deps/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/ubuntu:focal": "arm32v7/ubuntu@sha256:18100e418054ebe1be0fff4e514183f28088a0db409df081c3233dd22dcf4a15"
-        },
-        "simpleTags": [
-          "5.0-focal-arm32v7",
-          "5.0.0-preview-focal-arm32v7"
-        ],
-        "digest": "sha256:373d3e311350dd03dfe2d668593d7a7a470d91cf65bc100ddaef11de30796e1b"
-      },
-      "5.0/runtime-deps/focal/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/ubuntu:focal": "arm64v8/ubuntu@sha256:0551fb19b57011ba165f66399ca0e7e49402aa7cba6ba843a317f48e4cad9e35"
-        },
-        "simpleTags": [
-          "5.0-focal-arm64v8",
-          "5.0.0-preview-focal-arm64v8"
-        ],
-        "digest": "sha256:9ef66a7652a13b585e8f5179b3f2bcb1ef1fd39565d23d83050a84ca7b59d240"
-      }
-    }
-  },
-  {
-    "repo": "dotnet/core-nightly/sdk",
-    "images": {
-      "1.1/sdk/jessie/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:jessie-scm": "buildpack-deps@sha256:44d0d909383bb6976c231000af4bcf7988a84afff293270b3df8fdc8af0d3483"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.1/sdk/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:535887492a56d570a018063d259a99e576cf6092204f87c0d2937fb160e5b090",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:370afa846b124b4674257e193352b38c65790ef75bce27418da0738fa208e66a"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "1.1/sdk/stretch/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:stretch-scm": "buildpack-deps@sha256:0c69a4523a91a858e7e49d8818c97a467edda24553eafae8d409e3b04953226a"
-        },
-        "simpleTags": [],
-        "digest": null
-      },
-      "2.1/sdk/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.10",
-          "2.1.805-alpine3.10"
-        ],
-        "digest": "sha256:4c1cdc4704ef93b5f35d4946f525d30809ab60929a27c62b06ccdb436fcb47da"
-      },
-      "2.1/sdk/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine",
-          "2.1-alpine3.11",
-          "2.1.805-alpine",
-          "2.1.805-alpine3.11"
-        ],
-        "digest": "sha256:d4792578d704632f3897b68bc23a0a0dfea6d5218a868f628b0d0af11c013847"
-      },
-      "2.1/sdk/alpine3.7/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.7",
-          "2.1.802-alpine3.7"
-        ],
-        "digest": null
-      },
-      "2.1/sdk/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.1-alpine3.9",
-          "2.1.607-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.1/sdk/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:bionic-scm": "buildpack-deps@sha256:0176e7be2bf64df579144a7f9f83e00ba28b6a81e455ec91c9b538ae1948be05"
-        },
-        "simpleTags": [
-          "2.1-bionic",
-          "2.1.805-bionic"
-        ],
-        "digest": "sha256:32bbec49e3b7a22bcdf51476c2d0b17dda5db0693855f82461a6951d4a440741"
-      },
-      "2.1/sdk/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:bionic-scm": "arm32v7/buildpack-deps@sha256:7e6e04f39cd0dc85e0b24f200da5cf0c30afbb42000dec34435ca182b138a7d2"
-        },
-        "simpleTags": [
-          "2.1-bionic-arm32v7",
-          "2.1.805-bionic-arm32v7"
-        ],
-        "digest": "sha256:af447566e8b1930ce6823ce7f563f0ba86335ac39d0a2b59d5d58211bf8987c9"
-      },
-      "2.1/sdk/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:focal-scm": "buildpack-deps@sha256:57a162a545052301696ab53c56fac921a6bf3ef7b83b9a5356043ae96632528b"
-        },
-        "simpleTags": [
-          "2.1-focal",
-          "2.1.805-focal"
-        ],
-        "digest": "sha256:f1f65bb092be07843f67a2af6b5c507c1cdeabbdd3a80ca63efde98a988b1bc0"
-      },
-      "2.1/sdk/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:focal-scm": "arm32v7/buildpack-deps@sha256:7bdf1ecb91b477875cc7e023b9be601a8a53788e637e56cb302e847b657736bf"
-        },
-        "simpleTags": [
-          "2.1-focal-arm32v7",
-          "2.1.804-focal-arm32v7"
-        ],
-        "digest": "sha256:b7159623467c25ca5d177927d06a870784c3528c9f92b11e0fb83114a259fe9c"
-      },
-      "2.1/sdk/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "2.1.802-nanoserver-1803",
-          "2.1-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "2.1/sdk/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
-        },
-        "simpleTags": [
-          "2.1.805-nanoserver-1809",
-          "2.1-nanoserver-1809"
-        ],
-        "digest": "sha256:b2c03d1858d4c12ae067c8e0cd05b5da67df6b850f718f48b482051e8e979a4a"
-      },
-      "2.1/sdk/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
-        },
-        "simpleTags": [
-          "2.1.805-nanoserver-1903",
-          "2.1-nanoserver-1903"
-        ],
-        "digest": "sha256:e7cafb9f29573ae25d30e01a53d83ff00ea5d9b540c3e25563ca477a685e76e3"
-      },
-      "2.1/sdk/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
-        },
-        "simpleTags": [
-          "2.1.805-nanoserver-1909",
-          "2.1-nanoserver-1909"
-        ],
-        "digest": "sha256:cb51a18201f01cc3dc3b348ec9553387a85d925670e7c1868662129de8d63141"
-      },
-      "2.1/sdk/stretch/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:stretch-scm": "buildpack-deps@sha256:879c4b1ebf18bfbf6258cad8e99ec09aea47d48deeec90ae722ffb94a17feaee"
-        },
-        "simpleTags": [
-          "2.1-stretch",
-          "2.1.805-stretch"
-        ],
-        "digest": "sha256:1c1e9f25c0b838026c921c5e8f527b6e10a62ab4f3dbda5a6be53a46054ee893"
-      },
-      "2.1/sdk/stretch/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:stretch-scm": "arm32v7/buildpack-deps@sha256:a6244a41598c2cb6eca87d2ce0349e239628dcaa54511a7e61831f73338cd86d"
-        },
-        "simpleTags": [
-          "2.1-stretch-arm32v7",
-          "2.1.805-stretch-arm32v7"
-        ],
-        "digest": "sha256:d5a0e986f31e4d1918a4433dc8ed44824fe50cd79f27dd0039e485cc9da2ea42"
-      },
-      "2.2/sdk/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine",
-          "2.2-alpine3.10",
-          "2.2.207-alpine",
-          "2.2.207-alpine3.10"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/alpine3.8/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine3.8",
-          "2.2.402-alpine3.8"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "2.2-alpine3.9",
-          "2.2.207-alpine3.9"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:bionic-scm": "buildpack-deps@sha256:96380a13af67b2b28cd9d5ac947a045c337100ca48ce637ef5d28f2852836506"
-        },
-        "simpleTags": [
-          "2.2-bionic",
-          "2.2.207-bionic"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:bionic-scm": "arm32v7/buildpack-deps@sha256:86d02dd624dfbc124a5cb5dc239980054f36050bd69c46f294379bfddf78ad4e"
-        },
-        "simpleTags": [
-          "2.2-bionic-arm32v7",
-          "2.2.207-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "2.2.402-nanoserver-1803",
-          "2.2-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:0711f47c5bbfbe16448287a2f1fdd6cfcfd6674f2044c1fe4e4a20ef79245dfe",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:4b4acad59b06d129357951864ba2ec5624e2a33a11fbbd6fe3d27696e021c044"
-        },
-        "simpleTags": [
-          "2.2.207-nanoserver-1809",
-          "2.2-nanoserver-1809"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:29ac61dc04f9de9b82e9e7034afddf8622317b839f8000961330b893654d442b"
-        },
-        "simpleTags": [
-          "2.2-nanoserver-1809-arm32",
-          "2.2-nanoserver-1809-arm32v7",
-          "2.2.207-nanoserver-1809-arm32v7"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:9232b07147b4965894bdbeb70e0cfeba8be0d16e276451477f64cbe6943f3264",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:4fb5944b9ebefeab481893d54a0498a380432f8f80f62f2b9debe81dbd7ff6a7"
-        },
-        "simpleTags": [
-          "2.2.207-nanoserver-1903",
-          "2.2-nanoserver-1903"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:3af4fbf8bdf634c7df8a2878de55a2ad6d7370d0a026d9b11d325411c534ec90",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:12327ccba5d74921479cc95b56e9422278ac3565740c2a46359bf0ac44aab0ad"
-        },
-        "simpleTags": [
-          "2.2.207-nanoserver-1909",
-          "2.2-nanoserver-1909"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/stretch/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:stretch-scm": "buildpack-deps@sha256:e23e87cfce5f88d4d8b22c04233bc617c546844e2b932c62ea868d6a05162a9d"
-        },
-        "simpleTags": [
-          "2.2-stretch",
-          "2.2.207-stretch"
-        ],
-        "digest": null
-      },
-      "2.2/sdk/stretch/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:stretch-scm": "arm32v7/buildpack-deps@sha256:ae21abdde862481a83b77633318cff3eb578f42ca2e0c0c43ac94b8da47b87b3"
-        },
-        "simpleTags": [
-          "2.2-stretch-arm32v7",
-          "2.2.207-stretch-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.10",
-          "3.0.103-alpine3.10"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine",
-          "3.0-alpine3.11",
-          "3.0.103-alpine",
-          "3.0.103-alpine3.11"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/alpine3.9/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.0-alpine3.9",
-          "3.0.101-alpine3.9"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:bionic-scm": "buildpack-deps@sha256:ad37019424286afed0ec01bde64dfab84ca31c96b85969402df153571fcdb8e0"
-        },
-        "simpleTags": [
-          "3.0-bionic",
-          "3.0.103-bionic"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:bionic-scm": "arm32v7/buildpack-deps@sha256:745acf095788048daeb835ccef4c2029c953d7e911b6c5d1efa107f204baaf0f"
-        },
-        "simpleTags": [
-          "3.0-bionic-arm32v7",
-          "3.0.103-bionic-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/bionic/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:bionic-scm": "arm64v8/buildpack-deps@sha256:85f585783aa299be0bc879ecb4104b577198e63839aa038cb3a6e4a4b15f9ebb"
-        },
-        "simpleTags": [
-          "3.0-bionic-arm64v8",
-          "3.0.103-bionic-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/buster/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:buster-scm": "buildpack-deps@sha256:1481163b998184783d800ced064adfe2649a3109f79d6bafddbc9ed0ee4ec9d6"
-        },
-        "simpleTags": [
-          "3.0-buster",
-          "3.0.103-buster"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/buster/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:buster-scm": "arm32v7/buildpack-deps@sha256:6fe6a742de9e8aa6df4ece3aa98ee11f046656d2b989c2fc5024b5113ab2a945"
-        },
-        "simpleTags": [
-          "3.0-buster-arm32v7",
-          "3.0.103-buster-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/buster/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:buster-scm": "arm64v8/buildpack-deps@sha256:a38c83ca23b2e8c383cd80bc2d1197d315d90809ee1f4d056adbd18f8b1b58f6"
-        },
-        "simpleTags": [
-          "3.0-buster-arm64v8",
-          "3.0.103-buster-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/disco/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:disco-scm": "buildpack-deps@sha256:d65b6ce6080cbd536a5ea6b0950a16787da41136f99c0e30767e6e768efdf4bc"
-        },
-        "simpleTags": [
-          "3.0-disco",
-          "3.0.102-disco"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/disco/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:disco-scm": "arm32v7/buildpack-deps@sha256:ef75b726006f90bba049d87a1272413dcd98d79a651903d7c33e166c2aabfdde"
-        },
-        "simpleTags": [
-          "3.0-disco-arm32v7",
-          "3.0.102-disco-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/disco/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:disco-scm": "arm64v8/buildpack-deps@sha256:030c23f8a6c5cb0c6a468fe0f397a0a563d545a711d7149ded4f1ee44f364cd4"
-        },
-        "simpleTags": [
-          "3.0-disco-arm64v8",
-          "3.0.102-disco-arm64v8"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "3.0.100-nanoserver-1803",
-          "3.0-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:4201fb07c1ece2ef0bad7b518fd487d030cd49de98b81b3ed8b98e71432df463",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:a14c8e7a925f09bdd6eb5cc42e798349c4345be08d89514383e9731a900964e1"
-        },
-        "simpleTags": [
-          "3.0.103-nanoserver-1809",
-          "3.0-nanoserver-1809"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:29e2270953589a12de7a77a7e77d39e3b3e9cdfd243c922b3b8a63e2d8a71026"
-        },
-        "simpleTags": [
-          "3.0-nanoserver-1809-arm32v7",
-          "3.0.103-nanoserver-1809-arm32v7"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:8c2fbe170c5edb21dbe3694dbd4913649c2e7fd40cf75b5de6549d9a3336152d",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:7945cccb08209e77e611d3af2c8a64c0d2f04bbdb15d69f4ed87aaf164818d48"
-        },
-        "simpleTags": [
-          "3.0.103-nanoserver-1903",
-          "3.0-nanoserver-1903"
-        ],
-        "digest": null
-      },
-      "3.0/sdk/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:7b777cc9bd1cd34eb94de4e3978249eb9831ba9311f9c4b36153bba159b0eb2a",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:aa625958a0c8e438974f461cef177b0d5a1e1e4d6cf9abf74e7d29b24dbe43d4"
-        },
-        "simpleTags": [
-          "3.0.103-nanoserver-1909",
-          "3.0-nanoserver-1909"
-        ],
-        "digest": null
-      },
-      "3.1/sdk/alpine3.10/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine3.10",
-          "3.1.201-alpine3.10"
-        ],
-        "digest": "sha256:7c31f7a8b378849c54e4fd3e698220b82e2756e1c75762f2ea84bb9270b77b55"
-      },
-      "3.1/sdk/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "3.1-alpine",
-          "3.1-alpine3.11",
-          "3.1.201-alpine",
-          "3.1.201-alpine3.11"
-        ],
-        "digest": "sha256:cc5632cb22bb90320b4af9823dc4d753cd003d5b1f46024e10ff882b38fbd87e"
-      },
-      "3.1/sdk/bionic/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:bionic-scm": "buildpack-deps@sha256:0176e7be2bf64df579144a7f9f83e00ba28b6a81e455ec91c9b538ae1948be05"
-        },
-        "simpleTags": [
-          "3.1-bionic",
-          "3.1.201-bionic"
-        ],
-        "digest": "sha256:296c6a4dd729feb1bf0ff3cef21a6e8af790c9bd71b7a5c56da53f051c58db71"
-      },
-      "3.1/sdk/bionic/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:bionic-scm": "arm32v7/buildpack-deps@sha256:7e6e04f39cd0dc85e0b24f200da5cf0c30afbb42000dec34435ca182b138a7d2"
-        },
-        "simpleTags": [
-          "3.1-bionic-arm32v7",
-          "3.1.201-bionic-arm32v7"
-        ],
-        "digest": "sha256:4896ed9df335b0b8103633e91d3ad8b8fae6d098d2e1c423374a6e73bb68d185"
-      },
-      "3.1/sdk/bionic/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:bionic-scm": "arm64v8/buildpack-deps@sha256:c1fd085d9e2d43d672e9504fae9d41636f60af0f02e76263ae4ee9ee91366b93"
-        },
-        "simpleTags": [
-          "3.1-bionic-arm64v8",
-          "3.1.201-bionic-arm64v8"
-        ],
-        "digest": "sha256:6c46686f3357eaf71a0e3fcc80f47d3785223341db074d4b96b5cfdf77796b4d"
-      },
-      "3.1/sdk/buster/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:buster-scm": "buildpack-deps@sha256:1481163b998184783d800ced064adfe2649a3109f79d6bafddbc9ed0ee4ec9d6"
-        },
-        "simpleTags": [
-          "3.1-buster",
-          "3.1.201-buster"
-        ],
-        "digest": "sha256:9105ca29ce112f241d33da51ae9382f8788ae08f8c0127d2fbdcd3894ae422e5"
-      },
-      "3.1/sdk/buster/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:buster-scm": "arm32v7/buildpack-deps@sha256:6fe6a742de9e8aa6df4ece3aa98ee11f046656d2b989c2fc5024b5113ab2a945"
-        },
-        "simpleTags": [
-          "3.1-buster-arm32v7",
-          "3.1.201-buster-arm32v7"
-        ],
-        "digest": "sha256:de8fb53dd3272ce723d67f5e55ba45c35592beeed28ef66ef6b2edc7ce5d0f24"
-      },
-      "3.1/sdk/buster/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:buster-scm": "arm64v8/buildpack-deps@sha256:a38c83ca23b2e8c383cd80bc2d1197d315d90809ee1f4d056adbd18f8b1b58f6"
-        },
-        "simpleTags": [
-          "3.1-buster-arm64v8",
-          "3.1.201-buster-arm64v8"
-        ],
-        "digest": "sha256:7f1c3af22f4dc5e75b3dafa7a9583f65b5cac5f55cc018ae259832628b05bae4"
-      },
-      "3.1/sdk/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:focal-scm": "buildpack-deps@sha256:57a162a545052301696ab53c56fac921a6bf3ef7b83b9a5356043ae96632528b"
-        },
-        "simpleTags": [
-          "3.1-focal",
-          "3.1.201-focal"
-        ],
-        "digest": "sha256:46934949b025dc21a946a677b3fb87d401c177ef5504f0e24bdf1998b96b0b71"
-      },
-      "3.1/sdk/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:focal-scm": "arm32v7/buildpack-deps@sha256:7bdf1ecb91b477875cc7e023b9be601a8a53788e637e56cb302e847b657736bf"
-        },
-        "simpleTags": [
-          "3.1-focal-arm32v7",
-          "3.1.102-focal-arm32v7"
-        ],
-        "digest": "sha256:79b285d7781c84163172cf91ac453d916af26ced9b4e15f677badc4113512e0d"
-      },
-      "3.1/sdk/focal/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:focal-scm": "arm64v8/buildpack-deps@sha256:c8a1fd41fb9fa7e3ade560f086b9c33cd4275be0bc870ccfd1d64cf17f28672d"
-        },
-        "simpleTags": [
-          "3.1-focal-arm64v8",
-          "3.1.201-focal-arm64v8"
-        ],
-        "digest": "sha256:fbe9ff651a2f0399b089f0154de2b1f5ebb3449cc1b3bf393bc2ac43275d813f"
-      },
-      "3.1/sdk/nanoserver-1803/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1803": "mcr.microsoft.com/windows/nanoserver@sha256:8c62a9d8ce7dea14cc08d556e26fafa76a4870b2bcc709e03bac5111f51a9450",
-          "mcr.microsoft.com/windows/servercore:1803": "mcr.microsoft.com/windows/servercore@sha256:7f8669fc5f43382aef13ed258a9aae0cd45e5f7beb8d8a49d38d71159ede46d6"
-        },
-        "simpleTags": [
-          "3.1.100-preview3-nanoserver-1803",
-          "3.1-nanoserver-1803"
-        ],
-        "digest": null
-      },
-      "3.1/sdk/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
-        },
-        "simpleTags": [
-          "3.1.201-nanoserver-1809",
-          "3.1-nanoserver-1809"
-        ],
-        "digest": "sha256:467e1598186d0c5cb48ad4229d174b3212f84aa007b0c69abb6550e2722856ca"
-      },
-      "3.1/sdk/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61"
-        },
-        "simpleTags": [
-          "3.1-nanoserver-1809-arm32v7",
-          "3.1.201-nanoserver-1809-arm32v7"
-        ],
-        "digest": "sha256:f52d679dc8309327b53e1bc4a6a93ea67ec9fe16686820f53e9f9a1489852d4b"
-      },
-      "3.1/sdk/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
-        },
-        "simpleTags": [
-          "3.1.201-nanoserver-1903",
-          "3.1-nanoserver-1903"
-        ],
-        "digest": "sha256:2b4490cda458fd8f9fa172841ec9e34f7f2350aa99494c7c3677fca6a85539b7"
-      },
-      "3.1/sdk/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
-        },
-        "simpleTags": [
-          "3.1.201-nanoserver-1909",
-          "3.1-nanoserver-1909"
-        ],
-        "digest": "sha256:0a1b5bf415222bd766681199d6ffc69b19f1d595f3044cc189ea0933a95ff823"
-      },
-      "5.0/sdk/alpine3.11/amd64/Dockerfile": {
-        "simpleTags": [
-          "5.0-alpine",
-          "5.0-alpine3.11",
-          "5.0.100-preview-alpine",
-          "5.0.100-preview-alpine3.11"
-        ],
-        "digest": "sha256:e91f9fd524e0a85a5fdb72a3daf026f3e83bb078ed89e53977f26f738e1cac27"
-      },
-      "5.0/sdk/buster/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:buster-scm": "buildpack-deps@sha256:1481163b998184783d800ced064adfe2649a3109f79d6bafddbc9ed0ee4ec9d6"
-        },
-        "simpleTags": [
-          "5.0-buster",
-          "5.0.100-preview-buster"
-        ],
-        "digest": "sha256:843acb2c29e217445da4207b29d8134080af7d20b28949457064c658b9464641"
-      },
-      "5.0/sdk/buster/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:buster-scm": "arm32v7/buildpack-deps@sha256:6fe6a742de9e8aa6df4ece3aa98ee11f046656d2b989c2fc5024b5113ab2a945"
-        },
-        "simpleTags": [
-          "5.0-buster-arm32v7",
-          "5.0.100-preview-buster-arm32v7"
-        ],
-        "digest": "sha256:81462532fcf6227fe56cc6739ee56fbf0e61b1ff4d2ae692b7d47e10eb1c1a3e"
-      },
-      "5.0/sdk/buster/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:buster-scm": "arm64v8/buildpack-deps@sha256:a38c83ca23b2e8c383cd80bc2d1197d315d90809ee1f4d056adbd18f8b1b58f6"
-        },
-        "simpleTags": [
-          "5.0-buster-arm64v8",
-          "5.0.100-preview-buster-arm64v8"
-        ],
-        "digest": "sha256:15ecab74d963c60ba7dc92537c13505f084fb3fe05e6341395cbaa55ea951cb4"
-      },
-      "5.0/sdk/focal/amd64/Dockerfile": {
-        "baseImages": {
-          "buildpack-deps:focal-scm": "buildpack-deps@sha256:57a162a545052301696ab53c56fac921a6bf3ef7b83b9a5356043ae96632528b"
-        },
-        "simpleTags": [
-          "5.0-focal",
-          "5.0.100-preview-focal"
-        ],
-        "digest": "sha256:a0087730a742a051a2303fd35ebfa5545ad292764f46796d86508246f6b78f46"
-      },
-      "5.0/sdk/focal/arm32v7/Dockerfile": {
-        "baseImages": {
-          "arm32v7/buildpack-deps:focal-scm": "arm32v7/buildpack-deps@sha256:7bdf1ecb91b477875cc7e023b9be601a8a53788e637e56cb302e847b657736bf"
-        },
-        "simpleTags": [
-          "5.0-focal-arm32v7",
-          "5.0.100-preview-focal-arm32v7"
-        ],
-        "digest": "sha256:e2098293b17aed9e3156af9002b054d46e6cfcc767bbada8548ffa6ae5fe3f33"
-      },
-      "5.0/sdk/focal/arm64v8/Dockerfile": {
-        "baseImages": {
-          "arm64v8/buildpack-deps:focal-scm": "arm64v8/buildpack-deps@sha256:c8a1fd41fb9fa7e3ade560f086b9c33cd4275be0bc870ccfd1d64cf17f28672d"
-        },
-        "simpleTags": [
-          "5.0-focal-arm64v8",
-          "5.0.100-preview-focal-arm64v8"
-        ],
-        "digest": "sha256:37524a5fd2bd545cf6eef66b49e5b8dc90c09629ec735f10d42e6eee19253967"
-      },
-      "5.0/sdk/nanoserver-1809/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809": "mcr.microsoft.com/windows/nanoserver@sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d",
-          "mcr.microsoft.com/windows/servercore:1809": "mcr.microsoft.com/windows/servercore@sha256:9d0dff5e064c87d612503e1559c3d14353b404a1cd4b53ac1373e0fc62017971"
-        },
-        "simpleTags": [
-          "5.0.100-preview-nanoserver-1809",
-          "5.0-nanoserver-1809"
-        ],
-        "digest": "sha256:cf8f13fac86cf5e64ee3db88a23496da1f810a89dacf0e25512df67e09ebad6b"
-      },
-      "5.0/sdk/nanoserver-1809/arm32v7/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1809-arm32v7": "mcr.microsoft.com/windows/nanoserver@sha256:8b73c776dc0ed5b35595da20f50d0454809ae081a7acc9eb847bd76405ea0c61"
-        },
-        "simpleTags": [
-          "5.0-nanoserver-1809-arm32v7",
-          "5.0.100-preview-nanoserver-1809-arm32v7"
-        ],
-        "digest": "sha256:fa7f6d0b66e598246a90ad32d6f25c408f101a44c808fb28559e1e20dc0995a0"
-      },
-      "5.0/sdk/nanoserver-1903/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1903": "mcr.microsoft.com/windows/nanoserver@sha256:1ba75187a3768a1dfd6889b311fcda0e40e21da1bfc83521e8c2d527546959be",
-          "mcr.microsoft.com/windows/servercore:1903": "mcr.microsoft.com/windows/servercore@sha256:ad1d822527c131fa1939dc25083a91c3bb62640b60e754b9f7e504d28cde5157"
-        },
-        "simpleTags": [
-          "5.0.100-preview-nanoserver-1903",
-          "5.0-nanoserver-1903"
-        ],
-        "digest": "sha256:6680cfc51d1bab3653c802f28e8320d890102fd1179a4fdb52652a95f4f63eb1"
-      },
-      "5.0/sdk/nanoserver-1909/amd64/Dockerfile": {
-        "baseImages": {
-          "mcr.microsoft.com/windows/nanoserver:1909": "mcr.microsoft.com/windows/nanoserver@sha256:e78d71661c100cac7790083bd33ca472247ac1b6237f7bc642d9c05831f1e740",
-          "mcr.microsoft.com/windows/servercore:1909": "mcr.microsoft.com/windows/servercore@sha256:d0a93cf38daadc18ca7b2ed537bde74cfb867f50556d44e8adcfec4a1d1f2de4"
-        },
-        "simpleTags": [
-          "5.0.100-preview-nanoserver-1909",
-          "5.0-nanoserver-1909"
-        ],
-        "digest": "sha256:567528c18c2bd825084b72ffebac4eb23564943ae319e02ec61051b46a82c47d"
-      }
-    }
-  }
-]
+  ]
+}
