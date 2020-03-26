@@ -72,8 +72,8 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 808
     },
-    // A build definition that will update the dependencies of the dotnet/core-sdk repo
-    "core-sdk-dependencies": {
+    // A build definition that will update the dependencies of the dotnet/installer repo
+    "installer-dependencies": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 9749
@@ -732,8 +732,8 @@
         "https://github.com/dotnet/clicommandlineparser/blob/release/**/*",
         "https://github.com/dotnet/command-line-api/blob/master/**/*",
         "https://github.com/dotnet/command-line-api/blob/release/**/*",
-        "https://github.com/dotnet/core-sdk/blob/master/**/*",
-        "https://github.com/dotnet/core-sdk/blob/release/**/*",
+        "https://github.com/dotnet/installer/blob/master/**/*",
+        "https://github.com/dotnet/installer/blob/release/**/*",
         "https://github.com/dotnet/core-setup/blob/master/**/*",
         "https://github.com/dotnet/core-setup/blob/release/**/*",
         "https://github.com/dotnet/coreclr/blob/master/**/*",
@@ -869,7 +869,7 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/master/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-sdk/master/Latest.txt"
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/installer/master/Latest.txt"
       ],
       "action": "corefxlab-general",
       "delay": "00:10:00",
@@ -1111,7 +1111,7 @@
         "https://github.com/dotnet/cli/blob/release/3.1.1xx/**/*",
         "https://github.com/dotnet/toolset/blob/release/3.1.1xx/**/*",
         "https://github.com/dotnet/sdk/blob/release/3.1.1xx/**/*",
-        "https://github.com/dotnet/core-sdk/blob/release/3.1.1xx/**/*"
+        "https://github.com/dotnet/installer/blob/release/3.1.1xx/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1129,7 +1129,7 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/sdk/blob/release/3.1.3xx/**/*",
-        "https://github.com/dotnet/core-sdk/blob/release/3.1.3xx/**/*"
+        "https://github.com/dotnet/installer/blob/release/3.1.3xx/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1147,7 +1147,7 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/sdk/blob/release/5.0.1xx-preview2/**/*",
-        "https://github.com/dotnet/core-sdk/blob/release/5.0.1xx-preview2/**/*"
+        "https://github.com/dotnet/installer/blob/release/5.0.1xx-preview2/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1280,12 +1280,12 @@
         }
       }
     },
-    // Update dependencies in core-sdk master
+    // Update dependencies in installer master
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/master/Latest_Packages.txt",
       ],
-      "action": "core-sdk-dependencies",
+      "action": "installer-dependencies",
       "delay": "00:05:00",
       "actionArguments": {
         "vsoSourceBranch": "master",
@@ -1584,9 +1584,9 @@
         // "https://github.com/dotnet/cli/blob/release/3.1/**/*",
         "https://github.com/dotnet/cli-migrate/blob/release/**/*",
         "https://github.com/dotnet/clicommandlineparser/blob/release/**/*",
-        "https://github.com/dotnet/core-sdk/blob/release/2/**/*",
-        // "https://github.com/dotnet/core-sdk/blob/release/3.0.1xx/**/*",
-        // "https://github.com/dotnet/core-sdk/blob/release/3.1.1xx/**/*",
+        "https://github.com/dotnet/installer/blob/release/2/**/*",
+        // "https://github.com/dotnet/installer/blob/release/3.0.1xx/**/*",
+        // "https://github.com/dotnet/installer/blob/release/3.1.1xx/**/*",
         "https://github.com/dotnet/core-setup/blob/release/2/**/*",
         //"https://github.com/dotnet/core-setup/blob/release/3.0/**/*",
         //"https://github.com/dotnet/core-setup/blob/release/3.1/**/*",
