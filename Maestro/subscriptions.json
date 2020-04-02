@@ -1124,7 +1124,7 @@
         }
       }
     },
-    // Automate opening PRs to merge cli 3.1.3xx to release/5.0.1xx-preview2
+    // Automate opening PRs to merge cli 3.1.3xx to release/5.0.1xx-preview3
     {
       "triggerPaths": [
         "https://github.com/dotnet/sdk/blob/release/3.1.3xx/**/*",
@@ -1137,16 +1137,16 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/5.0.1xx-preview2",
+          "BaseBranch": "release/5.0.1xx-preview3",
           "ExtraSwitches": "-QuietComments"
         }
       }
     },
-    // Automate opening PRs to merge cli release/5.0.1xx-preview2 to master
+    // Automate opening PRs to merge cli release/5.0.1xx-preview3 to master
     {
       "triggerPaths": [
-        "https://github.com/dotnet/sdk/blob/release/5.0.1xx-preview2/**/*",
-        "https://github.com/dotnet/installer/blob/release/5.0.1xx-preview2/**/*"
+        "https://github.com/dotnet/sdk/blob/release/5.0.1xx-preview3/**/*",
+        "https://github.com/dotnet/installer/blob/release/5.0.1xx-preview3/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
