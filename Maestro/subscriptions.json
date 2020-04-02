@@ -1753,6 +1753,22 @@
     },
     {
       "triggerPaths": [
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/product/cli/release/2.1.17/build.semaphore"
+      ],
+      "action": "DotNet-Orchestration-Final-Publish-Executor",
+      "actionArguments": {
+        "vsoBuildParameters": {
+          "PB_FinalTargets": "/t:FinalBlobPublish",
+          "PB_TriggerPath": "<trigger-path>",
+          "PB_VersionsRepoRef": "<trigger-commit>",
+          "DotNetCliContainerName": "dotnet",
+          "DotNetCliChecksumsContainerName": "dotnet",
+          "CoreSetupLatestChannel": "release/2.1"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/corefx/blob/release/3.0/src/Common/src/CoreLib/**/*",
