@@ -332,33 +332,6 @@
         }
       }
     },
-    // Update dependencies in CoreCLR release/3.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/3.0/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/optimization/release/3.0/Latest.txt"
-      ],
-      "action": "coreclr-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/3.0",
-        "vsoBuildParameters": {
-          "ScriptFileName": "msbuild.cmd",
-          "Arguments": [
-            "tests\\build.proj",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=coreclr",
-            "/p:ProjectRepoBranch=release/3.0",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
     // Update dependencies in CoreFX master
     {
       "triggerPaths": [
@@ -603,32 +576,6 @@
         }
       }
     },
-    // Update dependencies in CoreFX release/3.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/3.0/Latest.txt"
-      ],
-      "action": "corefx-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/3.0",
-        "vsoBuildParameters": {
-          "ScriptFileName": "eng\\update-dependencies.cmd",
-          "Arguments": [
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=corefx",
-            "/p:ProjectRepoBranch=release/3.0",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-
     // Mirror github changes to devdiv Azure DevOps
     {
       "triggerPaths": [
@@ -999,32 +946,6 @@
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=core-setup",
             "/p:ProjectRepoBranch=release/2.1",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-    // Update dependencies in core-setup release/3.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/3.0/Latest.txt"
-      ],
-      "action": "core-setup-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/3.0",
-        "vsoBuildParameters": {
-          "ScriptFileName": "build.cmd",
-          "Arguments": [
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=core-setup",
-            "/p:ProjectRepoBranch=release/3.0",
             "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
             "/verbosity:Normal"
           ]
@@ -1612,15 +1533,12 @@
         }
       }
     },
-    // Automate opening PRs to merge dotnet org repos' release/3.0 changes into release/3.1 branches
+    // Automate opening PRs to merge dotnet org repos' release/2.1 changes into release/uwp6.2 branches
     {
       "triggerPaths": [
-        "https://github.com/dotnet/buildtools/blob/release/3.0/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/3.0/**/*",
-        "https://github.com/dotnet/corefx/blob/release/3.0/**/*",
-        "https://github.com/dotnet/core-setup/blob/release/3.0/**/*",
-        "https://github.com/dotnet/templating/blob/release/3.0/**/*",
-        "https://github.com/dotnet/wpf/blob/release/3.0/**/*"
+        "https://github.com/dotnet/coreclr/blob/release/2.1/**/*",
+        "https://github.com/dotnet/corefx/blob/release/2.1/**/*",
+        "https://github.com/dotnet/core-setup/blob/release/2.1/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1629,7 +1547,7 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/3.1"
+          "BaseBranch": "release/uwp6.2"
         }
       }
     },
@@ -1778,10 +1696,8 @@
       "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*",
-        "https://github.com/dotnet/corefx/blob/release/3.0/src/Common/src/CoreLib/**/*",
         "https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/shared/**/*",
         "https://github.com/dotnet/coreclr/blob/release/2.1/src/System.Private.CoreLib/shared/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/3.0/src/System.Private.CoreLib/shared/**/*",
         "https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/shared/**/*"
       ],
       "action": "DotNet-GitSync-CommitManager",
