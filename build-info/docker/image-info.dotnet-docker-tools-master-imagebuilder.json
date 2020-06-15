@@ -2,7 +2,59 @@
   "schemaVersion": "1.0",
   "repos": [
     {
-      "repo": "dotnet-buildtools/image-builder"
+      "repo": "dotnet-buildtools/image-builder",
+      "images": [
+        {
+          "manifest": {
+            "digest": "sha256:70031c3ec1b0fa5bf7dfaa9a5357f60754c2a67a74f9d185f172736521e826a8",
+            "created": "2020-06-15T19:21:59.9025629Z",
+            "sharedTags": [
+              "688368"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "Dockerfile.linux",
+              "simpleTags": [
+                "linux-amd64-688368"
+              ],
+              "digest": "sha256:b237433b3a445eb4cdc25ab6429745cc311ba54aab64b6086fb1f634b7d33abd",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/core/runtime-deps@sha256:4d14cdba94cf0307c234a692a6fb075b86d672e408c96be21130b4063dda40dd",
+              "osType": "Linux",
+              "osVersion": "Alpine",
+              "architecture": "amd64",
+              "created": "2020-06-15T19:14:00.6560095Z",
+              "commitUrl": "https://github.com/dotnet/docker-tools/blob/6ac12b8dab63cacde476d1936cd1e69a0a494d5b/Dockerfile.linux"
+            },
+            {
+              "dockerfile": "Dockerfile.linux",
+              "simpleTags": [
+                "linux-arm64-688368"
+              ],
+              "digest": "sha256:1532e21be8eda1c89a223e644a170b33498177a724298b7bf93db00f6b86c233",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/core/runtime-deps@sha256:f1693b1bf85317b807bbb9eb92a6ef1bd5f4132be0b21227f3df63930b46945e",
+              "osType": "Linux",
+              "osVersion": "Alpine",
+              "architecture": "arm64",
+              "created": "2020-06-15T19:15:32.058713Z",
+              "commitUrl": "https://github.com/dotnet/docker-tools/blob/6ac12b8dab63cacde476d1936cd1e69a0a494d5b/Dockerfile.linux"
+            },
+            {
+              "dockerfile": "Dockerfile.windows",
+              "simpleTags": [
+                "windows-amd64-688368"
+              ],
+              "digest": "sha256:47bf0ff6f30de0680050c77503a3e8961a1cee36a78ae4a8813a3123b2c24368",
+              "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:2b783310e6c82de737e893abd53ae238ca56b5a96e2861558fb9a111d6691ddb",
+              "osType": "Windows",
+              "osVersion": "Windows Server 2019",
+              "architecture": "amd64",
+              "created": "2020-06-15T19:18:03.7870038Z",
+              "commitUrl": "https://github.com/dotnet/docker-tools/blob/311d92ccaaa6499dc8f0d8bdd228111861cd709a/Dockerfile.windows"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
