@@ -30,6 +30,12 @@
       "vsoProject": "internal",
       "buildDefinitionId": 350
     },
+    // A build definition that mirrors runtime:master to runtimelab:runtime-master.
+    "github-runtime-master-to-runtimelab-mirror": {
+      "vsoInstance": "dnceng.visualstudio.com",
+      "vsoProject": "internal",
+      "buildDefinitionId": 906
+    },
     // A build definition capable of running any .ps1 script in the CoreFxLab repo. By default, the master branch.
     "corefxlab-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -737,6 +743,7 @@
         "https://github.com/dotnet/runtime/blob/release/**/*",
         "https://github.com/dotnet/runtime/blob/dev/infrastructure/**/*",
         "https://github.com/dotnet/runtimelab/blob/feature/**/*",
+        "https://github.com/dotnet/runtimelab/blob/master/**/*",
         "https://github.com/dotnet/runtime-assets/blob/master/**/*",
         "https://github.com/dotnet/runtime-assets/blob/release/**/*",
         "https://github.com/dotnet/sdk/blob/master/**/*",
@@ -834,6 +841,14 @@
           "BranchToMirror": "<trigger-branch>"
         }
       }
+    },
+    // Mirror runtime:master to runtimelab:runtime-master
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/runtime/blob/master/**/*"
+      ],
+      "action": "github-runtime-master-to-runtimelab-mirror",
+      "actionArguments": { }
     },
     // Update dependencies in CoreFxLab master
     {
