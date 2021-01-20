@@ -1009,9 +1009,7 @@
     },
     {
       "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/2.1//**/*",
-        "https://github.com/dotnet/efcore/blob/release/2.1//**/*",
-        "https://github.com/dotnet/extensions/blob/release/2.1//**/*",
+        "https://github.com/dotnet/extensions/blob/release/2.1//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1025,12 +1023,14 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet release/3.1 branches back to master and main.
+    // Automate opening PRs to merge aspnet release branches back to master and main
     {
       "triggerPaths": [
+        "https://github.com/dotnet/aspnetcore/blob/release/2.1//**/*",
         "https://github.com/dotnet/aspnetcore/blob/release/3.1//**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/5.0//**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/6.0*//**/*",
         "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*",
-        "https://github.com/dotnet/blazor/blob/release/3.1//**/*",
         "https://github.com/dotnet/ef6/blob/release/6.4//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
@@ -1047,7 +1047,10 @@
     },
     {
       "triggerPaths": [
+
         "https://github.com/dotnet/efcore/blob/release/3.1//**/*",
+        "https://github.com/dotnet/efcore/blob/release/5.0//**/*",
+        "https://github.com/dotnet/efcore/blob/release/6.0*//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1061,7 +1064,7 @@
         }
       }
     },
-    // Automate opening PRs to merge extensions release/5.0-previewN branches back to master.
+    // Automate opening PRs to merge extensions release/5.0 branches back to master.
     {
       "triggerPaths": [
         "https://github.com/dotnet/extensions/blob/release/5.0//**/*"
@@ -1074,57 +1077,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "master",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge aspnet release/5.0-rc2 branches back to release/5.0.
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/5.0-rc2//**/*",
-        "https://github.com/dotnet/efcore/blob/release/5.0-rc2//**/*",
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/5.0",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge aspnet release/5.0 branches back to master and main.
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/5.0//**/*",
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/efcore/blob/release/5.0//**/*",
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main",
           "ExtraSwitches": "-QuietComments"
         }
       }
