@@ -1024,11 +1024,14 @@
       }
     },
     // Automate opening PRs to merge aspnet release branches back to master and main
-    // Aspnetcore-Tooling is explicitly only release/3.1 to avoid the various release/vs* branches
     {
       "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release//**/*",
-        "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*"
+        "https://github.com/dotnet/aspnetcore/blob/release/2.1//**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/3.1//**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/5.0//**/*",
+        "https://github.com/dotnet/aspnetcore/blob/release/6.0*//**/*",
+        "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*",
+        "https://github.com/dotnet/ef6/blob/release/6.4//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1045,7 +1048,9 @@
     {
       "triggerPaths": [
 
-        "https://github.com/dotnet/efcore/blob/release//**/*"
+        "https://github.com/dotnet/efcore/blob/release/3.1//**/*",
+        "https://github.com/dotnet/efcore/blob/release/5.0//**/*",
+        "https://github.com/dotnet/efcore/blob/release/6.0*//**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1055,23 +1060,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "main",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge ef6 release/6.4 branch back to master.
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/ef6/blob/release/6.4//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master",
           "ExtraSwitches": "-QuietComments"
         }
       }
