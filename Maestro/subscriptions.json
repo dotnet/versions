@@ -784,7 +784,7 @@
         "https://github.com/dotnet/versions/blob/master/**/*",
         "https://github.com/dotnet/vscode-dotnet-runtime/blob/master/**/*",
         "https://github.com/dotnet/vscode-dotnet-runtime/blob/release/**/*",
-        "https://github.com/dotnet/wcf/blob/master/**/*",
+        "https://github.com/dotnet/wcf/blob/main/**/*",
         "https://github.com/dotnet/wcf/blob/release/**/*",
         "https://github.com/dotnet/windowsdesktop/blob/master/**/*",
         "https://github.com/dotnet/windowsdesktop/blob/release/**/*",
@@ -1353,17 +1353,17 @@
         }
       }
     },
-    // Update dependencies in WCF Master
+    // Update dependencies in WCF Main
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/standard/release/2.0.0/Latest.txt",
-        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/master/Latest.txt",
+        "https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/main/Latest.txt",
         "https://github.com/dotnet/versions/blob/master/build-info/dotnet/buildtools/release/2.1/Latest.txt"
       ],
       "action": "wcf-general",
       "delay": "00:10:00",
       "actionArguments": {
-        "vsoSourceBranch": "master",
+        "vsoSourceBranch": "main",
         "vsoBuildParameters": {
           "ScriptFileName": "build-managed.cmd",
           "Arguments": [
@@ -1374,7 +1374,7 @@
             "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
             "/p:ProjectRepoOwner=dotnet",
             "/p:ProjectRepoName=wcf",
-            "/p:ProjectRepoBranch=master",
+            "/p:ProjectRepoBranch=main",
             "/verbosity:Normal"
           ]
         }
