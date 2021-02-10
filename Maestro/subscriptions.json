@@ -1082,26 +1082,6 @@
         }
       }
     },
-    // Automate opening PRs to merge cli 3.1.1xx to 3.1.4xx
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/cli/blob/release/3.1.1xx/**/*",
-        "https://github.com/dotnet/toolset/blob/release/3.1.1xx/**/*",
-        "https://github.com/dotnet/sdk/blob/release/3.1.1xx/**/*",
-        "https://github.com/dotnet/installer/blob/release/3.1.1xx/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/3.1.4xx",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     // Automate opening PRs to merge cli release/5.0.2xx to master
     {
       "triggerPaths": [
