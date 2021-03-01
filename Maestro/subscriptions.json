@@ -30,8 +30,8 @@
       "vsoProject": "internal",
       "buildDefinitionId": 350
     },
-    // A build definition that mirrors runtime:master to runtimelab:runtime-master.
-    "github-runtime-master-to-runtimelab-mirror": {
+    // A build definition that mirrors runtime:main to runtimelab:runtime-master.
+    "github-runtime-main-to-runtimelab-mirror": {
       "vsoInstance": "dnceng.visualstudio.com",
       "vsoProject": "internal",
       "buildDefinitionId": 906
@@ -746,7 +746,7 @@
         "https://github.com/dotnet/roslyn-analyzers/blob/release/**/*",
         "https://github.com/dotnet/roslyn-analyzers/blob/2.9.x/**/*",
         "https://github.com/dotnet/roslyn-debug/blob/master/**/*",
-        "https://github.com/dotnet/runtime/blob/master/**/*",
+        "https://github.com/dotnet/runtime/blob/main/**/*",
         "https://github.com/dotnet/runtime/blob/release/**/*",
         "https://github.com/dotnet/runtime/blob/dev/infrastructure/**/*",
         "https://github.com/dotnet/runtimelab/blob/feature/**/*",
@@ -852,12 +852,12 @@
         }
       }
     },
-    // Mirror runtime:master to runtimelab:runtime-master
+    // Mirror runtime:main to runtimelab:runtime-master
     {
       "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/master/**/*"
+        "https://github.com/dotnet/runtime/blob/main/**/*"
       ],
-      "action": "github-runtime-master-to-runtimelab-mirror",
+      "action": "github-runtime-main-to-runtimelab-mirror",
       "actionArguments": {}
     },
     // Update dependencies in CoreFxLab master
