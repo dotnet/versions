@@ -1034,7 +1034,22 @@
     // Automate opening PRs to merge aspnet release branches back to master and main
     {
       "triggerPaths": [
-        "https://github.com/aspnet/BuildTools/blob/release/2.1//**/*",
+        "https://github.com/aspnet/BuildTools/blob/release/2.1//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "master",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "aspnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "master",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
+    {
+      "triggerPaths": [
         "https://github.com/dotnet/aspnetcore-tooling/blob/release/3.1//**/*",
         "https://github.com/dotnet/ef6/blob/release/6.4//**/*"
       ],
