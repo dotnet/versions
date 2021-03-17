@@ -655,7 +655,6 @@
         "https://github.com/dotnet/ef6/blob/release/**/*",
         "https://github.com/dotnet/efcore/blob/main/**/*",
         "https://github.com/dotnet/efcore/blob/release/**/*",
-        "https://github.com/dotnet/extensions/blob/master/**/*",
         "https://github.com/dotnet/extensions/blob/release/**/*",
         "https://github.com/aspnet/SignalR-Client-Cpp/blob/main/**/*",
         "https://github.com/aspnet/SignalR-Client-Cpp/blob/release/**/*",
@@ -1086,23 +1085,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "main",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge extensions release/5.0 branches back to master.
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/extensions/blob/release/5.0//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "master",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "master",
           "ExtraSwitches": "-QuietComments"
         }
       }
