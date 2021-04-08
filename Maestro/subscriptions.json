@@ -1077,6 +1077,23 @@
         }
       }
     },
+    // Automate opening PRs to merge aspnetcore-tooling main changes into dev17 branches.
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/aspnetcore-tooling/blob/main//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/vs17.0-pp1",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
     // Automate opening PRs to merge cli release/5.0.3xx to master
     {
       "triggerPaths": [
