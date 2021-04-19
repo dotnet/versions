@@ -1192,22 +1192,6 @@
         }
       }
     },
-    // Temporarily flow msbuild/main into msbuild/17.0 
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/msbuild/blob/main/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "vs17.0"
-        }
-      }
-    },
     // Temporary orchestrated build final publish in release/2.1.27
     {
       "triggerPaths": [
