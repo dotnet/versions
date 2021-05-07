@@ -1270,7 +1270,7 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/2.1/src/System.Private.CoreLib/shared/**/*",
+        "https://github.com/dotnet/coreclr/blob/release/2.1/src/System.Private.CoreLib/shared/**/*"
       ],
       "action": "DotNet-GitSync-CommitManager",
       "actionArguments": {
@@ -1279,6 +1279,40 @@
           "GithubRepo": "<trigger-repo>",
           "BranchToMirror": "<trigger-branch>",
           "CommitsToMirror": "<trigger-commitlist>"
+        }
+      }
+    },
+    // Automate opening PRs to merge winforms-designer release/16.10p4 to release/16.11p1
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/winforms-designer/blob/release/16.10p4/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/16.11p1",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
+    // Automate opening PRs to merge winforms-designer release/16.11xx to main
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/winforms-designer/blob/release/16.11xx/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "main",
+          "ExtraSwitches": "-QuietComments"
         }
       }
     }
