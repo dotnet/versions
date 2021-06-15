@@ -1167,8 +1167,24 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs16.10 into vs16.11 and vs16.11 into main
+    // Automate opening PRs to merge msbuild's vs17* branches into main
     // For details on how the triggerpath globbing syntax works, see: https://github.com/dotnet/versions/issues/558
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/msbuild/blob/vs17/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "main"
+        }
+      }
+    },
+    // Automate opening PRs to merge msbuild's vs16.10 into vs16.11 and vs16.11 into main
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs16.10/**/*"
