@@ -145,6 +145,23 @@
     }
   },
   "subscriptions": [
+    // Create merge PRs for linker release/6.0.2xx -> 
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/linker/blob/release/6.0-rc/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "release/6.0.2xx",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "main",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
     // Update dependencies in CoreCLR release/uwp6.0
     {
       "triggerPaths": [
