@@ -64,18 +64,135 @@
                 "3.1-alpine3.15",
                 "3.1.22-alpine3.15"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:a70bf57f20655d33c0626e4e146febe9c43b73c8b9fd01136ee592fec859a571",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:04b6eed95b928e564b906088233ad901804f624be945d512da3a7cf75669bd14",
+              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:ce00c0d0beb5de63d7256c87544f35f61d346460bd60ae6a5e085fd8993844c8",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:b9d452299d92dd0ce1860f14fb2d0e50b18725a3ea98f7f3730ced5ef2c77fb6",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:18:02.3066494Z",
+              "created": "2021-12-15T20:03:50.7355552Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/aspnet/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:4541c91abbe63da4ec53a7fe92e9f2b94086aeb3177bf8c828a9dc6d262f98d3",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:6fde8a05f02762cbc965b13a1dd83d3449d14e2be9a15ccc6314d0d2969998be"
+                "sha256:7e00ccee3c59d36d88162647934df11fa3a7fe919ace165bbc4a7907ebb182f2",
+                "sha256:9a47d03df9013973f0b596e753c9d5ad3f33b365fc1355827120e43b6586bd35",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             }
           ]
@@ -642,8 +759,8 @@
         {
           "productVersion": "5.0.13",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:fd56d491b33ec8742cfec642d74a916c6e425c4460975b0b5fc0b29cd8d01566",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:6fa2aa7d56a396b01188e5cea0aa62df6975c78daafd4e8bed29c8332cf43348",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "5.0-alpine",
               "5.0-alpine3.15",
@@ -658,18 +775,135 @@
                 "5.0-alpine3.15-amd64",
                 "5.0.13-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:4db230c5a58c0f9f6718d6c1286ee3130fa1dd4249d5ce6cf2885fba329292c0",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:92ddb34dda2ba78f2f3e21b895afabe43dadf70b7230a935d195c690dc752698",
+              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:b5fb7caa49737f67a0983b085fbe7fffb40efe88ce508b6245eade94cf422107",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:dcbd06718acc2c1e728377d3cdb19aebc63bb27091c2f994a0d7fa4243320c5b",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:18:06.4047772Z",
+              "created": "2021-12-15T20:03:54.4345924Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/aspnet/5.0/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:c9b7bcf12cc3b29a91d1225a29b472814b12cec79740991dfb125de9f9cc10e9",
-                "sha256:d81728a99e0d3a6dc9ecb88aaf11860b3593e41d34d445931fe88e860bf15ec8"
+                "sha256:a45a36c33bea5be0755e42a6e2e77cbc11510f6284ba253209186ae40d646b54",
+                "sha256:ae40d7a354f237f64eda633dec4ec0bf7e27aa4b3e089197f7e7f9ef5c51f6b9",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -1184,8 +1418,8 @@
         {
           "productVersion": "6.0.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:572d7b7878bf0a9209e7baca9b2cfa0f4bccb5d67cee5f66ee35080e767d8c29",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:7086707b58824cb29b8cd495484c5fcafed81f0e8350829db07004c143faddcc",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "6.0-alpine",
               "6.0-alpine3.15",
@@ -1200,18 +1434,135 @@
                 "6.0-alpine3.15-amd64",
                 "6.0.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:956f062cd0b0073551db32faf1183a64632c2466451089cd6defd5f525217a96",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:89b8a93ff2415d245ec7b85f85af5f04175e8ef4542955bacd2259f1b7bf23f8",
+              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:a0d1734b34094d04684d1ac5082f3227c0886afc7a70ef4a67f67a55e028449a",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:72e44a5666882db137d6457ca3f9b402c2cd9571560c9b048aaf0cdabe5fe4af",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:18:10.5056783Z",
+              "created": "2021-12-15T20:03:58.5176165Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/aspnet/6.0/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:2e4033d4d1ec92b0f4864dc5150c881394631b39d3988e2df3f7e819c278f496",
+                "sha256:0505fe85f2ae47e42360444649d0b25b767e2a2846484b81a744455885aed001",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:8803d9717314f14bc9d1ba5fa8f0e469c55c1eb48b9ddcc4c770e6a40797ac09"
+                "sha256:7c9ae9cb549a223ec2229807de2bfb5dff83e13600425d193c2c02a0b346673c",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -1717,8 +2068,8 @@
         {
           "productVersion": "7.0.0-alpha.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:ed64c15da4b3ab8415ebebeeba396a778ad0ee750c3f2e2453c852ea283a34bb",
-            "created": "2021-12-01T20:48:01.4573309Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:fd3a684fffa63727a1ead024f862a72ed258c0d3dbce527b920206669574da72",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "7.0-alpine",
               "7.0-alpine3.15",
@@ -1733,18 +2084,135 @@
                 "7.0-alpine3.15-amd64",
                 "7.0.0-alpha.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:d3484ba28e1a2c78a2b0dff1ebd748752d63ac91dbc2aeff530c8ed2179b9f69",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:3ccb467a817e5d57457dcb51bc58f36c53a45098435d10142f388836753e8826",
+              "digest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:881a371dd71eae11c238a9c05573daabbfb8ae235dda404a41d159ab839a12d0",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:768a629b73dbdec73100f2bf5c2035b5a951464e5912a73adc510afac720ab80",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:19:34.0228689Z",
+              "created": "2021-12-15T20:04:02.8195366Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/aspnet/7.0/alpine3.15/amd64/Dockerfile",
               "layers": [
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:f9080001527231e1f076f297b5e9dd4681a3d8ce1118b863a9739a0390a6ea4d",
-                "sha256:53c38dee3e8cdb6833665399a471f0b73d755acdaab44cf88986ce0afb6ea886"
+                "sha256:5cd40dd4563f6e976c5967c5a81f528c50406495a1e653b12dd29af6ac8fb786",
+                "sha256:9872ef4119fb1b5c47ac22389731899702640c2fbb0dcb5503fc10d1320b019b",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -2233,17 +2701,134 @@
                 "3.1-alpine3.15",
                 "3.1.22-alpine3.15"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:04b6eed95b928e564b906088233ad901804f624be945d512da3a7cf75669bd14",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:b9d452299d92dd0ce1860f14fb2d0e50b18725a3ea98f7f3730ced5ef2c77fb6",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:17:50.3701735Z",
+              "created": "2021-12-15T20:03:36.6375038Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/runtime/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:4541c91abbe63da4ec53a7fe92e9f2b94086aeb3177bf8c828a9dc6d262f98d3",
-                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3"
+                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
+                "sha256:7e00ccee3c59d36d88162647934df11fa3a7fe919ace165bbc4a7907ebb182f2",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             }
           ]
@@ -2750,8 +3335,8 @@
         {
           "productVersion": "5.0.13",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:e871fe9d5d7b63106d4ec599ef7060a4aeb33d020e0647e01e7b316349d09073",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:f1cd3ba2894b866d3d8df181eabca041eb0a3b7131de31609127f388c2c2f7f3",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "5.0-alpine",
               "5.0-alpine3.15",
@@ -2766,17 +3351,134 @@
                 "5.0-alpine3.15-amd64",
                 "5.0.13-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:92ddb34dda2ba78f2f3e21b895afabe43dadf70b7230a935d195c690dc752698",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:dcbd06718acc2c1e728377d3cdb19aebc63bb27091c2f994a0d7fa4243320c5b",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:17:54.0680992Z",
+              "created": "2021-12-15T20:03:40.0685685Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/runtime/5.0/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:c9b7bcf12cc3b29a91d1225a29b472814b12cec79740991dfb125de9f9cc10e9"
+                "sha256:a45a36c33bea5be0755e42a6e2e77cbc11510f6284ba253209186ae40d646b54",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -3352,8 +4054,8 @@
         {
           "productVersion": "6.0.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:db7b3d7b5cf22a2c97ab3fc008641fb026491a6b8b3cc074bff0efd5bdd25b74",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:5c9870ee4eb3de8e9103768ed3edbbe6087582a1d9e575f1493a724163f2cd44",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "6.0-alpine",
               "6.0-alpine3.15",
@@ -3368,17 +4070,134 @@
                 "6.0-alpine3.15-amd64",
                 "6.0.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:89b8a93ff2415d245ec7b85f85af5f04175e8ef4542955bacd2259f1b7bf23f8",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:72e44a5666882db137d6457ca3f9b402c2cd9571560c9b048aaf0cdabe5fe4af",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:17:57.8725069Z",
+              "created": "2021-12-15T20:03:43.8806999Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/runtime/6.0/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:8803d9717314f14bc9d1ba5fa8f0e469c55c1eb48b9ddcc4c770e6a40797ac09"
+                "sha256:7c9ae9cb549a223ec2229807de2bfb5dff83e13600425d193c2c02a0b346673c",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -3822,8 +4641,8 @@
         {
           "productVersion": "7.0.0-alpha.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:47de7741989bb67f506ab9633e4168ae50b1a1002ab017b8ad3e5b09e914ad67",
-            "created": "2021-12-01T20:48:01.4573309Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:bd1b283f826ddeedb415a12686fa92458078f7a8d4a494d1f09eb59e408ff3bf",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "7.0-alpine",
               "7.0-alpine3.15",
@@ -3838,17 +4657,134 @@
                 "7.0-alpine3.15-amd64",
                 "7.0.0-alpha.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:3ccb467a817e5d57457dcb51bc58f36c53a45098435d10142f388836753e8826",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime@sha256:768a629b73dbdec73100f2bf5c2035b5a951464e5912a73adc510afac720ab80",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:19:18.3354093Z",
+              "created": "2021-12-15T20:03:48.1283498Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/runtime/7.0/alpine3.15/amd64/Dockerfile",
               "layers": [
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:f9080001527231e1f076f297b5e9dd4681a3d8ce1118b863a9739a0390a6ea4d"
+                "sha256:5cd40dd4563f6e976c5967c5a81f528c50406495a1e653b12dd29af6ac8fb786",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -4237,16 +5173,133 @@
                 "3.1-alpine3.15",
                 "3.1.22-alpine3.15"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "baseImageDigest": "amd64/alpine@sha256:e7d88de73db3d3fd9b2d63aa7f447a10fd0220b7cbf39803c803f2af9ba256b3",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:19:01.1564697Z",
+              "created": "2021-12-15T20:03:32.129333Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/runtime-deps/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3"
+                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             }
           ]
@@ -4651,8 +5704,8 @@
         {
           "productVersion": "5.0.13",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:fec135ccc462ec94e7923ae0838c480e4b042a865540c581bb630a11e3e00c87",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:e52ed51559c1b8d6b33cf1da1f9a0c623ea88835993558aa935eb0fdb5736a8b",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "5.0-alpine",
               "5.0-alpine3.15",
@@ -4667,16 +5720,133 @@
                 "5.0-alpine3.15-amd64",
                 "5.0.13-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "baseImageDigest": "amd64/alpine@sha256:e7d88de73db3d3fd9b2d63aa7f447a10fd0220b7cbf39803c803f2af9ba256b3",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:19:01.1564697Z",
+              "created": "2021-12-15T20:03:32.129333Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/runtime-deps/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3"
+                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -5024,8 +6194,8 @@
         {
           "productVersion": "6.0.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:fec135ccc462ec94e7923ae0838c480e4b042a865540c581bb630a11e3e00c87",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:e52ed51559c1b8d6b33cf1da1f9a0c623ea88835993558aa935eb0fdb5736a8b",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "6.0-alpine",
               "6.0-alpine3.15",
@@ -5040,16 +6210,133 @@
                 "6.0-alpine3.15-amd64",
                 "6.0.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "baseImageDigest": "amd64/alpine@sha256:e7d88de73db3d3fd9b2d63aa7f447a10fd0220b7cbf39803c803f2af9ba256b3",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:19:01.1564697Z",
+              "created": "2021-12-15T20:03:32.129333Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/runtime-deps/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3"
+                "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -5294,8 +6581,8 @@
         {
           "productVersion": "7.0.0-alpha.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:fec135ccc462ec94e7923ae0838c480e4b042a865540c581bb630a11e3e00c87",
-            "created": "2021-12-01T20:48:01.4573309Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:e52ed51559c1b8d6b33cf1da1f9a0c623ea88835993558aa935eb0fdb5736a8b",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "7.0-alpine",
               "7.0-alpine3.15",
@@ -5310,16 +6597,133 @@
                 "7.0-alpine3.15-amd64",
                 "7.0.0-alpha.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:3495996697a97e7306ee1371726c35df23249e2641743ced34d9c401c7074a00",
+              "digest": "mcr.microsoft.com/dotnet/nightly/runtime-deps@sha256:ef2dcd90d035c1dad9501eb7fa4d6de91ec5de222c1843d0f68b2c4e7fd1af03",
               "baseImageDigest": "amd64/alpine@sha256:e7d88de73db3d3fd9b2d63aa7f447a10fd0220b7cbf39803c803f2af9ba256b3",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:19:01.1564697Z",
+              "created": "2021-12-15T20:03:32.129333Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/runtime-deps/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519"
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -5605,21 +7009,148 @@
                 "3.1-alpine3.15",
                 "3.1.416-alpine3.15"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:e7007de3273bb10b74b8e59a49953f83d7fc8feb54baccd9f191f8e1262c733c",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:a70bf57f20655d33c0626e4e146febe9c43b73c8b9fd01136ee592fec859a571",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:318e81cd2c1108b4363cacd602bff08a7f88e413e970167b2d454b248cd4f113",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:ce00c0d0beb5de63d7256c87544f35f61d346460bd60ae6a5e085fd8993844c8",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:18:33.4190356Z",
+              "created": "2021-12-15T20:04:23.1306899Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/sdk/3.1/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:4541c91abbe63da4ec53a7fe92e9f2b94086aeb3177bf8c828a9dc6d262f98d3",
+                "sha256:0460835132061366df575605288f7e0649a3b2659b965179d3932a0f5213615d",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:6180bb0414122322bf670925b35d953d8389d09b26437949e7de3c6998d74323",
-                "sha256:6785382c0c97595130974033589a459b01f0e035f81fd32161a4d26b760cee7f",
-                "sha256:69899bfec815ce490e63007acfaba9033b0279922bee5e81c50d89176ae9447c",
-                "sha256:6fde8a05f02762cbc965b13a1dd83d3449d14e2be9a15ccc6314d0d2969998be"
+                "sha256:61bba646a6061642462872be0850f65822b1bdf66b706a1c273da7079fce27d2",
+                "sha256:7e00ccee3c59d36d88162647934df11fa3a7fe919ace165bbc4a7907ebb182f2",
+                "sha256:9a1e826cca0da30c6dff14f746b61a64e36ffb099766d3c808f3f8cd14c5e9ce",
+                "sha256:9a47d03df9013973f0b596e753c9d5ad3f33b365fc1355827120e43b6586bd35",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "icu-libs",
+                  "version": "69.1-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ncurses-terminfo-base",
+                  "version": "6.3_p20211120-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             }
           ]
@@ -6173,8 +7704,8 @@
         {
           "productVersion": "5.0.404",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:970fd14133e84e3e260d36fca8c063966551aa5af30d41a8a5c5b7855f9e874c",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:056d25adb41c2135e7d7e31db8502eb22b451300e028a83e31ef73f4ab465415",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "5.0-alpine",
               "5.0-alpine3.15",
@@ -6189,21 +7720,183 @@
                 "5.0-alpine3.15-amd64",
                 "5.0.404-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:b2236ff7f6f5526ed4f542351831041afb2eaf8e790c8bc3ec5d9f38b63bce2e",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:4db230c5a58c0f9f6718d6c1286ee3130fa1dd4249d5ce6cf2885fba329292c0",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:7127a16eac58c2342ee9f7bed6965cdd5aff37c449943dc9b4370ea9a6e92a28",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:b5fb7caa49737f67a0983b085fbe7fffb40efe88ce508b6245eade94cf422107",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:18:55.6699081Z",
+              "created": "2021-12-15T20:04:45.1735617Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/sdk/5.0/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:7540d7e360a8327345a45ebf34da7c3c5972ef373bc5c74b02100cf1cdf1c0b6",
-                "sha256:9526b56f5325b38834e53d54561d528ded538db2c4050b298b08cb937b09167f",
-                "sha256:a03d55be78ff7d99dd41d6647f124c89b1c80a773450beca8c2f19bf2d4138ff",
-                "sha256:c9b7bcf12cc3b29a91d1225a29b472814b12cec79740991dfb125de9f9cc10e9",
-                "sha256:d81728a99e0d3a6dc9ecb88aaf11860b3593e41d34d445931fe88e860bf15ec8"
+                "sha256:a45a36c33bea5be0755e42a6e2e77cbc11510f6284ba253209186ae40d646b54",
+                "sha256:ab78317d8f07a402fd6dcede2cdda4c757bdfe7cdd8aa76e311a51348d91f348",
+                "sha256:ae40d7a354f237f64eda633dec4ec0bf7e27aa4b3e089197f7e7f9ef5c51f6b9",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd",
+                "sha256:d2c252b75575933a35c2d1787e18d0378b5f10939af2b1534e3ba20367c79d4d",
+                "sha256:d9ddfa44298a665e60dc21a4a1705849051a6601fbe89ee7ccb68f020e0d0376"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "brotli-libs",
+                  "version": "1.0.9-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "curl",
+                  "version": "7.80.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "expat",
+                  "version": "2.4.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "git",
+                  "version": "2.34.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "icu-libs",
+                  "version": "69.1-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcurl",
+                  "version": "7.80.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ncurses-terminfo-base",
+                  "version": "6.3_p20211120-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "nghttp2-libs",
+                  "version": "1.46.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "pcre2",
+                  "version": "10.39-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             }
           ]
@@ -6742,8 +8435,8 @@
         {
           "productVersion": "6.0.101",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:345a10647d43ff8e71876e0ed7d7719b1c6bbfe065c3a66a87163ad11ee5c727",
-            "created": "2021-12-14T19:24:25.332829Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:253b492d8512429b825548ca0b5b35fab3d52fc089b89607772545d90bb22b34",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "6.0-alpine",
               "6.0-alpine3.15",
@@ -6758,21 +8451,183 @@
                 "6.0-alpine3.15-amd64",
                 "6.0.101-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:7151123731ea343ca17ff66e7c113bd3515de8cbc3ba4fa20a6ddb58d317e5de",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:956f062cd0b0073551db32faf1183a64632c2466451089cd6defd5f525217a96",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:c69194cddd42587f861d38382259ef5892a6ff9baf6b664727a60f76837f827e",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:a0d1734b34094d04684d1ac5082f3227c0886afc7a70ef4a67f67a55e028449a",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-14T18:19:20.3505513Z",
+              "created": "2021-12-15T20:05:10.2359037Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/8c3df37d17a046f3d92039f2e5581b0dbf15c948/src/sdk/6.0/alpine3.15/amd64/Dockerfile",
               "layers": [
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:2e4033d4d1ec92b0f4864dc5150c881394631b39d3988e2df3f7e819c278f496",
-                "sha256:50008db7cca08a510d7770782d714a4173d0768aa132bda02baefa230ca0f5d2",
+                "sha256:0505fe85f2ae47e42360444649d0b25b767e2a2846484b81a744455885aed001",
+                "sha256:16d4087a3c67122d7ca4f11559a242c125b0a594f8ed2c5d988f62e96b2ab0d9",
+                "sha256:406c7b169f39d533edd6fbc0f516de18465a113260e18afff229f1ed7c54f14f",
+                "sha256:4aa6a38d54f301c89fe4ed7116e18cf1446cdb0eaa8ea3852a4c78423e3d3214",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:8803d9717314f14bc9d1ba5fa8f0e469c55c1eb48b9ddcc4c770e6a40797ac09",
-                "sha256:95502bb79d83e2ab8666648e0ecc508999309a543c008ac1f0696a4860947beb",
-                "sha256:d0cef197d37475d794f460598e0359c6a25a17a0c4b613afd31d59c7262f4c5f"
+                "sha256:7c9ae9cb549a223ec2229807de2bfb5dff83e13600425d193c2c02a0b346673c",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "brotli-libs",
+                  "version": "1.0.9-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "curl",
+                  "version": "7.80.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "expat",
+                  "version": "2.4.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "git",
+                  "version": "2.34.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "icu-libs",
+                  "version": "69.1-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcurl",
+                  "version": "7.80.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ncurses-terminfo-base",
+                  "version": "6.3_p20211120-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "nghttp2-libs",
+                  "version": "1.46.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "pcre2",
+                  "version": "10.39-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -7125,6 +8980,46 @@
         },
         {
           "productVersion": "6.0.101",
+          "manifest": {
+            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:c176801ec022020e5f0907eb3e14a9be0487b4904b0ee64c146316ed8634fa38",
+            "created": "2021-12-14T19:24:25.332829Z",
+            "sharedTags": [
+              "6.0-bullseye-slim",
+              "6.0.101-bullseye-slim"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "src/sdk/6.0/bullseye-slim/amd64/Dockerfile",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:30467fe0a9e6adb9363dee438a44f91b3b15805f93fb90d0b93bba005d4e208c",
+              "osType": "Linux",
+              "osVersion": "bullseye-slim",
+              "architecture": "amd64",
+              "created": "2021-12-14T18:20:16.4028696Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/6392ade69cf6d8ba1790cdd8fa7e6c42d2d6613c/src/sdk/6.0/bullseye-slim/amd64/Dockerfile"
+            },
+            {
+              "dockerfile": "src/sdk/6.0/bullseye-slim/arm32v7/Dockerfile",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:159c91db48a9a3d9c16a292002f6198b9c3462011a14d8ba07fc3187285df4c4",
+              "osType": "Linux",
+              "osVersion": "bullseye-slim",
+              "architecture": "arm32",
+              "created": "2021-12-14T18:25:05.4532158Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/6392ade69cf6d8ba1790cdd8fa7e6c42d2d6613c/src/sdk/6.0/bullseye-slim/arm32v7/Dockerfile"
+            },
+            {
+              "dockerfile": "src/sdk/6.0/bullseye-slim/arm64v8/Dockerfile",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:029d013067d799e947183de724f22e07d0e70f6847864ac4c775d5b790c87fed",
+              "osType": "Linux",
+              "osVersion": "bullseye-slim",
+              "architecture": "arm64",
+              "created": "2021-12-14T18:24:11.5127225Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/6392ade69cf6d8ba1790cdd8fa7e6c42d2d6613c/src/sdk/6.0/bullseye-slim/arm64v8/Dockerfile"
+            }
+          ]
+        },
+        {
+          "productVersion": "6.0.101",
           "platforms": [
             {
               "dockerfile": "src/sdk/6.0/windowsservercore-ltsc2019/amd64/Dockerfile",
@@ -7188,42 +9083,34 @@
           ]
         },
         {
-          "productVersion": "6.0.101",
-          "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:c176801ec022020e5f0907eb3e14a9be0487b4904b0ee64c146316ed8634fa38",
-            "created": "2021-12-14T19:24:25.332829Z",
-            "sharedTags": [
-              "6.0-bullseye-slim",
-              "6.0.101-bullseye-slim"
-            ]
-          },
+          "productVersion": "7.0.100-alpha.1",
           "platforms": [
             {
-              "dockerfile": "src/sdk/6.0/bullseye-slim/amd64/Dockerfile",
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:30467fe0a9e6adb9363dee438a44f91b3b15805f93fb90d0b93bba005d4e208c",
-              "osType": "Linux",
-              "osVersion": "bullseye-slim",
+              "dockerfile": "src/sdk/7.0/windowsservercore-ltsc2019/amd64/Dockerfile",
+              "simpleTags": [
+                "7.0-windowsservercore-ltsc2019",
+                "7.0.100-alpha.1-windowsservercore-ltsc2019"
+              ],
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:1652218ffa2eb90dee5201ec97813aa8ff69c2066654cf07cecbc8732fde00ba",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:79fd3c9b7df102440653e4abe7d052025d8633da97c50df81ef5cd52ad3d1988",
+              "osType": "Windows",
+              "osVersion": "windowsservercore-ltsc2019",
               "architecture": "amd64",
-              "created": "2021-12-14T18:20:16.4028696Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/6392ade69cf6d8ba1790cdd8fa7e6c42d2d6613c/src/sdk/6.0/bullseye-slim/amd64/Dockerfile"
-            },
-            {
-              "dockerfile": "src/sdk/6.0/bullseye-slim/arm32v7/Dockerfile",
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:159c91db48a9a3d9c16a292002f6198b9c3462011a14d8ba07fc3187285df4c4",
-              "osType": "Linux",
-              "osVersion": "bullseye-slim",
-              "architecture": "arm32",
-              "created": "2021-12-14T18:25:05.4532158Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/6392ade69cf6d8ba1790cdd8fa7e6c42d2d6613c/src/sdk/6.0/bullseye-slim/arm32v7/Dockerfile"
-            },
-            {
-              "dockerfile": "src/sdk/6.0/bullseye-slim/arm64v8/Dockerfile",
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:029d013067d799e947183de724f22e07d0e70f6847864ac4c775d5b790c87fed",
-              "osType": "Linux",
-              "osVersion": "bullseye-slim",
-              "architecture": "arm64",
-              "created": "2021-12-14T18:24:11.5127225Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/6392ade69cf6d8ba1790cdd8fa7e6c42d2d6613c/src/sdk/6.0/bullseye-slim/arm64v8/Dockerfile"
+              "created": "2021-12-14T18:33:45.2432405Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/976c7b703f20725ca010ef4bcaa836c2fa906da4/src/sdk/7.0/windowsservercore-ltsc2019/amd64/Dockerfile",
+              "layers": [
+                "sha256:1e84cdfd0e515a42798aaca9a65d9d5957e2ddd14744504b3a4c908d1ea37daa",
+                "sha256:2096c385bb6f9a798c53add76e4565ffd8c4b24fae8a6c8211ab4b8e995db075",
+                "sha256:4612f6d0b889cad0ed0292fae3a0b0c8a9e49aff6dea8eb049b2386d9b07986f",
+                "sha256:5ee7a7ea9cf22f75886179907a41810a992e21f3d0c57cc10d2147ce9237701c",
+                "sha256:813cf03abbb4a0dad6c240bf6b20b6382ec8fdcaf3b3cb88d57bae1d9a3fb2d6",
+                "sha256:908e1b419b0b0bdfa17da48d82315917d61fe7162a411ea0b40905779f9bdf47",
+                "sha256:ae2850e123924b17c769e425d354416958c9d2d649ea2b1790b79ef11b578f3d",
+                "sha256:c60ec5aa6dd6ed3ae42be06d9e520c908be75ac1c551998f5e32fd72a02dc48e",
+                "sha256:c84006b4e00da1e3492e7b9f9e990ce4b5b4d386b8be43b57653bdbc1a44740b",
+                "sha256:dc759300918e830643c367b4a15edad8b144d253f6db9939c5ee8f74b45615c5",
+                "sha256:eb6e38548a5f1c5cd18daea6f7183001a5bd32c6f07515c47a4621f53a204808"
+              ]
             }
           ]
         },
@@ -7270,8 +9157,8 @@
         {
           "productVersion": "7.0.100-alpha.1",
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:3d01b1b406db808d87ed43bbb58c49ec3fdd139c3c33a48963560751b2353b26",
-            "created": "2021-12-01T20:48:01.4573309Z",
+            "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:98f186ab8ef4fca674b49bd5c740b4534dc4f04a907dd240b3942d1c9c4459f6",
+            "created": "2021-12-15T20:25:06.6357573Z",
             "sharedTags": [
               "7.0-alpine",
               "7.0-alpine3.15",
@@ -7286,20 +9173,177 @@
                 "7.0-alpine3.15-amd64",
                 "7.0.100-alpha.1-alpine3.15-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:88a3fec92465f26785bd6756e2f7636690cb8a96826acb1a5380a45b4ebf382b",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:d3484ba28e1a2c78a2b0dff1ebd748752d63ac91dbc2aeff530c8ed2179b9f69",
+              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:152622f03c74b5bafaba3639dd5de0a774272ca51209f464b583b80accefb857",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:881a371dd71eae11c238a9c05573daabbfb8ae235dda404a41d159ab839a12d0",
               "osType": "Linux",
               "osVersion": "alpine3.15",
               "architecture": "amd64",
-              "created": "2021-12-01T20:21:00.6211275Z",
+              "created": "2021-12-15T20:05:28.5853458Z",
               "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/085a345b62d77c37242325b02adb0235d1c90b00/src/sdk/7.0/alpine3.15/amd64/Dockerfile",
               "layers": [
+                "sha256:0c3af1670893279140e40fe4f3abfa128e654aeed0aaa3ad75c087c1cf4c57e8",
+                "sha256:2a4e1bee917dba4f27d302ca32cfe63fa5981b94778389a59c00003952fdef96",
                 "sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3",
-                "sha256:18ee7242659261a7c461099cc8b1766dbace6cd0e14249b08ca399a0611b5519",
-                "sha256:f9080001527231e1f076f297b5e9dd4681a3d8ce1118b863a9739a0390a6ea4d",
-                "sha256:53c38dee3e8cdb6833665399a471f0b73d755acdaab44cf88986ce0afb6ea886",
-                "sha256:3fc74d9d0aaab7cc134c688538e0724168fb61354eedddc2c40e5e2be2762ef5",
-                "sha256:991e5741852558a5ead85d6da22a594b5055c35e8aaee9ffd24250b78a1c0d19"
+                "sha256:5cd40dd4563f6e976c5967c5a81f528c50406495a1e653b12dd29af6ac8fb786",
+                "sha256:9872ef4119fb1b5c47ac22389731899702640c2fbb0dcb5503fc10d1320b019b",
+                "sha256:d14df14d0875b0d90996e63ee1635ce6c4e5b973cfd90517211e26b480f21abd"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r18",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "brotli-libs",
+                  "version": "1.0.9-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20191127-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "curl",
+                  "version": "7.80.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "expat",
+                  "version": "2.4.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "git",
+                  "version": "2.34.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "icu-libs",
+                  "version": "69.1-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.19.2-r4",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcurl",
+                  "version": "7.80.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.4-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20211027-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r7",
+                  "type": "APK"
+                },
+                {
+                  "name": "nghttp2-libs",
+                  "version": "1.46.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "pcre2",
+                  "version": "10.39-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.34.1-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
@@ -7607,38 +9651,6 @@
                 "sha256:f2344b18c5a0be9585346313c45c16216433b35204645d959d76fec9d6689153",
                 "sha256:fae19b6b408702112beaedf0b8610bb5110791db230e9d5917dcb89790593cfe",
                 "sha256:fd2ed3e58873955b9be4ec1f7029370a23cd9eb493253ea8271cb197fd08b2a2"
-              ]
-            }
-          ]
-        },
-        {
-          "productVersion": "7.0.100-alpha.1",
-          "platforms": [
-            {
-              "dockerfile": "src/sdk/7.0/windowsservercore-ltsc2019/amd64/Dockerfile",
-              "simpleTags": [
-                "7.0-windowsservercore-ltsc2019",
-                "7.0.100-alpha.1-windowsservercore-ltsc2019"
-              ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/sdk@sha256:1652218ffa2eb90dee5201ec97813aa8ff69c2066654cf07cecbc8732fde00ba",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/nightly/aspnet@sha256:79fd3c9b7df102440653e4abe7d052025d8633da97c50df81ef5cd52ad3d1988",
-              "osType": "Windows",
-              "osVersion": "windowsservercore-ltsc2019",
-              "architecture": "amd64",
-              "created": "2021-12-14T18:33:45.2432405Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/976c7b703f20725ca010ef4bcaa836c2fa906da4/src/sdk/7.0/windowsservercore-ltsc2019/amd64/Dockerfile",
-              "layers": [
-                "sha256:1e84cdfd0e515a42798aaca9a65d9d5957e2ddd14744504b3a4c908d1ea37daa",
-                "sha256:2096c385bb6f9a798c53add76e4565ffd8c4b24fae8a6c8211ab4b8e995db075",
-                "sha256:4612f6d0b889cad0ed0292fae3a0b0c8a9e49aff6dea8eb049b2386d9b07986f",
-                "sha256:5ee7a7ea9cf22f75886179907a41810a992e21f3d0c57cc10d2147ce9237701c",
-                "sha256:813cf03abbb4a0dad6c240bf6b20b6382ec8fdcaf3b3cb88d57bae1d9a3fb2d6",
-                "sha256:908e1b419b0b0bdfa17da48d82315917d61fe7162a411ea0b40905779f9bdf47",
-                "sha256:ae2850e123924b17c769e425d354416958c9d2d649ea2b1790b79ef11b578f3d",
-                "sha256:c60ec5aa6dd6ed3ae42be06d9e520c908be75ac1c551998f5e32fd72a02dc48e",
-                "sha256:c84006b4e00da1e3492e7b9f9e990ce4b5b4d386b8be43b57653bdbc1a44740b",
-                "sha256:dc759300918e830643c367b4a15edad8b144d253f6db9939c5ee8f74b45615c5",
-                "sha256:eb6e38548a5f1c5cd18daea6f7183001a5bd32c6f07515c47a4621f53a204808"
               ]
             }
           ]
