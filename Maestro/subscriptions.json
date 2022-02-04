@@ -639,23 +639,6 @@
         }
       }
     },
-    // Automate merging runtime release/6.0 branch into release/6.0-maui
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/release/6.0//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/6.0-maui",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     // Update dependencies in core-setup release/2.1
     {
       "triggerPaths": [
