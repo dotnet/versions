@@ -6,10 +6,10 @@
       "images": [
         {
           "manifest": {
-            "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:47d9b096e870b0ef8848b804c17cb54c1e452b7ddcc957a795d2a14a336d5f82",
-            "created": "2022-02-09T17:15:08.4848229Z",
+            "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:e4a005789383ea812d29888272382ffc96e5ac3a964c7b38b6fa8ce6f58b9447",
+            "created": "2022-02-14T16:45:20.1491862Z",
             "sharedTags": [
-              "1602635",
+              "1611502",
               "latest"
             ]
           },
@@ -18,63 +18,477 @@
               "dockerfile": "Dockerfile.linux",
               "simpleTags": [
                 "linux-amd64",
-                "linux-amd64-1602635"
+                "linux-amd64-1611502"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:818c51e5044a6d1f9947f1c19d9038188a546ca6f09f7c4b90697fb2e77393af",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:7eb0a95879dbab9516a76c0f14893ba41ed222bbb2f0dc9769d151018063174f",
               "baseImageDigest": "mcr.microsoft.com/dotnet/runtime-deps@sha256:25cb8d963a12f293edf803b8269065119cec2e3ab2201d1c0b3ada7753fd7181",
               "osType": "Linux",
               "osVersion": "alpine",
               "architecture": "amd64",
-              "created": "2022-02-09T16:44:58.835228Z",
+              "created": "2022-02-14T16:06:13.4549689Z",
               "commitUrl": "https://github.com/dotnet/docker-tools/blob/2ab90bc6b90784b3b22d8a171d85cb36ec99a21b/Dockerfile.linux",
               "layers": [
-                "sha256:2ae2b9538f582428875a8265d8a9c8e452cd16aa172942985ecd8243e1d61073",
+                "sha256:0c3280e79f355859b5e40163b277ceea4cf5b753f1618248dd083afcbffc889a",
+                "sha256:19b288fd75424f6cf34fb4fe56aaa41b7b979bac4eb865b5e60e23c5d1354a3d",
+                "sha256:19f1bcb0c187f4d9139dc7456e8a1d6047bf37a2e5490e95383df0b61d4938c9",
                 "sha256:69b1f7b9228d9ff8e3b4f2e387cefba272de7da186fdc435a255f0feb477d96d",
-                "sha256:8f3d426eebae4e578c859e636b71bd499dbaae65e6751e5c5c30606866638075",
-                "sha256:92256f3c7f5097d7e2098f5d7bb11cb373d2f08fe80777d7d20bee4a023509f5",
                 "sha256:97518928ae5f3d52d4164b314a7e73654eb686ecd8aafa0b79acd980773a740d",
-                "sha256:a98a129bfd2708380e037abb775ee516938ecf8eb751040cb83248696d60893d"
+                "sha256:e9c57ec941e995c472e0f5b0310b7f5ab149d58805acce0705d2d704d029a6ad"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r16",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "brotli-libs",
+                  "version": "1.0.9-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.33.1-r6",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20211220-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "containerd",
+                  "version": "1.5.8-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "device-mapper-libs",
+                  "version": "2.02.187-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "docker-cli",
+                  "version": "20.10.11-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "docker-engine",
+                  "version": "20.10.11-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "docker",
+                  "version": "20.10.11-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "expat",
+                  "version": "2.4.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "git",
+                  "version": "2.32.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ip6tables",
+                  "version": "1.8.7-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "iptables",
+                  "version": "1.8.7-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.18.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcurl",
+                  "version": "7.79.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20210424-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libmnl",
+                  "version": "1.0.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "libnftnl-libs",
+                  "version": "1.2.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.3p1-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libseccomp",
+                  "version": "2.5.1-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20210424-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "nghttp2-libs",
+                  "version": "1.43.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "pcre2",
+                  "version": "10.36-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "runc",
+                  "version": "1.0.0_rc95-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.33.1-r6",
+                  "type": "APK"
+                },
+                {
+                  "name": "tini-static",
+                  "version": "0.19.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
               "dockerfile": "Dockerfile.linux",
               "simpleTags": [
                 "linux-arm64",
-                "linux-arm64-1602635"
+                "linux-arm64-1611502"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:0a547bc72c3f353e756e19954425179155b7eb8a043c4dc4ccfeb3dcd2391f5b",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:d0e9c40aa5256a61ed21c93dec2b50e7a026eacc99dac4095c305f5e6dbbd628",
               "baseImageDigest": "mcr.microsoft.com/dotnet/runtime-deps@sha256:798f3ececdc335ca66d8e8ac3ac7951a0a651503b3426bbdfbcb7b3240c1cd0f",
               "osType": "Linux",
               "osVersion": "alpine",
               "architecture": "arm64",
-              "created": "2022-02-09T16:38:26.9550447Z",
+              "created": "2022-02-14T16:05:21.3404816Z",
               "commitUrl": "https://github.com/dotnet/docker-tools/blob/2ab90bc6b90784b3b22d8a171d85cb36ec99a21b/Dockerfile.linux",
               "layers": [
-                "sha256:01d4c9cbdf5539e802c5ff3119dddd97f40d5229713d5af55e196dba08b80d5c",
                 "sha256:0bf3910294f643e7a70547a9abbc50ec421ce3cd5ee5038d1e9fa3139d514b75",
-                "sha256:15a5ee9b53dee91409f8e2df0f9a0ffbd4e07713dd1c43ea58b8fe34e2972e5f",
-                "sha256:4cb4f480113c0aacdc9186da1e5a8a3f9d66f7de39bb59e3e15a46bb1abc410c",
-                "sha256:be307f383ecc62b27a29b599c3fc9d3129693a798e7fcce614f09174cfe2d354",
-                "sha256:f5cdd915a7126de4f98d7db93cbd4195dd6c36e656b542761e3a2df67d0d6d16"
+                "sha256:1a194bdd0443effbab94d049377f55f2257a48e83aa049a4ee39ef8b0c086734",
+                "sha256:42a577c563729e86840a9e8963fe1e0d500d02ec9de995091d01d17a08589936",
+                "sha256:48ae8c302ed6076f9105636670ee54738c347eec5519cad14028b199b5d7c6a3",
+                "sha256:78d13c37df3956049b72f918cffc28c8c7a30d2738a54d7277735fe5a35aef6f",
+                "sha256:be307f383ecc62b27a29b599c3fc9d3129693a798e7fcce614f09174cfe2d354"
+              ],
+              "components": [
+                {
+                  "name": "alpine-baselayout",
+                  "version": "3.2.0-r16",
+                  "type": "APK"
+                },
+                {
+                  "name": "alpine-keys",
+                  "version": "2.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "apk-tools",
+                  "version": "2.12.7-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "brotli-libs",
+                  "version": "1.0.9-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "busybox",
+                  "version": "1.33.1-r6",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates-bundle",
+                  "version": "20191127-r5",
+                  "type": "APK"
+                },
+                {
+                  "name": "ca-certificates",
+                  "version": "20211220-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "containerd",
+                  "version": "1.5.8-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "device-mapper-libs",
+                  "version": "2.02.187-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "docker-cli",
+                  "version": "20.10.11-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "docker-engine",
+                  "version": "20.10.11-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "docker",
+                  "version": "20.10.11-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "expat",
+                  "version": "2.4.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "git",
+                  "version": "2.32.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ip6tables",
+                  "version": "1.8.7-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "iptables",
+                  "version": "1.8.7-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "keyutils-libs",
+                  "version": "1.6.3-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-conf",
+                  "version": "1.0-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "krb5-libs",
+                  "version": "1.18.4-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libc-utils",
+                  "version": "0.7.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcom_err",
+                  "version": "1.46.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcrypto1.1",
+                  "version": "1.1.1l-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libcurl",
+                  "version": "7.79.1-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libgcc",
+                  "version": "10.3.1_git20210424-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libintl",
+                  "version": "0.21-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libmnl",
+                  "version": "1.0.4-r1",
+                  "type": "APK"
+                },
+                {
+                  "name": "libnftnl-libs",
+                  "version": "1.2.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libretls",
+                  "version": "3.3.3p1-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libseccomp",
+                  "version": "2.5.1-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libssl1.1",
+                  "version": "1.1.1l-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "libstdc++",
+                  "version": "10.3.1_git20210424-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "libverto",
+                  "version": "0.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl-utils",
+                  "version": "1.2.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "musl",
+                  "version": "1.2.2-r3",
+                  "type": "APK"
+                },
+                {
+                  "name": "nghttp2-libs",
+                  "version": "1.43.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "pcre2",
+                  "version": "10.36-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "runc",
+                  "version": "1.0.0_rc95-r2",
+                  "type": "APK"
+                },
+                {
+                  "name": "scanelf",
+                  "version": "1.3.2-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "ssl_client",
+                  "version": "1.33.1-r6",
+                  "type": "APK"
+                },
+                {
+                  "name": "tini-static",
+                  "version": "0.19.0-r0",
+                  "type": "APK"
+                },
+                {
+                  "name": "zlib",
+                  "version": "1.2.11-r3",
+                  "type": "APK"
+                }
               ]
             },
             {
               "dockerfile": "Dockerfile.windows",
               "simpleTags": [
                 "nanoserver-1809-amd64",
-                "nanoserver-1809-amd64-1602635"
+                "nanoserver-1809-amd64-1611502"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:bd5e5feb10a334832d93a450975ad46c087a2a496bc63fdd4ea165a474fa1f25",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:dff18adb359777a7dea703f857c5ee01c748f23e8fb38f184524bd884b2559e1",
               "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:bd3f1d4464f7f190234331a406d2b7e7941adacfb72e1b4213dc5136fc6a5e20",
               "osType": "Windows",
               "osVersion": "nanoserver-1809",
               "architecture": "amd64",
-              "created": "2022-02-09T16:43:01.6110912Z",
+              "created": "2022-02-14T16:10:55.0910213Z",
               "commitUrl": "https://github.com/dotnet/docker-tools/blob/d72a717ba3fc401c0ee100dac336b6e2d461f90f/Dockerfile.windows",
               "layers": [
-                "sha256:096325ddd0a8bdba028069de082f792196e0b41272cf9f3ff1279a52d226c500",
-                "sha256:57f457d92e13ac64076382c5f24635f5b728d31e36d8f4ef9dfa4fe7dcdab891",
-                "sha256:a74b9a0d4278a6cdcd9739c2d0796bc83d7fbb5a602943a796be23459b23ce28",
+                "sha256:7e1c2845e751585366ef37df06bc99b583b5d7bcef5beac82fc3d281fd794413",
+                "sha256:a03c172a23f2cc4ed853d7059cd20c4b194513bc5dab2c44fc023aa8d6e32eae",
+                "sha256:ba7692c0bfa001ef90849c0f3d566b14fd19e3a87491498491948c71b7dc0df7",
                 "sha256:bd0b37167cd3d731eb15196e123df7156b5a35597874d3016a1a4298c46fac3f"
               ]
             },
@@ -82,61 +496,61 @@
               "dockerfile": "Dockerfile.windows",
               "simpleTags": [
                 "nanoserver-20H2-amd64",
-                "nanoserver-20H2-amd64-1602635"
+                "nanoserver-20H2-amd64-1611502"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:0d7542be2e391ae9fb26ba9e4cbfee3887237c803c664b27d9f143e5b44b47c0",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:692141e5320a4ce0655c8129173ddc8bc2195ee19aea783ff3e84418243936cf",
               "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:54f1211baec2ccfa18d09d5b074be53a334aa0e50323bde31e5cf921a880270a",
               "osType": "Windows",
               "osVersion": "nanoserver-20H2",
               "architecture": "amd64",
-              "created": "2022-02-09T16:34:53.2281566Z",
+              "created": "2022-02-14T16:10:48.2075765Z",
               "commitUrl": "https://github.com/dotnet/docker-tools/blob/d72a717ba3fc401c0ee100dac336b6e2d461f90f/Dockerfile.windows",
               "layers": [
-                "sha256:994246939979b6b06a205ef320b2cbe256dce6020a1328e387c7824126f9593d",
-                "sha256:c8a81904ce20ffdb84587f07d486b5ca9dc55803dd65bdb3861b892d40046e24",
+                "sha256:501196fcb07b4c865be917a851e69878375d53fde8abe2b494f6f7ae7aab2215",
                 "sha256:c9a5e9bb5f7ffc2af8b456c2f21a7b94acb47990d3ef6a04c0edabc501fad81c",
-                "sha256:eb197571ade3df1c1eefa2bdb70b9b0031c6b7dd38660e7de8a4de6ebe808eeb"
+                "sha256:f7357daddd15a2ddae4dedbb446046a08d8278b37e373483f4152d34abf131e3",
+                "sha256:f8e7acb93b3661022889f11d9b818a47ee8199094a445754c3fe0939e19709d8"
               ]
             },
             {
               "dockerfile": "Dockerfile.windows",
               "simpleTags": [
                 "nanoserver-ltsc2022-amd64",
-                "nanoserver-ltsc2022-amd64-1602635"
+                "nanoserver-ltsc2022-amd64-1611502"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:dcb88237932c0b3bf348d289fd59753928cce2047e9eaabbf18fdebffece5bbf",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:89223816efd669a6e476a29d742294ad66817f2742a02ed32979425d07cb70ec",
               "baseImageDigest": "mcr.microsoft.com/windows/nanoserver@sha256:c3e0862908fe03fd88d9d107cdb240e782b1634c12e1f759eb013c696764c4a1",
               "osType": "Windows",
               "osVersion": "nanoserver-ltsc2022",
               "architecture": "amd64",
-              "created": "2022-02-09T16:35:53.2826158Z",
+              "created": "2022-02-14T16:09:39.624256Z",
               "commitUrl": "https://github.com/dotnet/docker-tools/blob/d72a717ba3fc401c0ee100dac336b6e2d461f90f/Dockerfile.windows",
               "layers": [
-                "sha256:1d70a1dd1aab6320d72b564afd9ba13d698796407c43abeeba3a0324b897948a",
                 "sha256:3ab33c1d9cc1eaef56d5617b87373ead45d8a4ff7ab7da384afe612ba569a524",
-                "sha256:4d9ee8ecbcfc1bb0443e7736fad8ec2f36ed58add7d409ea7f899caf2ffdcb73",
-                "sha256:a052c3819aad1c57839bdb7854e6311af271c6bb228625d6596b5b19afcfbe15"
+                "sha256:563e814cf9bef87a5d2249ac80925f2ad3453bd2e94659b14eea42f26bd1058c",
+                "sha256:ea4e6111e4e5a8aa1302d6ce68bf142ce7de083bf2929aec4674f48304d395b8",
+                "sha256:f806e095a0208bd0a826d6daf56221c3220bd83b3ba197b90eace24b839d1a17"
               ]
             },
             {
               "dockerfile": "Dockerfile.windows",
               "simpleTags": [
                 "windowsservercore-ltsc2016-amd64",
-                "windowsservercore-ltsc2016-amd64-1602635"
+                "windowsservercore-ltsc2016-amd64-1611502"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:7387ee48a5c6eba3202e92bf00172988e55992f8b3e42dc9a5a54bc1c5e1c9f1",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/image-builder@sha256:8eb76d3eb4621c79f8b16c9f4499c91874c01a10d46ca086cf66f717bc11bd61",
               "baseImageDigest": "mcr.microsoft.com/windows/servercore@sha256:e253f8d19b2332254dd5dff080a1af343afb279f55189bca8a21449905f6869d",
               "osType": "Windows",
               "osVersion": "windowsservercore-ltsc2019",
               "architecture": "amd64",
-              "created": "2022-02-09T16:42:54.4279807Z",
+              "created": "2022-02-14T16:10:48.3187642Z",
               "commitUrl": "https://github.com/dotnet/docker-tools/blob/d72a717ba3fc401c0ee100dac336b6e2d461f90f/Dockerfile.windows",
               "layers": [
                 "sha256:09f55b4e451046a1ab7cf4005d33599e7fe5da96e602505167c251e768a20dac",
-                "sha256:2a8176bea97ef57f76cafa0c0a0eaffdccb8ec603806ce474f2b040aeae27772",
-                "sha256:31f3bae7efb32da8ef38df5b172072e08235e2b09b09174c1fa63840c440dcb9",
                 "sha256:3889bb8d808bbae6fa5a33e07093e65c31371bcf9e4c38c21be6b9af52ad1548",
-                "sha256:dcff70d34c6682f6049101faebcea3a5c962b33da1bb8e7d358a9b748f018ab7"
+                "sha256:7b5d967c4516dac5a8393a3850f757e9d436a3adf02ee861d37adbe1e736bd7a",
+                "sha256:9eee2e085679687665e9f2ec79d6e95c70c4baf171254eddc368dd0e07c7eff8",
+                "sha256:f2e562ad10b6c419c3963a42ffcc42d29dc5e82bf6cf3d30674b6b20a254f752"
               ]
             }
           ]
