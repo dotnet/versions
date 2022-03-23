@@ -740,23 +740,6 @@
         }
       }
     },
-    // Automate opening PRs to merge razor-tooling main changes into dev17 branches.
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/razor-tooling/blob/main//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main-vs-deps",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     // Automate opening PRs to merge cli release/6.0.3xx to main
     {
       "triggerPaths": [
