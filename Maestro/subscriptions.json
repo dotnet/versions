@@ -614,20 +614,6 @@
         }
       }
     },
-    // Test to switch to ubuntu mirror
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/arcade/blob/ubuntu-mirror-merge-test/**/*",
-      ],
-      "action": "github-dnceng-azdo-mirror",
-      "actionArguments": {
-        "vsoSourceBranch": "ubuntu-mirror",
-        "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "BranchToMirror": "<trigger-branch>"
-        }
-      }
-    },
     // Mirror runtime:main to runtimelab:runtime-main
     {
       "triggerPaths": [
