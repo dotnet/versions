@@ -521,6 +521,8 @@
         "https://github.com/dotnet/sdk/blob/main/**/*",
         "https://github.com/dotnet/sdk/blob/rel/**/*",
         "https://github.com/dotnet/sdk/blob/release/**/*",
+        "https://github.com/dotnet/spa-templates/blob/main/**/*",
+        "https://github.com/dotnet/spa-templates/blob/release/**/*",
         "https://github.com/dotnet/source-build-externals/blob/main/**/*",
         "https://github.com/dotnet/source-build-externals/blob/release/**/*",
         "https://github.com/dotnet/source-build-reference-packages/blob/main/**/*",
@@ -730,23 +732,6 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "main",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate merging aspnetcore release/6.0-rc branches back to release/6.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/6.0-rc/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/6.0",
           "ExtraSwitches": "-QuietComments"
         }
       }
