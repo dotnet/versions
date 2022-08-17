@@ -629,16 +629,16 @@
         {
           "manifest": {
             "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:36a389d28bc7e38ceaa2f6dc2edfb131c38ddfdbb18d52a3f3e242eecefda8bd",
-            "created": "2022-08-15T16:33:57.1137382Z",
+            "created": "2022-08-17T13:23:21.3981466Z",
             "sharedTags": [
-              "debian-buster-slim-docker-testrunner-1944062"
+              "debian-buster-slim-docker-testrunner-1949017"
             ]
           },
           "platforms": [
             {
               "dockerfile": "src/debian/10/docker-testrunner/amd64/Dockerfile",
               "simpleTags": [
-                "debian-buster-slim-docker-testrunner-amd64-1944062"
+                "debian-buster-slim-docker-testrunner-amd64-1949017"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:1fa9d6d32a91e1dca9904a97d3b33592cc97964625835abf46ba2a492b698995",
               "baseImageDigest": "debian@sha256:5b0b1a9a54651bbe9d4d3ee96bbda2b2a1da3d2fa198ddebbced46dfdca7f216",
@@ -656,7 +656,7 @@
             {
               "dockerfile": "src/debian/10/docker-testrunner/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-buster-slim-docker-testrunner-arm64v8-1944062"
+                "debian-buster-slim-docker-testrunner-arm64v8-1949017"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:54bd549cdc465410b9635ab9e3a8efbb9b6ec147f92cfe608aac0bb6cbedda7b",
               "baseImageDigest": "arm64v8/debian@sha256:5221df7fa6bdf2455562ebeaba3dea648405e857e2b0f80089aea046efbb0d78",
@@ -678,7 +678,7 @@
             {
               "dockerfile": "src/debian/10/helix/amd64/Dockerfile",
               "simpleTags": [
-                "debian-10-helix-amd64-20220815161730-f344011"
+                "debian-10-helix-amd64-20220817130759-f344011"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:2ca3f748f414a87c5eac0c6c83a723612d8b2809dcf706f2b0c49e63b947518c",
               "baseImageDigest": "debian@sha256:fb9654aac57319592f1d51497c62001e7033eddf059355408a0b53f7c71f8d5f",
@@ -704,7 +704,7 @@
             {
               "dockerfile": "src/debian/10/helix/arm32v7/Dockerfile",
               "simpleTags": [
-                "debian-10-helix-arm32v7-20220815161645-fbf2f29"
+                "debian-10-helix-arm32v7-20220817130717-fbf2f29"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:a37eabf8011cec738ddbfabdf8f3668c8a365eac0bc8f970be1aadb9710e941e",
               "baseImageDigest": "arm32v7/debian@sha256:1f7bef58f2040ee2d97c1f40eb5ff29f8c2aa51eeaa90931ac11e7c6680103aa",
@@ -728,7 +728,7 @@
             {
               "dockerfile": "src/debian/10/helix/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-10-helix-arm64v8-20220815161657-51001d5"
+                "debian-10-helix-arm64v8-20220817130613-51001d5"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:e6f84c1ac8cac308101271ebe5415c6f075c2ae49f0a7b0fc6fa2b93390cf07c",
               "baseImageDigest": "arm64v8/debian@sha256:d0f5ed350e7624e19f0f40c2c0cc31b0b2811f444ca929a083fefe449432333d",
@@ -751,9 +751,31 @@
         {
           "platforms": [
             {
+              "dockerfile": "src/debian/11/amd64/Dockerfile",
+              "simpleTags": [
+                "debian-11-amd64-20220817130623-99143ac"
+              ],
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:72391cb5c06a5f24183fca2771862386e42ba039fead8e9bce354c17d0b6540d",
+              "baseImageDigest": "debian@sha256:82bab30ed448b8e2509aabe21f40f0607d905b7fd0dec72802627a20274eba55",
+              "osType": "Linux",
+              "osVersion": "bullseye",
+              "architecture": "amd64",
+              "created": "2022-08-17T13:07:45.4321294Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/99143ac0c21d525ad62dab9c258993681221f7b8/src/debian/11/amd64/Dockerfile",
+              "layers": [
+                "sha256:edc485e0960f793afe11b2f91ae59afa42a8f866e580df0112f47c868cdae3a7",
+                "sha256:e27229ac2217e0d790d948ab9b4ac2167dfc5c5bff3810e829c4db88d378b91d",
+                "sha256:001c52e26ad57e3b25b439ee0052f6692e5c0f2d5d982a00a8819ace5e521452"
+              ]
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
               "dockerfile": "src/debian/11/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-11-arm64v8-20220815161657-b286fae"
+                "debian-11-arm64v8-20220817130557-b286fae"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:89d75c4b1513e9a48595fdef1d3489a4d1c4b485f0da22c6d485265d871aa442",
               "baseImageDigest": "arm64v8/debian@sha256:ede74d90543e4dedd6662653de639d72e82640717f99041591dc9f34c186f0f9",
@@ -775,7 +797,7 @@
             {
               "dockerfile": "src/debian/11/gcc12/Dockerfile",
               "simpleTags": [
-                "debian-11-gcc12-amd64-20220815161756-b7a6185"
+                "debian-11-gcc12-amd64-20220817130643-b7a6185"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:1234ecf54b8dd0b0c7b990e8141f2a060b5b523ddd7782e86495fc4ac54e3a91",
               "baseImageDigest": "gcc@sha256:7c8e9d21761aa181b8ec63f8d72e3b08ccef45df47af2327235c7186dc15dd74",
@@ -805,7 +827,7 @@
             {
               "dockerfile": "src/debian/11/helix/amd64/Dockerfile",
               "simpleTags": [
-                "debian-11-helix-amd64-20220815161841-f344011"
+                "debian-11-helix-amd64-20220817130646-f344011"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:758527be5b954a74b8f7b57c562240c4b376eae1431dd099570103c24b4e6d92",
               "baseImageDigest": "debian@sha256:82bab30ed448b8e2509aabe21f40f0607d905b7fd0dec72802627a20274eba55",
@@ -831,7 +853,7 @@
             {
               "dockerfile": "src/debian/11/helix/arm32v7/Dockerfile",
               "simpleTags": [
-                "debian-11-helix-arm32v7-20220815161651-97d8652"
+                "debian-11-helix-arm32v7-20220817130541-97d8652"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:e539d644859d4e14cc3738960be71a2fe0c286cc67a891a83cc269683c592a62",
               "baseImageDigest": "arm32v7/debian@sha256:48179204080219ed1d2dd14889619783b3eb2bc68cfcb05f64e8bf3403e6e480",
@@ -855,7 +877,7 @@
             {
               "dockerfile": "src/debian/11/helix/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-11-helix-arm64v8-20220815161656-51001d5"
+                "debian-11-helix-arm64v8-20220817130725-51001d5"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:c5cd2e67c2c65f8561037cab1ebe30fea467ee4dc2dddea2d2f80759426b2c20",
               "baseImageDigest": "arm64v8/debian@sha256:ede74d90543e4dedd6662653de639d72e82640717f99041591dc9f34c186f0f9",
@@ -880,7 +902,7 @@
             {
               "dockerfile": "src/debian/11/opt/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-11-opt-arm64v8-20220815161701-a6afcba"
+                "debian-11-opt-arm64v8-20220817130642-a6afcba"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:019f131d903b15c69793c9a09312ca0bdef728b1cefae227fa8c42e00e839302",
               "baseImageDigest": "arm64v8/debian@sha256:ede74d90543e4dedd6662653de639d72e82640717f99041591dc9f34c186f0f9",
@@ -903,7 +925,7 @@
             {
               "dockerfile": "src/debian/9/amd64/Dockerfile",
               "simpleTags": [
-                "debian-stretch-20220815162030-94fc78a"
+                "debian-stretch-20220817130632-94fc78a"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:5a99672505f4d61442ba005606fd9c4f925d248194fffa9dbb9aa3fe2ebdd6a8",
               "baseImageDigest": "debian@sha256:c5c5200ff1e9c73ffbf188b4a67eb1c91531b644856b4aefe86a58d2f0cb05be",
@@ -926,7 +948,7 @@
             {
               "dockerfile": "src/debian/9/arm32v7/Dockerfile",
               "simpleTags": [
-                "debian-9-arm32v7-20220815161649-94fc78a"
+                "debian-9-arm32v7-20220817130556-94fc78a"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:beb7d00dae05b6dffcd01ef54f742f5cbe032596938ac58dbfea4a2f0dae3f8e",
               "baseImageDigest": "arm32v7/debian@sha256:f0d0ca7b1c94bfa3fd5e0aaff7acec45d9067cf57170ab248e7087388353ea4f",
@@ -947,7 +969,7 @@
             {
               "dockerfile": "src/debian/9/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-9-arm64v8-20220815161655-94fc78a"
+                "debian-9-arm64v8-20220817130611-94fc78a"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:0d28318e9f3bcca1d7ab5c4dc66cf018d9817f4116ae2cd7c650750b3a6c45cd",
               "baseImageDigest": "arm64v8/debian@sha256:3d3251ecfd190284f76c271e6c9dd19bb4d111f10bb9028ad8b8ac3d3b4914ea",
@@ -970,7 +992,7 @@
             {
               "dockerfile": "src/debian/9/helix/arm32v7/Dockerfile",
               "simpleTags": [
-                "debian-9-helix-arm32v7-20220815161655-97d8652"
+                "debian-9-helix-arm32v7-20220817130605-97d8652"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:63e0f2049a5dd29b61a3dfd099777b5b8f065ca0a7ba44d88426c03bc5b7b2e4",
               "baseImageDigest": "arm32v7/debian@sha256:f0d0ca7b1c94bfa3fd5e0aaff7acec45d9067cf57170ab248e7087388353ea4f",
@@ -994,7 +1016,7 @@
             {
               "dockerfile": "src/debian/9/helix/arm64v8/Dockerfile",
               "simpleTags": [
-                "debian-9-helix-arm64v8-20220815161747-97d8652"
+                "debian-9-helix-arm64v8-20220817130728-97d8652"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:2099ea98a97c68cd814444d487bd15b377ccd3d161e7f3a5b49a0e6bdb45135e",
               "baseImageDigest": "arm64v8/debian@sha256:3d3251ecfd190284f76c271e6c9dd19bb4d111f10bb9028ad8b8ac3d3b4914ea",
@@ -1018,7 +1040,7 @@
             {
               "dockerfile": "src/debian/iot/arm32v7/Dockerfile",
               "simpleTags": [
-                "debian-iot-arm32v7-20220815161658-be5b37d"
+                "debian-iot-arm32v7-20220817130611-be5b37d"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:9da4c90c3c6c6b4a38deeeaf815f8a0e0b685896f09c01e269d8f4e86e322b57",
               "baseImageDigest": "arm32v7/debian@sha256:48179204080219ed1d2dd14889619783b3eb2bc68cfcb05f64e8bf3403e6e480",
@@ -2859,6 +2881,133 @@
             {
               "dockerfile": "src/windowsservercore/ltsc2019/helix/amd64/Dockerfile",
               "simpleTags": [
+                "windowsservercore-ltsc2019-helix-amd64-20220810124257-56c6673"
+              ],
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:f2c0451f67de4dad321a737edee14f6ea2f18d5958d3af4989f11d360d2fd474",
+              "baseImageDigest": "mcr.microsoft.com/windows/servercore@sha256:8ca3aaeb91e7715a98a0769dc62ed69212aac3e0bbee12ffd13b5e36d992d127",
+              "osType": "Windows",
+              "osVersion": "windowsservercore-ltsc2019",
+              "architecture": "amd64",
+              "created": "2022-08-10T12:49:46.1489509Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/56c6673d3aa6c6d9887a5a584b814b10da7b7177/src/windowsservercore/ltsc2019/helix/amd64/Dockerfile",
+              "layers": [
+                "sha256:51ba8d8bad90b52b463a3c9de9b646b2631656742b2fac3cb967081498e72ca7",
+                "sha256:a158cdaa0aeb57ddf9af0c02b30fdc76275559fc6577139ae664645d619fd10c",
+                "sha256:bfc9a969aab7489968b56768ab271918fe581051d7ef701da3bec976d2bfbb69",
+                "sha256:ea6a3581a2d7c7198b566b30399c6dd94867aedd2e097527e74983903dc648b0",
+                "sha256:f36766fb3edf9c15f0c4575b3c64c8c2a694fff84c07f9576e7ba86880460713",
+                "sha256:294d77ac553d7210b662d07674ef9e39a6c2e88dc15b9d2788d51e509bc8b54e",
+                "sha256:b111c3320c949bea81612bf4554f1b6592c2f504920b5bf57ba340a1d4d52c93"
+              ]
+            },
+            {
+              "dockerfile": "src/windowsservercore/ltsc2019/webassembly/Dockerfile",
+              "simpleTags": [
+                "windowsservercore-ltsc2019-webassembly-amd64-20220810124440-1e0083e"
+              ],
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:32a6c2cfb6d0a26512545a8282c3dcd35b0c8c9cc7241552565e8451fa04e04f",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/framework/runtime@sha256:30bd60e9e35abe424abaec9d802c1a38c8519496dca789333632357b98e33fad",
+              "osType": "Windows",
+              "osVersion": "windowsservercore-ltsc2019",
+              "architecture": "amd64",
+              "created": "2022-08-10T13:01:57.5669224Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/1e0083e15aa01faa32c54112733197ffe58239c5/src/windowsservercore/ltsc2019/webassembly/Dockerfile",
+              "layers": [
+                "sha256:2d9efb95a59e724c6512e738f0623e6d98fe4dd4b65aa85bcf3c17da235da7fa",
+                "sha256:3f8c932955a84542ddc2621898a568b5f8fc515e8ebf1e50a8e12cf35b534b06",
+                "sha256:81ea9bc28c09d1fdb1c82cbad684b630ed72509c5c93c7778d703435f3ce95ae",
+                "sha256:23fa715f77e9223623b91049d71e7937bcd42783b27094afeb3252337b7c3053",
+                "sha256:f3ffdf7874ff8b39d7887541d62a47de5c1b67d52ce9952ca5c427583fac6b06",
+                "sha256:6462dc8162d362dd98802ba33468858de0c36174dfaea45ae67fef8d41d02ef6",
+                "sha256:dbb1a1c678552eef6dcd221433b07a35504c3a8ca576c6181ac863c7edb5b0dd",
+                "sha256:1b026eba4972b386ab29d0ce7cfc7aa927062b35373fe9e282f709cdccba0512",
+                "sha256:704774b5492e2fe300f8594604e0b5d078ef450eed123824602be350ae3cd60b",
+                "sha256:aa912fe6de31bd8e27336caef440c8f3efd0d232f505f8469192a330a7628865",
+                "sha256:7a95f5c62f5143aa2beedddb2904c638252bafb353d3a7135113cd4fd3cee34a",
+                "sha256:5e4d5c9c78823d9fbd127a175fcdddf735d01f92060dba92ae0eea0e9174a23f",
+                "sha256:f4e657470604128730e84e5fe79ae0187a39ea5bfc73c97adf9c274ecd76a118",
+                "sha256:91a62bac0e9c5ae5555a93efe73c80f4a79aa7ed6ab2012a5db0b9029797ec91",
+                "sha256:269b16e423482e5179cb495b60e6d7d9f2b4ad60f3cc2f6be5129f49cad35104",
+                "sha256:f3a90025f255178588dc6fca4df1ac5001c71788d295136cf6cd1fcfe3ed0c07",
+                "sha256:deecac3ea4a61e6713266c77f8984de4f05765d68cb46ae813d0bf4c51863353",
+                "sha256:37c0d55014976300dc7b8b672729ab0926eff1145bdc57ab42bf3646e406238d",
+                "sha256:c87b69dd7e161a30565aee1c558d15796c00101151a17ee9d9975dc8e7a6b41b",
+                "sha256:64f18af6014b47c75551edad6b8d1074381925223d20d9ab66a5d3dda3e738a0",
+                "sha256:a4dfdfc9661802f2698d25fdd83b7f85b0459fd69ef2bcb7bbed698570daac5e",
+                "sha256:3a546786d363ae198740fd4861a8ab648a7b4cdd23a1be68027c88ecf3fc96f8",
+                "sha256:294d77ac553d7210b662d07674ef9e39a6c2e88dc15b9d2788d51e509bc8b54e",
+                "sha256:b111c3320c949bea81612bf4554f1b6592c2f504920b5bf57ba340a1d4d52c93"
+              ]
+            },
+            {
+              "dockerfile": "src/windowsservercore/ltsc2022/helix/amd64/Dockerfile",
+              "simpleTags": [
+                "windowsservercore-ltsc2022-helix-amd64-20220810124351-dc6e6f1"
+              ],
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:5fe84cec7ad221c3eb069c26aa09e86d039d6eba87364a06b3569c849e208b31",
+              "baseImageDigest": "mcr.microsoft.com/windows/servercore@sha256:35c3cb29ef2c9f05e36070d04c79d7fc861c035fa5df2df64ae607a276db42c6",
+              "osType": "Windows",
+              "osVersion": "windowsservercore-ltsc2022",
+              "architecture": "amd64",
+              "created": "2022-08-10T12:48:14.9013891Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/dc6e6f1461b09c819f01537dd51ab20330449557/src/windowsservercore/ltsc2022/helix/amd64/Dockerfile",
+              "layers": [
+                "sha256:d6acf312f04a50de619c9904fb9c1c79719c8d20372b1f5390dffd982fa14cc7",
+                "sha256:cd1bbfafa1bde7c91bff8deec68ce3bc3cc227ace5652b36453f96ce08bb5ac7",
+                "sha256:8dca380db4aa62206b0859f97d7f4b5466375ca6862b2bab91518e3a0ab2d45d",
+                "sha256:28d3fe20b9cba493572aa6c6409dd0cb230fcc0fc9d72aa0e6f6ba00e435dfcd",
+                "sha256:dbd7b0de0cd08740f2beee36a3da5a5cbab3d975f2838ba1eecca6f79ed0fb83",
+                "sha256:97b25a378238b615dc51216c4d87ce17fd3cc3dca9db458e8705d1a4c17e3bb7",
+                "sha256:97f65a0ec59e643faf84024aa713a9be059322380315fda829756bbbd96d6258"
+              ]
+            },
+            {
+              "dockerfile": "src/windowsservercore/ltsc2022/helix/webassembly/Dockerfile",
+              "simpleTags": [
+                "windowsservercore-ltsc2022-helix-webassembly-20220810124351-bf70060"
+              ],
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:89bc457b72441ac4120ba8a4c03038da1dd62fe0843758b6ab999f57b13f4aae",
+              "baseImageDigest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:5fe84cec7ad221c3eb069c26aa09e86d039d6eba87364a06b3569c849e208b31",
+              "osType": "Windows",
+              "osVersion": "windowsservercore-ltsc2022",
+              "architecture": "amd64",
+              "created": "2022-08-10T12:54:01.4855752Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/bf700604f418cff0d5b045b94c32bef89ad956be/src/windowsservercore/ltsc2022/helix/webassembly/Dockerfile",
+              "layers": [
+                "sha256:ba756c84928e2afd053d1ea1df5e2bd21c19284e843d14e1f6bc9e9035b2c11e",
+                "sha256:873f0151a0136d823efeda8580191e587355d44b1325259a45cf6db5068dea4a",
+                "sha256:0212e8e78519a6d3d9359e3e3ece64358af93b9c8c7722679786c2843f00b32e",
+                "sha256:ec00cda025a6528b0b3e964cd2ffd5eb3db5389733dcb39905b5cf34a5b621ba",
+                "sha256:67fe466a8fb5fccacce30bcbadd8c0ff0588f53cbbb5924b8b60a5cafd6ac61e",
+                "sha256:2ac4d7a8fd324e9de8ad6cb1ef9bc5a195f867aa4dcb597f0c5eae7f59de626e",
+                "sha256:6c0b42b760ad5f80eb70327b51eccbb7c5d99acf1e0d45b88e3afc66d23b451f",
+                "sha256:a6e9543699f66ce1266354a59fc81d2469d8c63587b9d42750320c011c45274b",
+                "sha256:98eef3656128201f28bb1941a8013257d93264ff154bae8a569ea05dfb5e0983",
+                "sha256:9dc118dfbf61c6644ac9ba78054b19c640d9a3f385fd40dcf4160fa97e211271",
+                "sha256:d3e120f681351522b744f54be6393e0bc74a908134dfe1e1139b4fe5ad4b57a0",
+                "sha256:a988bf238a4c7b72fe797514c82d249cb4fc0521917f276280905fdd647451ea",
+                "sha256:9825593464497bc15d2dd6611868fd90ea5589862aa61e90e7ee8df41f0e25d7",
+                "sha256:159667abeb43a208da4b7a18cdc5eec8fa2f23a917ad476cef7504dd9c7d35e0",
+                "sha256:4c2940fe66c29d3547d97ce751a2663d13ed987857d34689bcc72fac6ba80e17",
+                "sha256:687bd3bdd256a6214176c4413aefc0f5a4225549ec1562444ead7a349b6d269a",
+                "sha256:04f21b59514123fe8d2c93d4f067d6dee76839a98ff5283739aa9703692ee310",
+                "sha256:776dfdbbc79b31d3c69294e07b27bddeaf91987fe89713f919a50a15203b9941",
+                "sha256:d6acf312f04a50de619c9904fb9c1c79719c8d20372b1f5390dffd982fa14cc7",
+                "sha256:cd1bbfafa1bde7c91bff8deec68ce3bc3cc227ace5652b36453f96ce08bb5ac7",
+                "sha256:8dca380db4aa62206b0859f97d7f4b5466375ca6862b2bab91518e3a0ab2d45d",
+                "sha256:28d3fe20b9cba493572aa6c6409dd0cb230fcc0fc9d72aa0e6f6ba00e435dfcd",
+                "sha256:dbd7b0de0cd08740f2beee36a3da5a5cbab3d975f2838ba1eecca6f79ed0fb83",
+                "sha256:97b25a378238b615dc51216c4d87ce17fd3cc3dca9db458e8705d1a4c17e3bb7",
+                "sha256:97f65a0ec59e643faf84024aa713a9be059322380315fda829756bbbd96d6258"
+              ]
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "src/windowsservercore/ltsc2019/helix/amd64/Dockerfile",
+              "simpleTags": [
                 "windowsservercore-ltsc2019-helix-amd64-20220531131327-56c6673"
               ],
               "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:917bd7e7e78d8ce42e8c9102be0fb132397482b808b6b73321318c3afb138182",
@@ -3003,133 +3152,6 @@
                 "sha256:c02e87d6a17cef33350fd00ef9a2263295009e9194d4f59aa8399d20769153d3",
                 "sha256:d5455945be9e17019de64422726a7bd8df1e6e73db978e9a7f2a1e37351c24f7",
                 "sha256:e1b3afeb54d84fbb969be67c3bcd09beeb8e85b221cbed5c2cd1c10935519f76"
-              ]
-            }
-          ]
-        },
-        {
-          "platforms": [
-            {
-              "dockerfile": "src/windowsservercore/ltsc2019/helix/amd64/Dockerfile",
-              "simpleTags": [
-                "windowsservercore-ltsc2019-helix-amd64-20220810124257-56c6673"
-              ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:f2c0451f67de4dad321a737edee14f6ea2f18d5958d3af4989f11d360d2fd474",
-              "baseImageDigest": "mcr.microsoft.com/windows/servercore@sha256:8ca3aaeb91e7715a98a0769dc62ed69212aac3e0bbee12ffd13b5e36d992d127",
-              "osType": "Windows",
-              "osVersion": "windowsservercore-ltsc2019",
-              "architecture": "amd64",
-              "created": "2022-08-10T12:49:46.1489509Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/56c6673d3aa6c6d9887a5a584b814b10da7b7177/src/windowsservercore/ltsc2019/helix/amd64/Dockerfile",
-              "layers": [
-                "sha256:51ba8d8bad90b52b463a3c9de9b646b2631656742b2fac3cb967081498e72ca7",
-                "sha256:a158cdaa0aeb57ddf9af0c02b30fdc76275559fc6577139ae664645d619fd10c",
-                "sha256:bfc9a969aab7489968b56768ab271918fe581051d7ef701da3bec976d2bfbb69",
-                "sha256:ea6a3581a2d7c7198b566b30399c6dd94867aedd2e097527e74983903dc648b0",
-                "sha256:f36766fb3edf9c15f0c4575b3c64c8c2a694fff84c07f9576e7ba86880460713",
-                "sha256:294d77ac553d7210b662d07674ef9e39a6c2e88dc15b9d2788d51e509bc8b54e",
-                "sha256:b111c3320c949bea81612bf4554f1b6592c2f504920b5bf57ba340a1d4d52c93"
-              ]
-            },
-            {
-              "dockerfile": "src/windowsservercore/ltsc2019/webassembly/Dockerfile",
-              "simpleTags": [
-                "windowsservercore-ltsc2019-webassembly-amd64-20220810124440-1e0083e"
-              ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:32a6c2cfb6d0a26512545a8282c3dcd35b0c8c9cc7241552565e8451fa04e04f",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/framework/runtime@sha256:30bd60e9e35abe424abaec9d802c1a38c8519496dca789333632357b98e33fad",
-              "osType": "Windows",
-              "osVersion": "windowsservercore-ltsc2019",
-              "architecture": "amd64",
-              "created": "2022-08-10T13:01:57.5669224Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/1e0083e15aa01faa32c54112733197ffe58239c5/src/windowsservercore/ltsc2019/webassembly/Dockerfile",
-              "layers": [
-                "sha256:2d9efb95a59e724c6512e738f0623e6d98fe4dd4b65aa85bcf3c17da235da7fa",
-                "sha256:3f8c932955a84542ddc2621898a568b5f8fc515e8ebf1e50a8e12cf35b534b06",
-                "sha256:81ea9bc28c09d1fdb1c82cbad684b630ed72509c5c93c7778d703435f3ce95ae",
-                "sha256:23fa715f77e9223623b91049d71e7937bcd42783b27094afeb3252337b7c3053",
-                "sha256:f3ffdf7874ff8b39d7887541d62a47de5c1b67d52ce9952ca5c427583fac6b06",
-                "sha256:6462dc8162d362dd98802ba33468858de0c36174dfaea45ae67fef8d41d02ef6",
-                "sha256:dbb1a1c678552eef6dcd221433b07a35504c3a8ca576c6181ac863c7edb5b0dd",
-                "sha256:1b026eba4972b386ab29d0ce7cfc7aa927062b35373fe9e282f709cdccba0512",
-                "sha256:704774b5492e2fe300f8594604e0b5d078ef450eed123824602be350ae3cd60b",
-                "sha256:aa912fe6de31bd8e27336caef440c8f3efd0d232f505f8469192a330a7628865",
-                "sha256:7a95f5c62f5143aa2beedddb2904c638252bafb353d3a7135113cd4fd3cee34a",
-                "sha256:5e4d5c9c78823d9fbd127a175fcdddf735d01f92060dba92ae0eea0e9174a23f",
-                "sha256:f4e657470604128730e84e5fe79ae0187a39ea5bfc73c97adf9c274ecd76a118",
-                "sha256:91a62bac0e9c5ae5555a93efe73c80f4a79aa7ed6ab2012a5db0b9029797ec91",
-                "sha256:269b16e423482e5179cb495b60e6d7d9f2b4ad60f3cc2f6be5129f49cad35104",
-                "sha256:f3a90025f255178588dc6fca4df1ac5001c71788d295136cf6cd1fcfe3ed0c07",
-                "sha256:deecac3ea4a61e6713266c77f8984de4f05765d68cb46ae813d0bf4c51863353",
-                "sha256:37c0d55014976300dc7b8b672729ab0926eff1145bdc57ab42bf3646e406238d",
-                "sha256:c87b69dd7e161a30565aee1c558d15796c00101151a17ee9d9975dc8e7a6b41b",
-                "sha256:64f18af6014b47c75551edad6b8d1074381925223d20d9ab66a5d3dda3e738a0",
-                "sha256:a4dfdfc9661802f2698d25fdd83b7f85b0459fd69ef2bcb7bbed698570daac5e",
-                "sha256:3a546786d363ae198740fd4861a8ab648a7b4cdd23a1be68027c88ecf3fc96f8",
-                "sha256:294d77ac553d7210b662d07674ef9e39a6c2e88dc15b9d2788d51e509bc8b54e",
-                "sha256:b111c3320c949bea81612bf4554f1b6592c2f504920b5bf57ba340a1d4d52c93"
-              ]
-            },
-            {
-              "dockerfile": "src/windowsservercore/ltsc2022/helix/amd64/Dockerfile",
-              "simpleTags": [
-                "windowsservercore-ltsc2022-helix-amd64-20220810124351-dc6e6f1"
-              ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:5fe84cec7ad221c3eb069c26aa09e86d039d6eba87364a06b3569c849e208b31",
-              "baseImageDigest": "mcr.microsoft.com/windows/servercore@sha256:35c3cb29ef2c9f05e36070d04c79d7fc861c035fa5df2df64ae607a276db42c6",
-              "osType": "Windows",
-              "osVersion": "windowsservercore-ltsc2022",
-              "architecture": "amd64",
-              "created": "2022-08-10T12:48:14.9013891Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/dc6e6f1461b09c819f01537dd51ab20330449557/src/windowsservercore/ltsc2022/helix/amd64/Dockerfile",
-              "layers": [
-                "sha256:d6acf312f04a50de619c9904fb9c1c79719c8d20372b1f5390dffd982fa14cc7",
-                "sha256:cd1bbfafa1bde7c91bff8deec68ce3bc3cc227ace5652b36453f96ce08bb5ac7",
-                "sha256:8dca380db4aa62206b0859f97d7f4b5466375ca6862b2bab91518e3a0ab2d45d",
-                "sha256:28d3fe20b9cba493572aa6c6409dd0cb230fcc0fc9d72aa0e6f6ba00e435dfcd",
-                "sha256:dbd7b0de0cd08740f2beee36a3da5a5cbab3d975f2838ba1eecca6f79ed0fb83",
-                "sha256:97b25a378238b615dc51216c4d87ce17fd3cc3dca9db458e8705d1a4c17e3bb7",
-                "sha256:97f65a0ec59e643faf84024aa713a9be059322380315fda829756bbbd96d6258"
-              ]
-            },
-            {
-              "dockerfile": "src/windowsservercore/ltsc2022/helix/webassembly/Dockerfile",
-              "simpleTags": [
-                "windowsservercore-ltsc2022-helix-webassembly-20220810124351-bf70060"
-              ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:89bc457b72441ac4120ba8a4c03038da1dd62fe0843758b6ab999f57b13f4aae",
-              "baseImageDigest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:5fe84cec7ad221c3eb069c26aa09e86d039d6eba87364a06b3569c849e208b31",
-              "osType": "Windows",
-              "osVersion": "windowsservercore-ltsc2022",
-              "architecture": "amd64",
-              "created": "2022-08-10T12:54:01.4855752Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/bf700604f418cff0d5b045b94c32bef89ad956be/src/windowsservercore/ltsc2022/helix/webassembly/Dockerfile",
-              "layers": [
-                "sha256:ba756c84928e2afd053d1ea1df5e2bd21c19284e843d14e1f6bc9e9035b2c11e",
-                "sha256:873f0151a0136d823efeda8580191e587355d44b1325259a45cf6db5068dea4a",
-                "sha256:0212e8e78519a6d3d9359e3e3ece64358af93b9c8c7722679786c2843f00b32e",
-                "sha256:ec00cda025a6528b0b3e964cd2ffd5eb3db5389733dcb39905b5cf34a5b621ba",
-                "sha256:67fe466a8fb5fccacce30bcbadd8c0ff0588f53cbbb5924b8b60a5cafd6ac61e",
-                "sha256:2ac4d7a8fd324e9de8ad6cb1ef9bc5a195f867aa4dcb597f0c5eae7f59de626e",
-                "sha256:6c0b42b760ad5f80eb70327b51eccbb7c5d99acf1e0d45b88e3afc66d23b451f",
-                "sha256:a6e9543699f66ce1266354a59fc81d2469d8c63587b9d42750320c011c45274b",
-                "sha256:98eef3656128201f28bb1941a8013257d93264ff154bae8a569ea05dfb5e0983",
-                "sha256:9dc118dfbf61c6644ac9ba78054b19c640d9a3f385fd40dcf4160fa97e211271",
-                "sha256:d3e120f681351522b744f54be6393e0bc74a908134dfe1e1139b4fe5ad4b57a0",
-                "sha256:a988bf238a4c7b72fe797514c82d249cb4fc0521917f276280905fdd647451ea",
-                "sha256:9825593464497bc15d2dd6611868fd90ea5589862aa61e90e7ee8df41f0e25d7",
-                "sha256:159667abeb43a208da4b7a18cdc5eec8fa2f23a917ad476cef7504dd9c7d35e0",
-                "sha256:4c2940fe66c29d3547d97ce751a2663d13ed987857d34689bcc72fac6ba80e17",
-                "sha256:687bd3bdd256a6214176c4413aefc0f5a4225549ec1562444ead7a349b6d269a",
-                "sha256:04f21b59514123fe8d2c93d4f067d6dee76839a98ff5283739aa9703692ee310",
-                "sha256:776dfdbbc79b31d3c69294e07b27bddeaf91987fe89713f919a50a15203b9941",
-                "sha256:d6acf312f04a50de619c9904fb9c1c79719c8d20372b1f5390dffd982fa14cc7",
-                "sha256:cd1bbfafa1bde7c91bff8deec68ce3bc3cc227ace5652b36453f96ce08bb5ac7",
-                "sha256:8dca380db4aa62206b0859f97d7f4b5466375ca6862b2bab91518e3a0ab2d45d",
-                "sha256:28d3fe20b9cba493572aa6c6409dd0cb230fcc0fc9d72aa0e6f6ba00e435dfcd",
-                "sha256:dbd7b0de0cd08740f2beee36a3da5a5cbab3d975f2838ba1eecca6f79ed0fb83",
-                "sha256:97b25a378238b615dc51216c4d87ce17fd3cc3dca9db458e8705d1a4c17e3bb7",
-                "sha256:97f65a0ec59e643faf84024aa713a9be059322380315fda829756bbbd96d6258"
               ]
             }
           ]
