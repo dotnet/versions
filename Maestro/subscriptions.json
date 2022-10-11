@@ -678,40 +678,6 @@
         }
       }
     },
-    // Automate merging aspnetcore release/7.0-rc branches back to release/7.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/7.0-rc/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/7.0",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge aspnetcore release/7.0 branch back to main
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/7.0//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     // Update dependencies in core-setup release/2.1
     {
       "triggerPaths": [
