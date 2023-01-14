@@ -762,7 +762,25 @@
         }
       }
     },
-    // Automate opening PRs to merge cli release/7.0.2xx to main
+    // Automate opening PRs to merge cli release/7.0.3xx to main
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/sdk/blob/release/7.0.3xx//**/*",
+        "https://github.com/dotnet/installer/blob/release/7.0.3xx//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "main",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
+    // Automate opening PRs to merge cli release/7.0.2xx to 7.0.3xx
     {
       "triggerPaths": [
         "https://github.com/dotnet/sdk/blob/release/7.0.2xx//**/*",
@@ -775,7 +793,7 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main",
+          "BaseBranch": "release/7.0.3xx",
           "ExtraSwitches": "-QuietComments"
         }
       }
@@ -1224,6 +1242,7 @@
         "https://github.com/dotnet/installer/blob/release/6.0.3xx/**/*",
         "https://github.com/dotnet/installer/blob/release/6.0.4xx/**/*",
         "https://github.com/dotnet/installer/blob/release/7.0.1xx/**/*",
+        "https://github.com/dotnet/installer/blob/release/7.0.2xx/**/*",
         "https://github.com/dotnet/runtime/blob/release/5.0/**/*",
         "https://github.com/dotnet/runtime/blob/release/6.0/**/*",
         "https://github.com/dotnet/runtime/blob/release/7.0/**/*",
@@ -1241,6 +1260,7 @@
         "https://github.com/dotnet/sdk/blob/release/6.0.3xx/**/*",
         "https://github.com/dotnet/sdk/blob/release/6.0.4xx/**/*",
         "https://github.com/dotnet/sdk/blob/release/7.0.1xx/**/*",
+        "https://github.com/dotnet/sdk/blob/release/7.0.2xx/**/*",
         "https://github.com/dotnet/source-build/blob/release/2/**/*",
         "https://github.com/dotnet/source-build/blob/release/3.1/**/*",
         "https://github.com/dotnet/source-build/blob/release/5/**/*",
