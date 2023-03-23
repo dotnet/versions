@@ -648,10 +648,10 @@
       "action": "github-runtime-main-to-runtimelab-mirror",
       "actionArguments": {}
     },
-    // Automate merging runtime release/7.0-staging branches back into release/7.0
+    // Automate merging runtime release/7.0 branch into release/7.0-staging
     {
       "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/release/7.0-staging/**/*"
+        "https://github.com/dotnet/runtime/blob/release/7.0/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -660,15 +660,15 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/7.0",
+          "BaseBranch": "release/7.0-staging",
           "ExtraSwitches": "-QuietComments"
         }
       }
     },
-    // Automate merging runtime release/6.0-staging branches back into release/6.0
+    // Automate merging runtime release/6.0 branch into release/6.0-staging
     {
       "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/release/6.0-staging/**/*"
+        "https://github.com/dotnet/runtime/blob/release/6.0/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -677,7 +677,7 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/6.0",
+          "BaseBranch": "release/6.0-staging",
           "ExtraSwitches": "-QuietComments"
         }
       }
