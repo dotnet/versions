@@ -1381,26 +1381,10 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.4 into vs17.5
+    // Automate opening PRs to merge msbuild's vs17.4 into vs17.6
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.4/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "vs17.5"
-        }
-      }
-    },
-    // Automate opening PRs to merge msbuild's vs17.5 into vs17.6
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/msbuild/blob/vs17.5/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
