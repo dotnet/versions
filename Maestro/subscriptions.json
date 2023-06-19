@@ -1401,10 +1401,26 @@
         }
       }
     },
-    // MSBuild latest release to main
+    // Automate opening PRs to merge msbuild's vs17.6 into vs17.7
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.6/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "vs17.7"
+        }
+      }
+    },
+    // MSBuild latest release to main
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/msbuild/blob/vs17.7/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
