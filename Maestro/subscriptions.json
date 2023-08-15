@@ -906,7 +906,25 @@
         }
       }
     },
-    // Automate opening PRs to merge cli release/7.0.4xx to main
+    // Automate opening PRs to merge cli release/8.0.1xx to main
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/sdk/blob/release/8.0.1xx//**/*",
+        "https://github.com/dotnet/installer/blob/release/8.0.1xx//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "main",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
+        // Automate opening PRs to merge cli release/7.0.4xx to 8.0.1xx
     {
       "triggerPaths": [
         "https://github.com/dotnet/sdk/blob/release/7.0.4xx//**/*",
@@ -919,7 +937,7 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main",
+          "BaseBranch": "release/8.0.1xx",
           "ExtraSwitches": "-QuietComments"
         }
       }
