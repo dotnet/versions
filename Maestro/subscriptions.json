@@ -889,6 +889,23 @@
         }
       }
     },
+    // Automate merging runtime release/8.0-rc branches back to release/8.0
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/runtime/blob/release/8.0-rc/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/8.0",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
     // Automate opening PRs to merge cli release/7.0.4xx to main
     {
       "triggerPaths": [
