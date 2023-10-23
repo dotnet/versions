@@ -679,6 +679,23 @@
       "action": "github-runtime-main-to-runtimelab-mirror",
       "actionArguments": {}
     },
+    // Automate merging runtime release/8.0 branch into release/8.0-staging
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/runtime/blob/release/8.0/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/8.0-staging",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
     // Automate merging runtime release/7.0 branch into release/7.0-staging
     {
       "triggerPaths": [
