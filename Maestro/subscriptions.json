@@ -1012,26 +1012,7 @@
         }
       }
     },
-    // Automate opening PRs to merge cli release/6.0.3xx to .4xx
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/sdk/blob/release/6.0.3xx//**/*",
-        "https://github.com/dotnet/installer/blob/release/6.0.3xx//**/*",
-        "https://github.com/dotnet/templating/blob/release/6.0.3xx//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/6.0.4xx",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge cli release/6.0.1xx to .3xx
+    // Automate opening PRs to merge cli release/6.0.1xx to .4xx
     {
       "triggerPaths": [
         "https://github.com/dotnet/sdk/blob/release/6.0.1xx//**/*",
@@ -1045,7 +1026,7 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/6.0.3xx",
+          "BaseBranch": "release/6.0.4xx",
           "ExtraSwitches": "-QuietComments"
         }
       }
