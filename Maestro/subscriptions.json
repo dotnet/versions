@@ -847,6 +847,23 @@
         }
       }
     },
+    // Automate opening PRs to merge aspire main branch back to vNext
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/aspire/blob/main//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "vNext",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
     // Automate opening PRs to merge extensions-samples release/8.0 branch back to main
     {
       "triggerPaths": [
