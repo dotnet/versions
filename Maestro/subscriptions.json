@@ -421,6 +421,7 @@
         "https://github.com/dotnet/astra/blob/main/**/*",
         "https://github.com/dotnet/astra/blob/release/**/*",
         "https://github.com/dotnet/aspire/blob/main/**/*",
+        "https://github.com/dotnet/aspire/blob/vNext/**/*",
         "https://github.com/dotnet/aspire/blob/release/**/*",
         "https://github.com/dotnet/binaryen/blob/dotnet/main/**/*",
         "https://github.com/dotnet/binaryen/blob/dotnet/release/**/*",
@@ -843,6 +844,23 @@
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
           "BaseBranch": "dev",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
+    // Automate opening PRs to merge aspire main branch back to vNext
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/aspire/blob/main//**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "vNext",
           "ExtraSwitches": "-QuietComments"
         }
       }
