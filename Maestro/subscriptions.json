@@ -1481,7 +1481,7 @@
       }
     },
     // MSBuild servicing chain from oldest supported through currently-supported to main
-    // Automate opening PRs to merge msbuild's vs16.11 into vs17.0
+    // Automate opening PRs to merge msbuild's vs16.11 (VS until 4/2029) into vs17.0 (SDK 6.0.1xx)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs16.11/**/*"
@@ -1497,7 +1497,7 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.0 into vs17.2
+    // Automate opening PRs to merge msbuild's vs17.0 (SDK 6.0.1xx) into vs17.3 (SDK 6.0.4xx)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.0/**/*"
@@ -1509,14 +1509,14 @@
           "GithubRepoOwner": "dotnet",
           "GithubRepoName": "<trigger-repo>",
           "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "vs17.2"
+          "BaseBranch": "vs17.3"
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.2 into vs17.4
+    // Automate opening PRs to merge msbuild's vs17.3 (SDK 6.0.4xx) into vs17.4 (SDK 7.0.1xx until 5/2024, VS until 7/2024)
     {
       "triggerPaths": [
-        "https://github.com/dotnet/msbuild/blob/vs17.2/**/*"
+        "https://github.com/dotnet/msbuild/blob/vs17.3/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1529,7 +1529,7 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.4 into vs17.6
+    // Automate opening PRs to merge msbuild's vs17.4 into vs17.6 (VS until 1/2025)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.4/**/*"
@@ -1545,7 +1545,7 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.6 into vs17.8
+    // Automate opening PRs to merge msbuild's vs17.6 into vs17.8 (VS until 7/2025)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.6/**/*"
@@ -1561,7 +1561,7 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.7 into vs17.8
+    // Automate opening PRs to merge msbuild's vs17.7 (SDK 7.0.4xx until 5/2024) into vs17.8 (SDK 8.0.1xx)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.7/**/*"
@@ -1577,7 +1577,7 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.8 into vs17.9
+    // Automate opening PRs to merge msbuild's vs17.8 (SDK 8.0.1xx) into vs17.9 (SDK 8.0.2xx)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.8/**/*"
@@ -1593,7 +1593,7 @@
         }
       }
     },
-    // Automate opening PRs to merge msbuild's vs17.9 into vs17.10
+    // Automate opening PRs to merge msbuild's vs17.9 (SDK 8.0.2xx) into vs17.10 (SDK 8.0.3xx)
     {
       "triggerPaths": [
         "https://github.com/dotnet/msbuild/blob/vs17.9/**/*"
