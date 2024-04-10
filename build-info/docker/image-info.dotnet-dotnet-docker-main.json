@@ -2,6 +2,75 @@
   "schemaVersion": "1.0",
   "repos": [
     {
+      "repo": "dotnet/aspire-dashboard",
+      "images": [
+        {
+          "productVersion": "8.0.0-preview.5",
+          "manifest": {
+            "digest": "mcr.microsoft.com/dotnet/aspire-dashboard@sha256:688eab571dd391b4bbf3946c6e785e0837b18985443cd9f2c583106caddef5e4",
+            "created": "2024-04-10T01:02:33.082474Z",
+            "sharedTags": [
+              "8.0-preview",
+              "8.0.0-preview.5",
+              "latest"
+            ]
+          },
+          "platforms": [
+            {
+              "dockerfile": "src/aspire-dashboard/8.0/cbl-mariner-distroless/amd64/Dockerfile",
+              "simpleTags": [
+                "8.0-preview-amd64",
+                "8.0.0-preview.5-amd64"
+              ],
+              "digest": "mcr.microsoft.com/dotnet/aspire-dashboard@sha256:0f0e21a76189651afe5717ea1c2780bcaef4999d8494be06e5323cc62bf01fe1",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/aspnet@sha256:53f6485ee3668572f81d68a939cf3c457f7d05ae375e9c33994efc381d3feb63",
+              "osType": "Linux",
+              "osVersion": "cbl-mariner2.0-distroless",
+              "architecture": "amd64",
+              "created": "2024-04-10T00:04:05.533789Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/37ed8d19b14be39bbaf9ec55c4eb327382e9e6d3/src/aspire-dashboard/8.0/cbl-mariner-distroless/amd64/Dockerfile",
+              "layers": [
+                "sha256:e34f3fcc819ea982bcf60e4a286673218f9429067062f69edb85279aa4a72069",
+                "sha256:5240bb90e2f288464cc41a8bbac27e6bcd58930ad68d01200c0ed5ffd82ae190",
+                "sha256:05b5c1f27c52318bd7081f8de0a731ffdefb258c6d2b8f020f2bdce0c0f491d1",
+                "sha256:23e5829e4437abec84cc5b703c684ac27f17ef0ee466f8c67178d12241942974",
+                "sha256:354d710b53191c47d90e9843c75286d96c93786d49670e26f04e395607a25161",
+                "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+                "sha256:e53171e433591e65827fff8c9f34ace1b423fd68ee08084236498060b2d049a4",
+                "sha256:d7ac76ea30fe828dbd3b190770efe507975c2b4cba2ae977897ae023de0ab906",
+                "sha256:60122052401de36a46a7b53f6211fcd94fc9a403603d1a0ac0dedc9753b48f3a"
+              ]
+            },
+            {
+              "dockerfile": "src/aspire-dashboard/8.0/cbl-mariner-distroless/arm64v8/Dockerfile",
+              "simpleTags": [
+                "8.0-preview-arm64v8",
+                "8.0.0-preview.5-arm64v8"
+              ],
+              "digest": "mcr.microsoft.com/dotnet/aspire-dashboard@sha256:946019387cc02fea14fdb3f78f2237d5a22db856a2446841c8f39b3b0d5b5d88",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/aspnet@sha256:3c5c5ece15a54500f0695ebf4f596111a6b5d46f3d441262c8266d53c108ab5f",
+              "osType": "Linux",
+              "osVersion": "cbl-mariner2.0-distroless",
+              "architecture": "arm64",
+              "created": "2024-04-09T23:59:48.465608Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/37ed8d19b14be39bbaf9ec55c4eb327382e9e6d3/src/aspire-dashboard/8.0/cbl-mariner-distroless/arm64v8/Dockerfile",
+              "layers": [
+                "sha256:15153e887be3c64f24dcbbe56a7f8a8d4b15edfdf0a207bb3ce5498c205f33ea",
+                "sha256:40e24cc4aa605a78164626b7488189c7d8621e92ba65cc5c7470afe0195d55b9",
+                "sha256:540ee66f845f10e2667eecc2ddbe5776212b0f74bde8a5874ad0bc618ac71daf",
+                "sha256:eab06628ca0383e6cba4d737604aae94951a00bb7470cd0f1c99a1cc70e1ad55",
+                "sha256:c51a1dca56f6aabd7781a1ef3950e9eb2c45469cbed1dcea9c363de76681462e",
+                "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+                "sha256:8747daa0b6dc8b15d1a4e409e5ecfdf72e2ce446dc5f06a5d03629b495ba3885",
+                "sha256:68b668da51887b7f321d30cdfa1782248bd81ed43630230c0e01957a55f3fb83",
+                "sha256:b17cbb3133243a96458baf4dc6c52a95edf3e4c28e240faaca56ce2ccaf5cd7d"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "repo": "dotnet/aspnet",
       "images": [
         {
@@ -4834,75 +4903,6 @@
                 "sha256:eecf5bc971d03fd194a9cea410a5170134e86b33d7d5850d4cf95b91b9bc871f",
                 "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
                 "sha256:686b8d89a48adfcdd07ad367d32fdfabbbcc47fe11c692e9970711df099bf80c"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "repo": "dotnet/nightly/aspire-dashboard",
-      "images": [
-        {
-          "productVersion": "8.0.0-preview.5",
-          "manifest": {
-            "digest": "mcr.microsoft.com/dotnet/nightly/aspire-dashboard@sha256:c902b31b1587631ab16209270c99da77b5f2804386de168a0c9b8e66d66fba3a",
-            "created": "2024-04-09T18:55:49.3134345Z",
-            "sharedTags": [
-              "8.0-preview",
-              "8.0.0-preview.5",
-              "latest"
-            ]
-          },
-          "platforms": [
-            {
-              "dockerfile": "src/aspire-dashboard/8.0/cbl-mariner-distroless/amd64/Dockerfile",
-              "simpleTags": [
-                "8.0-preview-amd64",
-                "8.0.0-preview.5-amd64"
-              ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/aspire-dashboard@sha256:dac7f0cf6c41fd6cac8d8a399c2d768ead6bae2461c60fdcadad755076464134",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/aspnet@sha256:53f6485ee3668572f81d68a939cf3c457f7d05ae375e9c33994efc381d3feb63",
-              "osType": "Linux",
-              "osVersion": "cbl-mariner2.0-distroless",
-              "architecture": "amd64",
-              "created": "2024-04-09T13:59:46.8406655Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/37ed8d19b14be39bbaf9ec55c4eb327382e9e6d3/src/aspire-dashboard/8.0/cbl-mariner-distroless/amd64/Dockerfile",
-              "layers": [
-                "sha256:217340f03713b1ce3014abb5568f7224935115ed9f5cc9c435b94c85c9155c1e",
-                "sha256:bae9d4fba2e61b89530d9c86c8732de9530ae14996578a46952094226c5f7912",
-                "sha256:05b5c1f27c52318bd7081f8de0a731ffdefb258c6d2b8f020f2bdce0c0f491d1",
-                "sha256:23e5829e4437abec84cc5b703c684ac27f17ef0ee466f8c67178d12241942974",
-                "sha256:354d710b53191c47d90e9843c75286d96c93786d49670e26f04e395607a25161",
-                "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
-                "sha256:e53171e433591e65827fff8c9f34ace1b423fd68ee08084236498060b2d049a4",
-                "sha256:d7ac76ea30fe828dbd3b190770efe507975c2b4cba2ae977897ae023de0ab906",
-                "sha256:60122052401de36a46a7b53f6211fcd94fc9a403603d1a0ac0dedc9753b48f3a"
-              ]
-            },
-            {
-              "dockerfile": "src/aspire-dashboard/8.0/cbl-mariner-distroless/arm64v8/Dockerfile",
-              "simpleTags": [
-                "8.0-preview-arm64v8",
-                "8.0.0-preview.5-arm64v8"
-              ],
-              "digest": "mcr.microsoft.com/dotnet/nightly/aspire-dashboard@sha256:a72ad2886954a4464c184501e0fcb76d888e4275ed5c0f91feff6b335b14b2c3",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/aspnet@sha256:3c5c5ece15a54500f0695ebf4f596111a6b5d46f3d441262c8266d53c108ab5f",
-              "osType": "Linux",
-              "osVersion": "cbl-mariner2.0-distroless",
-              "architecture": "arm64",
-              "created": "2024-04-09T13:51:59.3578375Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-docker/blob/37ed8d19b14be39bbaf9ec55c4eb327382e9e6d3/src/aspire-dashboard/8.0/cbl-mariner-distroless/arm64v8/Dockerfile",
-              "layers": [
-                "sha256:1a76af9a39a60ac7ba8d510b385e2cbf3f27e70b22e21ffc7b100f3b1c6ef057",
-                "sha256:8c1c1f8054d0ccc9b207fda5fd1f4bebe79d9a662272011a7e697c8c04208c17",
-                "sha256:540ee66f845f10e2667eecc2ddbe5776212b0f74bde8a5874ad0bc618ac71daf",
-                "sha256:eab06628ca0383e6cba4d737604aae94951a00bb7470cd0f1c99a1cc70e1ad55",
-                "sha256:c51a1dca56f6aabd7781a1ef3950e9eb2c45469cbed1dcea9c363de76681462e",
-                "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
-                "sha256:8747daa0b6dc8b15d1a4e409e5ecfdf72e2ce446dc5f06a5d03629b495ba3885",
-                "sha256:68b668da51887b7f321d30cdfa1782248bd81ed43630230c0e01957a55f3fb83",
-                "sha256:b17cbb3133243a96458baf4dc6c52a95edf3e4c28e240faaca56ce2ccaf5cd7d"
               ]
             }
           ]
