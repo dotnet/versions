@@ -42,12 +42,6 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 5944
     },
-    // A build definition capable of running any .ps1 script in the CoreCLR repo. By default, the main branch.
-    "coreclr-general": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 2249
-    },
     // A build definition capable of running any .ps1 script in the core-setup repo
     "core-setup-general": {
       "vsoInstance": "devdiv.visualstudio.com",
@@ -145,101 +139,10 @@
     }
   },
   "subscriptions": [
-    // Update dependencies in CoreCLR release/uwp6.0
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/uwp6.0/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.0/Latest.txt"
-      ],
-      "action": "coreclr-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/uwp6.0",
-        "vsoBuildParameters": {
-          "ScriptFileName": "run.cmd",
-          "Arguments": [
-            "build",
-            "-Project='tests\\build.proj'",
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=coreclr",
-            "/p:ProjectRepoBranch=release/uwp6.0",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-    // Update dependencies in CoreCLR release/uwp6.2
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/2.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.2/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/buildtools/release/2.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/optimization/release/2.1/Latest.txt"
-      ],
-      "action": "coreclr-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/uwp6.2",
-        "vsoBuildParameters": {
-          "ScriptFileName": "run.cmd",
-          "Arguments": [
-            "build",
-            "-Project='tests\\build.proj'",
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=coreclr",
-            "/p:ProjectRepoBranch=release/uwp6.2",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
-    // Update dependencies in CoreCLR release/2.1
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/product/cli/release/2.1.30/packages.semaphore",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/buildtools/release/2.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/optimization/release/2.1/Latest.txt"
-      ],
-      "action": "coreclr-general",
-      "delay": "00:10:00",
-      "actionArguments": {
-        "vsoSourceBranch": "release/2.1",
-        "vsoBuildParameters": {
-          "ScriptFileName": "run.cmd",
-          "Arguments": [
-            "build",
-            "-Project='tests\\build.proj'",
-            "--",
-            "/t:UpdateDependenciesAndSubmitPullRequest",
-            "/p:GitHubUser=dotnet-maestro-bot",
-            "/p:GitHubEmail=dotnet-maestro-bot@microsoft.com",
-            "/p:GitHubAuthToken=`$(`$Secrets['DotNetMaestroBotGitHubToken'])",
-            "/p:ProjectRepoOwner=dotnet",
-            "/p:ProjectRepoName=coreclr",
-            "/p:ProjectRepoBranch=release/2.1",
-            "/p:NotifyGitHubUsers=dotnet/maestro-reviewers-core",
-            "/verbosity:Normal"
-          ]
-        }
-      }
-    },
     // Update dependencies in CoreFX release/uwp6.0
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/uwp6.0/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.0/Latest.txt"
+        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/uwp6.0/Latest.txt"
       ],
       "action": "corefx-general",
       "delay": "00:10:00",
@@ -265,8 +168,7 @@
     // Update dependencies in CoreFX release/uwp6.1
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/uwp6.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.1/Latest.txt"
+        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/uwp6.1/Latest.txt"
       ],
       "action": "corefx-general",
       "delay": "00:10:00",
@@ -293,7 +195,6 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/corefx/release/2.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.2/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/standard/release/2.0.0/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/projectn-tfs/release/uwp6.2/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/projectn-tfs-testilc/release/uwp6.2/Latest.txt",
@@ -358,8 +259,6 @@
         "https://github.com/dotnet/cli/blob/release/**/*",
         "https://github.com/dotnet/corefx/blob/release/**/*",
         "https://github.com/dotnet/corefx/blob/feature/utf8string/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/**/*",
-        "https://github.com/dotnet/coreclr/blob/feature/utf8string/**/*",
         "https://github.com/dotnet/core-setup/blob/release/**/*",
         "https://github.com/dotnet/core-setup/blob/feature/utf8string/**/*",
         "https://github.com/dotnet/msbuild/blob/vs/**/*",
@@ -435,7 +334,6 @@
         "https://github.com/dotnet/command-line-api/blob/main/**/*",
         "https://github.com/dotnet/command-line-api/blob/release/**/*",
         "https://github.com/dotnet/core-setup/blob/release/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/**/*",
         "https://github.com/dotnet/corefx/blob/feature/utf8string/**/*",
         "https://github.com/dotnet/corefx/blob/release/**/*",
         "https://github.com/dotnet/corescan/blob/main/**/*",
@@ -1224,7 +1122,6 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/buildtools/release/2.1/Latest.txt",
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.2/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/projectn-tfs-ilc/master/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/standard/release/2.0.0/Latest.txt"
       ],
@@ -1251,7 +1148,6 @@
     // Update dependencies in uwp-setup rel/6.1
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.1/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/projectn-tfs-ilc/release/uwp6.1/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/standard/release/2.0.0/Latest.txt"
       ],
@@ -1278,7 +1174,6 @@
     // Update dependencies in uwp-setup rel/6.2
     {
       "triggerPaths": [
-        "https://github.com/dotnet/versions/blob/main/build-info/dotnet/coreclr/release/uwp6.2/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/projectn-tfs-ilc/release/uwp6.2/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/standard/release/2.0.0/Latest.txt",
         "https://github.com/dotnet/versions/blob/main/build-info/dotnet/buildtools/release/2.1/Latest.txt"
@@ -1307,7 +1202,6 @@
     {
       "triggerPaths": [
         "https://github.com/dotnet/corefx/blob/release/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/**/*",
         "https://github.com/dotnet/core-setup/blob/release/**/*",
         "https://github.com/dotnet/cli/blob/release/**/*",
         "https://github.com/NuGet/NuGet.Client/blob/dev/**/*",
@@ -1631,8 +1525,7 @@
     },
     {
       "triggerPaths": [
-        "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*",
-        "https://github.com/dotnet/coreclr/blob/release/2.1/src/System.Private.CoreLib/shared/**/*"
+        "https://github.com/dotnet/corefx/blob/release/2.1/src/Common/src/CoreLib/**/*"
       ],
       "action": "DotNet-GitSync-CommitManager",
       "actionArguments": {
