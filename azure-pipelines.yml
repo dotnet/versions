@@ -1,8 +1,16 @@
 trigger:
 - main
+  paths:
+    exclude:
+    - subscriptions.json
+    - /build-info/docker/*.json
 
 pr:
 - main
+  paths:
+    exclude:
+    - subscriptions.json
+    - /build-info/docker/*.json
 
 jobs:
 - job: innerloop
