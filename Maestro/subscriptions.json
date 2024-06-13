@@ -1150,7 +1150,7 @@
       "triggerPaths": [
         "https://github.com/dotnet/arcade-services/blob/production/**/*",
         "https://github.com/dotnet/arcade-pool-provider/blob/production/**/*",
-        "https://github.com/dotnet/helix-service/blob/production/**/*",
+        "https://github.com/dotnet/helix-service/blob/production/**/*"
       ],
       "action": "github-dnceng-branch-merge-pr-generator",
       "actionArguments": {
@@ -1393,6 +1393,40 @@
           "GithubRepo": "<trigger-repo>",
           "BranchToMirror": "<trigger-branch>",
           "CommitsToMirror": "<trigger-commitlist>"
+        }
+      }
+    },
+    // Automate opening PRs to merge winforms-designer release/16.10p4 to release/16.11p1
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/winforms-designer/blob/release/16.10p4/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "release/16.11p1",
+          "ExtraSwitches": "-QuietComments"
+        }
+      }
+    },
+    // Automate opening PRs to merge winforms-designer release/16.11 preview branches to main
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/winforms-designer/blob/release/16.11/**/*"
+      ],
+      "action": "github-dnceng-branch-merge-pr-generator",
+      "actionArguments": {
+        "vsoSourceBranch": "main",
+        "vsoBuildParameters": {
+          "GithubRepoOwner": "dotnet",
+          "GithubRepoName": "<trigger-repo>",
+          "HeadBranch": "<trigger-branch>",
+          "BaseBranch": "main",
+          "ExtraSwitches": "-QuietComments"
         }
       }
     }
