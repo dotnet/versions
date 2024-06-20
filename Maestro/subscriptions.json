@@ -1,22 +1,11 @@
 {
+  // code mirroring from GitHub to Azdo is now done using different tool, see https://dev.azure.com/dnceng/internal/_git/dotnet-mirroring?path=/README.md
   "actions": {
     // A build definition capable of running any .ps1 script in the CoreFX repo. By default, the master branch.
     "corefx-general": {
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 1084
-    },
-    // A 'build' that mirrors changes from github into the devdiv intance of Azure DevOps
-    "github-devdiv-azdo-mirror": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 16952
-    },
-    // A 'build' that merges changes from github into the dnceng intance of Azure DevOps (into internal/ prefixed branches)
-    "github-dnceng-azdo-internal-merge-mirror": {
-      "vsoInstance": "dnceng.visualstudio.com",
-      "vsoProject": "internal",
-      "buildDefinitionId": 240
     },
     // A 'build' that generates pull requests on GitHub to merge branches
     "github-dnceng-branch-merge-pr-generator": {
@@ -101,11 +90,6 @@
       "vsoInstance": "devdiv.visualstudio.com",
       "vsoProject": "DevDiv",
       "buildDefinitionId": 8459
-    },
-    "github-devdiv-azdo-internal-merge-mirror": {
-      "vsoInstance": "devdiv.visualstudio.com",
-      "vsoProject": "DevDiv",
-      "buildDefinitionId": 16966
     },
     // Performs final publish steps for an orchestrated build based on its build output manifest on dotnet/versions.
     "DotNet-Orchestration-Final-Publish-Executor": {
@@ -237,28 +221,6 @@
         }
       }
     },
-    // Mirror github changes to devdiv Azure DevOps
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/msbuild/blob/vs/**/*",
-        "https://github.com/dotnet/msbuild/blob/main/**/*",
-        "https://github.com/dotnet/msbuild/blob/exp/**/*",
-        "https://github.com/dotnet/msbuild/blob/perf/**/*",
-        "https://github.com/dotnet/project-system/blob/main/**/*",
-        "https://github.com/NuGet/NuGet.Client/blob/dev/**/*",
-        "https://github.com/NuGet/NuGet.Client/blob/release/**/*"
-      ],
-      "action": "github-devdiv-azdo-mirror",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "BranchToMirror": "<trigger-branch>"
-        }
-      }
-    },
-    // Mirror github changes to dotnet Azure DevOps
-    // fast forward mirroring to dnceng is now done using pipeline https://dev.azure.com/dnceng/internal/_build?definitionId=1387&_a=summary
-    // and the definitions of rules are in https://dev.azure.com/dnceng/internal/_git/dotnet-mirroring?path=/dnceng-subscriptions.jsonc
     // Mirror runtime:main to runtimelab:runtime-main
     {
       "triggerPaths": [
@@ -877,63 +839,6 @@
             "/p:ProjectRepoBranch=rel/6.2",
             "/verbosity:Normal"
           ]
-        }
-      }
-    },
-    // Merge mirrored branches in DevDiv Azure DevOps
-    {
-      "triggerPaths": [
-        "https://github.com/NuGet/NuGet.Client/blob/dev/**/*",
-        "https://github.com/NuGet/NuGet.Client/blob/release/**/*"
-      ],
-      "action": "github-devdiv-azdo-internal-merge-mirror",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "BranchToMirror": "<trigger-branch>"
-        }
-      }
-    },
-    // Merge mirrored branches (to internal/) in dnceng Azure Devops
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/aspnetcore/blob/release/2.1/**/*",
-        "https://github.com/dotnet/aspnetcore/blob/release/6.0/**/*",
-        "https://github.com/dotnet/aspnetcore/blob/release/8.0/**/*",
-        "https://github.com/aspnet/BuildTools/blob/release/**/*",
-        "https://github.com/dotnet/diagnostics/blob/release/**/*",
-        "https://github.com/dotnet/dotnet-monitor/blob/release/**/*",
-        "https://github.com/dotnet/ef6/blob/release/6.5/**/*",
-        "https://github.com/dotnet/efcore/blob/release/6.0/**/*",
-        "https://github.com/dotnet/efcore/blob/release/8.0/**/*",
-        "https://github.com/dotnet/format/blob/release/8.x/**/*",
-        "https://github.com/dotnet/installer/blob/release/6.0.1xx/**/*",
-        "https://github.com/dotnet/installer/blob/release/6.0.4xx/**/*",
-        "https://github.com/dotnet/installer/blob/release/8.0.1xx/**/*",
-        "https://github.com/dotnet/installer/blob/release/8.0.2xx/**/*",
-        "https://github.com/dotnet/installer/blob/release/8.0.3xx/**/*",
-        "https://github.com/dotnet/maintenance-packages/blob/main/**/*",
-        "https://github.com/dotnet/runtime/blob/main/**/*",
-        "https://github.com/dotnet/runtime/blob/release/6.0//**/*",
-        "https://github.com/dotnet/runtime/blob/release/8.0//**/*",
-        "https://github.com/dotnet/sdk/blob/release/6.0.1xx/**/*",
-        "https://github.com/dotnet/sdk/blob/release/6.0.4xx/**/*",
-        "https://github.com/dotnet/sdk/blob/release/8.0.1xx/**/*",
-        "https://github.com/dotnet/sdk/blob/release/8.0.2xx/**/*",
-        "https://github.com/dotnet/sdk/blob/release/8.0.3xx/**/*",
-        "https://github.com/dotnet/templating/blob/release/6.0/**/*",
-        "https://github.com/dotnet/windowsdesktop/blob/release/6.0/**/*",
-        "https://github.com/dotnet/windowsdesktop/blob/release/8.0/**/*",
-        "https://github.com/dotnet/winforms/blob/release/6.0/**/*",
-        "https://github.com/dotnet/winforms/blob/release/8.0/**/*",
-        "https://github.com/dotnet/wpf/blob/release/6.0/**/*",
-        "https://github.com/dotnet/wpf/blob/release/8.0/**/*"
-      ],
-      "action": "github-dnceng-azdo-internal-merge-mirror",
-      "actionArguments": {
-        "vsoBuildParameters": {
-          "GithubRepo": "<trigger-repo>",
-          "BranchToMirror": "<trigger-branch>"
         }
       }
     },
