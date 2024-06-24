@@ -536,23 +536,6 @@
         }
       }
     },
-    // Automate opening PRs to merge aspnet release/2.1 branches back to release/3.0 or release/3.1.
-    {
-      "triggerPaths": [
-        "https://github.com/aspnet/BrowserLink/blob/release/2.1//**/*",
-        "https://github.com/dotnet/Scaffolding/blob/release/2.1//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "aspnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/3.0"
-        }
-      }
-    },
     // Automate opening PRs to merge Asp.Net/EF release branches back to main
     {
       "triggerPaths": [
