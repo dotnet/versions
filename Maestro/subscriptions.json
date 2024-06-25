@@ -536,23 +536,6 @@
         }
       }
     },
-    // Automate opening PRs to merge Asp.Net/EF release branches back to main
-    {
-      "triggerPaths": [
-        "https://github.com/aspnet/BuildTools/blob/release/2.1//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "aspnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     {
       "triggerPaths": [
         "https://github.com/dotnet/ef6/blob/release/6.5//**/*",
