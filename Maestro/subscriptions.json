@@ -6,23 +6,9 @@
       "vsoInstance": "dnceng.visualstudio.com",
       "vsoProject": "internal",
       "buildDefinitionId": 350
-    },
-    // A build definition that mirrors runtime:main to runtimelab:runtime-main.
-    "github-runtime-main-to-runtimelab-mirror": {
-      "vsoInstance": "dnceng.visualstudio.com",
-      "vsoProject": "internal",
-      "buildDefinitionId": 906
     }
   },
   "subscriptions": [
-    // Mirror runtime:main to runtimelab:runtime-main
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/main/**/*"
-      ],
-      "action": "github-runtime-main-to-runtimelab-mirror",
-      "actionArguments": {}
-    },
     // Automate merging runtime release/8.0 branch into release/8.0-staging
     {
       "triggerPaths": [
