@@ -221,22 +221,6 @@
         }
       }
     },
-    // Automate opening PRs to merge services' production branches into main
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/arcade-services/blob/production/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main"
-        }
-      }
-    },
     // MSBuild servicing chain from oldest supported through currently-supported to main
     // Automate opening PRs to merge msbuild's vs16.11 (VS until 4/2029) into vs17.0 (SDK 6.0.1xx)
     {
