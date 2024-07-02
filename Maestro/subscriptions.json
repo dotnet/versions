@@ -59,40 +59,6 @@
         }
       }
     },
-    // Automate opening PRs to merge extensions-samples release/8.0 branch back to main
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/extensions-samples/blob/release/8.0//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "main",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate opening PRs to merge extensions-samples main branch back to dev
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/extensions-samples/blob/main//**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "dev",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     // Automate opening PRs to merge sdk repos from release/8.0.4xx to main
     {
       "triggerPaths": [
