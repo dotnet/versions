@@ -9,40 +9,6 @@
     }
   },
   "subscriptions": [
-    // Automate merging runtime release/8.0 branch into release/8.0-staging
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/release/8.0/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/8.0-staging",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
-    // Automate merging runtime release/6.0 branch into release/6.0-staging
-    {
-      "triggerPaths": [
-        "https://github.com/dotnet/runtime/blob/release/6.0/**/*"
-      ],
-      "action": "github-dnceng-branch-merge-pr-generator",
-      "actionArguments": {
-        "vsoSourceBranch": "main",
-        "vsoBuildParameters": {
-          "GithubRepoOwner": "dotnet",
-          "GithubRepoName": "<trigger-repo>",
-          "HeadBranch": "<trigger-branch>",
-          "BaseBranch": "release/6.0-staging",
-          "ExtraSwitches": "-QuietComments"
-        }
-      }
-    },
     // MSBuild servicing chain from oldest supported through currently-supported to main
     // Automate opening PRs to merge msbuild's vs16.11 (VS until 4/2029) into vs17.0 (SDK 6.0.1xx)
     {
