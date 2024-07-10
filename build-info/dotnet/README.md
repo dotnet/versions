@@ -1,5 +1,8 @@
-## Legacy (2.1 and prior) build-info
-The directory that holds information about the current builds that are available for each repo.
+## Legacy (2.1 and prior) Build Information
+
+**This information is no longer regularly updated post .NET Core 2.1**
+
+The directory that holds information about the builds that are available for each repo.
 
 ### Structure
 
