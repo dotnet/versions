@@ -1,8 +1,6 @@
 # .NET Versions
 
-This repo contains basic information about:
-
-- [Docker images produced by the .NET team](./build-info/docker)
+This repo contains information about [container images produced by the .NET team](./build-info/docker).
 
 ## Issues
 
