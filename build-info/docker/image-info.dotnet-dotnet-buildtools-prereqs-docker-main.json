@@ -5,39 +5,76 @@
       "repo": "dotnet-buildtools/prereqs",
       "images": [
         {
+          "productVersion": "10.0",
           "platforms": [
             {
-              "dockerfile": "src/alpine/3.23/helix/Dockerfile",
+              "dockerfile": "src/azurelinux/3.0/net8.0/source-build-test/amd64/Dockerfile",
               "simpleTags": [
-                "alpine-3.23-helix-arm64v8"
+                "azurelinux-3.0-net10.0-source-build-test-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:45ba410c896e8750f08882644f4aa31874e59851567d8e3dfb4cfc12450629c5",
-              "baseImageDigest": "library/alpine@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:0201192d3b418b0858dc8479b2af9ced6ecc419fc2f48d7772f6b74df1626daa",
+              "baseImageDigest": "mcr.microsoft.com/dotnet/sdk@sha256:649ef5722be48917b404f5d9a46adc3cb8c3446a64a5db2c9d4dd91365424187",
               "osType": "Linux",
-              "osVersion": "alpine3.23",
-              "architecture": "arm64",
-              "created": "2026-07-22T14:41:54.4489138Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/d142ffce14520c888164bd3c11b69cb6b6eb21ca/src/alpine/3.23/helix/Dockerfile",
+              "osVersion": "azurelinux3.0",
+              "architecture": "amd64",
+              "created": "2026-07-22T16:05:14.9132384Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/268fe29b6ed8e993e5a5154ea533bf8c70b1a924/src/azurelinux/3.0/net8.0/source-build-test/amd64/Dockerfile",
               "layers": [
                 {
-                  "digest": "sha256:f16beb4fdd61d07973e56f0057258216cb535c80fe115de271324316ecf8091d",
-                  "size": 16755824
+                  "digest": "sha256:04ba8741eda73b30844263c1f947f569dd05c6e876c7b86126cdd3dcee7a1ac0",
+                  "size": 233
                 },
                 {
-                  "digest": "sha256:6d00dcfca7be65120834abcb6e9df6583229c647bab208d5d38f5daf60a9d422",
-                  "size": 3931737
+                  "digest": "sha256:1deb7306ad2dd211a3c366ed16d227aba39a902c92786d5c686ecfad76fd9692",
+                  "size": 237
                 },
                 {
-                  "digest": "sha256:b857526fff330442d45c284d32a838f9a70d41628759548e7c82f861572ce064",
-                  "size": 1052
+                  "digest": "sha256:e60b459bfa32795e7d3c099cf8dd82f801a51fb000ca1b6bafaf9af4a1817dba",
+                  "size": 23283028
                 },
                 {
-                  "digest": "sha256:d5e61abc544abc0800cd7214af27222c6def7ae290d1888253c130ff12cdd100",
-                  "size": 218271213
+                  "digest": "sha256:058a94da69b905c3faa5d1ed857dff0022bc944cf15c50b6d56900e6856e9b69",
+                  "size": 153979452
                 },
                 {
-                  "digest": "sha256:14a4754c352fba4c6c0da8e4f01bb990463c19f7ff63e090073c385bd2bc5046",
-                  "size": 4181860
+                  "digest": "sha256:c13d4c0a833b69f25c8af3e41905c180485c994fc6c84a5d18bc3899df0b49e3",
+                  "size": 18046195
+                },
+                {
+                  "digest": "sha256:2f931c30b09ab4290b455516a411f43216f8fb630d9dc3575b157a6280475ab2",
+                  "size": 509
+                },
+                {
+                  "digest": "sha256:30b67943e62027d49c51da62de33fd7bbb5085118ecf08c2a088c42190ab230c",
+                  "size": 185249356
+                },
+                {
+                  "digest": "sha256:576159d6a2b6863aac6dad84655ebf89e685ecabc52a36026467abc9dc9fce60",
+                  "size": 42403477
+                },
+                {
+                  "digest": "sha256:911f96946d340f0ee6d6bc6e04a5e129ec3a7c2748b51a417988f4a72d3708d1",
+                  "size": 12727904
+                },
+                {
+                  "digest": "sha256:d01ccc720f4eb15eefc3bf4a7a7397b852b0d9eb3bc431e2f8956483bdc466c5",
+                  "size": 163
+                },
+                {
+                  "digest": "sha256:891eff9e947363620e561cf64cd874b8ddc1572e8c92ac0fcc6d79ad225d0919",
+                  "size": 36603991
+                },
+                {
+                  "digest": "sha256:f11e765ed675b6fb7139aa6151ce60cd8b8cc92d56f55870c65caec9b3e52817",
+                  "size": 755494
+                },
+                {
+                  "digest": "sha256:300954def2667e6579371006b8a36c5351241ee3e1e32815430ca642f5edc493",
+                  "size": 18220858
+                },
+                {
+                  "digest": "sha256:0cadf8bdeba245c5d6beab244132bbb9c4695c0d57a36bfb1af67f5860f807cc",
+                  "size": 31756333
                 }
               ]
             }
@@ -503,6 +540,45 @@
                 {
                   "digest": "sha256:177f8e1e6f831989320cf2b59b7eabd21cbf36804c79506912f3a81caff426f2",
                   "size": 3261854
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "platforms": [
+            {
+              "dockerfile": "src/alpine/3.23/helix/Dockerfile",
+              "simpleTags": [
+                "alpine-3.23-helix-arm64v8"
+              ],
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:45ba410c896e8750f08882644f4aa31874e59851567d8e3dfb4cfc12450629c5",
+              "baseImageDigest": "library/alpine@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40",
+              "osType": "Linux",
+              "osVersion": "alpine3.23",
+              "architecture": "arm64",
+              "created": "2026-07-22T14:41:54.4489138Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/d142ffce14520c888164bd3c11b69cb6b6eb21ca/src/alpine/3.23/helix/Dockerfile",
+              "layers": [
+                {
+                  "digest": "sha256:f16beb4fdd61d07973e56f0057258216cb535c80fe115de271324316ecf8091d",
+                  "size": 16755824
+                },
+                {
+                  "digest": "sha256:6d00dcfca7be65120834abcb6e9df6583229c647bab208d5d38f5daf60a9d422",
+                  "size": 3931737
+                },
+                {
+                  "digest": "sha256:b857526fff330442d45c284d32a838f9a70d41628759548e7c82f861572ce064",
+                  "size": 1052
+                },
+                {
+                  "digest": "sha256:d5e61abc544abc0800cd7214af27222c6def7ae290d1888253c130ff12cdd100",
+                  "size": 218271213
+                },
+                {
+                  "digest": "sha256:14a4754c352fba4c6c0da8e4f01bb990463c19f7ff63e090073c385bd2bc5046",
+                  "size": 4181860
                 }
               ]
             }
@@ -3931,49 +4007,49 @@
               "simpleTags": [
                 "azurelinux-3.0-net8.0-crossdeps-builder-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:2133a671e1e96412d029240c603a6325a970c3fc95e28103fc449a6b5a000a38",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:0fabff08697e90d86e6ca146037cd0a7aa6553b991a6f4f18d20d5c09d1b5d6c",
               "baseImageDigest": "mcr.microsoft.com/azurelinux/base/core@sha256:a30e18dd24a8080ee0b72d0f998a688e99380678a407bdd7c3a0ac7417b15eb3",
               "osType": "Linux",
               "osVersion": "azurelinux3.0",
               "architecture": "amd64",
-              "created": "2026-07-23T02:31:26.4065562Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/268fe29b6ed8e993e5a5154ea533bf8c70b1a924/src/azurelinux/3.0/net8.0/crossdeps-builder/amd64/Dockerfile",
+              "created": "2026-07-23T09:46:15.159053Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/0c26b14061ee3dcb2f55c93f8f4178c6fbb3a3c7/src/azurelinux/3.0/net8.0/crossdeps-builder/amd64/Dockerfile",
               "layers": [
                 {
-                  "digest": "sha256:efb807c9b1ac0a29120b75a231f8f458e05ff387a4a56a1ff9fce63440c530c4",
-                  "size": 38147108
+                  "digest": "sha256:863a979cef51c26fc189d2ca3f4d14001fb3f8066d9a5d97d6ec489ff0f31b3d",
+                  "size": 38148371
                 },
                 {
-                  "digest": "sha256:8de315ea256f197b1778465d167ce01aabdc70e6537c8eb7d6ebcedca8e3993c",
-                  "size": 1211517499
+                  "digest": "sha256:e0d57b0464d4af0bccac0bb4b47cdabc278534b5776fb214608f5bd4ef878367",
+                  "size": 1211517531
                 },
                 {
-                  "digest": "sha256:8e99e69b5505183af5871ce9d3c9a1814cac45b58dd7d4c8b52c56e55a6a10dd",
-                  "size": 28675
+                  "digest": "sha256:85f80676df44e311b2de69878f646a32e799ed5357f6a9d82ac64b63a61c6ecd",
+                  "size": 28668
                 },
                 {
-                  "digest": "sha256:f9e9ee61a13990c29beb6afc5cfa02939594857bf299a84d22b656849b62636b",
-                  "size": 24170
+                  "digest": "sha256:466d107ac207369aa9606abccd3aaf52d6b2a3b36685247e624d8a0bc65cd9ff",
+                  "size": 24172
                 },
                 {
-                  "digest": "sha256:e2e393c1ac4604cc61894acaf4211f132e2e69d716357cb25d7fd55b501e265d",
+                  "digest": "sha256:c7834424a1c5ef7440e7813c17f566111bc8a8fb935ad8500dcaa224005caadb",
                   "size": 18904
                 },
                 {
-                  "digest": "sha256:e700066958d899768c3daf7acef0e9cdeb4c52210d605e81563ff3238d6d1418",
-                  "size": 29477402
+                  "digest": "sha256:adc20951f316b5f3bd50d46e224bdff58340d56582d5d2abb710ad76d030848e",
+                  "size": 29477576
                 },
                 {
-                  "digest": "sha256:92b263b5a94796ee4317ebcfc7906960f157b3dc7208439e2e9eebbb88b98ad8",
-                  "size": 14526618
+                  "digest": "sha256:8ba08a2ecd809acdd82019fedb4923c7693057c5cfdcac5d8b350d3581099338",
+                  "size": 14526641
                 },
                 {
-                  "digest": "sha256:14abce72d8e26908f0943fefd64535f8c3a8de13e6bb35dfb7fe8c06cb055c17",
-                  "size": 726
+                  "digest": "sha256:a60b8f388b3a2b7eb72e5fce723aaf388ad1591a8beead83a8cc3b24b7717cea",
+                  "size": 725
                 },
                 {
-                  "digest": "sha256:c719f975416b3a04c97c9ab287ea1c997d655ed160c4dc2c76638eb8f2caef36",
-                  "size": 432900003
+                  "digest": "sha256:d43055df1219e588862c7d7fb2c81478ea4f32c3bcf2fdc4ff22f8554d47ead8",
+                  "size": 432899857
                 },
                 {
                   "digest": "sha256:f6e0b173cdcc50279605a80d69647fda7a901ba86577197a1db2c813b1b406fd",
@@ -4885,49 +4961,49 @@
               "simpleTags": [
                 "azurelinux-3.0-net9.0-crossdeps-builder-amd64"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:2430a1ef28331a1a06729eb4dd1ab7d0d669e3dc395c881bfbf81c70ab2bcb4e",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:eca53428652cd73c17a7e8028813da5d241309c1efe110da18d13ce16454735f",
               "baseImageDigest": "mcr.microsoft.com/azurelinux/base/core@sha256:a30e18dd24a8080ee0b72d0f998a688e99380678a407bdd7c3a0ac7417b15eb3",
               "osType": "Linux",
               "osVersion": "azurelinux3.0",
               "architecture": "amd64",
-              "created": "2026-07-23T01:41:47.7755214Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/268fe29b6ed8e993e5a5154ea533bf8c70b1a924/src/azurelinux/3.0/net9.0/crossdeps-builder/amd64/Dockerfile",
+              "created": "2026-07-23T09:48:18.2441877Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/0c26b14061ee3dcb2f55c93f8f4178c6fbb3a3c7/src/azurelinux/3.0/net9.0/crossdeps-builder/amd64/Dockerfile",
               "layers": [
                 {
-                  "digest": "sha256:c4cdea64aefd89d5a4cdd089def3da6d25f2eb965ea6b1907169f39a98364cad",
-                  "size": 38147103
+                  "digest": "sha256:cde02aaa001916ba9f1a20bd2bbb1a64aed2b393abf9387800e21d0ecedf7e8d",
+                  "size": 38148297
                 },
                 {
-                  "digest": "sha256:d749e4fa70d13bfc3e5e9da40ed28e8bb4a373fa6a33f5d10ec7503c4e16fc63",
-                  "size": 1308561872
+                  "digest": "sha256:7defce461b24ee9a5f4424e8a89671c7c6a33b383117d6fc575128ffc8a4ec1c",
+                  "size": 1308562283
                 },
                 {
-                  "digest": "sha256:b22a7882f2415015562738182fac8c0d5041dc6fbeb78a18268aebb0e34d91fc",
-                  "size": 28675
+                  "digest": "sha256:81bf2c5fb4b08302ebd42b356df752f7fa314bd3fb3114ed3b1db8226b9d5b50",
+                  "size": 28674
                 },
                 {
-                  "digest": "sha256:41f686539b5ab5ef01efccaf17cc28f18010daa502ceae34517d1c0f948e5f28",
-                  "size": 24176
+                  "digest": "sha256:69ced2e3424033fd2a7d62172130f95721d7202697a31ebabc099cedda706946",
+                  "size": 24178
                 },
                 {
-                  "digest": "sha256:3d14f06e6128e81db8b0f1bf0d50b77132ee6d07d8e865a65238a33c5f40a268",
-                  "size": 18903
+                  "digest": "sha256:02ae1f02551398d0f6a95a3c45e86fcb01891cdaa0133397ce2a4f08e94bd2ee",
+                  "size": 18902
                 },
                 {
-                  "digest": "sha256:53a70a6f8d7ae85421005757b5dd008bd8a51111dd4c4c331cc5888c78182f1c",
-                  "size": 29477431
+                  "digest": "sha256:70cc0b02650c39cfc098f8e0cda1f15960359939a70aa96346a10912f4a5cf3e",
+                  "size": 29477453
                 },
                 {
-                  "digest": "sha256:fd4202558ed2316dcde74d536a1ce463d417730cc0d4a27d48bfe4f730b0cb90",
-                  "size": 14526626
+                  "digest": "sha256:96a4befec28653d9989f39102054771ff3f257869f0928b5cbfa3293555a1856",
+                  "size": 14526668
                 },
                 {
-                  "digest": "sha256:61ae5b9f5f1d93e59bed02133263221f7a4dbdd9590a5b16becdd0a4f8baeadf",
-                  "size": 726
+                  "digest": "sha256:278374a1069ad9558485e04c147b3049f5cf48e3c2d492b3e5ae6cec272b08a3",
+                  "size": 725
                 },
                 {
-                  "digest": "sha256:4697053e1105900a5d75599d81d6454dd9510eef01ce629f4306a0d6e3758a62",
-                  "size": 432907980
+                  "digest": "sha256:8083925fae03b67480d437de214765b0a19614b15626aee72998afb63808a6c1",
+                  "size": 432900161
                 },
                 {
                   "digest": "sha256:f6e0b173cdcc50279605a80d69647fda7a901ba86577197a1db2c813b1b406fd",
@@ -6575,21 +6651,21 @@
               "simpleTags": [
                 "ubuntu-22.04-cross-armel-tizen"
               ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:d541c90ac003146505a1105259dc4fe03b728f41e757c2820d86c1c363c6bb3d",
+              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:5050975f1d6e262ebc41bb947312722ab46476fbc444330c8061279c7f227d26",
               "baseImageDigest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:2211ee87213741f8dc9df789e4d42aa77560f2d58f60c130017034be2fddf798",
               "osType": "Linux",
               "osVersion": "bionic",
               "architecture": "amd64",
-              "created": "2026-07-22T17:13:32.8722773Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/35f261eaa73abe89fff23311433349822ce5ca88/src/ubuntu/22.04/cross/armel-tizen/Dockerfile",
+              "created": "2026-07-23T09:19:22.4848347Z",
+              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/0c26b14061ee3dcb2f55c93f8f4178c6fbb3a3c7/src/ubuntu/22.04/cross/armel-tizen/Dockerfile",
               "layers": [
                 {
-                  "digest": "sha256:82ecb2ffc3068de898c428cfa7e24e9756167a3014c011c1223c18c002943ef5",
-                  "size": 107214963
+                  "digest": "sha256:963c3f9c73281fcb98ff40870c6c5c31a800e7fc980f1ba53891408c1221af2b",
+                  "size": 107214852
                 },
                 {
-                  "digest": "sha256:fcf5a4ac3b1474a97f4a856a4a360df85ef895bde7b69f12588b5bc1592aeaa8",
-                  "size": 5947050
+                  "digest": "sha256:380036f9f970dfb3684529b504ede4e2901a980956447ca1db6adb1831473c2c",
+                  "size": 6283756
                 },
                 {
                   "digest": "sha256:13ba419fd0472c740887c7b52cc96fb21f13f5391bbbd4b61ce42fa0bc6766fe",
@@ -8378,82 +8454,6 @@
                 {
                   "digest": "sha256:0938cf51b672b81c9804d1d5f0c57031c931f41b279270e84820c63642d6a3bd",
                   "size": 1523059351
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "productVersion": "10.0",
-          "platforms": [
-            {
-              "dockerfile": "src/azurelinux/3.0/net8.0/source-build-test/amd64/Dockerfile",
-              "simpleTags": [
-                "azurelinux-3.0-net10.0-source-build-test-amd64"
-              ],
-              "digest": "mcr.microsoft.com/dotnet-buildtools/prereqs@sha256:0201192d3b418b0858dc8479b2af9ced6ecc419fc2f48d7772f6b74df1626daa",
-              "baseImageDigest": "mcr.microsoft.com/dotnet/sdk@sha256:649ef5722be48917b404f5d9a46adc3cb8c3446a64a5db2c9d4dd91365424187",
-              "osType": "Linux",
-              "osVersion": "azurelinux3.0",
-              "architecture": "amd64",
-              "created": "2026-07-22T16:05:14.9132384Z",
-              "commitUrl": "https://github.com/dotnet/dotnet-buildtools-prereqs-docker/blob/268fe29b6ed8e993e5a5154ea533bf8c70b1a924/src/azurelinux/3.0/net8.0/source-build-test/amd64/Dockerfile",
-              "layers": [
-                {
-                  "digest": "sha256:04ba8741eda73b30844263c1f947f569dd05c6e876c7b86126cdd3dcee7a1ac0",
-                  "size": 233
-                },
-                {
-                  "digest": "sha256:1deb7306ad2dd211a3c366ed16d227aba39a902c92786d5c686ecfad76fd9692",
-                  "size": 237
-                },
-                {
-                  "digest": "sha256:e60b459bfa32795e7d3c099cf8dd82f801a51fb000ca1b6bafaf9af4a1817dba",
-                  "size": 23283028
-                },
-                {
-                  "digest": "sha256:058a94da69b905c3faa5d1ed857dff0022bc944cf15c50b6d56900e6856e9b69",
-                  "size": 153979452
-                },
-                {
-                  "digest": "sha256:c13d4c0a833b69f25c8af3e41905c180485c994fc6c84a5d18bc3899df0b49e3",
-                  "size": 18046195
-                },
-                {
-                  "digest": "sha256:2f931c30b09ab4290b455516a411f43216f8fb630d9dc3575b157a6280475ab2",
-                  "size": 509
-                },
-                {
-                  "digest": "sha256:30b67943e62027d49c51da62de33fd7bbb5085118ecf08c2a088c42190ab230c",
-                  "size": 185249356
-                },
-                {
-                  "digest": "sha256:576159d6a2b6863aac6dad84655ebf89e685ecabc52a36026467abc9dc9fce60",
-                  "size": 42403477
-                },
-                {
-                  "digest": "sha256:911f96946d340f0ee6d6bc6e04a5e129ec3a7c2748b51a417988f4a72d3708d1",
-                  "size": 12727904
-                },
-                {
-                  "digest": "sha256:d01ccc720f4eb15eefc3bf4a7a7397b852b0d9eb3bc431e2f8956483bdc466c5",
-                  "size": 163
-                },
-                {
-                  "digest": "sha256:891eff9e947363620e561cf64cd874b8ddc1572e8c92ac0fcc6d79ad225d0919",
-                  "size": 36603991
-                },
-                {
-                  "digest": "sha256:f11e765ed675b6fb7139aa6151ce60cd8b8cc92d56f55870c65caec9b3e52817",
-                  "size": 755494
-                },
-                {
-                  "digest": "sha256:300954def2667e6579371006b8a36c5351241ee3e1e32815430ca642f5edc493",
-                  "size": 18220858
-                },
-                {
-                  "digest": "sha256:0cadf8bdeba245c5d6beab244132bbb9c4695c0d57a36bfb1af67f5860f807cc",
-                  "size": 31756333
                 }
               ]
             }
